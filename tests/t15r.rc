@@ -1,0 +1,13 @@
+int *x;
+
+function : void _main()
+{
+    int arr[2];
+    bool y;
+
+    x = &arr[2];
+
+    y = x[-1];
+}
+
+

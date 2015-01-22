@@ -1,0 +1,18 @@
+function : void _foo() { 
+    int *i;
+    bool *b;
+    float *f;
+
+    sizeof(int*);
+    sizeof(float*);
+    sizeof(bool*);
+
+    sizeof(i);
+    sizeof(f);
+    sizeof(b);
+
+    sizeof(&i);
+    sizeof(&f);
+    sizeof(&b);
+
+}

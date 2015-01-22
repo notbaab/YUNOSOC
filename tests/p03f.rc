@@ -1,0 +1,11 @@
+/* Check 3 (p03f.rc) */
+
+bool b;
+int i;
+int j;
+
+function : int main() {
+    j = i = j+i;
+    i =  b = i = 1;
+    return 0;
+}

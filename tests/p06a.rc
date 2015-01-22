@@ -1,0 +1,7 @@
+function : int f() {
+    return;
+}
+
+function : int main() { 
+    return 0;
+}

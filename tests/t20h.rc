@@ -1,0 +1,16 @@
+function : void _foo(int x, float y, bool *bptr)
+{
+  x = (int) y;
+  (int) x = y;
+  y = *((float*)(bptr));
+  y = (float)(*(bptr));
+}
+
+function : int _main()
+{
+  int i;
+  float f;
+  bool b;
+
+  _foo((int)3.5, (float)true, (bool*)5);
+}

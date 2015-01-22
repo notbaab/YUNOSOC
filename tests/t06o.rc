@@ -1,0 +1,12 @@
+function : void _foo()
+{
+	int x;
+	float y;
+	bool z;
+
+	
+	return x;
+	return y;
+	return z;
+	return;
+}

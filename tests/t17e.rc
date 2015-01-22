@@ -1,0 +1,16 @@
+int** w;
+int*** x;
+int*** y;
+
+function : void main()
+{
+  if (nullptr == nullptr) {
+    x++ = y;
+  } else {
+    y = x--;
+  }
+
+  if (nullptr != nullptr && x++ == y--) {
+    w = x + y;
+  }
+}

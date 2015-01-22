@@ -1,0 +1,8 @@
+int x;
+int y[10];
+int *** z[10];
+
+function : void main()
+{
+  x = y[y[0] + z[z[9]]];
+}

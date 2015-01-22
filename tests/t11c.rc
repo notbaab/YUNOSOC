@@ -1,0 +1,6 @@
+const int a = 5;
+
+function : void main()
+{
+  a[4] = a;
+}

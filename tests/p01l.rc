@@ -1,0 +1,9 @@
+/* Check 1 (p01l.rc) */
+
+int i;
+float r;
+
+function : int main() {
+    i = i / r;
+    return 0;
+}

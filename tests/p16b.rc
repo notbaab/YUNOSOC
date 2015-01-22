@@ -1,0 +1,31 @@
+/* Check 16 (x16b.rc) */
+
+structdef REC1 {
+    int a;
+    bool b;
+    float c;
+    int **d;
+    bool e[1];
+    function : void f() {
+        int i = 2;
+    }
+};
+
+function : int main() {
+    float *r;
+    int *ptr;
+    int *arptr[5];
+    REC1 *rp;
+
+    new rp;
+    new r;
+    new ptr;
+    new arptr;
+
+    delete rp;
+    delete r;
+    delete ptr;
+    delete arptr;
+
+    return *ptr;
+}

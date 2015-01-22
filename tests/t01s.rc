@@ -1,0 +1,7 @@
+function: void foo() {    
+    int i;
+    float f1;
+    float f2;
+
+     i / (f1 + i);
+}

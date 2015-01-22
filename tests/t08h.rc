@@ -1,0 +1,6 @@
+const bool c2 = !(true) || false;
+
+function : void main()
+{
+   float f = main();
+}

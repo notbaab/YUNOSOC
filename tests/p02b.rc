@@ -1,0 +1,15 @@
+/* Check 2 (p02b.rc) */
+
+int x[23];
+bool y;
+bool w;
+int z;
+
+function : int main() {
+    x++;
+    w = x[22]++ + --y;
+    x[1] = x[0]++ + ++x[22] + x[0]+++x[0]++;  // all good
+    w = --y-z-- - --x[0];
+
+    return 0;
+}

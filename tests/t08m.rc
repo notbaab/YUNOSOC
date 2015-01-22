@@ -1,0 +1,6 @@
+function : void main()
+{
+  const int y = 4.0/0.0;
+
+  0/(7%-7)/0*0;
+}

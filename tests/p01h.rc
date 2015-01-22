@@ -1,0 +1,8 @@
+/* Check 1 (p01h.rc) */
+
+int i;
+
+function : int main() {
+    i = 2 * 3.14;
+    return 0;
+}

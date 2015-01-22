@@ -1,0 +1,16 @@
+function : void _main()
+{
+    int i;
+    float f;
+    bool b;
+
+    i = (int)f;
+    i = (int)b;
+
+    f = (float)b;
+    f = (int)b;
+
+    b = (bool)i;
+    b = (bool)f;
+}
+

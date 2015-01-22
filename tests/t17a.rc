@@ -1,0 +1,14 @@
+int** w;
+int*** x;
+int*** y;
+float*** z;
+
+bool b;
+
+function : void main()
+{
+  b = x == w;
+  b = x == y;
+  b = x == z;
+  b = z == b;
+}

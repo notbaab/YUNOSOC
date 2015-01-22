@@ -1,0 +1,5 @@
+function : void main()
+{
+  bool b;
+  exit(b);
+}

@@ -1,0 +1,8 @@
+float a[10];
+float r;
+int i;
+
+function : void main()
+{
+  r = a[i];
+}

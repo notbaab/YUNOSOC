@@ -1,0 +1,15 @@
+structdef MS {
+  float a;
+};
+
+function : void main()
+{
+  float a;
+  bool* b;
+  MS c;
+  MS* d;
+  a->a = a;
+  b->a = a;
+  c->a = a;
+  d->a = *b;
+}

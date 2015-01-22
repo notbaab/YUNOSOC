@@ -1,0 +1,16 @@
+int a[30];
+
+
+const int Five = 5; 
+
+
+function : void _main()
+{
+    float b[20];
+    int c[30];
+    b = c;
+    a = b;
+    a = c;
+    b = a;
+
+}

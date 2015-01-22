@@ -1,0 +1,4 @@
+function : void main()
+{
+  exit(5 + 5.0);
+}

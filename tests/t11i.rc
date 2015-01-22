@@ -1,0 +1,7 @@
+int x;
+int y[9][10];
+
+function : void main()
+{
+  x = y[x];
+}

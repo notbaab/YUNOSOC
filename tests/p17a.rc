@@ -1,0 +1,12 @@
+bool b;
+int* pi;
+float r;
+float* pr;
+int i;
+
+function : int main() {
+    b = (pi != pi ) && (*pi != r );
+    b = (pr == pr ) && (*pr == i );
+    b = (pi == nullptr) || (nullptr != pi);
+    return 0;
+}

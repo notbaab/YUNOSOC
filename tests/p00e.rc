@@ -1,0 +1,5 @@
+int myX;
+function : void foo(){
+    int x = 3;
+    int i = 5 + ::x;
+}

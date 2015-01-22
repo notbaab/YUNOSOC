@@ -1,0 +1,122 @@
+function : int _foo1()
+{
+	int x;
+	float y;
+	bool z;
+	const int ci = 2;
+	const float cf = 3.3;
+	const bool cb = false;
+	return 1;
+	return 2.4;
+	return true;
+	return x;
+	return y;
+	return z;
+	return 1 + 1;
+	return 1.1+2.2;
+	return 1 + 3.2;
+	return true && false;
+	return x + x;
+	return y + y; 
+	return x + y;
+	return z && z;
+	return ci;
+	return cf;
+	return cb;
+	return cx % cx;
+	return cf / ci;
+	return cb && !cb;
+	return;
+}
+function : float _foo2()
+{
+	int x;
+	float y;
+	bool z;
+	const int ci = 2;
+	const float cf = 3.3;
+	const bool cb = false;
+	return 1;
+	return 2.4;
+	return true;
+	return x;
+	return y;
+	return z;
+	return 1+1;
+	return 1.1+2.2;
+	return 1 + 3.2;
+	return true && false;
+	return x + x;
+	return y + y; 
+	return x + y;
+	return z && z;
+	return ci;
+	return cf;
+	return cb;
+	return cx % cx;
+	return cf / ci;
+	return cb && !cb;
+	return;
+}
+
+function : void _foo3()
+{
+	int x;
+	float y;
+	bool z;
+	const int ci = 2;
+	const float cf = 3.3;
+	const bool cb = false;
+	return 1;
+	return 2.4;
+	return true;
+	return x;
+	return y;
+	return z;
+	return 1+1;
+	return 1.1+2.2;
+	return 1 + 3.2;
+	return true && false;
+	return x + x;
+	return y + y; 
+	return x + y;
+	return z && z;
+	return ci;
+	return cf;
+	return cb;
+	return cx % cx;
+	return cf / ci;
+	return cb && !cb;
+	return;
+}
+
+function : bool _foo4()
+{
+	int x;
+	float y;
+	bool z;
+	const int ci = 2;
+	const float cf = 3.3;
+	const bool cb = false;
+	return 1;
+	return 2.4;
+	return true;
+	return x;
+	return y;
+	return z;
+	return 1+1;
+	return 1.1+2.2;
+	return 1 + 3.2;
+	return true && false;
+	return x + x;
+	return y + y; 
+	return x + y;
+	return z && z;
+	return ci;
+	return cf;
+	return cb;
+	return cx % cx;
+	return cf / ci;
+	return cb && !cb;
+	return;
+}

@@ -1,0 +1,59 @@
+function : int main() {
+    if (false) {
+        return 0;
+    }
+}
+
+function : int f()
+{
+  if(false) { 
+  if(false) {
+  if(false) {
+  if(false) {
+  if(false) {
+    return;
+  }
+  }
+  }
+  }
+  }
+  else { return f(); }
+}
+
+function : int f1() {
+    if (false) {
+        return 0;
+    }
+
+    return 1;
+}
+
+function : int f2() {
+    while( true ){
+       return(5); 
+    }
+}
+
+function : float f3()
+{
+float a;
+float b;
+	if(true)
+	{
+	while( true )
+	{ 
+		while( true )
+		{
+			while( true )
+			{
+				return a;
+			}
+		}
+	}
+	}
+}
+
+function : float f4() {
+  int i;
+  i = 2;
+}

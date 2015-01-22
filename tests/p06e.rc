@@ -1,0 +1,11 @@
+function : int g() {
+    return 3;
+}
+
+function : float f() {
+    return g();
+}
+
+function : int main() { 
+    return 0;
+}

@@ -1,0 +1,8 @@
+
+float* x;
+
+function : void main()
+{
+  new x;
+  delete x;
+}

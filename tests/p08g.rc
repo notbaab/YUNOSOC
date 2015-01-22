@@ -1,0 +1,5 @@
+function : int main() {
+    const float i = 2.5;
+    int j = i;
+    return 0;
+}

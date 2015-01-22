@@ -1,0 +1,9 @@
+float x;
+
+function: float _foo(bool x) {
+    return x;
+}
+
+function: int main() { 
+    bool x = _foo();
+}

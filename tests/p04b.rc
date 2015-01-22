@@ -1,0 +1,11 @@
+/* Check 4 (p04b.rc) */
+
+float r;
+int i;
+
+function : int main() {
+    if (r + i) {
+        i = i + 1;
+    }
+    return 0;
+}

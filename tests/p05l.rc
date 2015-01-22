@@ -1,0 +1,10 @@
+/* Check 5 (p05l.rc) */
+
+int i;
+function : int fiVi(int &a) { int xxx; return xxx; }
+float r;
+
+function : int main() {
+    i = fiVi(fiVi(i));
+    return 0;
+} 

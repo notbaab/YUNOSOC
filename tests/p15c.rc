@@ -1,0 +1,15 @@
+function : int* fip(float a) { int* x;  return x; }
+float r;
+int i;
+int* t = nullptr;
+float* f = &r;
+
+function : int main() {
+ int* y;
+ y = fip(r);
+ i = *(y) + 5;
+ *y = 10;
+ i = fip(5.55);
+ return 0;
+} 
+

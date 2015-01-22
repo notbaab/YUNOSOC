@@ -1,0 +1,8 @@
+function: float _foo(bool a1, int a2, float a3) {
+    return _foo(true, 2, 1);
+}
+
+function: int main() { 
+    float x = _foo(true, 2, _foo(false, 3, 4.5));
+}
+

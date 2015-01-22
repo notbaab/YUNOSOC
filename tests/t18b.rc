@@ -1,0 +1,16 @@
+function : void foo(int* &x)
+{}
+
+function : void baz(int* y)
+{}
+
+function : void bar(float* z)
+{}
+
+function : void main()
+{
+  int x;
+  foo(&*&x);
+  baz(&*&x);
+  bar(&*&x);
+}

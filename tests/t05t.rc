@@ -1,0 +1,14 @@
+function: float _foo(bool &a1, int &a2, float &a3) {
+    return 3.5;
+}
+
+function: int main() { 
+    int i;
+    bool b;
+    float f;
+    if (_foo(b, i, f)) {
+        f = _foo(b, i, f);
+    }
+}
+
+

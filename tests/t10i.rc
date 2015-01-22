@@ -1,0 +1,10 @@
+const int zz = 15;
+const int zy = ((zz ^ 8) + 2) & 7;
+const int a = zy | 4;  // this should be 5
+
+int x[a+(a+a)-a];
+bool y[-a + -a]; // -10
+
+function : void main()
+{
+}

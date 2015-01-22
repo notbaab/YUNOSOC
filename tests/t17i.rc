@@ -1,0 +1,16 @@
+
+function : void _foo_val(int** x)
+{
+}
+
+function : void _foo_ref(int** &x)
+{
+}
+
+function : void _main()
+{
+    int y[10];
+
+    _foo_ref(y); //int** <-> int[][] => error
+    _foo_val(y); //int** <- int[][] => error
+}

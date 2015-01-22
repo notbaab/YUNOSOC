@@ -1,0 +1,7 @@
+function : void main()
+{
+  int x = 5;
+  int y = 5 + 6 + 6 + 7 + 8;
+  int z = x;
+  bool w = 5;
+}

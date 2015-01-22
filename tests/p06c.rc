@@ -1,0 +1,11 @@
+function : int f() {
+  return f();
+  return(2.0);
+}
+function : int main() {
+  return 0;
+}
+
+function : int wrong(){
+    return false;
+}

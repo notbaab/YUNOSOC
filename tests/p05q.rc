@@ -1,0 +1,14 @@
+float a;
+
+function : float & f() {
+    return a;
+}
+
+
+function : void main() {
+    int b;
+    float x = f() + b;
+   
+}
+
+

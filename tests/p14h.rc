@@ -1,0 +1,19 @@
+/* Check 14 (p14h.rc) */
+
+structdef MYS {
+    int x;
+    int y;
+    int z;
+    function : void foo() {
+        this.x = 8;
+        this.z = this.y;
+        this.foo();
+    }
+    function : void bar() {
+        this.foo();
+    }
+};
+
+function: int main() {
+    return 0;
+}

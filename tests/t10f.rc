@@ -1,0 +1,11 @@
+function : int foo()
+{
+  return 2;
+}
+
+int x[foo()];
+
+function : int main()
+{
+  return foo();
+}

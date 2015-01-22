@@ -1,0 +1,9 @@
+int x;
+
+function: int& _foo() {
+    return &x;
+}
+
+function: int main() { 
+    _foo()++;
+}

@@ -1,0 +1,13 @@
+function : bool* _foo()
+{
+  bool b[10];
+  return b;
+}
+
+int x;
+
+function : void _main()
+{
+  x = _foo()[4];
+}
+

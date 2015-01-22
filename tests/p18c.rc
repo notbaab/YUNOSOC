@@ -1,0 +1,6 @@
+function : int main() {
+    float *x;
+    int y;
+    x = &y;
+    return y;
+}

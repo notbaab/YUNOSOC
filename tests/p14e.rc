@@ -1,0 +1,17 @@
+/* Check 14 (p14e.rc) */
+
+structdef TX { int i; };
+
+structdef TR {
+    TX *r;
+    int i;
+};
+
+function : int main() {
+    float r;
+    int i;
+    TR* vtpTR;
+
+    r = vtpTR.r;
+    return 0;
+}

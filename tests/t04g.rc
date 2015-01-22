@@ -1,0 +1,15 @@
+function: void _foo() {
+    const int i = 5;
+
+    if (2+i) {
+        i;
+    }
+    
+    if (i && true) {
+        f;
+    }
+
+    if (false && !i) {
+        i;
+    }
+}

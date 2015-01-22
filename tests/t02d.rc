@@ -1,0 +1,8 @@
+function : void main() {
+    const float w = 4.0;
+    float x = 4.0;
+    --++5;
+    ++w--;
+    ++x--;
+}
+

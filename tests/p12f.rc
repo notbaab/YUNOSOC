@@ -1,0 +1,18 @@
+/* Check 12 (p12f.rc) */
+
+function : int main() {
+    bool b;
+    bool c;
+    
+    while( b ){
+        while( c ){
+            b = false;
+            if (b && c) {
+                break;
+            }
+            continue;
+        }
+        break;
+    }
+    return 0;
+}

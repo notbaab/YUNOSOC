@@ -1,0 +1,13 @@
+/* Check 3 (p03a.rc) */
+
+float r;
+int i;
+bool b;
+
+function : int main() {
+    r = i;
+    r = 2 + 3.0 + 4 + 5;
+    i = 27 - 5;
+    b = false;
+    return 0;
+ }

@@ -1,0 +1,13 @@
+int* vti1;
+float* vti2;
+
+int *vti3;
+float *vti4;
+
+function : void _main()
+{
+	bool b;
+    b = vti1 == vti2;
+    b = vti3 == vti4;
+}
+

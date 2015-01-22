@@ -1,0 +1,9 @@
+/* Check 5 (p05d.rc) */
+
+int i;
+function : int fii(int a) { int xxx; return xxx; }
+
+function : int main() {
+    i = fii();
+    return 0;
+}

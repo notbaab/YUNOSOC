@@ -1,0 +1,13 @@
+/* Check 1 (p01m.rc) */
+
+bool b;
+int i;
+float r;
+
+function : int main() {
+ b = i < r;
+ b = r <= r;
+ b = r >= i;
+ b = i > i; 
+ return 0;
+} 

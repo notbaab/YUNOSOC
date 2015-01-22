@@ -1,0 +1,4 @@
+/* Check 10 (p10e.rc) */
+
+const int i1 = 0;
+bool a[i1];

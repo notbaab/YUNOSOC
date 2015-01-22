@@ -1,0 +1,10 @@
+
+int b;
+float* pf;
+int* pi;
+const bool tr = true;
+
+function : int main() {
+    pf = (float*)pi;
+    return (int)(bool)(float)tr;
+}

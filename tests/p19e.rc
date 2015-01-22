@@ -1,0 +1,15 @@
+structdef MS {
+	int a;
+	int b;
+	function : int doo() { return 0; } // has no effect on size!
+};
+MS t;
+function : void main() {
+	int arr[4];
+	
+	const int x4 = sizeof(int[3]); // should be 12
+	arr[x4-8]=0;
+	
+	const int x8 = sizeof(t); // should be 8
+	arr[x8-4]=0;
+}

@@ -1,0 +1,7 @@
+function : void main()
+{
+  int x;
+  exit(++x);
+  exit(x);
+  exit(x--);
+}

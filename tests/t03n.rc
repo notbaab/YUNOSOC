@@ -1,0 +1,6 @@
+float x;
+function: void _foo() {    
+    bool x;
+    float y;
+    y = x;
+}

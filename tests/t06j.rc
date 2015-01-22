@@ -1,0 +1,12 @@
+function : int& __foo()
+{
+	int x;
+
+	return x;
+}
+
+function : void __main()
+{
+    __foo() = 3;
+    __foo() = 3.5;
+}

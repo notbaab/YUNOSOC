@@ -1,0 +1,12 @@
+structdef MS {
+  float a;
+  float b;
+};
+
+MS* x;
+float y;
+
+function : void main()
+{
+  y = (x->a + y) / (*x).b;
+}

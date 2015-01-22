@@ -1,0 +1,12 @@
+
+function : int main() {
+    int** ipp;
+
+    new ipp;
+    new (*ipp);
+
+    delete ipp;
+    delete (*ipp);
+
+    return **ipp;
+}

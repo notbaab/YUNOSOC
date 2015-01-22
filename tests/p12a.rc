@@ -1,0 +1,9 @@
+/* Check 12 (p12a.rc) */
+
+function : int main() {
+    bool b;
+    while( b ){
+        break;
+    }
+    return 0;
+}

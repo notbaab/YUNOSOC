@@ -1,0 +1,13 @@
+float r2;
+float a1[7];
+float a2[7][7];
+
+function : void main()
+{
+  float arr[7][7];
+  float x;
+  float y;
+
+  x = arr[0][0] + 9.9;
+  arr[1][2] = y;
+}

@@ -1,0 +1,11 @@
+const float cf = 12.34;
+int ai[20];
+float f;
+const bool fa = false;
+
+function : int main() {
+    ai[(int)cf] = (int)(bool)cf;
+    ai[(int)cf + (int)cf];	// should complain on out-of-bounds
+    f = ai[(int)fa];
+    return (int)f;
+}

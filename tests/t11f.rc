@@ -1,0 +1,10 @@
+int x;
+float y;
+int z[10];
+
+function : void main()
+{
+  x = z[y];
+  x = z[x][x];
+}
+

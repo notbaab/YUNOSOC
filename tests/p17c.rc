@@ -1,0 +1,27 @@
+const bool cb = nullptr != nullptr;
+int a;
+int * b = &a;
+int* c = &a;
+float x;
+float* y = &x;
+int * p = nullptr;
+bool r;
+
+function : int main() {
+
+    r = (a == *c);
+    b++;
+    r = (b == ++c);
+   
+    r = (*b != a);
+ 
+    r = (--c == &a);
+
+    r = (y != b);
+
+    r = (p == y);
+
+    p++;
+
+    return 0;
+}

@@ -1,0 +1,11 @@
+bool b;
+int* pi;
+float r;
+float* pr;
+int i;
+
+function : int main() {
+    b = i != pi;
+    b = pr == *pi;   
+    return 0;
+}

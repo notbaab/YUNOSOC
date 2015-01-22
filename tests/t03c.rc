@@ -1,0 +1,6 @@
+function: void _foo() {    
+    int *x;
+    
+    *x = 1;
+}
+

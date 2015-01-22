@@ -1,0 +1,9 @@
+int x;
+int arr[7];
+int y[7][2];
+const int c = 6;
+
+function : void main()
+{
+  x = y[c-5][c+1];
+}

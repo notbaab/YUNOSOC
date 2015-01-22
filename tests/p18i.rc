@@ -1,0 +1,7 @@
+function : void main()
+{
+   int a;
+   float b = &(float)(a*a);
+   
+   return;
+}

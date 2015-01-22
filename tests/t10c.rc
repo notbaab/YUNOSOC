@@ -1,0 +1,5 @@
+int a[5 < 5];
+
+function : void main()
+{
+}

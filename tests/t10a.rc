@@ -1,0 +1,7 @@
+int x;
+
+function : void main()
+{
+  int array1[10+10];
+  int array2[10+x+10];
+}

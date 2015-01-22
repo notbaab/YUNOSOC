@@ -1,0 +1,26 @@
+function : void func(){
+    return 0;
+}
+
+function : void func2(){
+    if(false){
+	return 0;
+    }
+}
+
+function : void func3(){
+    if(false){
+	return;
+    }
+}
+
+function : void func4(){
+    int i;
+    i = i + i;
+}
+
+function : void func5(){
+    int i;
+    i = i + i;
+    return;
+}

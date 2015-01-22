@@ -1,0 +1,4 @@
+const int i = 5;
+const int i2 = *&i;
+function : void f() { *&i = 10; }
+

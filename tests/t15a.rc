@@ -1,0 +1,7 @@
+float*** ptr = nullptr;
+float y;
+
+function : void main()
+{
+  y = ***ptr;
+}

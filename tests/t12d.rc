@@ -1,0 +1,36 @@
+function : void main()
+{
+    k = k;
+    
+    break;  // error 
+    
+    while(b) { 
+	i = i / 2;
+	if(i == 10) {
+	    continue;
+	}
+    }
+    
+    if(b) {
+	continue;    // error
+    }
+    
+    while( k != i) {
+	i = i / 2;
+	if( i < 10 ) {
+		k = k + 5;
+		if( k == 20) {
+		    break;
+		}
+		break;
+		i = 2;
+	}
+	if( i == 10 ) {
+	    continue;
+	}
+    }
+
+    if( b ) {
+	continue;    // error
+    }
+}

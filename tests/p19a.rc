@@ -1,0 +1,13 @@
+
+int x;
+
+function : void main() {
+	int arr[4];
+	
+	const int x1 = sizeof(float); // should be 4
+	arr[x1-0]=0;
+	
+	const int x5 = sizeof(x); // should be 4
+	arr[x5-0]=0;
+	
+}

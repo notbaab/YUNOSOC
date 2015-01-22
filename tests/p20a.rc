@@ -1,0 +1,22 @@
+bool b;
+bool* pb;
+int i;
+int* pi;
+float f;
+float* pf;
+
+function : int main() {
+    i = (int) b;
+    i = (bool) i;
+    i = (int) *pi;
+    i = (int) pi;
+
+    pf = (float*) pi;
+
+//how about throwing down the nonconverting cast example!
+    *pf = f;
+    pi = (int*)pf;
+    i = *pi;
+   
+    return 0;
+}

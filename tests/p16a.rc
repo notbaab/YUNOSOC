@@ -1,0 +1,20 @@
+
+function : int main() {
+    int i;
+    int* p1;
+    int* p2;
+    int* p3;
+
+    new p1;
+    new p2;
+    new p3;
+
+    i = *p1;
+    i = *p3 + *p2;
+
+    delete p3;
+    delete p2;
+    delete p1;
+
+    return *p2; // Bad idea
+}

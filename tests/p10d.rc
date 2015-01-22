@@ -1,0 +1,5 @@
+/* Check 10 (p10d.rc) */
+
+int i;
+int i1 = 2;
+bool a[i1];

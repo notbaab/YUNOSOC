@@ -1,0 +1,14 @@
+function: bool _foo(bool a1, float a2, int a3) {
+    int x;
+    return (x!=main());
+}
+
+function: int main() { 
+    float f;
+    bool b = true;
+    int i;
+    if (_foo(b, f, i&i) != _foo(b, i&2, i&3)) {
+        b = _foo(true||false, 2+3.4, 3*7^4);
+    }
+}
+

@@ -1,0 +1,5 @@
+function : void main()
+{
+  int* x;
+  x = &x;
+}

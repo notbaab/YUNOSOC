@@ -1,0 +1,10 @@
+function : int foo(int x)
+{
+  return x;
+}
+
+function : int main()
+{
+  const int e = foo(2);
+  return foo(2);
+}

@@ -1,0 +1,10 @@
+/* Check 5 (p05m.rc) */
+
+int i;
+function : int fiVr(float &a) { int xxx; return xxx; }
+float r;
+
+function : int main() {
+    i = fiVr(3, r);
+    return 0;
+} 

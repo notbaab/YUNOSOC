@@ -1,0 +1,11 @@
+function : int main() {
+    int x;
+    int y;
+    int *z;
+
+    z = &x; // &x in this example is not a modifiable l-val
+    &x = nullptr; // Error, since not a modifiable l-val
+    y = *&x; // *&x is essentially just x, so OK.
+    *&x = y; // The * reverses the &x, making it a modifiable l-val again
+    &*z = z; // Error, result of address-of is not a modifiable l-val
+}

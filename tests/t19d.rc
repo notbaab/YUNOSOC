@@ -1,0 +1,22 @@
+structdef MS { 
+     int a;
+     int b; 
+     function : int doo() { return 0; } // has no effect on size! 
+}; 
+
+int x; 
+const float y = 55.5; 
+bool z[4]; 
+MS t;
+
+function : void main() { 
+     foo(z, z); 
+     x = sizeof(float); // should be 4 
+     x = sizeof(MS);  // should be 8 
+     x = sizeof(float***); // should be 4 
+     x = sizeof(int[3]); // should be 12 
+     x = sizeof(x);  // should be 4 
+     x = sizeof(y);  // should be 4 
+     x = sizeof(z);  // should be 16 
+     x = sizeof(t);  // should be 8 
+} 

@@ -1,0 +1,18 @@
+structdef _MYS { 
+    int x;
+    int y; 
+    function : void f( int &x ) 
+    { x = x + 1; }
+    function : void _foo() {} 
+};
+
+function: int _foo (_MYS &x, int y) {
+    return (x.y + y);
+}
+
+function: void _main () {
+    _MYS x;
+    x.y = _foo(x, 2);
+}
+
+

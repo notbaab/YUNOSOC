@@ -1,0 +1,13 @@
+int x;
+int y[10];
+bool a1[10];
+bool a2[10][4];
+bool a3[10][4][5];
+bool z[10][4][5][1];
+
+function : void main()
+{
+  x = y[x][x];
+  x = z[x][x][x][x];
+  x = z[x][x][x][x][x];
+}

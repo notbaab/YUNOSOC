@@ -1,0 +1,10 @@
+/* Check 5 (p05n.rc) */
+
+function : float fvr(float a) { return 0.0; }
+int i;
+float r;
+
+function : int main() {
+    fvr(i, r);
+    return 0;
+}

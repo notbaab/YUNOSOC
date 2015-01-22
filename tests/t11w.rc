@@ -1,0 +1,11 @@
+float myArr[2];
+
+function : void _foo(float* &f)
+{
+}
+
+function : void _main()
+{
+  _foo(myArr);
+}
+
