@@ -2,15 +2,15 @@
 Do you want a very power testing framework? One that will show you your regression? Want a way automatically save test suites for latter?
 How about a tool that allows for easy sharing of tests? 
 
-If all those sound great, **you on the wrong fucking page**. You probably want [YUNO](https://github.com/bulatb/yuno). 
+If all those sound great, **your on the wrong fucking page**. You probably want [YUNO](https://github.com/bulatb/yuno). 
 
-This is YYUNOSOC. A perl script for those to lazy to learn YUNO. It loops over a directory called
+This is YYUNOSOC. A perl script for those to lazy to learn how YUNO works. It loops over a directory called
 tests, runs anything that has a .rc extension and compares the output your compiler got with an rc.out file. It then makes
 a pretty html page with the results. There are some arguments you can pass the script to make it not run the entire suite, see usage or type
 
     perl runTests.pl -h. 
 
-However if you don't want to learn YUNO you probaly are lazy and work scroll down to the usage section. Just run 
+However if you don't want to learn YUNO you probaly are lazy and won't scroll down to the usage section. Just run 
 
     perl runTests.pl
 In you compiler directory with the test directory provided here and then you don't have to read anything else if you 
@@ -21,7 +21,7 @@ really don't want to, then open results.html.
 Notice publicTest.pl needs to be in the same directory as RC and the test directory
 
 
-    +StarterCode
+    +CompilerCode
     +--src/
     +--lib/
     +--bin/
@@ -75,12 +75,11 @@ or force creation of a new rc.out file.
 
     -f --force  force output files to be generated with the reference compilers
 
-    -p --pass   automatically pass compilers 
-
 After the test is run it will give you a nice diff output in html called results.html
 
+##Origins
+The script was first passed down to me from a friend, who got it from a friend, who got it from another friend. The origins are a mystery to me but I couldn't find it anywhere else so I decided to make it better and release it as a tool. It was modified extensively by me in order to work with our project specification, use our reference compiler, and to allow command line arguments. The only thing untouched from the original script is the the html output. It is a work of genius and if I meet the person who made that I would probably by him a snack of some kind. 
 
 ##Complaints 
 Any complaints please send a box of cookies and a blood sacrifice to 
-
 699 8th Street, San Francisco, CA 94103
