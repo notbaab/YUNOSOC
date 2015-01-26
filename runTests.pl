@@ -15,6 +15,7 @@ my $html_output       = "results.html";
 my $testing_directory = "tests";
 my $rc_output_suffix  = "out";
 my $rc_suffix         = "rc";
+my $failedDir         = "failedTests";
 my $start_date_text   = "";
 my $finish_date_text  = "";
 my $total_passed      = 0;
@@ -40,11 +41,16 @@ my @only;
 my $pass;
 my $dir;
 my $resultFile;
-
+# make failed dir
+if(!(-e $failedDir)) {
+  print "Making dir";
+  mkdir $failedDir, 0777;
+}
 # Clean up any temporary files leftover since last time.
 `rm -f $testing_directory/*.tmp`;
 `rm -f $testing_directory/*.tmp1`;
 `rm -f $testing_directory/*.tmp2`;
+`rm $failedDir/*`; # could fail, nothing bad happens though
  # get command line options
 GetOptions(
     'force|f' => \$force,
@@ -272,7 +278,6 @@ for my $i (0 .. $#rc_files) {
 
   # Perform a diff on the two files you've created.
   my $diff_result = `diff $testing_directory/$rc_files[$i].tmp1 $testing_directory/$rc_files[$i].tmp2`;
-  # my $diff_result = `diff -Z $testing_directory/$rc_files[$i].tmp1 $testing_directory/$rc_files[$i].tmp2`;
 
   # Print out a hyphen and then the number of this test.
   print "- Test " . ($i + 1) . ": ";
@@ -293,6 +298,9 @@ for my $i (0 .. $#rc_files) {
     print "Failed";
     print color "reset";
     $total_failed++;
+    # copy the failed file to a failed directory, along with the out files
+    `cp $testing_directory/$rc_files[$i] $testing_directory/$rc_files[$i].tmp $testing_directory/$rc_files[$i].out $failedDir`
+    
   } else {
     $diff_outputs[$i] = "";
     $results[$i]      = 1;
