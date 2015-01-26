@@ -194,6 +194,7 @@ if (scalar(@rc_files) == 0) {
   exit 0;
 } 
 
+@rc_files = sort @rc_files;
 
 # Finished checking that all files have output files associated with them.
 print "done.\n";

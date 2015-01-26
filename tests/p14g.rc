@@ -8,7 +8,7 @@ structdef COMPILERSCLASS {
 };
 
 function : int main() {
-    COMPILERSCLASS compiler;
+    COMPILERSCLASS compilers;
 
     compilers.passClass();
 
