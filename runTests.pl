@@ -39,6 +39,7 @@ my @skip;
 my @only;
 my $pass;
 my $dir;
+my $resultFile;
 
 # Clean up any temporary files leftover since last time.
 `rm -f $testing_directory/*.tmp`;
@@ -52,8 +53,12 @@ GetOptions(
     'help|h' => \$help,
     'pass|p' => \$pass,
     'dir|d=s' => \$dir,
+    'result|r=s' => \$resultFile,
 );
 
+if($resultFile){
+  $html_output = $resultFile . ".html"
+}
 # usage message
 if($help){
   print "Usage: perlTest [so] range [d] directory [fp] 
