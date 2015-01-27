@@ -1,0 +1,10 @@
+structdef MYS { 
+ int x;
+ int y;
+ int x; // duplicate id x, error #1
+ int z; // duplicate id x, error #2
+ int x; // duplicate id x, error #2
+ int y;  // duplicate id y, error #3
+ int foo;
+ int foo;
+ }; 

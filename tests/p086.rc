@@ -1,0 +1,4 @@
+float i = 5/0.0;
+const float j = 0.0;
+float k = 10 / j;
+

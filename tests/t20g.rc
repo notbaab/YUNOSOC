@@ -2,13 +2,13 @@ int baz;
 float* rptr;
 structdef MS {
   MS* g[50];
-  BAZ* j;
+  int* j;
 };
 MS* iptr;
 MS* z;
 float* w;
 
-function : BAZ* main()
+function : int* main()
 {
   w = (MS*) (z->g[(int)50.0 + (-1)]->j);
   w = (MS*) (*(z->g[(int)50.0 + (-1)]->g[(int)50.0 - 1]->g[(-1) + 1]));

@@ -1,0 +1,15 @@
+structdef MYS {
+	int x;
+	int y;
+	int z;
+	float a;
+	bool b;
+};
+
+function : void foo() {
+	MYS* a;
+	int x;
+	
+	int c = x.x + (*a).z;
+	bool d = (*a).c;
+}

@@ -1,0 +1,83 @@
+/*single param functs*/
+function: bool foo( int &bob){ //func_1
+return false;
+}
+
+//all but function name same. 
+function: bool bar( int &bob){//func_2. Comparing to func_1
+return false;
+}
+
+function: bool bar( bool &bob){//func_3. Compare to func_1
+return false;
+}
+
+function: bool foo( bool &bob){//func_4. Compare to func_1 and func_3
+return false;
+}
+
+/* multi param functs
+ *
+ */
+function: bool foo( int &bob, float saget){ //func_5. compare to func_1
+return false;
+}
+/*
+function: bool foo( float &bob, int saget){ //func_6. compare to func_5 
+return false;
+}
+*/
+function: int foobar(int x, int y, int z){//func_7
+return 0;
+}
+
+function: int foobar(int x, int y, float z){//func_8 compare to func_7
+return 0;
+}
+
+function: int foobar(float x, int &y, int z){//func_9. compare to funct_7 and func_8
+return 0;
+}
+
+function: int foobar(int x){//func_10. compare to func_7 
+return 0;
+}
+
+function: int barfoo(int x){//func_11. compare to func_10 
+return 0;
+}
+
+function: int barfoo(int x, int y, int z){//func_12. compare to func_7 
+return 0;
+}
+
+/* the following tests that calls to these funcs generate errors when
+ * they should, as well as they test valid calls
+ */
+
+
+function: int main() {
+    int x = 1;
+    bool truth = true;
+
+    foo( x);    //VALID call to func_1
+//    foo(truth); //ERROR call to func_1
+    foo(truth);//VALID call to func_4
+//    foo(x);    //ERROR call to func_4
+   
+    bar(x );//VALID call to func_2
+//    bar(truth);//ERROR call to func_2
+    bar( truth);// VALID call to func_3
+
+    float y = 1.55; //introducing float for next calls
+    foo( x, x); //VALID call to func_5 using two ints
+    foo( x, y); //VALID call to func_5 ising (int,float)
+    foo(y,  y); //ERROR call to func_5 using (float,float)
+
+    foobar(x,x,x);//VALID call to func_7 (possibly more since ambiguous
+    foobar(x,y,x);//ERROR since float cant be int. (see func 7,8, and 9
+
+
+
+return 0;
+}

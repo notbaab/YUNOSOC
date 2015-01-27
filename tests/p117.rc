@@ -1,0 +1,9 @@
+function : int sumPointer(int intPtr[20]) {
+  return intPtr[1];
+}
+
+function: void main() {
+  int asdf [12] ;
+
+  sumPointer(asdf);
+}

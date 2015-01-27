@@ -1,0 +1,5 @@
+function: void foo(){
+	while(true){
+		continue;
+	}
+}

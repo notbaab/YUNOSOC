@@ -1,0 +1,24 @@
+function: void main() {
+int a[4];
+int x;
+int *r = &x;
+int *s = a;
+
+float farr[2];
+float *fp =  farr;
+r = nullptr;
+
+//from discussion slides
+
+float fa2fa3[2][3] ;
+float *fa2p[2];
+fa2p = fa2fa3;
+float ***fa2ppp[2] ;
+fa2ppp = nullptr;
+
+//illegal
+float **fpp = fa2fa3;
+
+int **c1 = a;
+
+}

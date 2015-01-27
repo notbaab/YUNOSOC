@@ -1,0 +1,52 @@
+structdef PSTRUCT
+{
+    int a;
+    int b;
+    int* x;
+    int* y;
+};
+
+function : int main()
+{
+    bool** x = nullptr;
+    float*** y = nullptr;
+    int** z[5];
+    int **a;
+    int *b;
+
+    PSTRUCT *p;
+
+    p->a = *p->x;
+   (*p).a = p->b;
+
+    a = x;
+    *a = *x;
+    x = a;
+
+    z[0] = x;
+    *z[0] = b;
+    b = *z[0];
+
+    *y = z[0];
+    **y = *z[0];
+    z[0] = *y;
+
+    if (y == x){} // Fail
+    if (y != x) {} // Fail
+    if (y == nullptr){} // Pass
+    if (x != nullptr) {} // Pass
+    if (nullptr == nullptr) {} // Pass
+    if (*y == x) {} // Fail
+    if (z[0] == a) {} // Pass
+    if (**a == *b) {}// Pass
+    if (*a == b) {} // Pass
+    if (a == b) {} // Fail
+    if (*y == a) {} // Fail
+
+    y++;
+    ++y;
+    a = z[0]++;
+    *(z[0]++) = *a;
+    
+    return 0;
+}

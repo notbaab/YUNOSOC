@@ -1,0 +1,70 @@
+function : void func4(){
+    int i;
+    i = i + i;
+}
+
+function : void func4(int &a){
+    int i;
+    i = i + i;
+    return;
+}
+
+structdef AA {
+    int integer;
+    function : void x() { return;}
+    function : void y(int b) { return; }
+    function : int foo() { return 0; }
+    function : int foo(int a) { return a; }
+    function : int foo(bool a) { return (int) a;}
+    function : float foo(float a, float b) { return a + b; }
+    function : int foo(int &a, int &b) { return a + b; }
+};
+
+structdef BB {
+    int integer;
+    function : void x() { return;}
+    function : void y(int b) { return; }
+    function : int foo() { return 0; }
+    function : int foo(int a) { return a; }
+    function : int foo(int a, int b) { return a + b; }
+    function : float foo(float a, float b) { return a + b; }
+};
+
+function : void x() { return;}
+function : void y(int b) { return; }
+function : int foo() { return 0; }
+function : int foo(int a) { return a; }
+function : int foo(int a, int b) { return a + b; }
+function : float foo(float a, float b) { return a + b; }
+
+
+function : BB functest(AA b)
+{
+    BB *ptr;
+    return *((BB *) ((int *) &ptr));
+}
+
+function : AA functest(BB a)
+{
+    AA *ptr;
+    return *((AA *) ((bool *) &ptr));
+}
+
+function : int main() {
+
+    float e;
+    float f;
+    int i;
+    int j;
+    const int l = 0; 
+    const int m = 1; 
+    AA a;
+    BB b;
+
+    a.foo();
+    a.foo(e, f);
+    f = (float) a.foo() + b.foo();
+    a.foo((int)((float)((int)( (int *) false))));
+    
+    return 0;
+}

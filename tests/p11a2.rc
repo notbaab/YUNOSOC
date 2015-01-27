@@ -1,0 +1,50 @@
+function : void main() {
+    int a = 0;
+    int not_array = 4;
+    const int not_in_bounds = 0xE0F;
+
+    // Type of expression referenced by array subscript (int) is not of
+    // array or pointer type.
+    a = a + not_array[1];
+
+    int int_10[10];
+
+    // Index value of 3599 is outside legal range [0,10).
+    a = a + int_10[not_in_bounds];
+
+    // Index value of -1 is outside legal range [0,10).
+    a = int_10[-1];
+}
+
+function : void multidimensional_arrays() {
+
+    int var_not_in_bounds = 0xE0F;
+    int int5[5];
+    int int5_10[5][10];
+    int int5_10_4 [5][10][4];
+    int* int5_10_p [5][10];
+    int* int5_10_4_p[5][10][4];
+
+    // int5_10[2] = int5_10_4[3][9]; // WNBT
+    // int5_10_4[1] = int5_10_p[1];  // WNBT
+
+    // Index value of 10 is outside legal range [0,10).
+    int5_10[10][4] = int5_10_p[1][8][3];
+
+    int5[0] = int5_10_4_p[0xE0F][3][9][4];
+}
+
+function : void fn(int i10[10], int i10_alias[10], int* intp) {
+    return;
+}
+
+function : void test_function_calls() {
+    int int10[10];
+
+    // Argument of type int[10] not assignable to value parameter i10,
+    // of type int[10].
+    //
+    // Argument of type int[10] not assignable to value parameter i10_alias,
+    // of type int[10].
+    fn(int10, int10, int10);
+}

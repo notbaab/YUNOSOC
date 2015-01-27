@@ -1,0 +1,14 @@
+function: float foo(float x) {
+return 0;
+}
+
+
+//no error
+function: float foo(float x, float y, float z) {
+return 0;
+}
+
+function: int main() {
+foo(1); //error
+return 0;
+}

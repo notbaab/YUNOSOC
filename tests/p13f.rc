@@ -1,0 +1,13 @@
+/*check 13*/
+structdef MYS {
+  int x;
+  MYS() {} // ctor – no error
+  MYS(int x) {} // OK, legal overload – no error
+  MYS(float x) {} // OK, legal overload – no error
+  ~MYS() {} // dtor – no error
+  FOO() {} // error13b_Ctor - name does not match struct
+  ~BAR() {} // error13b_Dtor - name does not match struct
+  MYS() {} // error9_Decl – dup overload
+  MYS(int y) {} // error9_Decl – dup overload
+  ~MYS() {} // error9_Decl – dup overload
+};

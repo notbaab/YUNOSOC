@@ -1,0 +1,10 @@
+
+function : int main () {
+	int x = 2 + 2;
+		
+	while ( 4.8 ) {
+		x = x * 2;
+	}
+	
+	return x;
+}

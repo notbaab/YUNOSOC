@@ -1,0 +1,22 @@
+function : int foo() {
+	return 3;
+}
+
+function : void baz(int &x) {
+	return;
+}
+
+int i = 3;
+function : int & quz() {
+	return &i;
+}
+
+function : void main() {
+	int x;
+	bool y = false;
+	baz(4);
+	baz(y);
+	
+	++foo();
+	quz()++;
+}

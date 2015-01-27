@@ -1,0 +1,9 @@
+function : int foo() {
+	int x = 0;
+	int y = x++;
+	int w = x++ + --y;
+	
+	float z = 1.4;
+	z = z++ + --z;
+	return w;
+}

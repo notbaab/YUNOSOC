@@ -1,0 +1,7 @@
+
+function : int main() {
+    const int a = -1;
+    const int b = a + 5;
+
+    return b;
+}

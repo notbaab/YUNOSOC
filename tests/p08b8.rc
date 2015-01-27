@@ -1,0 +1,8 @@
+int test = 10;
+
+//not known at compile time
+const int x =test; 
+
+function: int main() {
+return 0;
+}

@@ -1,0 +1,48 @@
+//legal constant
+const int x1 = 0;
+const bool x2 = true;
+const float x3 = 0.0;
+
+static int x4 = 5;
+float x5 = 6;
+
+//not known at compile time error x3
+const int x6= x4;
+const bool x7 = x5 < 3;
+const float x8 = x5 - 0.0;
+
+function: void voidfunc() {
+  return;
+}
+function: float floatfunc() {
+  return x5;
+}
+function: int intfunc() {
+return x1;
+}
+
+function: bool boolfunc() {
+return x2;
+}
+
+function : int main() {
+  const int succeed = x1;
+  
+  //not known at compile time x3
+  const int fail1 = x4;
+  const bool fail2 = x5 > 2;
+  const float fail3 = x5 - 0.1;
+  //const not assignable
+  const int fail4 = 0.0;
+  const bool fail5 = 3;
+  const float fail6 = x2;
+  
+  float succeed2 = intfunc();
+  
+  //not assignable stuff
+  int fail7 = floatfunc();
+  bool fail8 =intfunc();
+  float fail9 = boolfunc();
+  
+  return 0;
+}

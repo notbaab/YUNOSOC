@@ -1,0 +1,13 @@
+structdef NESTED {
+	int a;
+	int b;
+};
+
+structdef TOP {
+	int x;
+	int y;
+	NESTED* nested;	// valid
+	TOP* invalid;	// invalid
+	TOP* valid;		// valid
+	NESTED* nested;  // invalid
+};

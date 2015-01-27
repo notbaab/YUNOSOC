@@ -1,0 +1,36 @@
+structdef MS {
+    int a;
+    int b;
+
+    function : int doo() { return 0; } // has no effect on size!
+};
+int x;
+const float y = 55.5;
+bool z[4];
+MS t;
+function : void foo(bool &p1[4], bool* p2) {
+    x = sizeof(p1); // should be 16
+    x = sizeof(p2); // should be 4
+}
+function : void main() {
+    foo(z, &z[0]);
+    x = sizeof(float); // should be 4
+    x = sizeof(MS); // should be 8
+    x = sizeof(float***); // should be 4
+    x = sizeof(int[3]); // should be 12
+    x = sizeof(x); // should be 4
+    x = sizeof(y); // should be 4
+    x = sizeof(z); // should be 16
+    x = sizeof(t); // should be 8
+
+    // added to test correct size is returned
+    int arr[1];
+    arr[sizeof(float)]; // should be 4
+    arr[sizeof(MS)]; // should be 8
+    arr[sizeof(float***)]; // should be 4
+    arr[sizeof(int[3])]; // should be 12
+    arr[sizeof(x)]; // should be 4
+    arr[sizeof(y)]; // should be 4
+    arr[sizeof(z)]; // should be 16
+    arr[sizeof(t)]; // should be 8
+}

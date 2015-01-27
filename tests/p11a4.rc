@@ -1,0 +1,19 @@
+function : void main() {
+    const int cc = 1;
+
+    float a[10];
+
+    float b[10];
+
+    float c[10][2]; // This results in an array with 2 rows, 10 cols
+
+    float * d;
+
+    c[1][9] = a[2];
+
+    // Type of index expression in array reference (float) not equivalent
+    // to int.
+    b[b[b[b[2] - cc] + cc] - 1] = c[1][9];
+
+    a[2] = d[0];
+}

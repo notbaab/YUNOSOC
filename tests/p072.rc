@@ -1,0 +1,4 @@
+function : int main() {
+	exit(1);
+	return 1;
+}

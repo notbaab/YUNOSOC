@@ -1,0 +1,18 @@
+function : void legal_while() {
+    while (true) {
+        break;
+    }
+
+    while (true) {
+        continue;
+    }
+
+    while (2 == 3) {
+        if (true) {
+            continue;
+        }
+        else {
+            break;
+        }
+    }
+}

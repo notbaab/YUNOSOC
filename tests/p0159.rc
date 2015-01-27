@@ -1,0 +1,9 @@
+function : int main() {
+	int x;
+
+	x = true | 2;
+	x = 3.0 | false;
+	x = 2 | 3.0;
+	
+	return x;
+}

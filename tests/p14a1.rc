@@ -1,0 +1,49 @@
+structdef TWO_INT_FIELDS {
+        int x;
+        int y;
+    };
+
+structdef TWO_FUNCTIONS {
+    int fn1;
+
+    bool fn2;
+};
+
+structdef ONE_ARRAY {
+    int int5 [5];
+};
+
+TWO_INT_FIELDS two_ints;
+TWO_FUNCTIONS two_functions;
+ONE_ARRAY one_int5;
+
+int a = two_ints.x;
+
+int b = two_ints.y + a;
+
+int c = two_functions.fn1;
+
+int d = one_int5.int5[1] + b;
+
+bool e = two_functions.fn2 && true;
+
+structdef S {
+    int v_if_true;
+
+    bool flip_b;
+
+    float * echo_f;
+};
+
+function : void legal_calls() {
+
+
+    S struct_instance;
+    float f = 2.0;
+
+    bool a = struct_instance.flip_b;
+
+    int b = struct_instance.v_if_true;
+
+    float *c = struct_instance.echo_f;
+}

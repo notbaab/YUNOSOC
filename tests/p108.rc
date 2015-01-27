@@ -1,0 +1,16 @@
+function : void main() {
+
+    // Index expression value (0) in array declaration must be > 0.
+    int a[0];
+
+    // Index expression type (float) in array declaration not equivalent to int.
+    float b[1.0];
+
+    // Index expression value (-96) in array declaration must be > 0.
+    bool c[-96];
+
+    int d = 4;
+
+    // Value of index expression not known at compile time.
+    int e [d];
+}

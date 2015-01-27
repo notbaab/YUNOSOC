@@ -1,0 +1,11 @@
+int myArray[20] ;
+int myInt;
+//int *myPtr;
+const int c = 5;
+
+function: void main() {
+  myArray[5+c] = myArray[6-c];
+  myArray[myInt] = 15;
+  //myPtr = myArray;
+  //myPtr[c] = 100;
+}

@@ -1,0 +1,18 @@
+function : void main() {
+	int *x;
+	int ***z;
+	bool *y;
+	
+	x++;
+	++x;
+	x--;
+	--x;
+	y++;
+	++y;
+	y--;
+	--y;
+	z++;
+	++z;
+	z--;
+	--z;
+}

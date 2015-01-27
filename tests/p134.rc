@@ -1,0 +1,20 @@
+
+structdef MYS {
+  int x;
+  int y;
+  int *z;
+  MYS* recursivePtr;
+};
+structdef MYS2 {
+  int x;
+  int y;
+  int *z;
+  MYS2 * a[5];
+  MYS2* recursivePtr;
+};
+
+function: int main() {
+  MYS mys3[5];
+
+return 0;
+}

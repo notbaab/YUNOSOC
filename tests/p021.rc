@@ -1,0 +1,11 @@
+function : int foo() {
+	bool x;
+	int w;
+	x = true;
+	w = x++;
+	w = ++x;
+	w = x--;
+	w = --x;
+	w = 3++;
+	return 3;
+}

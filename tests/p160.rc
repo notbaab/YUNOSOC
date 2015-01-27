@@ -1,0 +1,13 @@
+const int c = 5;
+
+function : void main() {
+	delete c;
+	delete (2+2);
+
+	int x = 4;
+	delete x;
+
+	new c;
+	new (2+2);
+	new x;
+}

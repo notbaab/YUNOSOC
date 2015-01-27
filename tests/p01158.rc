@@ -1,0 +1,5 @@
+function : void foo() {
+int i = 1; 
+float j = 1.0;
+float k = i / j;
+}

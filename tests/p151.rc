@@ -1,0 +1,15 @@
+function : void foo(int * i) {
+
+ }
+
+ function : void foo(bool * i) {
+
+ }
+
+ function : void foo(float * i) {
+
+ }
+
+ function : void foo(float ** i) {
+
+ }

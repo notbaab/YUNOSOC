@@ -1,0 +1,20 @@
+structdef STRUCT {
+	int x;
+};
+
+function : void main() {
+	STRUCT *ptr;
+	STRUCT *s;
+	int *ptr2;
+	int *w;
+	int **y;
+	int z;
+	bool *b;
+	float *f;
+	
+	ptr = w;
+	ptr2 = b;
+	ptr2 = y;
+	ptr2 = z;
+	s->x = w;
+}

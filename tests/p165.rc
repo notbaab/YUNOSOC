@@ -1,0 +1,7 @@
+function : void main() {
+	int x;
+	bool y;
+	
+	new 3;
+	new x;
+}

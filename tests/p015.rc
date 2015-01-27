@@ -1,0 +1,7 @@
+// All these lines should compile without error.
+
+int a = 1 + 2 - 3 / 4;
+
+float b = (1.0 + 5) / 0755 + 0x88;
+
+int c = (9 / 2) % 3;

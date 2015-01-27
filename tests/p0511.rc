@@ -1,0 +1,18 @@
+function : int foo(int i, int j) {return i+j;}
+function : void bar(float k) {}
+function : void baz(int &x){}
+function : int &retByReference() {int i; return i;}
+
+function : int main() {
+	int x = 0;
+	x = x + foo(1, 2);
+
+	bar(x);
+
+	baz(x);
+
+	retByReference() = 5;
+
+	return 0;
+}
+	

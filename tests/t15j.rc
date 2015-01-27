@@ -16,7 +16,7 @@ function : S2* foo2(S2* y) { return y; }
 function : S1* foo3(S1* &z) { return z; }
 
 S1* a;
-PTR2 b;
+S2* b;
 S1* c;
 
 function : void main()

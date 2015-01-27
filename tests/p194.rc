@@ -1,0 +1,6 @@
+function : void main() {
+	int x;
+	x = sizeof(3);
+	x = sizeof(4.0);
+	x = sizeof(true);
+}

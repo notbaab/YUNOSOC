@@ -1,0 +1,7 @@
+//Casting on the left
+int x;
+function : void main() {
+
+  (float)x = 5.0; //error not a mod L val
+
+}

@@ -1,0 +1,53 @@
+//this tests if arrays can be passed by reference
+
+//int ARR[5];
+//int ARR2[5][10];
+
+function: int sumArray(int & array[5] ) {
+return array[0];
+}
+
+function :int sumArray2(int  & array[5][10]) {
+return array[5][5]; //should be an error b/c out of bounds
+return 0;
+}
+
+//legal version of above
+function :int sumArray2_2(int & array[5][10]) {
+return array[5][4];
+}
+
+//should be an error because this returns an array not an int
+function: int sumArray3(int & array[5][10][10]) {
+return array[5][1];
+}
+
+function:  int & sumArray4(int * & arr[5][10]) {
+**arr = 5;  //can't dereference this much
+(*arr)[11] = 5; //outside legal range
+(*arr)[9][5] = 3; //outside legal
+return *arr; //error
+return *arr; //good
+}
+
+
+function : int main() {
+const int poo = 0;
+int poo2 = 3;
+int poo5[5];
+float poo3[3] ;
+float poo4[4];
+//legal stuff
+int c[5];
+sumArray(c);
+sumArray(poo5);
+
+//illegal
+sumArray(poo);
+sumArray(poo2);
+sumArray(poo3);
+
+//illegal, non-mod lval
+poo3 = poo4;
+return 0;
+}

@@ -1,0 +1,46 @@
+structdef TWO_INT_FIELDS {
+    int x;
+    int y;
+};
+
+structdef ONE_FUNCTION {
+    int fn;
+};
+
+TWO_INT_FIELDS two_ints;
+ONE_FUNCTION one_function;
+
+// Referenced field mising_field not found in type TWO_INT_FIELDS.
+int a = two_ints.missing_field;
+
+// Referenced field missing_field_2 not found in type TWO_INT_FIELDS.
+int b = two_ints.missing_field_2;
+
+// Referenced field missing_function not found in type ONE_FUNCTION.
+int c = one_function.missing_function;
+
+structdef S {
+    int v_if_true;
+
+    bool flip_b;
+
+    float * echo_f;
+};
+
+function : void illegal_calls() {
+
+
+    S struct_instance;
+
+    // Argument of type int not assignable to value parameter b, of type bool
+    int a = struct_instance.v_if_true;
+    int c = struct_instance.flip_b;
+
+    // Argument of type int not assignable to value parameter b, of type bool
+    bool b = struct_instance.flip_b;
+    bool d = struct_instance.v_if_true;
+
+    // Argument of type bool not equivalent to reference parameter f,
+    // of type float
+    float f = struct_instance.echo_f;
+}

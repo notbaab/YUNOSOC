@@ -1,0 +1,5 @@
+function : void foo() {
+bool i = true; 
+float j = 1.0;
+bool k = i > j;
+}

@@ -1,0 +1,11 @@
+
+function : int foo() {
+	bool b;
+	exit(1 + b);
+	return 3;
+}
+
+function : void bar() {
+
+	exit(true & 1);
+}

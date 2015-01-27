@@ -1,0 +1,36 @@
+structdef MYS_A {
+  int x;
+}; // Your compiler will implicitly add default ctor in this case
+structdef MYS_B {
+  int x;
+  MYS_B(float x) {}
+};
+structdef MYS_C {
+  int x;
+  MYS_C() {} // Explicit default ctor defined
+  MYS_C(int & x) {}
+  MYS_C(int x, float y) {}
+};
+// Global instantiations
+MYS_A a1;          // OK – matches default ctor
+MYS_A a2 : ();     // OK – matches default ctor
+MYS_A a3 : (1, 2); // error5n_Call – implicit 2 arg call, 0 param
+MYS_A a4[5][1];    // OK – matches default ctor 
+MYS_A a5[5] : ();  // OK – matches default ct or
+
+
+function : void main() {
+  // Local instantiations
+  MYS_B b1;            // error5n_Call – implicit 0 arg call, 1 param
+  MYS_B b2 : ();       // error5n_Call – explicit 0 arg call, 1 param
+  MYS_B b3 : (1);      // OK – int coerced to float (no overloading)
+  MYS_B b4 : (false);  // error5a_Call – not assignable
+  MYS_B b5[7];         // error5n_Call – implicit 0 arg call, 1 param
+  MYS_B b6[7] : (2.0); // OK – matches ctor
+  MYS_C c1;            // OK – implicit call to default ctor in MYS_C
+  MYS_C c2 : ();       // OK – explicit call to default ctor in MYS_C
+  MYS_C c3 : (1);      // error9_Illegal – no exact overload match
+  MYS_C c4 : (1, 2.2); // OK – exact match to overloaded ctor in MYS_C
+  MYS_C c5 : (1, 5);   // error9_Illegal – no exact overload match
+  MYS_C c6 : (1, 2, 3);// error9_Illegal – no exact overload match
+}

@@ -1,0 +1,27 @@
+int x=1;
+int r1;
+
+int *xptr = &x;
+int y = *xptr;
+
+int *falsedouble_xptr = &xptr; //int** non convertable to int*
+int **truedouble_xptr = &xptr;
+int *xptr_cpy = xptr;
+
+function: int main(){
+    float *f_xptr;
+    y = **truedouble_xptr;
+    x = y;
+    y = *xptr_cpy;
+    y = **xptr_cpy;//error
+    y = ***truedouble_xptr;//error
+    *xptr_cpy = 10;
+    f_xptr = xptr; //error
+    f_xptr = xptr_cpy;//error
+    f_xptr = *xptr_cpy;//error
+    y = **xptr_cpy;//error
+    r1 = **truedouble_xptr;
+    r1 = (*xptr) + r1;
+    return 0;
+}
+

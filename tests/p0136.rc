@@ -1,0 +1,9 @@
+// All these lines should compile without error.
+
+bool a = true && false;
+
+bool b = true || false;
+
+bool c = !true && !false;
+
+bool d = !!true;

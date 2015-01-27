@@ -1,0 +1,43 @@
+int i;
+int m;
+float r;
+structdef REC1 { float a; };
+structdef REC2 { float a; };
+REC1 r1;
+REC2 r2;
+REC1 r3;
+float a1[5];
+int a2[5];
+function : int f(REC1 &a) { /* stuff */ }
+function : int g(float &a[5]) { /* stuff */ }
+int* p1;
+float* p2;
+REC1* p3;
+REC2* p4;
+REC1* p5;
+function : int main() {
+  i = m; // okay, assignable (both int)
+  i = r; // error, not assignable - float cannot be assigned to int
+  // Error Message: error3b_Assign
+  r = i; // okay, assignable - int can be assigned to float (coercion)
+  f(r1); // okay, same type/strict name equivalent
+  f(r2); // error, not strict name equivalent
+  // Error Message: error5r_Call
+  f(r3); // okay, same type/strict name equivalent
+  g(a1); // okay, structurally equivalent
+  g(a2); // error, not structurally equivalent
+  // Error Message: error5r_Call
+  a1 = a1; // error, array identifiers are non-modifiable L-vals
+  // Error Message: error3a_Assign
+  r1 = r1; // okay, strict name equiv & struct variables are mod L-vals
+  r1 = r2; // error, not strict name equivalent
+  // Error Message: error3b_Assign
+  r3 = r1; // okay, strict name equiv & struct variables are mod L-vals
+  p1 = p1; // okay, structurally equivalent
+  p2 = p1; // error, not structurally equivalent
+  // Error Message: error3b_Assign
+  p3 = p4; // error, types pointed to (structs) are not strict name equiv
+  // Error Message: error3b_Assign
+  p3 = p5; // okay, types pointed to (structs) are strict name equivalent
+  return 0;
+}

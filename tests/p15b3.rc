@@ -1,0 +1,7 @@
+function : void main() {
+	int *ptr;
+	int x;
+	x = *ptr;
+	x = ptr[100];
+	x = ptr[x];
+}

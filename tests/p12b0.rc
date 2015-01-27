@@ -1,0 +1,17 @@
+function : void foo() {
+	break;
+	continue;
+
+	{
+		break;
+	}
+
+	{
+		continue;
+	}
+}
+
+function : void main() {
+	continue;
+	break;
+}

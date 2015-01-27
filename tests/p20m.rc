@@ -1,0 +1,12 @@
+//float to bool
+const float iamafloat = 3.14;
+bool boo1 = (bool)iamafloat;
+
+
+
+function : void main() {
+    //pointer to bool
+    int a = 2;
+    int* intptr = &a;
+    bool boo2 = (bool)intptr;
+}

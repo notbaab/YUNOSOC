@@ -1,0 +1,17 @@
+structdef R1 {
+    float a;
+    float b;
+};
+structdef R2 {
+    float a;
+    float b;
+};
+
+
+R1 x;
+R2 y;
+
+function: int main() {
+x = y;
+return 0;
+}

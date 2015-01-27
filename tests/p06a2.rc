@@ -1,0 +1,9 @@
+// This file should compile without errors.
+
+function : void void_no_return() {
+    // nothing
+}
+
+function : void empty_return() {
+    return;
+}

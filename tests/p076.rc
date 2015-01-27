@@ -1,0 +1,10 @@
+//tests illegal exit in other methods
+function: int foo() {
+ exit(0.0);
+ return 0;
+} 
+//what if no return here?
+
+function: void main() {
+  return;
+}

@@ -1,11 +1,11 @@
 const int Five = 5;
-int integer;
+
 int integer[2*Five];
 
 int a[2*Five];
 int b[(Five*3)-5];
 
-function : INTEGER foo(int i)
+function : int foo(int i)
 {
   return i + 5;
 }

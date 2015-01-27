@@ -1,0 +1,4 @@
+function : int main () {
+	int x = 0x90;
+	return x;
+}

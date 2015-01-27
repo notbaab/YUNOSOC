@@ -1,0 +1,12 @@
+function : void main() {
+	int x;
+	bool* y;
+	int a[4];
+	int* r;
+	
+	int* m = x;
+	float* s = r;
+	int* t = y;
+	int i[2];
+	i[2] = r;
+}

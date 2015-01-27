@@ -1,0 +1,18 @@
+
+function : bool foo() {
+	return true;
+}
+
+function : int bar (int x, int y) {
+	return -3;
+}
+
+function : void main () {
+	int x;
+	bool y = false;
+	if (foo(3)) {
+		x = bar(2.1, 18);
+		x = bar(3, false);
+		x = bar(true, 8.8);
+	}
+}

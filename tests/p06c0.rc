@@ -1,0 +1,11 @@
+function : void no_return_statement() {
+    // nothing
+}
+
+function : void returns_empty() {
+    return;
+}
+
+function : int nonvoid_returns_value() {
+    return 1;
+}

@@ -1,0 +1,15 @@
+int* x;
+int* y;
+
+function : void main() {
+	int* z = nullptr;
+	int* w = nullptr;
+	bool* b = nullptr;
+
+	if (x == y || x != y || x == z || x != z || w == z || w != z) {}
+
+	x++;
+	++x;
+	y--;
+	--y;
+}

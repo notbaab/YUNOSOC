@@ -1,0 +1,5 @@
+function : void foo() {
+	bool x = 2;
+	float y = 3;
+	int z = 4.0;
+}

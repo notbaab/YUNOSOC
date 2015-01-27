@@ -1,0 +1,9 @@
+function : float main() {
+	int x;
+
+	x = true * 2;
+	x = 3 * false;
+	x = true * false;
+	
+	return 0;
+}

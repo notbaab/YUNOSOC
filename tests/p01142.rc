@@ -1,0 +1,5 @@
+function : void foo() {
+int i = 1; 
+bool j = false;
+int k = i ^ j;
+}

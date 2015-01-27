@@ -1,0 +1,10 @@
+const int a = 0;
+const float b = a/10;
+const float e = 0.0;
+static float c = 10/e;
+
+function : int main() {
+	static int d = 3/a;
+	static int z = 3;
+	return 10;
+}

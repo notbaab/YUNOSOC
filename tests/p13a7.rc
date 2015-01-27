@@ -1,0 +1,12 @@
+structdef MYS {
+	int x;
+	int y;
+    int x;
+    int z;
+    int x;
+	float y;
+    int w;
+    int w;
+};
+
+function: void main() {}

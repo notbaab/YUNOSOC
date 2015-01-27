@@ -1,0 +1,44 @@
+function : void main() {
+	
+	float a[5];
+	float aa = a[0]; 			// valid
+	float ab = a[2]; 			// valid
+	float ac = a[-1]; 			// invalid. out of bounds
+	float ad = a[5]; 			// invalid. out of bounds
+	
+	int b[10];
+	int ba = b[0]; 				// valid
+	int bb = b[9]; 				// valid
+	int bc = b[-1]; 			// invalid. out of bounds
+	int bd = b[10]; 			// invalid. out of bounds
+	
+	float c[10][15];
+	float ca = c[0][0]; 		// valid
+	float cb = c[14][9]; 		// valid
+	float cc = c[15][9]; 		// invalid, out of bounds
+	float cd = c[14][10]; 		// invalid, out of bounds
+	float ce = c[15][10]; 		// invalid, out of bounds
+
+	bool d[11][12][13];
+	bool da = d[0][0][0]; 		// valid
+	bool db = d[1][2][3]; 		// valid
+	bool dc = d[-1][-1][-1]; 	// invalid. out of bounds
+	bool dd = d[1][-1][-1]; 	// invalid. out of bounds
+	bool de = d[1][2][-1]; 		// invalid. out of bounds
+	bool df = d[-1][2][-1]; 	// invalid. out of bounds
+	bool dg = d[2][-1][-1]; 	// invalid. out of bounds
+	
+	bool dh = d[12][11][10]; 	// valid
+	bool di = d[13][11][10];	// invalid. out of bounds
+	bool dj = d[12][12][10];	// invalid. out of bounds
+	bool dk = d[12][11][11];	// invalid. out of bounds
+	bool dl = d[40][40][40];	// invalid. out of bounds
+	
+	int e[6];
+	int ea = e[e[e[e[1]]]]; 	// valid
+	int eb = e[e[e[e[-1]]]]; 	// invalid. out of bounds
+	int ec = e[e[e[e[6]]]]; 	// invalid. out of bounds
+	int ed = e[e[e[e[10]]]]; 	// invalid. out of bounds
+
+	
+}
