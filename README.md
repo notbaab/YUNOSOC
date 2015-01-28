@@ -16,6 +16,12 @@ However if you don't want to learn YUNO you probaly are lazy and won't scroll do
 In you compiler directory with the test directory provided here and then you don't have to read anything else if you 
 really don't want to, then open results.html.
 
+If you are even more lazy, you don't have to run the perl script and look at an individual comparision with 
+
+    chmod +x compare.sh
+    ./compare.sh p00a.rc
+
+and that will give you vimdiff of that individual test. To exit vimdiff hit [ESC] :qall. It's a very boring script but it helps with giving you a better look at the compaision when you are working on one specific test. 
 
 ## Example Structure.
 Notice publicTest.pl needs to be in the same directory as RC and the test directory
@@ -25,11 +31,11 @@ Notice publicTest.pl needs to be in the same directory as RC and the test direct
     +--src/
     +--lib/
     +--bin/
-    +--publicTests/
+    +--tests/
     +--RC
     +--RCdbg
     +--build.xml
-    +--publicTests.pl
+    +--runTests.pl
 
 ##Tests Directory
 There are two files needed for testing. The first is the rc file, which is the actual source code to be tested 
@@ -46,7 +52,7 @@ The simplest way is to just run
     
     perl publicTests.pl
 
-This will run through your test directory and run all the tests and output a html page with the results.
+This will run through your tests directory and run all the tests and output a html page with the results.
 It also accepts a few command line arguments if you want to limit the tests you are running, test a certain directory 
 or force creation of a new rc.out file.
 
@@ -55,25 +61,30 @@ or force creation of a new rc.out file.
 
     -s --skip   skip files that have the passed in prefix. A range is also 
                 accepted. You can also split up arguments with a comma. 
-                EX:  ./publicTestsRef -s p08  <- skips any file that starts with 
+                EX:  ./runTests -s p08  <- skips any file that starts with 
                                                  p08
-                     ./publicTestsRef -s p08-p10  <- skips any file that starts 
+                     ./runTests -s p08-p10  <- skips any file that starts 
                                                   with p08, p09, p10
-                     ./publicTestsRef -s p08-10,p12-13  <- skips any file that 
+                     ./runTests -s p08-10,p12-13  <- skips any file that 
                                                            starts with p08, p09,
                                                            p10, p12, p13
-                     ./publicTestsRef -s p08-10 -s p12-13  <- skips any file that 
+                     ./runTests -s p08-10 -s p12-13  <- skips any file that 
                                                               starts with p08 p09
                                                               p10 p12 p13
     -d --dir    Run tests from a different directory other than the default
                 $testing_directory
-                EX: ./publicTestsRef -d testDir  <- runs only files in testDir
-                    ./publicTestsRef -d testDir -s p08  <- runs only files in 
+                EX: ./runTests -d testDir  <- runs only files in testDir
+                    ./runTests -d testDir -s p08  <- runs only files in 
                                                            testDir and skips p08
-                    ./publicTestsRef -d testDir -o p08 <- runs only p08 tests in 
+                    ./runTests -d testDir -o p08 <- runs only p08 tests in 
                                                           testDir
 
     -f --force  force output files to be generated with the reference compilers
+
+    -p --pass   automatically pass compilers
+
+    -r --result Specify a result file other than result.html. Appends html automatically
+                EX: ./runTests -r otherresult
 
 After the test is run it will give you a nice diff output in html called results.html
 
