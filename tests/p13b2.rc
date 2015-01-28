@@ -16,11 +16,11 @@ structdef MYS {
 	float a;
 	MYS *b;
 	MYS() {} 										// ctor – no error
-    MYS(int x) {} 									// OK, legal overload – no error
+  MYS(int x) {} 									// OK, legal overload – no error
 	function : void foo() {} 						// ok
 	function : void foo(int a) {} 					// ok
-    function : void foo() {} 						// error9_Decl dup overload, error #4
-    function : void bar(MYS * mys, A a, B b) {}		// undeclared identifier 'B'.
-    function : void bar(int x) {} 					// OK, since legal overload
+  function : void foo() {} 						// error9_Decl dup overload, error #4
+  function : void bar(MYS * mys, A a, B b) {}		// undeclared identifier 'B'.
+  function : void bar(int x) {} 					// OK, since legal overload
 };
 

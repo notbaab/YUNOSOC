@@ -2,3 +2,7 @@
 *.out
 outputFiles/
 .DS_Store
+
+YUNOSOC.sublime-project
+
+YUNOSOC.sublime-workspace

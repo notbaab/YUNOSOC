@@ -4,7 +4,6 @@ function: int main()
     const bool l = true;
     const int x = 4;
     const int y = 5;
-    const int z = x + y + w;
     const int h = x + y + y + x * y;
     const int g = h & y;
     const int e = -g;
