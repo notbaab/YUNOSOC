@@ -74,27 +74,30 @@ if($help){
 
     -s --skip   skip files that have the passed in prefix. A range is also 
                 accepted. You can also split up arguments with a comma. 
-                EX:  ./publicTestsRef -s p08  <- skips any file that starts with 
+                EX:  ./runTests -s p08  <- skips any file that starts with 
                                                  p08
-                     ./publicTestsRef -s p08-p10  <- skips any file that starts 
+                     ./runTests -s p08-p10  <- skips any file that starts 
                                                   with p08, p09, p10
-                     ./publicTestsRef -s p08-10,p12-13  <- skips any file that 
+                     ./runTests -s p08-10,p12-13  <- skips any file that 
                                                            starts with p08, p09,
                                                            p10, p12, p13
-                     ./publicTestsRef -s p08-10 -s p12-13  <- skips any file that 
+                     ./runTests -s p08-10 -s p12-13  <- skips any file that 
                                                               starts with p08 p09
                                                               p10 p12 p13
     -d --dir    Run tests from a different directory other than the default
                 $testing_directory
-                EX: ./publicTestsRef -d testDir  <- runs only files in testDir
-                    ./publicTestsRef -d testDir -s p08  <- runs only files in 
+                EX: ./runTests -d testDir  <- runs only files in testDir
+                    ./runTests -d testDir -s p08  <- runs only files in 
                                                            testDir and skips p08
-                    ./publicTestsRef -d testDir -o p08 <- runs only p08 tests in 
+                    ./runTests -d testDir -o p08 <- runs only p08 tests in 
                                                           testDir
 
     -f --force  force output files to be generated with the reference compilers
 
     -p --pass   automatically pass compilers
+
+    -r --result Specify a result file other than result.html 
+                EX: ./runTests -r otherresult
 
     Doc(ish): YYUNOC test tool. The idiot proof test tool for cse 131.
     Running without any arguments is the simplest way to use the tool. It will look for 
