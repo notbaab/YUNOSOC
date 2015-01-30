@@ -1,0 +1,37 @@
+int a;
+
+structdef MYS 
+{
+  int x;
+  int y; 
+  MYS() 
+  {
+    this.x = 0;
+    this.y = 0;
+    this = 0;
+    this.x = this;
+    this.x = a;
+    x;
+    this.a;
+    a;
+    this.x;
+  }
+  MYS(int x, int y) 
+  {
+    this.x = x;
+    this.y = y; 
+    this.t;
+  }
+  function : void foo() 
+  {
+     this.x = 8;
+     this.y = this.x;
+     this.foo();
+     this.boo();
+  }
+  function : void bar() 
+  {
+    this.foo();
+    this.foo2();
+  } 
+};

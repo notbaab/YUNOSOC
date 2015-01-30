@@ -1,0 +1,68 @@
+structdef MYS
+{
+  int x;
+  function : void y() {}
+};
+
+function : int main() 
+{
+  int ****x;
+  *x = 1;
+  ***x = 1;
+  ****x = 1;
+
+  int y;
+  MYS* ptr;
+  MYS* ptr2;
+  MYS** ptr3;
+  MYS z;
+
+  y = (*ptr).x;
+  int w = ptr->x;
+  z = *ptr2;
+  (*ptr).x = y;
+  ptr->x = w;
+  ptr->y;
+  ptr->foo();
+  ptr->y();
+  *ptr2 = z;
+  *ptr3;
+
+  **ptr3 = ptr2;
+  *ptr3 = *ptr2;
+
+  nullptr->x;
+  *nullptr;
+  nullptr[2];
+
+  x = nullptr;
+  y = nullptr;
+  ptr = nullptr;
+  ptr2 = nullptr;
+  int k = nullptr;
+  int* ptr4 = nullptr;
+
+  x->a;
+  y->a;
+  z->a;
+  ptr->a;
+  ptr->foo();
+  ptr->y();
+  ptr2->x;
+  ptr2->a;
+  *x;
+  *y;
+  *z;
+
+
+  int* ptr5  = 1;
+
+
+  int * p;
+  p[99] = p[-40] + p[*p]; 
+
+  float * f;
+  f[99] = f[*f];
+
+  return 0;
+}

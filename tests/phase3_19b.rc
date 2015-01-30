@@ -1,0 +1,24 @@
+structdef MS {
+  int a;
+  int b;
+  function : int doo() { return 0; } // has no effect on size!
+};
+int x;
+const float y = 55.5;
+bool z[4];
+MS t;
+function : void foo(bool &p1[4], bool* p2) {
+  x = 1/(sizeof(p1)-16); // should be 16
+  x = 1/(sizeof(p2)-4); // should be 4
+}
+function : void main() {
+  foo(z, &z[0]);
+  x = 1/(sizeof(float)-4); // should be 4
+  x = 1/(sizeof(MS)-8); // should be 8
+  x = 1/(sizeof(float***)-4); // should be 4
+  x = 1/(sizeof(int[3])-12); // should be 12
+  x = 1/(sizeof(x)-4); // should be 4
+  x = 1/(sizeof(y)-4); // should be 4
+  x = 1/(sizeof(z)-16); // should be 16
+  x = 1/(sizeof(t)-8); // should be 8
+}

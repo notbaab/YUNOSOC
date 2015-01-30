@@ -1,0 +1,10 @@
+function : int main()
+{
+ int i = 5;
+ float a = 0.2;
+ int b = 0xa1;
+ int c = 012;
+ bool d = true;
+ bool e = false;
+ return 0;
+}

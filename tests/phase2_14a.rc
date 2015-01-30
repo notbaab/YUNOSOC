@@ -1,0 +1,41 @@
+structdef MYS_A 
+{
+  int x;
+};
+structdef MYS_B 
+{
+  int x;
+  MYS_B(float x) {}
+};
+structdef MYS_C 
+{
+  int x;
+  MYS_C() {}
+  MYS_C(int & x) {}
+  MYS_C(int x, float y) {}
+};
+
+// Global instantiations
+MYS_A a1;
+MYS_A a2 : ();
+MYS_A a3 : (1, 2);
+MYS_A a4[5][1];
+MYS_A a5[5] : ();
+
+function : void main() 
+{
+  // Local instantiations
+  MYS_B b1;
+  MYS_B b2 : ();
+  MYS_B b3 : (1);
+  MYS_B b4 : (false);
+  MYS_B b5[7];
+  MYS_B b6[7] : (2.0);
+  MYS_B b7[false] : (false);
+  MYS_C c1;
+  MYS_C c2 : ();
+  MYS_C c3 : (1);
+  MYS_C c4 : (1, 2.2);
+  MYS_C c5 : (1, 5);
+  MYS_C c6 : (1, 2, 3);
+}

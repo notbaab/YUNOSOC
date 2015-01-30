@@ -1,0 +1,41 @@
+function : void main()
+{
+  int x;
+  const int c = 5+5;
+  const int d = 5/0;
+  const int e = 5.0+5;
+  const int f = x;
+  const int g = 5.0/0;
+  const int h =  5/0.0;
+  const int h = 20;
+  const int h = 30;
+  const int i = 5%0;
+  const int j = 5%2;
+
+  const bool k = true && false;
+  const bool l = true || true;
+
+  const int m = 3 | 4;
+  const int n = 3 & 4;
+  const int o = 3 ^ 4;
+
+  const bool p = 3 > 4;
+  const bool q = 3 < 4;
+  const bool r = 3 <= 4;
+  const bool s = 3 >= 4;
+
+  const bool t = 3 == 4;
+  const bool u = true == false;
+
+  const bool v = 3 != 4;
+  const bool w = true != false;
+
+  const int y = !false;
+
+  float c = 1;
+  float f2 = 1;
+  int a = 1.5;
+  bool b = 1;
+
+
+}

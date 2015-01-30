@@ -1,0 +1,22 @@
+function : int main()
+{
+  int x = 1;
+  int y = 2;
+  bool z = true;
+
+  if (x)
+  {
+    int a = 0;
+  }
+
+  while (x+y)
+  {
+    int b = 1;
+  }
+
+  if (true)
+  {
+  }
+
+  return 0;
+}

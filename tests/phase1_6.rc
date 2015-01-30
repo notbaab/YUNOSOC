@@ -1,0 +1,50 @@
+function : void foo(float f)
+{
+  return;
+}
+
+function : float foo2()
+{
+  return 1;
+  return 1.5;
+  return true;
+}
+
+function : float& foo3()
+{
+  int x;
+  float y;
+  return y;
+  return 1.5;
+  return x;
+  return 1;
+}
+
+function : int foo4()
+{
+  if (true)
+  {
+    return 1;
+  }
+}
+
+
+function : int foo5()
+{
+  return;
+}
+
+function : void foo6()
+{
+}
+
+function : int foo7()
+{
+}
+
+function : int main()
+{
+  int x = 1;
+  float y = 2;
+  return;
+}
