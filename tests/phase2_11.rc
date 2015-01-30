@@ -1,0 +1,17 @@
+function : void hello()
+{
+  const int x = 55;
+  int a[55];
+  a[0-99];
+  a[x+10];
+  a[-9];
+  a[5][7];
+  a[-9][0];
+  a[77][66];
+
+  int b[5][5][5];
+  int y;
+  y = b[2];
+}
+
+

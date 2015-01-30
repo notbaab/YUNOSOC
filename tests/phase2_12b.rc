@@ -1,0 +1,97 @@
+function : void main(){
+  break;
+}
+
+function : void main2() {
+  while(true){
+    break;
+  }
+}
+
+function : void main3() {
+  int a[5];
+  foreach( int x : a){
+    break;
+  }
+  break;
+}
+
+function: void main4() {
+  int a[5];
+  int b[5];
+  foreach(int x: a) {
+    foreach(int y: b) {
+      break;
+    }
+    break;
+  }
+  break;
+}
+
+function : void main5() {
+  while(true) {
+    while(true) {
+      break;
+    }
+    break;
+  }
+  break;
+}
+
+function : void main6(){
+  continue;
+}
+
+function : void main7() {
+  while(true){
+    continue;
+  }
+}
+
+function : void main8() {
+  int a[5];
+  foreach( int x : a){
+    continue;
+  }
+  continue;
+}
+
+function: void main9() {
+  int a[5];
+  int b[5];
+  foreach(int x: a) {
+    foreach(int y: b) {
+      continue;
+    }
+    continue;
+  }
+  continue;
+}
+
+function : void main10() {
+  while(true) {
+    while(true) {
+      continue;
+    }
+    continue;
+  }
+  continue;
+}
+
+function : void main11() {
+  int a[5];
+  while(true){
+  }
+  foreach(int x:a) {
+  }
+  while(true) {
+    foreach(int x:a){
+      continue;
+      break;
+    }
+    continue;
+    break;
+  }
+  continue;
+  break;
+}

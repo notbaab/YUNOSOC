@@ -1,0 +1,50 @@
+structdef MYS_A 
+{
+  int x;
+};
+structdef MYS_B 
+{
+  int x;
+  MYS_B(float x) {}
+};
+function : void main() 
+{
+  int a;
+  new a;
+  delete a;
+
+  int* b;
+  new b;
+  delete b;
+
+  const int c = 5;
+  new c;
+  delete c;
+  new 5;
+  delete 5;
+
+  int** d = &b;
+  new d;
+  delete d;
+  delete *d;
+
+  MYS_A* ptr1;
+  new ptr1;
+  delete ptr1;
+
+  MYS_B* ptr2;
+  new ptr2;
+  delete ptr2;
+
+  new ptr1 : ();
+  new ptr1 : (5);
+  new ptr2 : (1.0);
+  new ptr2 : (true);
+  delete ptr1;
+  delete ptr2;
+
+  MYS_B b1;
+  new b1;
+  delete b1;
+
+}

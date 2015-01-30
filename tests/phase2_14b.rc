@@ -1,0 +1,37 @@
+structdef MYS_A 
+{
+  int x;
+  function : void foo() {}
+  function : void foo(int i) {}
+};
+structdef MYS_B 
+{
+  int x;
+  float y;
+  bool z;
+  MYS_B(float x) {}
+  function : void foo() {float f;}
+  function : void foo2() {}
+};
+MYS_A a;
+function : void main() 
+{
+  MYS_B b : (1);
+
+  a.foo();
+  a.foo(1);
+  a.foo(1.5);
+  a.x;
+  a.y;
+  a.foo;
+  a.i;
+
+  b.foo();
+  b.foo2();
+  b.boo();
+  b.x;
+  b.y;
+  b.z;
+  b.t;
+  b.f;
+}

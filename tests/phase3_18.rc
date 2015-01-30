@@ -1,0 +1,15 @@
+
+function : int main()
+{
+  int x;
+  int y;
+  int *z;
+  const int w = 77;
+  z = &x;
+  &x = nullptr;
+  y = *&x;
+  *&x = y;
+  *&w = y;
+  &*z = z;
+  return 0;
+}
