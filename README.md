@@ -89,7 +89,7 @@ or force creation of a new rc.out file.
 After the test is run it will give you a nice diff output in html called results.html
 
 ##Origins
-The script was first passed down to me from a friend, who got it from a friend, who got it from another friend. The origins are a mystery to me but I couldn't find it anywhere else so I decided to make it better and release it as a tool. It was modified extensively by me in order to work with our project specification, use our reference compiler, and to allow command line arguments. The only thing untouched from the original script is the the html output. It is a work of genius and if I meet the person who made that I would probably buy him a snack of some kind. 
+The script was seems to originally be made by someone named Ben Fiola and Thomas Gray in the 2013 Winter Quarter. It was modified extensively by me in order to work with our project specification, use our reference compiler, and to allow command line arguments. The only thing untouched from the original script is the the html output. Thomas and Ben, you generate HTML beautifly and I thank you for making compiler test results easy to digest. 
 
 ##Complaints 
 Any complaints please send a box of cookies and a blood sacrifice to 
