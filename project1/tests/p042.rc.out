@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_FwTaux/file.rc", line 5: 
+  bool required for conditional test, float found.
+Compile: failure.

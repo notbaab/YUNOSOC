@@ -1,0 +1,14 @@
+
+structdef MYSTRUCT {
+	float field1;
+	float field2;
+};
+
+MYSTRUCT my;
+
+structdef FOOSTRUCT {
+	int field1;
+	int field2;
+};
+
+FOOSTRUCT *f1 = (FOOSTRUCT*)(my); //error

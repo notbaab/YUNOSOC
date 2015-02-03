@@ -1,0 +1,20 @@
+// WNBT:
+// Incompatible type int to binary operator &&, equivalent to bool expected.
+// Incompatible type float to binary operator &&, equivalent to bool expected.
+// bool a = true && 06 || false && 3.0;
+
+
+// Basic type errors -----------------------------------------------------------
+
+
+// Incompatible type float to unary operator !, equivalent to bool expected.
+bool b = !21.107;
+
+// Incompatible type int to unary operator !, equivalent to bool expected.
+bool c = !!7;
+
+// Incompatible type float to binary operator ||, equivalent to bool expected.
+bool d = false || 6.0;
+
+// Incompatible type int to binary operator &&, equivalent to bool expected.
+bool e = 0xA && true;

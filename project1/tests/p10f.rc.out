@@ -1,0 +1,17 @@
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 7: 
+  Index value of 5 is outside legal range [0,5).
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 7: 
+  redeclared identifier 'e'.
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 8: 
+  Index expression type (bool) in array declaration not equivalent to int.
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 9: 
+  redeclared identifier 'e'.
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 10: 
+  Index expression type (bool) in array declaration not equivalent to int.
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 11: 
+  Index expression type (bool) in array declaration not equivalent to int.
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 14: 
+  Index expression type (bool) in array declaration not equivalent to int.
+Error, "/tmp/cs131_testrunner_XyTaux/file.rc", line 16: 
+  Index expression type (float) in array declaration not equivalent to int.
+Compile: failure.

@@ -1,0 +1,4 @@
+Error, "/tmp/cs131_testrunner_CHTaux/file.rc", line 11: 
+  Incompatible types to operator: float == bool;
+  both must be numeric, or both equivalent to bool.
+Compile: failure.

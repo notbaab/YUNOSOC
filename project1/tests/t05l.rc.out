@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_HDTaux/file.rc", line 6: 
+  Number of arguments (5) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_HDTaux/file.rc", line 7: 
+  Number of arguments (1) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_HDTaux/file.rc", line 8: 
+  Number of arguments (2) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_HDTaux/file.rc", line 9: 
+  Return required in function, none found.
+Compile: failure.

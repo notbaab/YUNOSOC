@@ -1,0 +1,8 @@
+function : bool main() {
+	bool x;
+
+	x = !2;
+	x = !4.5;
+	
+	return x;
+}

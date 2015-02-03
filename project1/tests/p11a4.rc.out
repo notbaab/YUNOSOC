@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_azTaux/file.rc", line 12: 
+  Index value of 9 is outside legal range [0,2).
+Error, "/tmp/cs131_testrunner_azTaux/file.rc", line 16: 
+  Type of index expression in array reference (float) not equivalent to int.
+Error, "/tmp/cs131_testrunner_azTaux/file.rc", line 16: 
+  Index value of 9 is outside legal range [0,2).
+Compile: failure.

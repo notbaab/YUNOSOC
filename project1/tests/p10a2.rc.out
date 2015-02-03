@@ -1,0 +1,27 @@
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 4: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 5: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 6: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 12: 
+  Index expression value (0) in array declaration must be > 0.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 13: 
+  Index expression value (-1) in array declaration must be > 0.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 14: 
+  Index expression value (0) in array declaration must be > 0.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 17: 
+  Incompatible type int to unary operator !, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 18: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 19: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 21: 
+  Index expression type (float) in array declaration not equivalent to int.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 22: 
+  Index expression type (bool) in array declaration not equivalent to int.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 23: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner_QyTaux/file.rc", line 27: 
+  redeclared identifier 'e'.
+Compile: failure.

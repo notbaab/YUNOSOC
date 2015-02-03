@@ -1,0 +1,19 @@
+structdef MS {
+  int x;
+};
+
+structdef MS2 {
+  int x;
+};
+
+MS* x;
+MS * y;
+MS2* a;
+bool z;
+
+function : void main()
+{
+  z = x != y;
+  z = x != a;
+}
+

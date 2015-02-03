@@ -1,0 +1,33 @@
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 8: 
+  Incompatible type bool to binary operator >, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 11: 
+  Incompatible type bool to binary operator >, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 14: 
+  Incompatible type bool to binary operator >, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 18: 
+  Incompatible type bool to binary operator >, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 25: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 28: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 31: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 34: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 41: 
+  Incompatible type bool to binary operator >=, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 44: 
+  Incompatible type bool to binary operator >=, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 47: 
+  Incompatible type bool to binary operator >=, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 50: 
+  Incompatible type bool to binary operator >=, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 57: 
+  Incompatible type bool to binary operator <=, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 60: 
+  Incompatible type bool to binary operator <=, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 63: 
+  Incompatible type bool to binary operator <=, numeric expected.
+Error, "/tmp/cs131_testrunner_juTaux/file.rc", line 66: 
+  Incompatible type bool to binary operator <=, numeric expected.
+Compile: failure.

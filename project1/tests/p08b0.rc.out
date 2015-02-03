@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_.xTaux/file.rc", line 4: 
+  Initialization value of constant named k not known at compile time.
+Error, "/tmp/cs131_testrunner_.xTaux/file.rc", line 9: 
+  Initialization value of constant named z not known at compile time.
+Compile: failure.

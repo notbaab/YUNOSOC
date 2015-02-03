@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_nATaux/file.rc", line 7: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_nATaux/file.rc", line 8: 
+  Value of type MYS not assignable to variable of type int.
+Compile: failure.

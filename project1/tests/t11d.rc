@@ -1,0 +1,11 @@
+function : bool foo()
+{
+  return false;
+}
+
+int x;
+
+function : void main()
+{
+  x = foo()[4];
+}

@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_wxTaux/file.rc", line 4: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_wxTaux/file.rc", line 13: 
+  Return required in function, none found.
+Compile: failure.

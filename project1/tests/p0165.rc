@@ -1,0 +1,11 @@
+// Incompatible types to operator: bool == int;
+// both must be numeric, or both equivalent to bool.
+bool a = (3.14 == 1.59) == 6;
+
+// Incompatible types to operator: bool != int;
+// both must be numeric, or both equivalent to bool.
+bool b = true != 1;
+
+// Incompatible types to operator: float != bool;
+// both must be numeric, or both equivalent to bool.
+bool c = 0.0 != false;

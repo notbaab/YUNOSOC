@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_BETaux/file.rc", line 9: 
+  Type of return expression (int), not assignment compatible with function's return type (void).
+Error, "/tmp/cs131_testrunner_BETaux/file.rc", line 10: 
+  Type of return expression (float), not assignment compatible with function's return type (void).
+Error, "/tmp/cs131_testrunner_BETaux/file.rc", line 11: 
+  Type of return expression (bool), not assignment compatible with function's return type (void).
+Compile: failure.

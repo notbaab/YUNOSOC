@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_6GTaux/file.rc", line 6: 
+  Referenced field z not found in current struct.
+Error, "/tmp/cs131_testrunner_6GTaux/file.rc", line 6: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_6GTaux/file.rc", line 15: 
+  Referenced field foo not found in current struct.
+Error, "/tmp/cs131_testrunner_6GTaux/file.rc", line 22: 
+  Return required in function, none found.
+Compile: failure.

@@ -1,0 +1,6 @@
+
+int c;
+float j [1.0];
+float a [c];
+float b [0];
+float s [-1];

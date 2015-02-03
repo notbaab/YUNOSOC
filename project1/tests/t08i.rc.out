@@ -1,0 +1,35 @@
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 24: 
+  Initialization value of constant named p not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 25: 
+  Initialization value of constant named q not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 26: 
+  Initialization value of constant named z1 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 27: 
+  Initialization value of constant named z2 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 28: 
+  Initialization value of constant named z3 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 29: 
+  Initialization value of constant named r1 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 30: 
+  Initialization value of constant named r2 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 31: 
+  Initialization value of constant named r3 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 32: 
+  Initialization value of constant named s1 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 33: 
+  Initialization value of constant named s2 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 34: 
+  Initialization value of constant named s3 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 35: 
+  Initialization value of constant named t1 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 36: 
+  Initialization value of constant named t2 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 37: 
+  Initialization value of constant named t3 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 38: 
+  Initialization value of constant named u1 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 39: 
+  Initialization value of constant named u2 not known at compile time.
+Error, "/tmp/cs131_testrunner_jFTaux/file.rc", line 40: 
+  Initialization value of constant named u3 not known at compile time.
+Compile: failure.

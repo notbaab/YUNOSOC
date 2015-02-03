@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_XwTaux/file.rc", line 7: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner_XwTaux/file.rc", line 8: 
+  Value of type void not assignable to variable of type int.
+Compile: failure.

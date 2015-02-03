@@ -1,0 +1,6 @@
+const int a = 3;
+static int y = a + 38;
+
+function: void main() {
+	int x;
+}

@@ -1,0 +1,11 @@
+int arr[10];
+
+function : int foo(int &a)
+{
+  return a;
+}
+
+function : void main()
+{
+  foo(arr[2]);
+}

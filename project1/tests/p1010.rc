@@ -1,0 +1,12 @@
+function : void main() {
+
+    const int ten = 10;
+
+    bool a[ten];
+
+    bool c[1];
+
+    bool d [ten + ten];
+
+    float e[2 + 2];
+}

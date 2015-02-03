@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_fzTaux/file.rc", line 11: 
+  Type of index expression in array reference (float) not equivalent to int.
+Compile: failure.

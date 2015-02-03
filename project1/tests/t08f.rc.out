@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_cFTaux/file.rc", line 3: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_cFTaux/file.rc", line 4: 
+  Initialization value of type bool not assignable to constant/variable of type int.
+Compile: failure.

@@ -1,0 +1,18 @@
+structdef MS {
+	int a;
+	int b;
+};
+int x;
+const float y = 55.5;
+bool z[4];
+
+
+function : void foo(bool &p1[4] , bool* p2) {
+	x = sizeof(p1);			// should be 16
+	x = sizeof(p2);			// should be 4
+}
+
+function : void main() {
+	foo(z, &z);
+
+}

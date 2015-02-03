@@ -1,0 +1,9 @@
+bool z[4];
+int x;
+function : void foo(bool &p1[4], bool* p2) {
+	x = sizeof(p1); // should be 16
+	x = sizeof(p2); // should be 4
+}
+function : void main() {
+	foo(z, z);
+}

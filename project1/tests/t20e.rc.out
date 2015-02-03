@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_qJTaux/file.rc", line 9: 
+  Invalid type cast. Type float[10][9] to type int is not supported.
+Compile: failure.

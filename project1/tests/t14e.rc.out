@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_2GTaux/file.rc", line 25: 
+  syntax error near "this".
+Compile: failure.

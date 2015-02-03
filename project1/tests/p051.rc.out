@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_PwTaux/file.rc", line 36: 
+  Argument of type bool not assignable to value parameter f, of type float.
+Error, "/tmp/cs131_testrunner_PwTaux/file.rc", line 40: 
+  Argument of type void not assignable to value parameter b, of type bool.
+Error, "/tmp/cs131_testrunner_PwTaux/file.rc", line 40: 
+  Argument of type float not assignable to value parameter i, of type int.
+Compile: failure.

@@ -1,0 +1,13 @@
+function : void main()
+{
+  int x;
+  int y;
+  int *z;
+  const int w = 77;
+  z = &x;	// OK
+  &x = nullptr;	// Error, not mod L-val
+  y = *&x;	// OK
+  *&x = y;	// OK
+  *&w = y;	// OK, since * reverses and re-enables mod L-val!!! Crazy!
+  &*z = z;	// Error, result of & is R-val
+}

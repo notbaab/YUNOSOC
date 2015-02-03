@@ -1,0 +1,16 @@
+function: int __foo(bool a1, int a2, float a3) {
+    return 3;
+}
+
+function: void _main() { 
+    int i;
+    bool b;
+    float f;
+    
+    int ia[10];
+    float fa[10];
+
+    ia[__foo(b, i, f)] = 1;
+    fa[__foo(b, i, f)] = 2.0;
+}
+

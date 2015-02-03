@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_YDTaux/file.rc", line 9: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_YDTaux/file.rc", line 12: 
+  Return required in function, none found.
+Compile: failure.

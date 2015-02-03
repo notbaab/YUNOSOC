@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_rCTaux/file.rc", line 8: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_rCTaux/file.rc", line 9: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_rCTaux/file.rc", line 10: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_rCTaux/file.rc", line 11: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner_rCTaux/file.rc", line 14: 
+  Incompatible type bool to binary operator <, numeric expected.
+Compile: failure.

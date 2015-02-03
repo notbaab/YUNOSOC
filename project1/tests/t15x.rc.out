@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_kITaux/file.rc", line 10: 
+  Incompatible types to operator ==:
+    int*,
+    float*;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_kITaux/file.rc", line 11: 
+  Incompatible types to operator ==:
+    int*,
+    float*;
+  both must be of equivalent pointer type.
+Compile: failure.

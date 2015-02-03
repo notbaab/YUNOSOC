@@ -1,0 +1,29 @@
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 24: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 25: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 26: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 27: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 29: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 30: 
+  Incompatible type bool to operator ++, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 32: 
+  Incompatible type bool to operator ++, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 33: 
+  Incompatible type bool to operator ++, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 35: 
+  Incompatible type bool to operator ++, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 37: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 38: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 39: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 41: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_FCTaux/file.rc", line 42: 
+  Incompatible type bool to operator ++, equivalent to int, float, or pointer expected.
+Compile: failure.

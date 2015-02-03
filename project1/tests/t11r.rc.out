@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_nGTaux/file.rc", line 10: 
+  Index value of 19 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_nGTaux/file.rc", line 15: 
+  Argument of type float[20] not equivalent to reference parameter x, of type float[10][20].
+Error, "/tmp/cs131_testrunner_nGTaux/file.rc", line 15: 
+  Argument of type float[10][20] not equivalent to reference parameter y, of type int[10][20].
+Compile: failure.

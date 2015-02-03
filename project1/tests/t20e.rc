@@ -1,0 +1,11 @@
+int intarr[3*3];
+int intarr2[3*3][10*1];
+int x[3*3][10*1];
+float floatarr[27/3];
+float y[120%11][27/3];
+
+function : int main()
+{
+  x = (int) y;
+  return (int) y[0][0];
+}

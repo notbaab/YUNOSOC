@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_muTaux/file.rc", line 4: 
+  Incompatible type bool to binary operator ^, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_muTaux/file.rc", line 5: 
+  Incompatible type float to binary operator ^, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_muTaux/file.rc", line 6: 
+  Incompatible type float to binary operator ^, equivalent to int expected.
+Compile: failure.

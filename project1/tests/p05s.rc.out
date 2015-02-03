@@ -1,0 +1,4 @@
+Error, "/tmp/cs131_testrunner_hxTaux/file.rc", line 23: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_hxTaux/file.rc", line 25: 
+  Number of arguments (2) differs from number of parameters (1).

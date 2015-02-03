@@ -1,0 +1,27 @@
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 4: 
+  Initialization value of type float[10] not assignable to constant/variable of type float.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 5: 
+  Initialization value of type float[10] not assignable to constant/variable of type bool.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 6: 
+  Initialization value of type float[10] not assignable to constant/variable of type int.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 9: 
+  Initialization value of type int[10] not assignable to constant/variable of type float.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 10: 
+  Initialization value of type int[10] not assignable to constant/variable of type bool.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 11: 
+  Initialization value of type int[10] not assignable to constant/variable of type int.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 14: 
+  Initialization value of type bool[10] not assignable to constant/variable of type float.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 15: 
+  Initialization value of type bool[10] not assignable to constant/variable of type bool.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 16: 
+  Initialization value of type bool[10] not assignable to constant/variable of type int.
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 19: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 23: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 27: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_OyTaux/file.rc", line 28: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Compile: failure.

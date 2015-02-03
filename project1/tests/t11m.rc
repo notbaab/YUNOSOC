@@ -1,0 +1,13 @@
+float arr[10];
+bool a;
+float myArr[10][11];
+
+function : void foo(float &a)
+{
+  a[1] = a[9];
+}
+
+function : void main()
+{
+  foo(myArr);
+}

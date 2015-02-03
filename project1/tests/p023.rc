@@ -1,0 +1,29 @@
+// Operand to ++ is not a modifiable L-value.
+int a = 4++;
+
+// Operand to ++ is not a modifiable L-value.
+int b = ++4;
+
+// Operand to -- is not a modifiable L-value.
+int c = 4--;
+
+// Operand to -- is not a modifiable L-value.
+int d = --4;
+
+// Incompatible type bool to operator ++, equivalent to int, float, or
+// pointer expected.
+bool e = ++true;
+
+// Incompatible type bool to operator --, equivalent to int, float, or
+// pointer expected.
+bool f = false--;
+
+// Operand to ++ is not a modifiable L-value.
+float g = (4.0 + 5.0)++;
+
+// Operand to -- is not a modifiable L-value.
+float h = --(4.0 + 6);
+
+// Operand to -- is not a modifiable L-value.
+float i = 0.0;
+float j = (i++)--;

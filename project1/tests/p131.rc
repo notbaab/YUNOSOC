@@ -1,0 +1,21 @@
+structdef S {
+    int x;
+};
+
+function : S bar(S a) {
+    S b;
+    b = a;
+    return b;
+}
+
+function : S foo(S a) {
+    S b;
+    b = a;
+    return bar(b);
+}
+
+function : int main() {
+    S b;
+    foo(5); //bug
+    return foo(b).x;
+}

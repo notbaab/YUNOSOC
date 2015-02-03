@@ -1,0 +1,8 @@
+function : int __main()
+{
+    const int x = 1;
+
+    int a[(int)((int*)1)];
+    int b[(int)(float)((int*)1)];
+    int c[(int)((int*)x)];
+}

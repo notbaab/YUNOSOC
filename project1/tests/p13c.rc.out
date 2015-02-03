@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_6zTaux/file.rc", line 16: 
+  Field f2 declared second time in struct.
+Compile: failure.

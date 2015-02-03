@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_UCTaux/file.rc", line 5: 
+  Value of type bool not assignable to variable of type float.
+Compile: failure.

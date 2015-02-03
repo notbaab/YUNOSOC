@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_9zTaux/file.rc", line 8: 
+  Name of constructor FOO does not match name of struct MYS.
+Error, "/tmp/cs131_testrunner_9zTaux/file.rc", line 9: 
+  Name of destructor ~BAR does not match name of struct MYS.
+Error, "/tmp/cs131_testrunner_9zTaux/file.rc", line 10: 
+  Duplicate declaration of overloaded function MYS.
+Error, "/tmp/cs131_testrunner_9zTaux/file.rc", line 11: 
+  Duplicate declaration of overloaded function MYS.
+Error, "/tmp/cs131_testrunner_9zTaux/file.rc", line 12: 
+  Duplicate declaration of overloaded function ~MYS.
+Compile: failure.

@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_HHTaux/file.rc", line 6: 
+  Incompatible type float to unary dereference operator *, pointer expected.
+Compile: failure.

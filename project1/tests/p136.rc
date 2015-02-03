@@ -1,0 +1,14 @@
+structdef MYS {
+  int x;
+  int y;
+  int x[3];    //dup id x, error #1
+  int z; //dup id x, error #2
+  int x; //dup id x, error #2
+  float y;  //dup id y, error #3
+  int w;
+  int w;    //dup id w, error #4
+};
+
+function: int main() {
+return 0;
+}

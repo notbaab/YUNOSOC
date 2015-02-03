@@ -1,0 +1,22 @@
+int x;
+float y;
+int* intPtr;
+
+structdef STRUCT {
+  int x;
+  float y;
+  STRUCT* s;
+};
+
+function : int foo(int & y) { return 0; }
+
+function : int main() {
+  (int) y = x;    // (int) y is not a modifiable L-val
+  x = foo((int) y); // (int) y is not addressable
+  intPtr = & (int) y; // (int) y is not addressable
+
+  STRUCT s1;
+  y = (int) s1;   // Structs cannot be cast.
+  
+  return 0;
+}

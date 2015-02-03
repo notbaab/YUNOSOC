@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_OHTaux/file.rc", line 11: 
+  Incompatible type float to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_OHTaux/file.rc", line 12: 
+  Incompatible type bool* to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_OHTaux/file.rc", line 13: 
+  Incompatible type MS to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_OHTaux/file.rc", line 14: 
+  Value of type bool not assignable to variable of type float.
+Compile: failure.

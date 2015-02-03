@@ -1,0 +1,6 @@
+Error, "/tmp/cs131_testrunner_FITaux/file.rc", line 17: 
+  Incompatible types to operator !=:
+    MS*,
+    MS2*;
+  both must be of equivalent pointer type.
+Compile: failure.

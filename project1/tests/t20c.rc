@@ -1,0 +1,9 @@
+int x;
+bool y;
+
+function : int _main()
+{
+  y = (bool) (((int) (((bool) x) && true)) % 5);
+  return (int) y;
+}
+

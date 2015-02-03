@@ -1,0 +1,6 @@
+
+function : bool main() {
+	bool x = !true;
+	
+	return x;
+}

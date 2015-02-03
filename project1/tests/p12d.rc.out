@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_xzTaux/file.rc", line 9: 
+  Continue does not occur in a loop.
+Compile: failure.

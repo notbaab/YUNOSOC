@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_9yTaux/file.rc", line 15: 
+  Index value of 9 is outside legal range [0,2).
+Error, "/tmp/cs131_testrunner_9yTaux/file.rc", line 16: 
+  Index value of 3 is outside legal range [0,2).
+Compile: failure.

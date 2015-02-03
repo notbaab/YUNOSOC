@@ -1,0 +1,9 @@
+function : int fi() { 
+    int xxx;
+    return xxx;
+}
+
+function : int main() { 
+    const int foo = 2 * 3 + 4 * fi();
+    return 0;
+}

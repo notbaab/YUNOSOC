@@ -1,0 +1,12 @@
+
+const float y = 55.5;
+bool z[4];
+function : void main() {
+	int arr[4];
+	
+	const int x6 = sizeof(y); // should be 4
+	arr[x6-0]=0;
+	
+	const int x7 = sizeof(z); // should be 16
+	arr[x7-12]=0;
+}

@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_oxTaux/file.rc", line 5: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_oxTaux/file.rc", line 12: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_oxTaux/file.rc", line 18: 
+  Type of return expression (int), not assignment compatible with function's return type (bool).
+Error, "/tmp/cs131_testrunner_oxTaux/file.rc", line 24: 
+  Type of return expression (float), not assignment compatible with function's return type (int).
+Error, "/tmp/cs131_testrunner_oxTaux/file.rc", line 29: 
+  Incompatible type bool to binary operator /, numeric expected.
+Compile: failure.

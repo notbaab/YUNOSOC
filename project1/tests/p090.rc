@@ -1,0 +1,73 @@
+/*NOTE: return types and parameter names do not matter
+ *therefore following _ funcs should generate errors
+ *after the first one.
+ */
+
+function: bool foo( int &bob){//first and only valid func
+return false;
+}
+
+//diff return type and param name. same signature.
+function: int foo( int &saget){//error
+return 0;
+}
+
+//diff return type. same name. same signature
+function: void foo( int &bob){//error
+}
+
+//same returntype and param name. same signature
+function: bool foo( int &bob){//error
+return false;
+}
+
+/*NOTE pass-by-value and pass-by-reference are regarded as 
+ *same for the purpose of function signatures.
+ *therefore the following _ funcs should generate errors
+ *after first one.
+ */
+
+function: bool bar( int &mother){//first valid. func_2
+return false;
+}
+
+function: int foobar( int homer){//secon valid. func_3
+return 0;
+}
+
+//pass by val, but should gen error anyway
+function: bool bar( int mother){//error b/c of func_2
+return true;
+}
+
+//pass by val, but should gen error anyway since param name don't matter
+function: bool bar( int theresa){//error B/C func_2
+return true;
+}
+
+//same signature as func_2 but diff return type and param name
+function: float bar( int &mother){//error B/C func_2
+return 1.34;
+}
+
+/*Following funcs cause errors similar to last three, but this
+ *time because of func_3 whose signature param type is passbyreference.
+ */
+function: int foobar( int homer){//secon valid. func_3
+return 0;
+}
+//pass by ref, but should gen error anyway
+function: int foobar( int &homer){//error b/c of func_3
+return 0;
+}
+
+//pass by ref, but should gen error anyway since param name don't matter
+function: int foobar( int &simpson){//error B/C func_3
+return 0;
+}
+
+//same signature as func_2 but diff return type and param name
+function: bool foobar( int simpson){//error B/C func_3
+return false;
+}
+

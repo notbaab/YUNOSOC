@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_5ATaux/file.rc", line 14: 
+  Number of arguments (0) differs from number of parameters (2).
+Error, "/tmp/cs131_testrunner_5ATaux/file.rc", line 15: 
+  Operand to "new" with constructor call is not of pointer to struct type, int* found.
+Error, "/tmp/cs131_testrunner_5ATaux/file.rc", line 16: 
+  Argument of type int not assignable to value parameter y, of type bool.
+Error, "/tmp/cs131_testrunner_5ATaux/file.rc", line 21: 
+  Argument of type bool not assignable to value parameter x, of type int.
+Error, "/tmp/cs131_testrunner_5ATaux/file.rc", line 21: 
+  Argument of type int not assignable to value parameter y, of type bool.
+Compile: failure.

@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_yFTaux/file.rc", line 5: 
+  Index expression type (float) in array declaration not equivalent to int.
+Compile: failure.

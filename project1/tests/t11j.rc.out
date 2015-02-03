@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_8FTaux/file.rc", line 8: 
+  Index value of 7 is outside legal range [0,2).
+Compile: failure.

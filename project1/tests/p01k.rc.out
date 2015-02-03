@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_ZvTaux/file.rc", line 7: 
+  Incompatible type bool to binary operator %, equivalent to int expected.
+Compile: failure.

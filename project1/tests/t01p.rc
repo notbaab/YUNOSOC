@@ -1,0 +1,15 @@
+function: void foo() {    
+    int i;
+    float f;
+    bool b;
+
+    i >= i;
+    i >= f;
+    i >= b;
+    b >= b;
+    b >= i;
+    b >= f;
+    f >= f;
+    f >= i;
+    f >= b;
+}

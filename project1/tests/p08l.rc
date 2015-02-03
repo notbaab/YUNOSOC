@@ -1,0 +1,26 @@
+int a;
+int b;
+
+const int c = 2 + 3 * 0 - 1;
+const int d = c * 7;
+
+const float e = (d + c) * c;
+
+function : int main () {
+  a = (b + c + d);
+  return ( a % c);  
+}
+
+function : int somefunc(int somearg) {
+  const int Zero = 0;
+
+  const bool f = c*3%4 < d+9+8+1;
+  
+
+  exit(Zero);
+  return Zero;
+}
+
+function : int myfunc(int b) {
+  return somefunc(d);  
+}

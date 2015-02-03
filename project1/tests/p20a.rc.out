@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_YBTaux/file.rc", line 10: 
+  Value of type bool not assignable to variable of type int.
+Compile: failure.

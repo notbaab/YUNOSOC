@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_FATaux/file.rc", line 36: 
+  Type of return expression (MYS***[20]), not assignment compatible with function's return type (MYS**).
+Error, "/tmp/cs131_testrunner_FATaux/file.rc", line 48: 
+  Incompatible type float to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_FATaux/file.rc", line 55: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Compile: failure.

@@ -1,0 +1,21 @@
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 5: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 8: 
+  Incompatible type bool to binary operator -, numeric expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 11: 
+  Incompatible type bool to binary operator *, numeric expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 14: 
+  Incompatible type bool to binary operator /, numeric expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 21: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 24: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 32: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 35: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 38: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_6uTaux/file.rc", line 41: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Compile: failure.

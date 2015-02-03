@@ -1,0 +1,15 @@
+// All these lines should compile without error.
+
+function : void good_stuff() {
+    int a = 2;
+    bool b = true;
+    bool things_are_broken = true;
+
+    if (b) {
+        things_are_broken = false;
+    }
+
+    while (b) {
+        things_are_broken = false;
+    }
+}

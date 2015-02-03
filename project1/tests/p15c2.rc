@@ -1,0 +1,31 @@
+structdef MYSTRUCT {
+	int x;
+};
+
+function : int* returnPtr() {
+	int y = 5;
+	int* yy = &y;
+	return yy;
+}
+
+function : MYSTRUCT* f() {
+	MYSTRUCT *r;
+	return r;
+}
+
+function : void main() {
+	MYSTRUCT* ptr;
+	int* ptr2;
+	int y = (*ptr).x;
+	int w = ptr->x;
+	int z = *ptr2;
+}
+
+function : void pbyReference(MYSTRUCT * mp) {
+	int y = mp->x;	
+}
+
+function : void pbyValue(MYSTRUCT m) {
+	m.x = 2;
+	pbyReference(&m);
+}

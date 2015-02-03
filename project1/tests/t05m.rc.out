@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_JDTaux/file.rc", line 3: 
+  undeclared identifier 'main'.
+Error, "/tmp/cs131_testrunner_JDTaux/file.rc", line 13: 
+  Return required in function, none found.
+Compile: failure.

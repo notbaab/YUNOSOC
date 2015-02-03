@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_YzTaux/file.rc", line 5: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_YzTaux/file.rc", line 7: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_YzTaux/file.rc", line 8: 
+  Field y declared second time in struct.
+Error, "/tmp/cs131_testrunner_YzTaux/file.rc", line 10: 
+  Field w declared second time in struct.
+Compile: failure.

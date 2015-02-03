@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_OzTaux/file.rc", line 37: 
+  Argument of type bool[32] not equivalent to reference parameter a, of type bool[31].
+Error, "/tmp/cs131_testrunner_OzTaux/file.rc", line 38: 
+  Argument of type REC2* not equivalent to reference parameter b, of type REC2.
+Error, "/tmp/cs131_testrunner_OzTaux/file.rc", line 39: 
+  Type of expression referenced by "." (int) is not a struct.
+Compile: failure.

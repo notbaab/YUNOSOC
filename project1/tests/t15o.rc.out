@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_3HTaux/file.rc", line 11: 
+  Value of type bool not assignable to variable of type int.
+Compile: failure.

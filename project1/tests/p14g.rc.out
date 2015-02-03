@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_sATaux/file.rc", line 13: 
+  Referenced field passClass not found in type COMPILERSCLASS.
+Compile: failure.

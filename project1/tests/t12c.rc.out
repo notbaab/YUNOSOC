@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_EGTaux/file.rc", line 3: 
+  bool required for conditional test, int found.
+Error, "/tmp/cs131_testrunner_EGTaux/file.rc", line 9: 
+  Return required in function, none found.
+Compile: failure.

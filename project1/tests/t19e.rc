@@ -1,0 +1,4 @@
+function : void foo(int &p1[10], float** p2) { 
+    x = sizeof(p1);  // should be 40 
+    x = sizeof(p2);  // should be 4 
+} 

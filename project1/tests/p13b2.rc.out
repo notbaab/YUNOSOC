@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_2zTaux/file.rc", line 22: 
+  Duplicate declaration of overloaded function foo.
+Error, "/tmp/cs131_testrunner_2zTaux/file.rc", line 23: 
+  undeclared identifier 'B'.
+Compile: failure.

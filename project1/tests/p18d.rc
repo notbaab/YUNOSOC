@@ -1,0 +1,6 @@
+function : int main() {
+    int *x;
+    const int y = 6;
+    x = &y;
+    return y;
+}

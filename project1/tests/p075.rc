@@ -1,0 +1,9 @@
+//tests illegal exit in main
+function: void main() {
+if(1 == 2) {
+  exit(true); //not valid
+  } else {
+    exit(1+2); //valid
+  }
+  exit(0.0 + 1000);  // not valid
+}

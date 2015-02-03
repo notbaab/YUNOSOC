@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_pHTaux/file.rc", line 18: 
+  Type of return expression (_MYS_1) is not equivalent to the function's return type (_MYS_2).
+Compile: failure.

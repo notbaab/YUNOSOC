@@ -1,0 +1,61 @@
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 9: 
+  Incompatible types to operator ==:
+    int*,
+    bool*;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 10: 
+  Incompatible types to operator ==:
+    int*,
+    int**;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 11: 
+  Incompatible types to operator ==:
+    int*,
+    int;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 12: 
+  Incompatible types to operator ==:
+    int*,
+    int;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 15: 
+  Incompatible types to operator ==:
+    nullptr,
+    int;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 18: 
+  Incompatible types to operator !=:
+    int*,
+    bool*;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 19: 
+  Incompatible types to operator !=:
+    int*,
+    int**;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 20: 
+  Incompatible types to operator !=:
+    int*,
+    int;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 21: 
+  Incompatible types to operator !=:
+    int*,
+    int;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 24: 
+  Incompatible types to operator !=:
+    nullptr,
+    int;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 28: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 29: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 32: 
+  Non-addressable argument of type int to address-of operator.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 33: 
+  Non-addressable argument of type int to address-of operator.
+Error, "/tmp/cs131_testrunner_nBTaux/file.rc", line 37: 
+  Return required in function, none found.
+Compile: failure.

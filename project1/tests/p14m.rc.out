@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_yATaux/file.rc", line 22: 
+  Number of arguments (2) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_yATaux/file.rc", line 23: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_yATaux/file.rc", line 25: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_yATaux/file.rc", line 28: 
+  Argument of type bool not assignable to value parameter x, of type float.
+Error, "/tmp/cs131_testrunner_yATaux/file.rc", line 31: 
+  Illegal call to overloaded function MYC.
+Compile: failure.

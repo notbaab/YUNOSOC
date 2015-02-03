@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_IzTaux/file.rc", line 19: 
+  Argument of type int not assignable to value parameter a, of type S.
+Compile: failure.

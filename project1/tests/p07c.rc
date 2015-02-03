@@ -1,0 +1,14 @@
+function : void foo()
+{
+  exit(3.3);
+}
+
+function : void foo2() 
+{
+  exit(false);
+}
+
+function : void foo3()
+{
+  exit(1);
+}

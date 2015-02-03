@@ -1,0 +1,23 @@
+structdef MYSTRUCT{
+    int a;
+    int b;
+    bool c;
+    int d[10];
+};
+MYSTRUCT* x;
+int i;
+MYSTRUCT s;
+
+function : int main() {
+    i = x->a;
+    i = x->c;
+
+    i = (*x).b;
+    i = (*x).c;
+
+    s = *x;
+    i = x->d[5];
+    
+    return 0;
+}
+ 

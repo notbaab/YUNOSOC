@@ -1,0 +1,8 @@
+const int a = 2;
+const float b = a + 3.0;
+static float c = a * b;
+
+function : int main() {
+	static int d = 47 + a;
+	return d;
+}

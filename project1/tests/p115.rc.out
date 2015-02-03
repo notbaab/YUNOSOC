@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_3yTaux/file.rc", line 7: 
+  Incompatible type float** to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner_3yTaux/file.rc", line 8: 
+  Type of index expression in array reference (float) not equivalent to int.
+Error, "/tmp/cs131_testrunner_3yTaux/file.rc", line 15: 
+  Type of expression referenced by array subscript (float) is not of array or pointer type.
+Compile: failure.

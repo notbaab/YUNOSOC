@@ -1,0 +1,13 @@
+Error, "/tmp/cs131_testrunner_CxTaux/file.rc", line 5: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_CxTaux/file.rc", line 15: 
+  Return in function requires a result expression, none found.
+Error, "/tmp/cs131_testrunner_CxTaux/file.rc", line 21: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_CxTaux/file.rc", line 35: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_CxTaux/file.rc", line 54: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_CxTaux/file.rc", line 59: 
+  Return required in function, none found.
+Compile: failure.

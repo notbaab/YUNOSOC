@@ -1,0 +1,21 @@
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 5: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 6: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 7: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 8: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 10: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 11: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 12: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 13: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 15: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_DCTaux/file.rc", line 16: 
+  Operand to -- is not a modifiable L-value.
+Compile: failure.

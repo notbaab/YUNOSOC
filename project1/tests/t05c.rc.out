@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_nDTaux/file.rc", line 8: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_nDTaux/file.rc", line 9: 
+  Return required in function, none found.
+Compile: failure.

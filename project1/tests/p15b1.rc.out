@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_OATaux/file.rc", line 6: 
+  Referenced field b not found in type MYSTRUCT.
+Error, "/tmp/cs131_testrunner_OATaux/file.rc", line 7: 
+  Referenced field b not found in type MYSTRUCT.
+Error, "/tmp/cs131_testrunner_OATaux/file.rc", line 8: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_OATaux/file.rc", line 9: 
+  Incompatible type MYSTRUCT to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_OATaux/file.rc", line 10: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Compile: failure.

@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_zITaux/file.rc", line 9: 
+  Operand to "delete" is not a modifiable L-value.
+Compile: failure.

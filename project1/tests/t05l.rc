@@ -1,0 +1,9 @@
+function: float _foo() {
+    return 3.5;
+}
+
+function: int main() { 
+    _foo(true, -4, 3.5, 4.4, 3.6);
+    _foo(true);
+    _foo(1, 2);
+}

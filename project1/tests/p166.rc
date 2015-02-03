@@ -1,0 +1,21 @@
+structdef MY {
+    int x;
+    bool y;
+    MY (int x, bool y) {}
+};
+
+function : void main() {
+    int y;
+    int *z;
+	MY *a;
+	MY *b;
+
+    new a;            // Number of arguments (0) differs from number of parameters (1). *Since not overloaded
+    new z : (y);      // Operand to "new" with constructor call is not of pointer to struct type, int* found.
+    new b : (y,4);    // Number of arguments (2) differs from number of parameters (1).
+    new b : (y,true); // Ok
+
+    new b : (true, y); //Argument of type bool not assignable to value parameter x, of type int.
+                        //Argument of type int not assignable to value parameter y, of type bool.
+
+}

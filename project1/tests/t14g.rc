@@ -1,0 +1,22 @@
+structdef _MYS_1 { 
+    int x;
+    float y; 
+    _MYS_1 *m1;
+    function : float f( int &x ) 
+    { this.z = x + this.m1->f(x); }
+    function : void foo() {} 
+};
+
+structdef _MYS_2 { 
+    int x;
+    bool y; 
+    _MYS_2 *m2;
+    function : void f( int &x ) 
+    { this.x = this.foo(x) - this.m2; }
+    function : void foo() {} 
+};
+
+function: int main () {
+    _MYS_1 x;
+    _MYS_2 y;
+}

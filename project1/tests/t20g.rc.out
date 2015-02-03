@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_uJTaux/file.rc", line 13: 
+  Value of type MS* not assignable to variable of type float*.
+Error, "/tmp/cs131_testrunner_uJTaux/file.rc", line 14: 
+  Invalid type cast. Type MS to type MS* is not supported.
+Compile: failure.

@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_OwTaux/file.rc", line 40: 
+  Value of type void not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_OwTaux/file.rc", line 43: 
+  Number of arguments (1) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_OwTaux/file.rc", line 46: 
+  Argument of type float not assignable to value parameter i, of type int.
+Error, "/tmp/cs131_testrunner_OwTaux/file.rc", line 50: 
+  Argument of type int not equivalent to reference parameter i, of type float.
+Error, "/tmp/cs131_testrunner_OwTaux/file.rc", line 54: 
+  Argument passed to reference parameter b (type bool) is not a modifiable L-value.
+Compile: failure.

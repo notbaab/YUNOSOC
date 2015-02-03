@@ -1,0 +1,55 @@
+// Break or continue outside a block is a syntax error.
+
+function : void illegal_break() {
+    // Break does not occur in a loop.
+    break;
+
+    if (true) {
+        // Break does not occur in a loop.
+        break;
+    }
+    else {
+        if (false) {
+            // Break does not occur in a loop.
+            break;
+        }
+
+        // Break does not occur in a loop.
+        break;
+    }
+}
+
+function : void illegal_continue() {
+    // Continue does not occur in a loop.
+    continue;
+
+    if (false) {
+        // Continue does not occur in a loop.
+        continue;
+    }
+    else {
+        if (true) {
+            // Continue does not occur in a loop.
+            continue;
+        }
+
+        // Continue does not occur in a loop.
+        continue;
+    }
+}
+
+function : void illegal_both() {
+    // Break does not occur in a loop.
+    break;
+
+    // Continue does not occur in a loop.
+    continue;
+
+    if (true) {
+        // Continue does not occur in a loop.
+        continue;
+
+        // Break does not occur in a loop.
+        break;
+    }
+}

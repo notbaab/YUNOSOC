@@ -1,0 +1,11 @@
+function: bool _foo(bool a1, float a2, int a3) {
+    int x;
+    return (x!=5);
+}
+
+function: int main() { 
+    float f;
+    bool b = true;
+    int i;
+    b = _foo(b, f, i) && _foo(b, i, i);
+}

@@ -1,0 +1,14 @@
+structdef _MYS_1 { 
+    bool x;
+    float y; 
+    function : float f( int &x ) 
+    { 
+        this.y = this.x + this.y;
+        return this.y; 
+    }
+    function : void foo() {} 
+};
+
+function: int main () {
+    _MYS_1 x;
+}

@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_RATaux/file.rc", line 12: 
+  Value of type int* not assignable to variable of type int.
+Compile: failure.

@@ -1,0 +1,29 @@
+function : bool foo(float a, float b, float &c) {
+  bool x;
+  x = a > b;
+  x = (a+c) <= 2;
+  return x;
+}
+function : bool foo2(float a, float &b, float &c) {
+  bool x;
+  x = a > b;
+  x = (a+c) <= 2;
+  return x;
+}
+
+function : void main () {
+  int x;
+  float f1 = 0.0;
+  float f2 = 0.0;
+  float f3 = 0.0;
+  bool b = false;
+  bool nofail = foo(f1, f2, f3);
+  bool fail1 = foo(f1, f2, b); //should fail because bool is not assignable to float
+  x =  x+ foo(f1, x, f1); //error arguments called correctly (x promoted) but cannot add
+  x =  x+ foo2(f1, x, f1); //error
+  bool fail2 = foo(x, f1);
+  int  fail3 = foo(f3,f2, x);    // ASK: is there an error in the assignment as well?
+  int fail4 = foo2(true,1,1); // multiple arguments failed
+  int fail5 = foo2(1.0, 1.0, 1.0); //fails because no modlval twice
+
+}

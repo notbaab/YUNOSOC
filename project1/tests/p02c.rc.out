@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_mwTaux/file.rc", line 8: 
+  Value of type int not assignable to variable of type bool.
+Error, "/tmp/cs131_testrunner_mwTaux/file.rc", line 9: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_mwTaux/file.rc", line 10: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_mwTaux/file.rc", line 11: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_mwTaux/file.rc", line 12: 
+  Operand to ++ is not a modifiable L-value.
+Compile: failure.

@@ -1,0 +1,7 @@
+int a[4+5];
+int b[12-4-1];
+int c[3*6/1];
+
+function : void main()
+{
+}

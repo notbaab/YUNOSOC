@@ -1,0 +1,22 @@
+structdef MYS {
+int x;
+int y;
+MYS() { // Ctor
+ this.x = 0;
+ this.y = 0;
+ this = nullptr; // Error, not modifiable l-val
+ this.x = this; // Error, MYS not assignable to int
+}
+MYS(int x, int y) { // Ctor
+ this.x = x;
+ this.y = y;
+}
+function : void foo() {
+ this.x = 8;
+ this.y = this.x;
+ this.foo(); // Legal, recursive call
+}
+function : void bar() {
+ this.foo(); // Legal, calling other struct function
+}
+};

@@ -1,0 +1,34 @@
+const bool x = true;
+const int i = 1;
+const float f = 1.0;
+
+
+int y[10];
+int z;
+float a;
+int* b;
+bool c;
+function : void main() {
+	int* p = &z;
+	//Conversion from const bool
+	z = y[(int) x]; //index into array will be 1
+	a = (float) x;
+	b = (int*) x;
+
+	//Conversion from int, float, pointer to bool
+	c = (bool)i;
+	c = (bool)f;
+	c = (bool)p;
+
+	//Conversion of float to int, pointer
+	z = (int)f;
+	b = (int *)f;
+
+	//Converstion of int, pointer to float
+	a = (float)i;
+	a = (float)p;
+
+	//Conversion of int to pointer and pointer to int
+	z = (int)p;
+	b = (int *)i;
+}

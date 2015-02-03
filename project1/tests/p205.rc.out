@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_TBTaux/file.rc", line 5: 
+  Argument passed to reference parameter x (type int) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_TBTaux/file.rc", line 9: 
+  Non-addressable argument of type int to address-of operator.
+Error, "/tmp/cs131_testrunner_TBTaux/file.rc", line 14: 
+  Invalid type cast. Type int[10] to type float is not supported.
+Compile: failure.

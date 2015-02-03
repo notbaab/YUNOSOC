@@ -1,0 +1,4 @@
+
+function : void bar() {
+	exit(0);
+}

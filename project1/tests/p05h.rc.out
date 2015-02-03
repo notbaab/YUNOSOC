@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_8wTaux/file.rc", line 7: 
+  Argument of type int not equivalent to reference parameter a, of type float.
+Compile: failure.

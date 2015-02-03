@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_MATaux/file.rc", line 23: 
+  Value of type int not assignable to variable of type bool.
+Error, "/tmp/cs131_testrunner_MATaux/file.rc", line 26: 
+  Value of type int not assignable to variable of type bool.
+Error, "/tmp/cs131_testrunner_MATaux/file.rc", line 29: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_MATaux/file.rc", line 32: 
+  Value of type YOURSTRUCT not assignable to variable of type MYSTRUCT.
+Error, "/tmp/cs131_testrunner_MATaux/file.rc", line 34: 
+  Value of type YOURSTRUCT* not assignable to variable of type MYSTRUCT*.
+Compile: failure.

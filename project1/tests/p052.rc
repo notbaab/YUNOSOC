@@ -1,0 +1,20 @@
+
+function : bool foo() {
+	return true;
+}
+
+function : int bar (int x, int y) {
+	return x + y - 3;
+}
+
+function : void baz (int &x) {
+	return;
+}
+
+function : void main () {
+	int x;
+	if (foo()) {
+		x = bar(2, 18);
+	}
+	baz(x);
+}

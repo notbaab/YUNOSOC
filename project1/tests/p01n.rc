@@ -1,0 +1,9 @@
+/* Check 1 (p01n.rc) */
+
+bool b;
+int i;
+
+function : int main() {
+    b = i > b;
+    return 0;
+}

@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_BBTaux/file.rc", line 16: 
+  Argument of type bool[4]* not assignable to value parameter p2, of type bool*.
+Compile: failure.

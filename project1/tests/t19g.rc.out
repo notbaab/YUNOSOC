@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_fJTaux/file.rc", line 15: 
+  Index value of 48 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_fJTaux/file.rc", line 16: 
+  Index value of 136 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_fJTaux/file.rc", line 19: 
+  Index value of 40 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_fJTaux/file.rc", line 20: 
+  Index value of 12 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_fJTaux/file.rc", line 21: 
+  Index value of 16 is outside legal range [0,10).
+Compile: failure.

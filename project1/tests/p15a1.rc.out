@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_IATaux/file.rc", line 2: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_IATaux/file.rc", line 4: 
+  Incompatible type int to operator ->, pointer to struct expected.
+Compile: failure.

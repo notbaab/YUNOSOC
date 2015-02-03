@@ -1,0 +1,7 @@
+int***** x;
+
+function : void main()
+{
+  new x;
+  delete x;
+}

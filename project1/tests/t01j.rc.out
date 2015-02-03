@@ -1,0 +1,17 @@
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 6: 
+  Incompatible type int to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 7: 
+  Incompatible type int to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 8: 
+  Incompatible type int to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 10: 
+  Incompatible type int to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 11: 
+  Incompatible type float to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 12: 
+  Incompatible type float to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 13: 
+  Incompatible type float to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_pCTaux/file.rc", line 14: 
+  Incompatible type float to binary operator ||, equivalent to bool expected.
+Compile: failure.

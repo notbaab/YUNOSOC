@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_pATaux/file.rc", line 7: 
+  Type of expression referenced by "." (bool) is not a struct.
+Compile: failure.

@@ -1,0 +1,41 @@
+function : void void_no_args() {
+    return;
+}
+
+function : int int_no_args() {
+    return 0;
+}
+
+function : float float_one_arg(float f) {
+    return f;
+}
+
+function : bool bool_two_args(bool b, int i) {
+    return b;
+}
+
+function : bool bool_two_args_one_ref(bool& b, int i) {
+    return true;
+}
+
+function : bool& boolref_one_arg(int a) {
+    bool false_ = false;
+    return false_;
+}
+
+function : int& intref_three_args(int i, bool b, float f) {
+    return i;
+}
+
+function : int int_one_arg_by_ref(float& i) {
+    return 0;
+}
+
+function : void main() {
+    // Argument of type bool not assignable to value parameter f, of type float.
+    float_one_arg(true);
+
+    // Argument of type void not assignable to value parameter b, of type bool.
+    // Argument of type float not assignable to value parameter i, of type int.
+    bool_two_args(main(), 2.0);
+}

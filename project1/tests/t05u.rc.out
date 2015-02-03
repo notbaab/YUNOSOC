@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_0DTaux/file.rc", line 9: 
+  Number of arguments (4) differs from number of parameters (3).
+Error, "/tmp/cs131_testrunner_0DTaux/file.rc", line 11: 
+  Type of return expression (float), not assignment compatible with function's return type (int).
+Error, "/tmp/cs131_testrunner_0DTaux/file.rc", line 12: 
+  Return required in function, none found.
+Compile: failure.

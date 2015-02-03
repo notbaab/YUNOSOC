@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_xyTaux/file.rc", line 1: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_xyTaux/file.rc", line 2: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_xyTaux/file.rc", line 4: 
+  Illegal call to overloaded function foo.
+Compile: failure.

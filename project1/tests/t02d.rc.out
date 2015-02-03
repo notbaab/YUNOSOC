@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_ECTaux/file.rc", line 4: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_ECTaux/file.rc", line 5: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_ECTaux/file.rc", line 6: 
+  Operand to ++ is not a modifiable L-value.
+Compile: failure.

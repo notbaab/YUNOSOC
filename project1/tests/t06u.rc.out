@@ -1,0 +1,121 @@
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 10: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 11: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 12: 
+  Type of return expression (bool) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 14: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 15: 
+  Type of return expression (bool) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 16: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 17: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 18: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 19: 
+  Type of return expression (bool) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 20: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 21: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 22: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 23: 
+  Type of return expression (bool) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 24: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 25: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 26: 
+  Type of return expression (bool) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 27: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 28: 
+  Type of return expression (float) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 29: 
+  Type of return expression (bool) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 30: 
+  Return in function requires a result expression, none found.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 40: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 41: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 42: 
+  Type of return expression (bool) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 43: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 45: 
+  Type of return expression (bool) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 46: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 47: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 48: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 49: 
+  Type of return expression (bool) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 50: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 51: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 52: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 53: 
+  Type of return expression (bool) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 54: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 55: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 56: 
+  Type of return expression (bool) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 57: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 58: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 59: 
+  Type of return expression (bool) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 60: 
+  Return in function requires a result expression, none found.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 71: 
+  Type of return expression (int) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 72: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 73: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 74: 
+  Type of return expression (int) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 75: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 77: 
+  Type of return expression (int) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 78: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 79: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 80: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 81: 
+  Type of return expression (int) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 82: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 83: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 84: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 85: 
+  Type of return expression (int) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 86: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 87: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 88: 
+  Type of return expression (int) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 89: 
+  Type of return expression (float) is not equivalent to the function's return type (bool).
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 90: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_PETaux/file.rc", line 91: 
+  Return in function requires a result expression, none found.
+Compile: failure.

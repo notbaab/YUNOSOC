@@ -1,0 +1,26 @@
+structdef MYS {
+        int x;
+        int y;
+
+        // Field x declared second time in struct.
+        int x;
+
+        // Field x declared second time in struct.
+        int z;
+        int x;
+
+        // Field y declared second time in struct.
+        float y;
+
+
+        float f;
+
+        int foo;
+
+        // Field foo declared second time in struct.
+        float foo;
+    };
+
+function : void main() {
+
+}

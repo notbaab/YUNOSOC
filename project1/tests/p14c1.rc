@@ -1,0 +1,13 @@
+int a;
+
+structdef MYS {
+    int x;
+    int y;
+    MYS() { // Ctor
+     x = 0;             // error
+    }
+
+    function : int foo() {
+     return a+y;            // Error
+    }
+};

@@ -1,0 +1,3 @@
+structdef STRUCT {
+	STRUCT s;
+};

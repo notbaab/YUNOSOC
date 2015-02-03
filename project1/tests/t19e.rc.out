@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_bJTaux/file.rc", line 2: 
+  undeclared identifier 'x'.
+Error, "/tmp/cs131_testrunner_bJTaux/file.rc", line 3: 
+  undeclared identifier 'x'.
+Compile: failure.

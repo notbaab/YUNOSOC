@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_4FTaux/file.rc", line 7: 
+  Type of index expression in array reference (int***) not equivalent to int.
+Compile: failure.

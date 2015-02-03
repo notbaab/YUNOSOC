@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner__ATaux/file.rc", line 6: 
+  Operand to "delete" is not a modifiable L-value.
+Compile: failure.

@@ -1,0 +1,22 @@
+
+function : void __foo() {
+    bool i[10];
+    bool *b[4];
+    float f[3];
+
+    sizeof(int[12]);
+    sizeof(float[34]);
+    sizeof(bool[1]);
+
+    sizeof(i);
+    sizeof(f);
+    sizeof(b);
+
+    i[sizeof(int[12])];
+    i[sizeof(float[34])];
+    i[sizeof(bool[1])];
+
+    i[sizeof(i)];
+    i[sizeof(f)];
+    i[sizeof(b)];
+}

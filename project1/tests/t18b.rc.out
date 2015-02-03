@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_UITaux/file.rc", line 13: 
+  Argument passed to reference parameter x (type int*) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_UITaux/file.rc", line 15: 
+  Argument of type int* not assignable to value parameter z, of type float*.
+Compile: failure.

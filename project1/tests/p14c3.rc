@@ -1,0 +1,31 @@
+int a;
+
+function : bool bar() {
+    return true;
+}
+
+structdef MY {
+    int y;
+    bool x;
+
+    MY() {
+        int y;
+        int x;
+        x = y;              // ok
+        x = this.y;         // ok
+        this.x = y;         // error int not assignable to bool
+    }
+
+    function : int bar() {
+        x = a;              // error undeclared
+        this.y = a;         // ok
+        return this.y;
+    }
+
+    function : void foo(int x) {
+        x = bar();          // error bool not assignable to int
+        x = this.bar();     // ok
+        this.x = bar();     // ok
+        this.x = this.bar();// error int not assignable to bool
+    }
+};

@@ -1,0 +1,63 @@
+// This code should compile without errors.
+
+function : void void_no_args() {
+    // nothing
+}
+
+function : int int_no_args() {
+    return 0;
+}
+
+function : float float_one_arg(float f) {
+    return f;
+}
+
+function : bool bool_two_args(bool b, int i) {
+    return b;
+}
+
+function : bool bool_two_args_one_ref(bool& b, int i) {
+    return true;
+}
+
+function : bool& boolref_one_arg(int a) {
+    bool false_ = false;
+    return false_;
+}
+
+function : int& intref_three_args(int i, bool b, float f) {
+    return i;
+}
+
+function : void main() {
+    int int_var;
+    float float_var;
+    bool bool_var;
+
+    // Return type matches variable type exactly
+    int_var = int_no_args();
+
+    // Arg type matches parameter type exactly
+    float_var = float_one_arg(2.0);
+
+    // Arg passed by value, assignable to parameter type
+    float_var = float_one_arg(1);
+
+    // Arg 1 passed by reference, equivalent to parameter type
+    bool_var = bool_two_args(true, int_var);
+
+    // Type returned by reference is assignable to variable of that type
+    int_var = intref_three_args(1, true, 1.0);
+
+    // Arg 2 type (returned by reference) assignable to parameter of that type
+    int_var = intref_three_args(int_var, boolref_one_arg(4), float_var);
+
+    // Reference parameter 1 accepts arg of that type returned by reference
+    bool_two_args_one_ref(boolref_one_arg(1), 2);
+
+    // Is this even a compiler?
+    void_no_args();
+
+    // And let's not run this.
+    main();
+}

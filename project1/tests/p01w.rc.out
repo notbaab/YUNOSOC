@@ -1,0 +1,137 @@
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 7: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 9: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 10: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 11: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 12: 
+  Incompatible type bool to binary operator -, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 13: 
+  Incompatible type bool to binary operator -, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 14: 
+  Incompatible type bool to binary operator -, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 15: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 16: 
+  Incompatible type float to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 17: 
+  Incompatible type bool to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 21: 
+  Incompatible type bool to binary operator /, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 22: 
+  Incompatible type bool to binary operator /, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 25: 
+  Incompatible type bool to binary operator *, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 26: 
+  Incompatible type bool to binary operator *, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 28: 
+  Incompatible type int to binary operator &&, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 29: 
+  Incompatible type float to binary operator &&, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 30: 
+  Incompatible type float to binary operator &&, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 32: 
+  Incompatible type int to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 33: 
+  Incompatible type float to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 34: 
+  Incompatible type int to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 35: 
+  Incompatible type float to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 36: 
+  Incompatible type int to binary operator ||, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 38: 
+  Incompatible type int to unary operator !, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 39: 
+  Incompatible type float to unary operator !, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 43: 
+  Incompatible type float to binary operator |, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 44: 
+  Incompatible type bool to binary operator |, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 45: 
+  Incompatible type float to binary operator |, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 48: 
+  Incompatible type float to binary operator &, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 49: 
+  Incompatible type bool to binary operator &, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 50: 
+  Incompatible type float to binary operator &, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 53: 
+  Incompatible type float to binary operator ^, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 54: 
+  Incompatible type bool to binary operator ^, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 55: 
+  Incompatible type float to binary operator ^, equivalent to int expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 57: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 59: 
+  Incompatible type bool to binary operator <, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 61: 
+  Incompatible type bool to binary operator >, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 63: 
+  Incompatible type bool to binary operator >, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 65: 
+  Incompatible type bool to binary operator >=, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 67: 
+  Incompatible type bool to binary operator >=, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 69: 
+  Incompatible type bool to binary operator <=, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 71: 
+  Incompatible type bool to binary operator <=, numeric expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 73: 
+  Incompatible types to operator: int == bool;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 75: 
+  Incompatible types to operator: bool == int;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 77: 
+  Incompatible types to operator: int != bool;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 79: 
+  Incompatible types to operator: bool != int;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 82: 
+  Incompatible types to operator: int == bool;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 85: 
+  Incompatible types to operator: bool == int;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 88: 
+  Incompatible types to operator: int != bool;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 91: 
+  Incompatible types to operator: bool != int;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 97: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 98: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 100: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 101: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 102: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 103: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 104: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 105: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 106: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 113: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 114: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 115: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 116: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 117: 
+  Incompatible type bool to operator ++, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner__vTaux/file.rc", line 118: 
+  Incompatible type bool to operator --, equivalent to int, float, or pointer expected.
+Compile: failure.

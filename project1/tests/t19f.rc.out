@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_dJTaux/file.rc", line 17: 
+  Index value of 4 is outside legal range [0,4).
+Error, "/tmp/cs131_testrunner_dJTaux/file.rc", line 18: 
+  Index value of 3999 is outside legal range [0,20).
+Compile: failure.

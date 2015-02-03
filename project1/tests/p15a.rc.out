@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_GATaux/file.rc", line 13: 
+  Value of type bool not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_GATaux/file.rc", line 16: 
+  Value of type bool not assignable to variable of type int.
+Compile: failure.

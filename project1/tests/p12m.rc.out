@@ -1,0 +1,21 @@
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 2: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 16: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 28: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 38: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 42: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 56: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 68: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 78: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 95: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GzTaux/file.rc", line 96: 
+  Break does not occur in a loop.
+Compile: failure.

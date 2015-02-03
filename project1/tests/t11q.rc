@@ -1,0 +1,22 @@
+int arr[10];
+int integer;
+bool boolean;
+int a1[20];
+
+int a[20][30];
+int b[10];
+int c[4];
+
+int i;
+bool w;
+
+const int Five = 5; 
+
+
+function : void main()
+{
+ i = i + b[10-1];
+ i = a[3][5];
+ i = a[4][w];
+ i = c[c[c[c[c[2]]]]];
+}

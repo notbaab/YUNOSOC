@@ -1,0 +1,19 @@
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 31: 
+  Argument of type bool[4] not assignable to value parameter p2, of type bool*.
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 50: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 51: 
+  Invalid operand to sizeof. Not a type or not addressable.
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 52: 
+  Invalid operand to sizeof. Not a type or not addressable.
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 53: 
+  Invalid operand to sizeof. Not a type or not addressable.
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 56: 
+  Index value of 4 is outside legal range [0,1).
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 57: 
+  Index value of 400 is outside legal range [0,1).
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 58: 
+  Index value of 400 is outside legal range [0,1).
+Error, "/tmp/cs131_testrunner_EBTaux/file.rc", line 59: 
+  Index value of 4000 is outside legal range [0,1).
+Compile: failure.

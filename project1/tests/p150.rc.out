@@ -1,0 +1,13 @@
+Error, "/tmp/cs131_testrunner_CATaux/file.rc", line 5: 
+  Initialization value of type int[4] not assignable to constant/variable of type int*.
+Error, "/tmp/cs131_testrunner_CATaux/file.rc", line 8: 
+  Initialization value of type float[2] not assignable to constant/variable of type float*.
+Error, "/tmp/cs131_testrunner_CATaux/file.rc", line 15: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_CATaux/file.rc", line 17: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_CATaux/file.rc", line 20: 
+  Initialization value of type float[2][3] not assignable to constant/variable of type float**.
+Error, "/tmp/cs131_testrunner_CATaux/file.rc", line 22: 
+  Initialization value of type int[4] not assignable to constant/variable of type int**.
+Compile: failure.

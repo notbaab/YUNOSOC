@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_CwTaux/file.rc", line 5: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_CwTaux/file.rc", line 14: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_CwTaux/file.rc", line 15: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_CwTaux/file.rc", line 16: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Compile: failure.

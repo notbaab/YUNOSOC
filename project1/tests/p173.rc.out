@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_eBTaux/file.rc", line 15: 
+  Value of type int* not assignable to variable of type STRUCT*.
+Error, "/tmp/cs131_testrunner_eBTaux/file.rc", line 16: 
+  Value of type bool* not assignable to variable of type int*.
+Error, "/tmp/cs131_testrunner_eBTaux/file.rc", line 17: 
+  Value of type int** not assignable to variable of type int*.
+Error, "/tmp/cs131_testrunner_eBTaux/file.rc", line 18: 
+  Value of type int not assignable to variable of type int*.
+Error, "/tmp/cs131_testrunner_eBTaux/file.rc", line 19: 
+  Value of type int* not assignable to variable of type int.
+Compile: failure.

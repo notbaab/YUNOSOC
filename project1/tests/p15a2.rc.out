@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_JATaux/file.rc", line 7: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_JATaux/file.rc", line 8: 
+  Incompatible type bool to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_JATaux/file.rc", line 9: 
+  Incompatible type float to unary dereference operator *, pointer expected.
+Compile: failure.

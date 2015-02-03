@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_GwTaux/file.rc", line 6: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_GwTaux/file.rc", line 11: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_GwTaux/file.rc", line 16: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_GwTaux/file.rc", line 21: 
+  bool required for conditional test, float found.
+Compile: failure.

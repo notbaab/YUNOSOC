@@ -1,0 +1,5 @@
+function : int main() {
+	const int x = 5;
+	x++; //not a modifiable l value
+	return 0;
+}

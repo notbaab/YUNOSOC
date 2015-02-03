@@ -1,0 +1,17 @@
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 11: 
+  Type of return expression (bool), not assignment compatible with function's return type (float).
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 19: 
+  Return expression is not a modifiable L-value for function that returns by reference.
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 20: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 21: 
+  Type of return expression (int) is not equivalent to the function's return type (float).
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 29: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 35: 
+  Return in function requires a result expression, none found.
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 43: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_HxTaux/file.rc", line 50: 
+  Return in function requires a result expression, none found.
+Compile: failure.

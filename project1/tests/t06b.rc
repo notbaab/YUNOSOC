@@ -1,0 +1,6 @@
+function : void _foo()
+{
+
+	return;
+	return 1;
+}

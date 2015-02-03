@@ -1,0 +1,9 @@
+function: void _foo() {    
+    int x;
+    int y;
+    int z;
+
+    x = y = z;
+    x = 1 = z;
+    1 = x = z;
+}

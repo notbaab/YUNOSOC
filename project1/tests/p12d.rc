@@ -1,0 +1,11 @@
+/* Check 12 (p12d.rc) */
+
+function : int main() {
+    bool b;
+    int i;
+    while( b ){
+        while( b ){ i = 0; }
+    }
+    continue;
+    return 0;
+}

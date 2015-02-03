@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_JHTaux/file.rc", line 11: 
+  Value of type float not assignable to variable of type bool.
+Compile: failure.

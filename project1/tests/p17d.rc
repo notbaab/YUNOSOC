@@ -1,0 +1,37 @@
+function : int main()
+{
+  int* a;
+  int* b;
+  bool* c;
+  int** d;
+  int e;
+  a == b;
+  a == c;
+  a == d;
+  a == e;
+  a == 1;
+  a == nullptr;
+  nullptr == a;
+  nullptr == e;
+
+  a !=b;
+  a !=c;
+  a !=d;
+  a !=e;
+  a !=1;
+  a !=nullptr;
+  nullptr != b;
+  nullptr != e;
+
+  a++;
+  a--;
+  nullptr++;
+  nullptr--;
+  d++;
+  d--;
+  &e++;
+  &e--;
+
+
+
+}

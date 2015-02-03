@@ -1,0 +1,12 @@
+bool a;
+float myfloat[10][10];
+const int i = -5;
+function: float foo(float &a[10], float* &f)
+{
+  a[0] = a[9];
+  f[0-101] = f[i];
+  return f[999];
+}
+function: void main() {
+  foo(myfloat[10],4);
+}

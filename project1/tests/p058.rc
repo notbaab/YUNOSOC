@@ -1,0 +1,7 @@
+function : bool foo() { return false; }
+function : void bar() { }
+function : void main() {
+	int x;
+	x = x + foo(); //error: bool incompatible with + operator
+	x = bar(); //error: void not assignable to int
+}

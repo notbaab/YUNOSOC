@@ -1,0 +1,13 @@
+structdef MS {
+  bool a;
+};
+
+MS* x;
+float y;
+MS z;
+
+function : void main()
+{
+  x->a = y;
+  *x = z;
+}

@@ -1,0 +1,16 @@
+float a[10][5][2];
+float b[10];
+float c[2][10][3];
+float d[5][4][3][2][1];
+
+float e[2];
+float e[a[9][5]];
+float f[true];
+float e[2] ;
+float g [ true == false];
+float h [3 < 4];
+float i [3 | 4];
+
+float j [3][2][4][false];
+
+float k [3][3.3][false][2];

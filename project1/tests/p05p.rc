@@ -1,0 +1,11 @@
+/* Check 5 (p05o.rc) */
+
+bool b;
+function : int fvii(int a, int b) { return 0; }
+int i;
+float r;
+
+function : int main() {
+    fvii(i + r, i + 23 - (2 * (7 / 8) / 3));
+    return 0;
+}

@@ -1,0 +1,16 @@
+function : float main() {
+	int x;
+
+	x = true % 2;
+	x = 3 % false;
+	x = true % false;
+	
+	x = 3.0 % 3;
+	x = 3 % 4.1;
+	x = 3.4 % 3.4;
+	
+	x = 2.3 % true;
+	x = false % 1.0;
+	
+	return x;
+}

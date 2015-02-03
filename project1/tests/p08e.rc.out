@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_jyTaux/file.rc", line 5: 
+  Initialization value of constant named c1 not known at compile time.
+Compile: failure.

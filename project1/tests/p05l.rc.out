@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_axTaux/file.rc", line 8: 
+  Argument passed to reference parameter a (type int) is not a modifiable L-value.
+Compile: failure.

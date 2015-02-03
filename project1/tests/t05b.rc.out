@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_lDTaux/file.rc", line 5: 
+  Type of return expression (int*) is not equivalent to the function's return type (int).
+Error, "/tmp/cs131_testrunner_lDTaux/file.rc", line 9: 
+  Return required in function, none found.
+Compile: failure.

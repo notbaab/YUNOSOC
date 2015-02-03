@@ -1,0 +1,12 @@
+float x;
+
+function: void _foo(bool x) {
+    if (x) {
+        x;
+    }
+    return;
+}
+
+function: int main() { 
+    _foo();
+}

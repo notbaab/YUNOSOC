@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_IyTaux/file.rc", line 1: 
+  Index expression value (-10) in array declaration must be > 0.
+Compile: failure.

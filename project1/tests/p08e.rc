@@ -1,0 +1,12 @@
+bool x;
+
+function : int f(int x) {
+    int a;
+    const int c1 = x;
+    const int c2 = 5 + 6;
+    return a;
+}
+
+function : int main() {
+	return f(420);
+}

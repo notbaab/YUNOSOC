@@ -1,0 +1,19 @@
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 11: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 12: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 20: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 24: 
+  Argument of type REC2 not equivalent to reference parameter a, of type REC1.
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 28: 
+  Argument of type int[5] not equivalent to reference parameter a, of type float[5].
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 30: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 33: 
+  Value of type REC2 not assignable to variable of type REC1.
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 37: 
+  Value of type int* not assignable to variable of type float*.
+Error, "/tmp/cs131_testrunner_BwTaux/file.rc", line 39: 
+  Value of type REC2* not assignable to variable of type REC1*.
+Compile: failure.

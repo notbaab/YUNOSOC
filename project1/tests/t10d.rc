@@ -1,0 +1,5 @@
+int z[-1];
+
+function : void main()
+{
+}     

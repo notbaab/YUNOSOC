@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner__rTaux/file.rc", line 5: 
+  Identifier x is undeclared in the global scope.
+Compile: failure.

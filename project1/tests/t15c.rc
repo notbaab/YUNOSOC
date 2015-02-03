@@ -1,0 +1,12 @@
+structdef MS {
+  float a;
+  bool b;
+};
+
+MS* x;
+bool y;
+
+function : void main()
+{
+  y = (x->a == x->b);
+}

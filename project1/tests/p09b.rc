@@ -1,0 +1,6 @@
+function : float foo(float x) { return 0.0 }
+function : float foo(float x, float y, float z) { return 0.0  }
+function : int main() {
+ foo(1); // error9_Illegal
+ return 0;
+}

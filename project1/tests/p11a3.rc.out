@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner__yTaux/file.rc", line 29: 
+  Index value of 9 is outside legal range [0,5).
+Error, "/tmp/cs131_testrunner__yTaux/file.rc", line 30: 
+  Index value of 9 is outside legal range [0,4).
+Error, "/tmp/cs131_testrunner__yTaux/file.rc", line 40: 
+  Argument of type int[10] not assignable to value parameter intp, of type int*.
+Compile: failure.

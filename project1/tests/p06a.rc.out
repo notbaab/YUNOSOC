@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_ixTaux/file.rc", line 3: 
+  Return in function requires a result expression, none found.
+Compile: failure.

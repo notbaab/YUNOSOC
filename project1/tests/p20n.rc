@@ -1,0 +1,8 @@
+
+function : int main() {
+  int x;
+  float y;
+  
+  x = *(int *)&y;
+  return 0;
+}

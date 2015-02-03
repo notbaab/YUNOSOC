@@ -1,0 +1,4 @@
+function: void _foo() {    
+    _foo = 1;
+}
+

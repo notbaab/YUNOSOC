@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_KzTaux/file.rc", line 19: 
+  Initialization value of type S not assignable to constant/variable of type int.
+Compile: failure.

@@ -1,0 +1,24 @@
+const int cc = 1;
+float a[10];
+float b[10];
+float * d;
+int e;
+float f[10][2];
+
+function : void main() {
+	int i = e[2];
+	b[b[2] - cc] = 2.5;
+
+	const int x = 3;
+	const int c = 12;
+	a[55] = 0;
+	a[0-99] = 0;
+	a[x+10] = 0;
+	a[c] = 0;
+	a[c+5] = 0;
+	a[-9] = 0;
+	f[5][7] = 0;
+	f[-9][0] = 0;
+	f[x+4][c+2] = 0;
+	f[-c][5+3] = 0;
+}

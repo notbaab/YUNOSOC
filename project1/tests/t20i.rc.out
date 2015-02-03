@@ -1,0 +1,15 @@
+Error, "/tmp/cs131_testrunner_yJTaux/file.rc", line 16: 
+  Argument passed to reference parameter x (type int) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_yJTaux/file.rc", line 16: 
+  Argument passed to reference parameter y (type float) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_yJTaux/file.rc", line 16: 
+  Argument of type bool* not equivalent to reference parameter bptr, of type bool.
+Error, "/tmp/cs131_testrunner_yJTaux/file.rc", line 17: 
+  Argument passed to reference parameter x (type int) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_yJTaux/file.rc", line 17: 
+  Argument passed to reference parameter y (type float) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_yJTaux/file.rc", line 17: 
+  Argument of type bool* not equivalent to reference parameter bptr, of type bool.
+Error, "/tmp/cs131_testrunner_yJTaux/file.rc", line 18: 
+  Return required in function, none found.
+Compile: failure.

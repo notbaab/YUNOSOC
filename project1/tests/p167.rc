@@ -1,0 +1,13 @@
+structdef MY {
+    int x;
+    MY () {}
+    MY (int x) {}
+};
+
+function : void main() {
+    int y;
+	MY *a;
+	MY *b;
+    new a;
+    new b : (y);
+}

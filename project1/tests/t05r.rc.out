@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_TDTaux/file.rc", line 10: 
+  Argument of type int not equivalent to reference parameter a3, of type float.
+Error, "/tmp/cs131_testrunner_TDTaux/file.rc", line 11: 
+  Return required in function, none found.
+Compile: failure.

@@ -1,0 +1,16 @@
+int x;
+int y;
+int *z;
+const int w = 77;
+
+function : int main() {
+    z = &x;         // &x in this example is simply an R-val
+    &x = nullptr;   // Error, since not a modifiable L-val
+    y = *&x;        // *&x is essentially just x, so OK.
+    *&x = y;        // The * reverses the &x, making it a modifiable L-val
+    *&w = y;        // The * reverses the &w, making it a modifiable L-val,
+                    // even though w was originally a constant
+    &*z = z;        // Error, result of address-of is not a modifiable L-val
+
+    return 0;
+}

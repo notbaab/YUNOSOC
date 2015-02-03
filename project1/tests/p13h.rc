@@ -1,0 +1,30 @@
+int x;
+function : void bar(){}
+
+structdef MYS
+{
+  int x;
+  int y;
+  int x;
+  int z;
+  int x;
+  MYS* next;
+  function : void y() {} // check13a_Struct dup id y, error #3 
+  function : void f( int &x ) // No error with x (inner scope)
+  {
+    MYS a;
+    x = x + 1; 
+  }
+  function : void foo() {}
+  function : void foo() {} // error9_Decl dup overload, error #4 
+  function : void bar() {}
+  function : void bar(int x) {} // OK, since legal overload
+};
+function : int main()
+{     
+  int x = 1;
+  float y = 2;
+  MYS a;
+  main();
+  return 0;
+}

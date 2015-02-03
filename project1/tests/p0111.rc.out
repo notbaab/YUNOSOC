@@ -1,0 +1,4 @@
+Error, "/tmp/cs131_testrunner_6sTaux/file.rc", line 4: 
+  Incompatible types to operator: bool == int;
+  both must be numeric, or both equivalent to bool.
+Compile: failure.

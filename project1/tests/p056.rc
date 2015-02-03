@@ -1,0 +1,9 @@
+function : bool foo() { return false; }
+
+function : void bar() { /* nothing */ }
+
+function : void main () {
+  int x;
+  x =  x+ foo(); //error foo returns a bool
+  x = bar(); //err void is not assignable to int;
+}

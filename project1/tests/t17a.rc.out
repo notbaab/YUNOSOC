@@ -1,0 +1,16 @@
+Error, "/tmp/cs131_testrunner_BITaux/file.rc", line 10: 
+  Incompatible types to operator ==:
+    int***,
+    int**;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_BITaux/file.rc", line 12: 
+  Incompatible types to operator ==:
+    int***,
+    float***;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_BITaux/file.rc", line 13: 
+  Incompatible types to operator ==:
+    float***,
+    bool;
+  both must be of equivalent pointer type.
+Compile: failure.

@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_YGTaux/file.rc", line 23: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner_YGTaux/file.rc", line 24: 
+  Incompatible type _MYS_1 to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_YGTaux/file.rc", line 24: 
+  Incompatible type _MYS_2 to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_YGTaux/file.rc", line 25: 
+  Return required in function, none found.
+Compile: failure.

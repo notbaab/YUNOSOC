@@ -1,0 +1,10 @@
+/* Check 12 (p12e.rc) */
+
+function : int main() {
+    int i = 44;
+    while( i == 0  ){ 
+        i = i-11;
+        continue;
+    }
+    return 0;
+}

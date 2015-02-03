@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_2DTaux/file.rc", line 19: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_2DTaux/file.rc", line 20: 
+  Argument passed to reference parameter hi (type int) is not a modifiable L-value.
+Compile: failure.

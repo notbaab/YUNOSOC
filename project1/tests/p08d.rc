@@ -1,0 +1,5 @@
+function : int main() { 
+    const bool foo = 5.0 < true;
+
+    return 0;
+}

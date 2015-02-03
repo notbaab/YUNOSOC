@@ -1,0 +1,53 @@
+int foo2;
+
+function : void foo(float f)
+{
+}
+
+function : void foo(float &f, int i)
+{
+}
+
+function : void foo(int i, float f)
+{
+}
+
+function : int foo(float f, int i)
+{
+  return 0;
+}
+
+function : void foo2(float f)
+{
+}
+
+function : void foo3(int i)
+{
+}
+function: float foo4(float &x) 
+{
+  return 0;
+}
+function: bool foo4() 
+{
+  return false;
+}
+
+function : int main()
+{
+  int x = 1;
+  float y = 2;
+  foo3();
+  foo();
+  foo(1);
+  foo(y,1);
+  foo(1, 1.5);
+  foo(true, true);
+  foo(!1);
+  boo();
+  return 0;
+  bool b = foo4();
+  float x1;
+  float x2 = foo4(x1);
+
+}

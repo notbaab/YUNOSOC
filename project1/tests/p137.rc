@@ -1,0 +1,41 @@
+
+
+structdef REC2 {
+  int a;
+};
+
+structdef REC {
+  float a;
+  float b;
+  bool c [32];
+  //1 error
+  REC2 *x;
+  REC2 *x1;
+};
+
+REC myRec1;
+REC myRec2;
+
+function: void foo1(bool & a[32]) {}
+
+function: void foo2(bool & a[31]) {}
+
+function: void foo3(REC2 & b) {}
+
+function: void main() {
+  myRec2 = myRec1;
+  myRec2.b = 3.6;
+  myRec2.a = myRec2.b;
+  
+  int x;
+
+  
+  foo1(myRec1.c);
+  foo3(myRec1.x1[3]);
+  
+  //3 errors
+  foo2(myRec2.c);  
+  foo3(myRec1.x1);
+  x.b = 3;
+
+}

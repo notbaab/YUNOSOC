@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_lwTaux/file.rc", line 9: 
+  Incompatible type int[23] to operator ++, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_lwTaux/file.rc", line 10: 
+  Incompatible type bool to operator --, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_lwTaux/file.rc", line 12: 
+  Incompatible type bool to operator --, equivalent to int, float, or pointer expected.
+Compile: failure.

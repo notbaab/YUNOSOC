@@ -1,0 +1,18 @@
+structdef STFU {
+	int x;
+	STFU* child;
+};
+
+function : void main() {
+	int* x;
+	int a;
+	float* y;
+	bool* z;
+	bool res;
+	STFU* s;
+	
+	res = x != a;
+	res = a != x;
+	res = x != y;
+	res = s != *s;
+}

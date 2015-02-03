@@ -1,0 +1,14 @@
+float * ptr = nullptr;
+float y;
+
+function : void main()
+{
+  int x = *(int *)nullptr;
+  int xx = *(float *)nullptr;
+  int xxx = *(bool *)nullptr;
+  int y = (int)nullptr;
+  int yy = (float)nullptr;
+  int yyy = (bool)nullptr;
+
+  float z = *(float*)ptr;
+}

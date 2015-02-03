@@ -1,0 +1,10 @@
+Error, "/tmp/cs131_testrunner_avTaux/file.rc", line 3: 
+  Incompatible types to operator: bool == int;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner_avTaux/file.rc", line 7: 
+  Incompatible types to operator: bool != int;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner_avTaux/file.rc", line 11: 
+  Incompatible types to operator: float != bool;
+  both must be numeric, or both equivalent to bool.
+Compile: failure.

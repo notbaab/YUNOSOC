@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_qATaux/file.rc", line 15: 
+  Type of expression referenced by "." (TR*) is not a struct.
+Compile: failure.

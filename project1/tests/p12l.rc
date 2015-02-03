@@ -1,0 +1,15 @@
+int a;
+int b[2];
+float c[3];
+float * d[4];
+float e[3][4];
+  
+function : void main() {
+  foreach (float x : a) {  } // Error, 'a' is not an array type
+  foreach (bool x : b) {  } // Error, int not assignable to bool
+  foreach (float x : b) {  } // OK, int assignable to float
+  foreach (float &x : b) {  } // Error, int not equivalent to float
+  foreach (float*&x : d) {  } // OK, float* equivalent to float*
+  foreach (float x : d) {  } // Error, float* not assignable to float
+  foreach (float x : e) {  } //
+}

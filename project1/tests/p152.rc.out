@@ -1,0 +1,13 @@
+Error, "/tmp/cs131_testrunner_EATaux/file.rc", line 23: 
+  Value of type int not assignable to variable of type float*.
+Error, "/tmp/cs131_testrunner_EATaux/file.rc", line 24: 
+  Referenced field x not found in type MYSTRUCT.
+Error, "/tmp/cs131_testrunner_EATaux/file.rc", line 26: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_EATaux/file.rc", line 27: 
+  Value of type int not assignable to variable of type int*.
+Error, "/tmp/cs131_testrunner_EATaux/file.rc", line 28: 
+  Incompatible type int* to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_EATaux/file.rc", line 29: 
+  Referenced field s not found in type MYSTRUCT.
+Compile: failure.

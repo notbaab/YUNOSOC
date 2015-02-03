@@ -1,0 +1,15 @@
+function: void _foo() {    
+    int i;
+    float f;
+    bool b;
+    
+    i = f;
+    i = 1.1;
+
+    f = i;
+    f = 1;
+
+    b = i;
+    b = 1.0;
+}
+

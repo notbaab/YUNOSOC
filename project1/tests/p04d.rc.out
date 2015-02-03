@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_LwTaux/file.rc", line 7: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_LwTaux/file.rc", line 8: 
+  Value of type float not assignable to variable of type int.
+Compile: failure.

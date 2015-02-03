@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_rFTaux/file.rc", line 3: 
+  Arithmetic exception occurred during constant folding.
+Error, "/tmp/cs131_testrunner_rFTaux/file.rc", line 5: 
+  Arithmetic exception occurred during constant folding.
+Compile: failure.

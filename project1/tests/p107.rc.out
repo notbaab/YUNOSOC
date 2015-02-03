@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_KyTaux/file.rc", line 4: 
+  Index expression value (-1) in array declaration must be > 0.
+Error, "/tmp/cs131_testrunner_KyTaux/file.rc", line 5: 
+  Value of index expression not known at compile time.
+Compile: failure.

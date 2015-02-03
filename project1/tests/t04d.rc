@@ -1,0 +1,17 @@
+function: void _foo() {
+    int i;
+    bool b;
+    float f;
+
+    if (i+f) {
+        i;
+    }
+    
+    if (i || !f) {
+        f;
+    }
+
+    if (!i && !b) {
+        i;
+    }
+}

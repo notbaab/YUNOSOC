@@ -1,0 +1,27 @@
+// All these lines should compile without error.
+
+function : void above_board() {
+    int a = 0x7;
+    int b = 5;
+    float c = 1.0;
+    float d = 0.1;
+
+    a = b;
+    a = 0;
+    b = 4;
+    b = 07;
+
+    c = d;
+    c = 0.0;
+    d = 1.0;
+    d = 1.1;
+
+    int e = b;
+    float f = c;
+
+    a = b = 10;
+    b = a = e;
+
+    c = d = 5.0;
+    d = c = f;
+}

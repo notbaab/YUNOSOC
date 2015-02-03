@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_LGTaux/file.rc", line 7: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_LGTaux/file.rc", line 15: 
+  Return required in function, none found.
+Compile: failure.

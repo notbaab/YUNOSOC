@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_UxTaux/file.rc", line 4: 
+  Exit expression (type float) is not assignable to int.
+Error, "/tmp/cs131_testrunner_UxTaux/file.rc", line 9: 
+  Exit expression (type bool) is not assignable to int.
+Compile: failure.

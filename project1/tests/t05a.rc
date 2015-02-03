@@ -1,0 +1,7 @@
+function: int _foo() { 
+    return 1;
+}
+
+function: int main() { 
+    --_foo()++;
+}

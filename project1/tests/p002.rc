@@ -1,0 +1,5 @@
+int x = 0;
+
+function : void foo() {
+	int i = 5 + ::x;
+}

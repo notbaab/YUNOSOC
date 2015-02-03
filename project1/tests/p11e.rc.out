@@ -1,0 +1,15 @@
+Error, "/tmp/cs131_testrunner_ezTaux/file.rc", line 5: 
+  Index value of -99 is outside legal range [0,55).
+Error, "/tmp/cs131_testrunner_ezTaux/file.rc", line 6: 
+  Index value of 65 is outside legal range [0,55).
+Error, "/tmp/cs131_testrunner_ezTaux/file.rc", line 7: 
+  Index value of -9 is outside legal range [0,55).
+Error, "/tmp/cs131_testrunner_ezTaux/file.rc", line 8: 
+  Type of expression referenced by array subscript (int) is not of array or pointer type.
+Error, "/tmp/cs131_testrunner_ezTaux/file.rc", line 9: 
+  Index value of -9 is outside legal range [0,55).
+Error, "/tmp/cs131_testrunner_ezTaux/file.rc", line 10: 
+  Index value of 77 is outside legal range [0,55).
+Error, "/tmp/cs131_testrunner_ezTaux/file.rc", line 14: 
+  Value of type int[5][5] not assignable to variable of type int.
+Compile: failure.

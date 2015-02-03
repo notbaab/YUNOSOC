@@ -1,0 +1,16 @@
+
+
+function : void _main()
+{
+    int *aptr[10];
+
+    int *x = *aptr;
+
+    if (x == *aptr) {
+    }
+
+    if (x == aptr[0]) {
+    }
+}
+
+

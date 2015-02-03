@@ -1,0 +1,10 @@
+function : void main() {
+	int a;
+	int x;
+	bool y;
+	float z;
+	
+	a = *x;
+	a = *y;
+	a = *z;
+}

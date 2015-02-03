@@ -1,0 +1,9 @@
+/* Check 5 (p05k.rc) */
+
+function : int fvVi(int &a) { return 0; }
+int i;
+
+function : int main() {
+    fvVi(i + 2);
+    return 0;
+ }

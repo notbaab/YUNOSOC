@@ -1,0 +1,15 @@
+function : int f(){
+    return 5;
+}
+
+function : int main() { 
+    if(f() == 5){
+        exit (0); 
+    }
+    return 0;
+} 
+
+function : void f1(){
+    int j;
+    exit (j);
+}

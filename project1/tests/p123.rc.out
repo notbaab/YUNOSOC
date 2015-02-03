@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_jzTaux/file.rc", line 5: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_jzTaux/file.rc", line 6: 
+  Break does not occur in a loop.
+Compile: failure.

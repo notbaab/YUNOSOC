@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_uFTaux/file.rc", line 2: 
+  Initialization value of constant named i2 not known at compile time.
+Compile: failure.

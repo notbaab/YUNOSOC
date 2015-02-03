@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner__GTaux/file.rc", line 11: 
+  Type of return expression (int), not assignment compatible with function's return type (_MYS).
+Error, "/tmp/cs131_testrunner__GTaux/file.rc", line 15: 
+  Value of type _MYS not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner__GTaux/file.rc", line 16: 
+  Return required in function, none found.
+Compile: failure.

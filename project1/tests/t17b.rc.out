@@ -1,0 +1,6 @@
+Error, "/tmp/cs131_testrunner_DITaux/file.rc", line 13: 
+  Incompatible types to operator ==:
+    nullptr,
+    bool;
+  both must be of equivalent pointer type.
+Compile: failure.

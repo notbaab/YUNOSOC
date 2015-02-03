@@ -1,0 +1,21 @@
+function: void foo()
+{
+  const int ci = 4;
+  const float cf = 1.5;
+
+  int i = 4;
+  float f = 5;
+  bool b;
+  
+  while (i) {}    // bool condition required
+  if (1) {}       // bool condition required
+  if (ci) {}       // bool condition required
+  if (f) {}       // bool condition required
+  while (f) {}    // bool condition required
+  if (4.0) {}       // bool condition required 
+  while (cf) {}    // bool condition required 
+  while ( i + f ) {} // bool condition required
+  if ( i - f ) {}   // bool condition required 
+  while ( -(i + f) ) {} // bool condition required
+}
+

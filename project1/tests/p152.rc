@@ -1,0 +1,31 @@
+int **x;
+int *y;
+float* ptr2;
+float* *ptrptr3;
+
+structdef MYSTRUCT {
+  int i;
+  int j;
+};
+MYSTRUCT *ptrStruct;
+
+function: void main() {
+  //legal
+  *ptr2 = 3;
+  int y1;
+  y1 = (*ptrStruct).i;
+  int w1 = ptrStruct -> j;
+  *y = 3;
+  int y2;
+  float w2;
+
+  //illegal
+  ptr2 = 3;
+  y2 = (*ptrStruct).x;// does not exist
+  w2= ptrStruct -> j; //cannot assign
+  *y = 0.0; //cannot assign float to int
+  y = 0;// cannot assign int to pointer
+  y -> x = 3; //cannot arrow deref soemthing that's not a pointer to a struct
+  y = ptrStruct -> s; //s doesnot exist
+
+}

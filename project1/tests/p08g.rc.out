@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_lyTaux/file.rc", line 3: 
+  Initialization value of type float not assignable to constant/variable of type int.
+Compile: failure.

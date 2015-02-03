@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_GFTaux/file.rc", line 6: 
+  Value of index expression not known at compile time.
+Compile: failure.

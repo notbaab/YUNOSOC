@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_AGTaux/file.rc", line 3: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_AGTaux/file.rc", line 5: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_AGTaux/file.rc", line 7: 
+  Return required in function, none found.
+Compile: failure.

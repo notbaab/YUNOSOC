@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_buTaux/file.rc", line 4: 
+  Incompatible types to operator: bool != int;
+  both must be numeric, or both equivalent to bool.
+Error, "/tmp/cs131_testrunner_buTaux/file.rc", line 5: 
+  Incompatible types to operator: float != bool;
+  both must be numeric, or both equivalent to bool.
+Compile: failure.

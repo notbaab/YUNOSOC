@@ -1,0 +1,11 @@
+
+function : void main () {
+    int myMap[10][10];
+    int * nodeptr;
+
+    const int i = 9;
+    int j = 10;
+
+    nodeptr[100000] = myMap[i][i];
+    myMap[j][i] = myMap[i][j];
+}

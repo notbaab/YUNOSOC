@@ -1,0 +1,11 @@
+structdef MS {
+  float a;
+};
+
+function : void main()
+{
+  float* b;
+  MS* d;
+  (*d).a = *b;
+  d->b = *b;
+}

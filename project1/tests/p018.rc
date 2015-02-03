@@ -1,0 +1,28 @@
+// Incompatible type float to binary operator &, equivalent to int expected.
+float a = 0x3 & 0.14;
+
+// Incompatible type float to binary operator |, equivalent to int expected.
+float b = 21.107 | 13.74;
+
+// Incompatible type bool to binary operator ^, equivalent to int expected.
+int c = false ^ true;
+
+
+// Parens, multiple errors -----------------------------------------------------
+
+
+// Incompatible type bool to binary operator |, equivalent to int expected.
+float d = ((1 & 4) ^ (false | 1)) & (true & 0);
+
+
+// Make sure the resulting type is int -----------------------------------------
+
+
+// Incompatible type bool to binary operator %, equivalent to int expected.
+float e = (2 & 2) % false;
+
+// Incompatible type bool to binary operator %, equivalent to int expected.
+float f = (2 | 2) % false;
+
+// Incompatible type bool to binary operator %, equivalent to int expected.
+float g = (2 ^ 2) % false;

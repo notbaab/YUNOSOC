@@ -1,0 +1,20 @@
+structdef MS {
+	int a;
+	int b;
+};
+int x;
+const float y = 55.5;
+bool z[4];
+MS t;
+
+function : void main() {
+	int arr[1];
+	x = arr[sizeof(int)];		// should be 4
+	x = arr[sizeof(MS)];		// should be 8
+	x = arr[sizeof(float***)];	// should be 4
+	x = arr[sizeof(int[3])];	// should be 12
+	x = arr[sizeof(x)];			// should be 4
+	x = arr[sizeof(y)];			// should be 4
+	x = arr[sizeof(z)];			// should be 16
+	x = arr[sizeof(t)];			// should be 8
+}

@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_PBTaux/file.rc", line 7: 
+  Index value of 23 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_PBTaux/file.rc", line 8: 
+  Index value of 10 is outside legal range [0,10).
+Compile: failure.

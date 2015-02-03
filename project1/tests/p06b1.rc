@@ -1,0 +1,13 @@
+
+function : int foo() {
+	return false;
+}
+
+function : int& bar() {
+	float x;
+	return &x;
+}
+
+function : int& quz() {
+	return 3;
+}

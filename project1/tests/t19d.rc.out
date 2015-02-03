@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner__ITaux/file.rc", line 13: 
+  undeclared identifier 'foo'.
+Compile: failure.

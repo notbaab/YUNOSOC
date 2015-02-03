@@ -1,0 +1,40 @@
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 22: 
+  Value of type bool** not assignable to variable of type int**.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 23: 
+  Value of type bool* not assignable to variable of type int*.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 24: 
+  Value of type int** not assignable to variable of type bool**.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 26: 
+  Value of type bool** not assignable to variable of type int**.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 30: 
+  Value of type int** not assignable to variable of type float**.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 31: 
+  Value of type int* not assignable to variable of type float*.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 32: 
+  Value of type float** not assignable to variable of type int**.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 34: 
+  Incompatible types to operator ==:
+    float***,
+    bool**;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 35: 
+  Incompatible types to operator !=:
+    float***,
+    bool**;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 39: 
+  Incompatible types to operator ==:
+    float**,
+    bool**;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 43: 
+  Incompatible types to operator ==:
+    int**,
+    int*;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_XATaux/file.rc", line 44: 
+  Incompatible types to operator ==:
+    float**,
+    int**;
+  both must be of equivalent pointer type.
+Compile: failure.

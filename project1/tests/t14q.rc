@@ -1,0 +1,21 @@
+structdef _MYS_1 { 
+    int x;
+    float y; 
+    function : void _foo() {} 
+};
+
+structdef _MYS_2 { 
+    int x;
+    float y; 
+    function : void _foo() {} 
+};
+
+function : _MYS_1& __foo()
+{
+	_MYS_1 x;
+	_MYS_2 y;
+    
+    __foo() = y;
+
+	return x;
+}

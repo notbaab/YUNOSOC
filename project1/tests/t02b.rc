@@ -1,0 +1,22 @@
+function: void foo() {    
+    int i;
+    float f;
+    bool b;
+
+    i++ + i;
+    i++ + f;
+    i++ + b;
+    f++ + f;
+    f++ + i;
+    f++ + b;
+    b++;
+    
+    i-- + i;
+    i-- + f;
+    i-- + b;
+    f-- + f;
+    f-- + i;
+    f-- + b;
+    b--;
+}
+

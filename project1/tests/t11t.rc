@@ -1,0 +1,14 @@
+int a[30];
+int b[10];
+
+const int Five = 5; 
+
+
+function : void _foo( int & x[10])
+{
+    a = x;
+    b = x;
+    x = x;
+    x = a;
+    x = b;
+}

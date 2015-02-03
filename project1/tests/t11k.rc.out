@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_.FTaux/file.rc", line 7: 
+  Index value of -4 is outside legal range [0,10).
+Compile: failure.

@@ -1,0 +1,27 @@
+structdef MYS {
+	int x;
+	int y;
+	int z;
+	float a;
+	bool b;
+};
+
+structdef STRUCT {
+	int x;
+	int y;
+	int z;
+	float a;
+	bool b;
+	MYS *m;
+};
+
+function : void foo() {
+	MYS *a;
+	STRUCT* b;
+	
+	int c = (*a).x + (*a).z;
+	bool d = (*a).b;
+	
+	MYS *e = (*b).m;
+	int f = (*(*b).m).y;
+}

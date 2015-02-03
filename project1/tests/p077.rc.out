@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_PxTaux/file.rc", line 3: 
+  Exit expression (type bool) is not assignable to int.
+Compile: failure.

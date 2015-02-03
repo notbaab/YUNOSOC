@@ -1,0 +1,60 @@
+float******* f2;          //size 4
+float******* f3[100];     //size 400
+float********* f4[100];   //size 400
+float f5[1000] ;          //size 4000
+
+structdef MS {
+  int a;
+  int b;
+};
+
+//total 12
+structdef MS2 {
+  MS* a; //4
+  MS* b; //4
+  MS* c; //4
+};
+
+MS2 f6[20] ; //20 * 12 = 240
+
+int x;
+const float y = 55.5;
+bool z[4];
+MS t;
+
+function: void foo(bool &p1[4], bool* p2) {
+  const int c1 = sizeof(p1);
+  const int c2 = sizeof(p2);
+}
+
+function: void main() {
+  foo(z, z);
+  x = sizeof(float);
+  x= sizeof(MS);
+  x= sizeof(float***);
+  x = sizeof(int[3]);
+  x = sizeof(x);
+  x= sizeof(y);
+  x = sizeof(z);
+  x= sizeof(t);
+
+//mine
+  x=  sizeof(f2);
+  x= sizeof(f3);
+  x = sizeof(f4);
+  x= sizeof(f5);
+  x= sizeof(f6);
+
+
+//illegal
+  sizeof(f6) = sizeof(f5);
+  sizeof(10);
+  sizeof(sizeof(f5));
+  sizeof(&x);
+
+  int arr [1];
+  arr[sizeof(f2)]; //size 4
+  arr[sizeof(f3)]; //size 400
+  arr[sizeof(f4)]; //size 4
+  arr[sizeof(f5)]; //size 4000
+}

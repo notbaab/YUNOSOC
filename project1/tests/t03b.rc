@@ -1,0 +1,10 @@
+function: void _foo() {    
+    int *x;
+    int y[10];
+    
+    *x = 1;
+    y[4] = 1;
+    &x = y;
+    y = y;
+    _foo = 1;
+}

@@ -1,0 +1,5 @@
+function : int main() {
+    int i;
+    float j = i;
+    return 0;
+}

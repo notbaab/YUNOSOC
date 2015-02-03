@@ -1,0 +1,8 @@
+// Global
+int     b[2];
+
+function : void main() {
+    foreach (float x : b) { // Declare x?
+        float x;            // shouldn't throw an error
+    }
+}

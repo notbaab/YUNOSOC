@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_2yTaux/file.rc", line 11: 
+  Index value of 10 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_2yTaux/file.rc", line 11: 
+  Argument of type int not equivalent to reference parameter f, of type float*.
+Compile: failure.

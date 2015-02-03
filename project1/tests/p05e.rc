@@ -1,0 +1,10 @@
+/* Check 5 (p05e.rc) */
+
+int i;
+function : int fii(int a) { int xxx; return xxx; }
+float r;
+
+function : int main() {
+    i = fii(r);
+    return 0;
+}

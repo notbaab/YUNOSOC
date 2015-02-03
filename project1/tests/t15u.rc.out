@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_eITaux/file.rc", line 7: 
+  Incompatible type int*[10] to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_eITaux/file.rc", line 9: 
+  Incompatible type int*[10] to unary dereference operator *, pointer expected.
+Compile: failure.

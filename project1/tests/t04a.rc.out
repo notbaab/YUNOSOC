@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_5CTaux/file.rc", line 6: 
+  bool required for conditional test, int found.
+Error, "/tmp/cs131_testrunner_5CTaux/file.rc", line 10: 
+  bool required for conditional test, float found.
+Compile: failure.

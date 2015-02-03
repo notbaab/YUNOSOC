@@ -1,0 +1,47 @@
+function : void foo() {
+
+  int check;
+  int i_x = 0;
+  float f_a = 1.0;
+  bool t = true;
+  
+  // ok
+  
+  i_x++;
+  float y = i_x++ + f_a++;
+  i_x--;
+  y--;
+  y = y++ - --y;
+  --i_x;
+  y = i_x++;
+  float w = y++ + --i_x;
+  f_a++;
+  ++f_a;
+  --f_a;
+  f_a--;
+
+  // fail
+  1++;
+  2++;
+  ++2;
+  ++3;
+  
+  1.0++;
+  true++;
+  
+  ++true;
+  ++t;
+  
+  t++;
+  
+  --(y++); 
+  ++(y--);
+  ++(++y);
+  
+  check = 2++; //Error
+  check = true++; //Error
+  check = check++; //Works
+  
+  // total errors : 14
+
+}

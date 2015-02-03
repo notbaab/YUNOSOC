@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_qCTaux/file.rc", line 7: 
+  Incompatible type int to unary operator !, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_qCTaux/file.rc", line 8: 
+  Incompatible type float to unary operator !, equivalent to bool expected.
+Compile: failure.

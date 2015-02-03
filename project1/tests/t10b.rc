@@ -1,0 +1,7 @@
+
+function : void main()
+{
+  float a[10];
+  float b[10.0];
+}
+

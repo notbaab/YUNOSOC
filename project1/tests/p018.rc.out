@@ -1,0 +1,17 @@
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 2: 
+  Incompatible type float to binary operator &, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 5: 
+  Incompatible type float to binary operator |, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 8: 
+  Incompatible type bool to binary operator ^, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 15: 
+  Incompatible type bool to binary operator |, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 15: 
+  Incompatible type bool to binary operator &, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 22: 
+  Incompatible type bool to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 25: 
+  Incompatible type bool to binary operator %, equivalent to int expected.
+Error, "/tmp/cs131_testrunner_qvTaux/file.rc", line 28: 
+  Incompatible type bool to binary operator %, equivalent to int expected.
+Compile: failure.

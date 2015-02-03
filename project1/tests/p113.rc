@@ -1,0 +1,27 @@
+const int x = 10;
+
+function : void main() {
+	int a[10];
+	int arr;
+	int b;
+	int c;
+	int numbahs [10][10];
+	
+	c = b[3];
+	c = a[4.0+1];
+	c = a[x];
+	
+	b = a[55];
+	b = a[0-99];
+	b = a[x+10];
+	b = a[c];
+	b = a[c+5];
+	b = a[-9];
+	
+	c = numbahs[5][7];
+	c = numbahs[-9][0];
+	c = numbahs[3+2][x+4];
+	c = numbahs[-x][5+3];
+	
+	a = arr;
+}

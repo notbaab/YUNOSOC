@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_5DTaux/file.rc", line 13: 
+  Type of index expression in array reference (float) not equivalent to int.
+Error, "/tmp/cs131_testrunner_5DTaux/file.rc", line 14: 
+  Type of index expression in array reference (float) not equivalent to int.
+Compile: failure.

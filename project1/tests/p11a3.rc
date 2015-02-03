@@ -1,0 +1,41 @@
+function : void main() {
+
+    int var_not_in_bounds = 0xE0F;
+    int* intp;
+    int int10[10];
+    int int10_aliased[10];
+
+    int a = int10[var_not_in_bounds];
+
+    a = int10[int10[1]];
+
+    int10[1] = 4;
+    int10_aliased[2] = var_not_in_bounds;
+    int10_aliased[9] = int10[0] + intp[0];
+}
+
+function : void multidimensional_arrays() {
+
+    int var_not_in_bounds = 0xE0F;
+    int int5[5];
+    int int5_10[5][10];
+    int int5_10_4[5][10][4];
+    int * int5_10_p[5][10];
+    int * int5_10_4_p[5][10][4];
+
+    // int5_10[2] = int5_10_4[3][9]; // WNBT
+    // int5_10_4[1] = int5_10_p[1];  // WNBT
+
+    int5_10[9][4] = int5_10_p[0][8][3];
+    int5[0] = int5_10_4_p[0][3][9][4];
+}
+
+function : void fn(int &i10[10], int i10_alias[10], int* intp) {
+    return;
+}
+
+function : void test_function_calls() {
+    int int10[10] ;
+
+    fn(int10, int10, int10);
+}

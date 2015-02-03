@@ -1,0 +1,15 @@
+
+function : int main() {
+	int x;
+	int y;
+	int *z;
+	const int w = 77;
+	z = &x;
+	&x = nullptr;		// Error, &x is not a modifiable L-val
+	y = *&x;
+	*&x = y;
+	*&w = y;			// *&w is a modifiable L-val, even though w was a const
+	&*z = z;			// Error, &*z is not a modifiable L-val
+	
+	return 0;
+}

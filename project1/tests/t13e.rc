@@ -1,0 +1,25 @@
+structdef _MYS_1 { 
+    int x;
+    int y; 
+    _MYS_1 *m1;
+    _MYS_1 *m2;
+    function : void f( int &x ) 
+    { x = x + 1; }
+    function : void foo() {} 
+};
+
+structdef _MYS_2 { 
+    int x;
+    int y; 
+    _MYS_1 * m1;
+    function : void f( int &x ) 
+    { x = x + 1; }
+    function : void foo() {} 
+};
+
+function: int main () {
+    _MYS_1 x;
+    _MYS_2 y;
+}
+
+

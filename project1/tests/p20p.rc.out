@@ -1,0 +1,15 @@
+Error, "/tmp/cs131_testrunner_bCTaux/file.rc", line 10: 
+  Invalid type cast. Type nullptr to type int* is not supported.
+Error, "/tmp/cs131_testrunner_bCTaux/file.rc", line 13: 
+  Invalid type cast. Type MY to type bool* is not supported.
+Error, "/tmp/cs131_testrunner_bCTaux/file.rc", line 55: 
+  Arithmetic exception occurred during constant folding.
+Error, "/tmp/cs131_testrunner_bCTaux/file.rc", line 63: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_bCTaux/file.rc", line 64: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_bCTaux/file.rc", line 65: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_bCTaux/file.rc", line 66: 
+  Return required in function, none found.
+Compile: failure.

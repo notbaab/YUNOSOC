@@ -1,0 +1,17 @@
+function : float & f() {
+    float a;
+    return a;
+}
+
+
+function : void main() {
+    int b;
+    float c;
+    f() = b;
+    f() = c;
+    float m = f();
+    int z = f();
+}
+
+
+

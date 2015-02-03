@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_zxTaux/file.rc", line 6: 
+  Number of arguments (0) differs from number of parameters (2).
+Compile: failure.

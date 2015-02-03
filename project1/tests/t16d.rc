@@ -1,0 +1,12 @@
+int* c = nullptr;
+
+function : int * funcRetPtr(){ return nullptr ;}
+function : void main()
+{
+  new nullptr;
+  delete c;
+  new funcRetPtr();
+  delete funcRetPtr();
+  int i = *funcRetPtr();
+  delete *funcRetPtr();
+}

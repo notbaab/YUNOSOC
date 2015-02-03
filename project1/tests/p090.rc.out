@@ -1,0 +1,21 @@
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 11: 
+  Duplicate declaration of overloaded function foo.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 16: 
+  Duplicate declaration of overloaded function foo.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 20: 
+  Duplicate declaration of overloaded function foo.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 39: 
+  Duplicate declaration of overloaded function bar.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 44: 
+  Duplicate declaration of overloaded function bar.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 49: 
+  Duplicate declaration of overloaded function bar.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 56: 
+  Duplicate declaration of overloaded function foobar.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 60: 
+  Duplicate declaration of overloaded function foobar.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 65: 
+  Duplicate declaration of overloaded function foobar.
+Error, "/tmp/cs131_testrunner_ryTaux/file.rc", line 70: 
+  Duplicate declaration of overloaded function foobar.
+Compile: failure.

@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_0GTaux/file.rc", line 6: 
+  Incompatible type bool to binary operator +, numeric expected.
+Error, "/tmp/cs131_testrunner_0GTaux/file.rc", line 14: 
+  Return required in function, none found.
+Compile: failure.

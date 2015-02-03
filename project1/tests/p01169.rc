@@ -1,0 +1,6 @@
+
+function : int main() {
+	int x = 5 % 5;
+	
+	return x;
+}

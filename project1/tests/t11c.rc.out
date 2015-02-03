@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_TFTaux/file.rc", line 5: 
+  Type of expression referenced by array subscript (int) is not of array or pointer type.
+Compile: failure.

@@ -1,0 +1,25 @@
+function : void dumb_name_bad_thing() {
+    float b = 1.5;
+    bool things_are_broken = false;
+
+    // bool or int required for conditional test, float found.
+    if (b) {
+        things_are_broken = true;
+    }
+
+    // bool or int required for conditional test, float found.
+    if (5.0) {
+        things_are_broken = true;
+    }
+
+    // bool or int required for conditional test, float found.
+    while (b) {
+        things_are_broken = true;
+    }
+
+    // bool or int required for conditional test, float found.
+    while (4.1) {
+        things_are_broken = true;
+    }
+
+}

@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_9vTaux/file.rc", line 7: 
+  Incompatible type int to unary operator !, equivalent to bool expected.
+Compile: failure.

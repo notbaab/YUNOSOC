@@ -1,0 +1,7 @@
+function : void main()
+{
+  float x;
+
+  new x;
+  delete x;
+}

@@ -1,0 +1,12 @@
+
+int x; 
+float y; 
+float* z; 
+int* intPtr; 
+function : int main() { 
+ x = (int) y; 
+ x = (int) (x + 4.9); 
+ y = (float) (int) (65.3); 
+ intPtr = (int*) z; 
+ return 0; 
+} 

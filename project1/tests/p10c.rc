@@ -1,0 +1,4 @@
+/* Check 10 (p10c.rc) */
+
+const float i1 = 2.0;
+bool a[i1];

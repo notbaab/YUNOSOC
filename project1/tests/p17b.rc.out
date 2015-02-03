@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_lBTaux/file.rc", line 8: 
+  Incompatible types to operator !=:
+    int,
+    int*;
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_lBTaux/file.rc", line 9: 
+  Incompatible types to operator ==:
+    float*,
+    int;
+  both must be of equivalent pointer type.
+Compile: failure.

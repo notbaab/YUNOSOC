@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_sGTaux/file.rc", line 9: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_sGTaux/file.rc", line 10: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_sGTaux/file.rc", line 11: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_sGTaux/file.rc", line 12: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_sGTaux/file.rc", line 13: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Compile: failure.

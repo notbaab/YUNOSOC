@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_NDTaux/file.rc", line 9: 
+  Argument passed to reference parameter a3 (type float) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_NDTaux/file.rc", line 10: 
+  Return required in function, none found.
+Compile: failure.

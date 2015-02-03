@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_.ETaux/file.rc", line 8: 
+  Initialization value of constant named e not known at compile time.
+Compile: failure.

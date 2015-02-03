@@ -1,0 +1,43 @@
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 3: 
+  undeclared identifier 'k'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 3: 
+  undeclared identifier 'k'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 5: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 7: 
+  undeclared identifier 'b'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 8: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 8: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 9: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 14: 
+  undeclared identifier 'b'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 15: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 18: 
+  undeclared identifier 'k'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 18: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 19: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 19: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 20: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 21: 
+  undeclared identifier 'k'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 21: 
+  undeclared identifier 'k'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 22: 
+  undeclared identifier 'k'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 26: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 28: 
+  undeclared identifier 'i'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 33: 
+  undeclared identifier 'b'.
+Error, "/tmp/cs131_testrunner_GGTaux/file.rc", line 34: 
+  Continue does not occur in a loop.
+Compile: failure.

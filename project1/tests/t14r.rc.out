@@ -1,0 +1,4 @@
+Error, "/tmp/cs131_testrunner_tHTaux/file.rc", line 17: 
+  Incompatible types to operator: _MYS == _MYS;
+  both must be numeric, or both equivalent to bool.
+Compile: failure.

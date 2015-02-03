@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_txTaux/file.rc", line 4: 
+  Type of return expression (float), not assignment compatible with function's return type (int).
+Error, "/tmp/cs131_testrunner_txTaux/file.rc", line 11: 
+  Type of return expression (bool), not assignment compatible with function's return type (int).
+Compile: failure.

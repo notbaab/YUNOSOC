@@ -1,0 +1,30 @@
+/* Check 14 (p14a.rc) */
+
+structdef COORDINATES {
+    float xLocation;
+    float yLocation;
+    function : float dist2(float x2, float y2) {
+        float xdist;
+        float ydist;
+        xdist = (this.xLocation - x2)*(this.xLocation - x2);
+        ydist = (this.yLocation - y2)*(this.yLocation - y2);
+        return xdist + ydist;
+    }
+};
+
+structdef PCOORD {
+    COORDINATES *r;
+};
+
+function : int main() {
+    float r;
+    COORDINATES *pR;
+    PCOORD r3;
+    PCOORD r4;
+
+    r = pR->xLocation;
+    r = r3.r->yLocation;
+    r = r3.r->dist2(r4.r->xLocation, r4.r->yLocation);
+
+    return 0;
+}

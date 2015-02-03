@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_DBTaux/file.rc", line 3: 
+  Invalid operand to sizeof. Not a type or not addressable.
+Error, "/tmp/cs131_testrunner_DBTaux/file.rc", line 4: 
+  Invalid operand to sizeof. Not a type or not addressable.
+Error, "/tmp/cs131_testrunner_DBTaux/file.rc", line 5: 
+  Invalid operand to sizeof. Not a type or not addressable.
+Compile: failure.

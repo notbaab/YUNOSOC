@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_UBTaux/file.rc", line 14: 
+  Invalid type cast. Type MYSTRUCT to type FOOSTRUCT* is not supported.
+Compile: failure.

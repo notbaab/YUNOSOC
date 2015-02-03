@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_9BTaux/file.rc", line 5: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Compile: failure.

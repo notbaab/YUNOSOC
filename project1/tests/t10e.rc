@@ -1,0 +1,14 @@
+const int Four = 4;
+
+int myarr[Four];
+int myarr1[Four][Four*Four];
+int myarr2[Four][Four*Four][Four+Four];
+int myarr3[Four][Four*Four][Four+Four][(2*Four) + (-Four)];
+int myarr4[Four];
+
+function : int main()
+{
+  int x[Four];
+  int y[Four / 1];
+  return Four;
+}

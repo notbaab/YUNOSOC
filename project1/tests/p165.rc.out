@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_4ATaux/file.rc", line 6: 
+  Operand to "new" is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_4ATaux/file.rc", line 7: 
+  Type of new's operand must be of pointer type, int found.
+Compile: failure.

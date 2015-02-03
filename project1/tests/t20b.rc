@@ -1,0 +1,21 @@
+function : void _main()
+{
+    const int i = 1;
+    const float f = 2.0;
+    const bool b = false;
+
+    if ((i = (int)f) == 2) {
+        i = ((int)(true || false))+5;
+    }
+    if ((i = i + (int)b) == 6) {
+        i = (int)f;
+    }
+
+    f = (float)b;
+    f = f + (int)b;
+    if (f == 3) {
+        b = (bool)i;
+        b = (bool)f;
+    }
+}
+

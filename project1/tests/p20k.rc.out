@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_8BTaux/file.rc", line 9: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_8BTaux/file.rc", line 10: 
+  Value of index expression not known at compile time.
+Error, "/tmp/cs131_testrunner_8BTaux/file.rc", line 11: 
+  Value of index expression not known at compile time.
+Compile: failure.

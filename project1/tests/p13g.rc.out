@@ -1,0 +1,45 @@
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 6: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 8: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 10: 
+  Referenced field a not found in current struct.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 15: 
+  Referenced field a not found in current struct.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 16: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 24: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 38: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 40: 
+  Referenced field a not found in current struct.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 45: 
+  Referenced field a not found in current struct.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 46: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 71: 
+  Illegal call to overloaded function MYS1.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 72: 
+  Illegal call to overloaded function MYS2.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 84: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 85: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 86: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 92: 
+  Referenced field a not found in type MYS1.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 93: 
+  Referenced field a not found in type MYS1.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 94: 
+  Referenced field a not found in type MYS1.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 102: 
+  Value of type float not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 107: 
+  Value of type void not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 108: 
+  Value of type void not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_.zTaux/file.rc", line 111: 
+  Value of type void not assignable to variable of type int.
+Compile: failure.

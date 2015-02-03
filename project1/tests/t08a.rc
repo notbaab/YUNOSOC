@@ -1,0 +1,7 @@
+const int ci = 42;
+const int ci2 = 42 == 42;
+
+function : int main()
+{
+  return ci;
+}

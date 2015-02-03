@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_dATaux/file.rc", line 13: 
+  Type of expression referenced by "." (int) is not a struct.
+Error, "/tmp/cs131_testrunner_dATaux/file.rc", line 14: 
+  Referenced field c not found in type MYS.
+Compile: failure.

@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_IBTaux/file.rc", line 12: 
+  Index value of 4 is outside legal range [0,4).
+Error, "/tmp/cs131_testrunner_IBTaux/file.rc", line 15: 
+  Index value of 4 is outside legal range [0,4).
+Compile: failure.

@@ -1,0 +1,15 @@
+Error, "/tmp/cs131_testrunner_HATaux/file.rc", line 7: 
+  Initialization value of type int** not assignable to constant/variable of type int*.
+Error, "/tmp/cs131_testrunner_HATaux/file.rc", line 16: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_HATaux/file.rc", line 17: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_HATaux/file.rc", line 19: 
+  Value of type int* not assignable to variable of type float*.
+Error, "/tmp/cs131_testrunner_HATaux/file.rc", line 20: 
+  Value of type int* not assignable to variable of type float*.
+Error, "/tmp/cs131_testrunner_HATaux/file.rc", line 21: 
+  Value of type int not assignable to variable of type float*.
+Error, "/tmp/cs131_testrunner_HATaux/file.rc", line 22: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Compile: failure.

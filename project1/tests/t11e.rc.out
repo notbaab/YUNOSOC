@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_XFTaux/file.rc", line 5: 
+  Type of expression referenced by array subscript (bool) is not of array or pointer type.
+Compile: failure.

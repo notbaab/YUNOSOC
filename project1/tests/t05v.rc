@@ -1,0 +1,21 @@
+bool me;
+int i;
+
+function : int & hey(int & hi){
+   return i;
+}
+
+function : int & you(int & hi){
+   return i;
+}
+
+function : int & and(bool b){
+   return i;
+}
+
+function : void main(){
+   int wassup;
+   you(and(me)) = ++hey(you(wassup));
+   ++you(and(me)) = ++hey(you(wassup));
+   hey(wassup--) = you(i)--;
+}

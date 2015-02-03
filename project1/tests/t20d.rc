@@ -1,0 +1,8 @@
+int x;
+bool y;
+
+function : int& _main()
+{
+  bool *bptr = &((bool)(int)y);
+  return (int) y;
+}

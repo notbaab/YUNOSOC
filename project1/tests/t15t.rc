@@ -1,0 +1,10 @@
+function : void _main()
+{
+    int *aptr[10];
+
+    int *x = *aptr;
+
+    int *y = aptr[0];
+}
+
+

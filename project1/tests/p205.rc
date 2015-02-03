@@ -1,0 +1,15 @@
+//Cannot pass by reference
+float flt = 2.1;
+function : void pbr(int & x) {}
+function : void main1() {
+  pbr((int)flt); //error, not mod l value
+
+	//Cannot pass to address-of operator
+	int* ptr;
+	ptr = &((int)flt); //error, not addressable
+
+	//Entire structs and arrays cannot be cast
+	int y[10];
+	float floats[10];
+	floats = (float)y; //error
+}

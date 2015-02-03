@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_rDTaux/file.rc", line 8: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_rDTaux/file.rc", line 9: 
+  Return required in function, none found.
+Compile: failure.

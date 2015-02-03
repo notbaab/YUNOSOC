@@ -1,0 +1,15 @@
+/* Check 2 (p02c.rc) */
+
+int x;
+bool y;
+bool w;
+
+function : int main() {
+    y = x++;
+    x = (x+99)++;
+    ++x = 1337;
+    x = (x++)++;
+    x = 131++ + 131;
+
+    return 0;
+}

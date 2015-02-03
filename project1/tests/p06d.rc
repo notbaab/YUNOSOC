@@ -1,0 +1,11 @@
+bool i;
+bool j;
+
+function : float f(int i, int j) {
+  return(i + j);
+  return f();
+}
+
+function : int main() { 
+  return 0;
+}

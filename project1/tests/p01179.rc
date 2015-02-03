@@ -1,0 +1,9 @@
+function : bool main() {
+	bool x;
+
+	x = true || 2;
+	x = 3.0 || false;
+	x = 2 || 3.0;
+	
+	return x;
+}

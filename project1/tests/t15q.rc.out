@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_7HTaux/file.rc", line 8: 
+  Value of type int[2] not assignable to variable of type int*.
+Compile: failure.

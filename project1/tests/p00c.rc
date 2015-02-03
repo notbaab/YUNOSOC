@@ -1,0 +1,16 @@
+/* Check 0 (p00c.rc) */
+
+int x;
+function : int foo()
+{
+  return -1;	// Need to fix unary minus/plus to avoid error
+}
+
+int i;
+
+function : int main()
+{
+  i = 5;
+  x = foo();
+  return 0;
+}

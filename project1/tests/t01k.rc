@@ -1,0 +1,9 @@
+function: void foo() {    
+    int i;
+    float f;
+    bool b;
+
+    !b;
+    !i;
+    !f;
+}

@@ -1,0 +1,4 @@
+function : int & f() {
+    return 4.6;
+}
+

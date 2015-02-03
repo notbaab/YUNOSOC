@@ -1,0 +1,18 @@
+function : void _foo(int x, float y, bool *bptr)
+{
+}
+
+function : void _foo_ref(int &x, float &y, bool &bptr)
+{
+}
+
+function : int _main()
+{
+  int i;
+  float f;
+  bool b;
+
+  _foo((int)3.5, (float)true, (bool*)5);
+  _foo_ref((int)3.5, (float)true, (bool*)5);
+  _foo_ref((int)f, (float)b, (bool*)i);
+}

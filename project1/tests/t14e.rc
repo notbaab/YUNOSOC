@@ -1,0 +1,26 @@
+structdef _MYS_1 { 
+    int x;
+    float y; 
+    _MYS_1 *m1;
+    function : float f( int &x ) 
+    { 
+        return this.y; 
+    }
+    function : void foo() {} 
+};
+
+structdef _MYS_2 { 
+    int x;
+    bool y; 
+    _MYS_2 *m2;
+    function : void f( int &x ) 
+    { return; }
+    function : void foo() {} 
+};
+
+function: int main () {
+    _MYS_1 x;
+    _MYS_2 y;
+    float f;
+    f = x->this.x + y->this.y;
+}

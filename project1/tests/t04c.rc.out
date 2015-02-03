@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_9CTaux/file.rc", line 6: 
+  bool required for conditional test, int found.
+Error, "/tmp/cs131_testrunner_9CTaux/file.rc", line 10: 
+  Incompatible type bool to binary operator +, numeric expected.
+Compile: failure.

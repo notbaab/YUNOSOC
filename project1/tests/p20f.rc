@@ -1,0 +1,26 @@
+int x;
+float y;
+float* z;
+int* intPtr;
+
+structdef STRUCT {
+  int x;
+  float y;
+  STRUCT * s;
+};
+
+function : int main() {
+  x = (int) y;
+  x = (int) (x + 4.9);
+  y = (float) (int) (65.3);
+  intPtr = (int*) z;
+  
+  STRUCT s1;
+  STRUCT *s2;
+  STRUCT **s3;
+  x = (int) s1.y;
+  y = (float) (s2 -> x);
+  z = (float*) ((*s3) -> s);
+
+  return 0;
+}

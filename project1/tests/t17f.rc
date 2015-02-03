@@ -1,0 +1,10 @@
+
+function : void _main()
+{
+    int **x;
+    int y[10];
+    bool b;
+
+    b = x == y;
+    x = y;
+}

@@ -1,0 +1,11 @@
+// Global
+int     b[2];
+
+function : void main() {
+    foreach (float x : b) { // Declare x?
+        float x;      // Redeclared identifier?
+    }
+    foreach (float x : ::b) { // Have no idea what this will do.
+        float x;      
+    }
+}

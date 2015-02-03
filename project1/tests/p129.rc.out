@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_pzTaux/file.rc", line 1: 
+  syntax error near "continue".
+Compile: failure.

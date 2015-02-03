@@ -1,0 +1,41 @@
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 10: 
+  Value of type int not assignable to variable of type int***.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 11: 
+  Value of type int not assignable to variable of type int*.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 26: 
+  Referenced field foo not found in type MYS.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 31: 
+  Value of type MYS* not assignable to variable of type MYS.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 32: 
+  Value of type MYS not assignable to variable of type MYS*.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 34: 
+  Attempt to dereference nullptr keyword using *, ->, or [] operator.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 35: 
+  Attempt to dereference nullptr keyword using *, ->, or [] operator.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 36: 
+  Attempt to dereference nullptr keyword using *, ->, or [] operator.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 39: 
+  Value of type nullptr not assignable to variable of type int.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 42: 
+  Initialization value of type nullptr not assignable to constant/variable of type int.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 45: 
+  Incompatible type int**** to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 46: 
+  Incompatible type int to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 47: 
+  Incompatible type MYS to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 48: 
+  Referenced field a not found in type MYS.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 49: 
+  Referenced field foo not found in type MYS.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 52: 
+  Referenced field a not found in type MYS.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 54: 
+  Incompatible type int to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 55: 
+  Incompatible type MYS to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 58: 
+  Initialization value of type int not assignable to constant/variable of type int*.
+Error, "/tmp/cs131_testrunner_YATaux/file.rc", line 65: 
+  Type of index expression in array reference (float) not equivalent to int.
+Compile: failure.

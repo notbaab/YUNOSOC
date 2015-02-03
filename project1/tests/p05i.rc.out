@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_9wTaux/file.rc", line 7: 
+  Argument passed to reference parameter a (type float) is not a modifiable L-value.
+Compile: failure.

@@ -1,0 +1,115 @@
+/*Check 13*/
+structdef MYS1 {
+  int x;
+  int y;
+  int x; // check13a_Struct dup id x, error #1
+  float z;
+  int x; // check13a_Struct dup id x, error #2
+  MYS1 * next; // recursive field – no error – will be tested
+  MYS1(int x) {
+    this.a = 1;  // a not defined
+    this.x = x;  // I'm not sure
+    this.z = x;  // type def error
+  } 
+  MYS1(float x) {
+    this.a = x;  // not defined
+    this.x = x;  // not defined
+    this.z = x;  // not defined
+  } 
+  function : void f( int &x ) // No error with x (inner scope)
+  {
+   x = x + 1;
+  }
+  function : void foo() {}
+  function : int bar() {}
+  function : void bar(int x) {} // OK, since legal overload
+  function : int bar(int x, int y, int z) {return 1;} // OK, since legal overload
+  function : void bar(int x, int y, float z) {} // OK, since legal overload
+  function : void barf(float z) {} // OK, since legal overload
+
+};
+
+// struct with same fields, but different types for vars
+structdef MYS2 {
+  int x; 
+  int y;
+  float z;
+  int x; 
+  MYS1 * next; // recursive field – no error – will be tested
+  MYS2(int x) {
+    this.a = 1;  // a not defined
+    this.x = x;  // I'm not sure
+    this.z = x;  // type def error
+  } 
+  MYS2(float x) {
+    this.a = x;  // not defined
+    this.x = x;  // not defined
+    this.z = x;  // not defined
+  } 
+  function : void f( int &x ) // No error with x (inner scope)
+  {
+   x = x + 1;
+  }
+  function : void foo() {}
+  function : void bar() {}
+  function : void bar(int x) {} 
+  function : float bar(int x, int y, int z) {return 0.0;} 
+  function : void bar(int x, int y, float z) {} 
+  function : void barf(int z) {} // OK, since legal overload
+};
+
+
+MYS1 * * mys1; // throw in some pointers for good measure
+MYS2 * mys2;
+
+function : void main(){
+  int x;
+  int y;
+  float z;
+  int zz;
+
+  MYS1 mys1na; // no arg constructors
+  MYS2 mys2na;
+
+  MYS1 mys1int : (0.0);  // error
+  MYS2 mys2int : (0);  
+
+  MYS1 mys1float : (0);  // error
+  MYS2 mys2float : (0.0);  
+
+  x = mys1na.x;
+  x = mys1int.x;
+  x = mys1float.x;
+
+  x = mys1na.z;
+  x = mys1int.z;
+  x = mys1float.z;
+
+  z = mys1na.z;
+  z = mys1int.z;
+  z = mys1float.z;
+
+  z = mys1na.a;
+  z = mys1int.a;
+  z = mys1float.a;
+
+  mys1na.bar(); // all fine
+  mys1na.foo();
+  mys2na.bar();
+  mys2na.foo();
+
+  x = mys1na.bar(x, y, zz); // fine, returns int
+  x = mys2na.bar(x, y, zz); // should get type error, bar returns float
+
+  z = mys1na.bar(x, y, zz); // error
+  z = mys2na.bar(x, y, zz); // ok
+
+  x = mys1na.bar(x);  // error
+  x = mys2na.bar(x);
+
+  x = mys1na.bar();
+  x = mys2na.bar(); // error
+
+  mys1na.barf(x); // not overloaded, so both should be fine
+  mys1na.barf(x);
+}

@@ -1,0 +1,16 @@
+
+function : void _foo_val(float**** x)
+{
+}
+
+function : void _foo_ref(float**** &x)
+{
+}
+
+function : void _main()
+{
+    float*** y[10];
+
+    _foo_ref(y); //float**** <-> float***[] => error
+    _foo_val(y); //float**** <- float***[] => success
+}

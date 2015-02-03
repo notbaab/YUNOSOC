@@ -1,0 +1,15 @@
+int y;
+
+structdef _MYS_1 { 
+    int x;
+    float y; 
+    _MYS_1 *m1;
+    function : float f( int &x ) 
+    { 
+        bool y;
+        this.y = x + ::y;
+        return this.y; 
+    }
+    function : void _foo() {} 
+};
+

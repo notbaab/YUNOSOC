@@ -1,0 +1,35 @@
+structdef S1 {
+  float x;
+};
+structdef S2 {
+  float x;
+};
+
+S1* ptr1;
+S1* ptr2;
+S2* ptr3;
+
+// PTR1 and PTR3 are equivalent
+
+function : S1* foo1(S1* x) { return x; }
+function : S2* foo2(S2* y) { return y; }
+function : S1* foo3(S1* &z) { return z; }
+
+S1* a;
+S2* b;
+S1* c;
+
+function : void main()
+{
+        foo1(a);
+        foo1(b);	// error
+        foo1(c);
+
+        foo2(a);	// error
+        foo2(b);	
+        foo2(c);	// error
+
+        foo3(a);
+        foo3(b);	// error
+        foo3(c);
+}

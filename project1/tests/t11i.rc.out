@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_6FTaux/file.rc", line 6: 
+  Value of type int[10] not assignable to variable of type int.
+Compile: failure.

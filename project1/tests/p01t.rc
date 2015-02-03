@@ -1,0 +1,10 @@
+/* Check 1 (p01t.rc) */
+
+bool b;
+
+function : int main() {
+ b = b && b;
+ b = b || b;
+ b = !b;
+ return 0;
+}

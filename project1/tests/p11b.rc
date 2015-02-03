@@ -1,0 +1,17 @@
+/* lets go arrays */
+float r;
+int ai[10];
+float ar[10];
+int i;
+const int ci = 42;
+function : int fi() { int x; return x; }
+
+function : int main() {
+    r = ai[i];
+    r = ci[0];
+//    r = fi[0];
+    r = r[r];
+    r = ar[2.0];
+    r = ar[1 + ai[1 + ai[1 + ai[0] + 1]]];
+    return 0;
+}

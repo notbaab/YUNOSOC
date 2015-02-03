@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_WGTaux/file.rc", line 6: 
+  Return required in function, none found.
+Error, "/tmp/cs131_testrunner_WGTaux/file.rc", line 20: 
+  Return required in function, none found.
+Compile: failure.

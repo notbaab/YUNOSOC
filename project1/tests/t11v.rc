@@ -1,0 +1,17 @@
+float arr[10];
+bool a;
+float myArr[10];
+
+const int i = -5;
+
+function : float _foo(float a[10], float* &f)
+{
+  a[0] = a[9];
+  f[0-101] = f[i];
+  return f[999];
+}
+
+function : void _main()
+{
+  _foo(myArr, myArr);
+}

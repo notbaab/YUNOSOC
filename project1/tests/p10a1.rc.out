@@ -1,0 +1,43 @@
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 6: 
+  Index value of -1 is outside legal range [0,5).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 7: 
+  Index value of 5 is outside legal range [0,5).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 12: 
+  Index value of -1 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 13: 
+  Index value of 10 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 17: 
+  Index value of 14 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 18: 
+  Index value of 15 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 19: 
+  Index value of 14 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 20: 
+  Index value of 15 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 25: 
+  Index value of -1 is outside legal range [0,11).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 26: 
+  Index value of -1 is outside legal range [0,12).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 27: 
+  Index value of -1 is outside legal range [0,13).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 28: 
+  Index value of -1 is outside legal range [0,11).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 29: 
+  Index value of -1 is outside legal range [0,12).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 31: 
+  Index value of 12 is outside legal range [0,11).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 32: 
+  Index value of 13 is outside legal range [0,11).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 33: 
+  Index value of 12 is outside legal range [0,11).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 34: 
+  Index value of 12 is outside legal range [0,11).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 35: 
+  Index value of 40 is outside legal range [0,11).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 39: 
+  Index value of -1 is outside legal range [0,6).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 40: 
+  Index value of 6 is outside legal range [0,6).
+Error, "/tmp/cs131_testrunner_PyTaux/file.rc", line 41: 
+  Index value of 10 is outside legal range [0,6).
+Compile: failure.

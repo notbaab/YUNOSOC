@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_huTaux/file.rc", line 4: 
+  Incompatible type bool to binary operator <=, numeric expected.
+Compile: failure.

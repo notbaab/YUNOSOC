@@ -1,0 +1,18 @@
+const int Five = 5;
+
+int integer[2*Five];
+
+int a[2*Five];
+int b[(Five*3)-5];
+
+function : int foo(int i)
+{
+  return i + 5;
+}
+
+function : int main()
+{
+ a[4] = b[3];
+ a[2] = b[9999 + a[2] + foo(3 + Five)];
+ return b[0+0-1+1];
+}

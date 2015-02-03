@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_hFTaux/file.rc", line 5: 
+  Initialization value of type void not assignable to constant/variable of type float.
+Compile: failure.

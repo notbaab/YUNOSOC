@@ -1,0 +1,20 @@
+/* Check 5 (p05a.rc) */
+
+function : int fvr(float a) { return 0; }
+float r;
+function : int fv() { return 0; }
+int i;
+function : int fi() { int xxx; return xxx; }
+function : int fii(int a) { int xxx; return xxx; }
+function : int fiVr(float &a) { int xxx; return xxx; }
+
+function : void main() {
+ fvr(r);
+ fv();
+ i = fi();
+ i = fii(i);
+ i = fii(fii(17 + i));
+ i = fii(i * fi());
+ i = fiVr(r);
+ fvr(i);
+} 

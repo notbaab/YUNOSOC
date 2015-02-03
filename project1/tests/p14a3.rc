@@ -1,0 +1,10 @@
+structdef MYSTRUCT {
+	int a;
+	int y;
+};
+
+function : void main() {
+	MYSTRUCT m;
+	m.a = 5;
+	m.y= 4;
+}

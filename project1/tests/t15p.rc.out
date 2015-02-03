@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_5HTaux/file.rc", line 6: 
+  Attempt to dereference nullptr keyword using *, ->, or [] operator.
+Compile: failure.

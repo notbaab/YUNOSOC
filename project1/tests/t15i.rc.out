@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_QHTaux/file.rc", line 10: 
+  Referenced field b not found in type MS.
+Compile: failure.

@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_ZxTaux/file.rc", line 2: 
+  Initialization value of type int not assignable to constant/variable of type bool.
+Error, "/tmp/cs131_testrunner_ZxTaux/file.rc", line 4: 
+  Initialization value of type float not assignable to constant/variable of type int.
+Compile: failure.

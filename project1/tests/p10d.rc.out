@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_VyTaux/file.rc", line 5: 
+  Value of index expression not known at compile time.
+Compile: failure.

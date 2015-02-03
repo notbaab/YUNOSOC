@@ -1,0 +1,13 @@
+Error, "/tmp/cs131_testrunner_LBTaux/file.rc", line 16: 
+  Arithmetic exception occurred during constant folding.
+Error, "/tmp/cs131_testrunner_LBTaux/file.rc", line 17: 
+  Arithmetic exception occurred during constant folding.
+Error, "/tmp/cs131_testrunner_LBTaux/file.rc", line 18: 
+  Arithmetic exception occurred during constant folding.
+Error, "/tmp/cs131_testrunner_LBTaux/file.rc", line 19: 
+  Arithmetic exception occurred during constant folding.
+Error, "/tmp/cs131_testrunner_LBTaux/file.rc", line 20: 
+  Arithmetic exception occurred during constant folding.
+Error, "/tmp/cs131_testrunner_LBTaux/file.rc", line 24: 
+  Arithmetic exception occurred during constant folding.
+Compile: failure.

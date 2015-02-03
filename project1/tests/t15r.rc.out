@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_.HTaux/file.rc", line 8: 
+  Index value of 2 is outside legal range [0,2).
+Error, "/tmp/cs131_testrunner_.HTaux/file.rc", line 10: 
+  Value of type int not assignable to variable of type bool.
+Compile: failure.

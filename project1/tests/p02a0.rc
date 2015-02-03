@@ -1,0 +1,7 @@
+function : int main() {
+	int hex = 0x42;
+	int hexbig = 0X42;
+	int octal = 042;
+	int decimal = 10258240;
+	return 0;
+}

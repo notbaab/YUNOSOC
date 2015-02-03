@@ -1,0 +1,8 @@
+Error, "/tmp/cs131_testrunner_MITaux/file.rc", line 8: 
+  Incompatible types to operator ==:
+    int**,
+    int[10];
+  both must be of equivalent pointer type.
+Error, "/tmp/cs131_testrunner_MITaux/file.rc", line 9: 
+  Value of type int[10] not assignable to variable of type int**.
+Compile: failure.

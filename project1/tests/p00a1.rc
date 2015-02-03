@@ -1,0 +1,11 @@
+function : int main() {
+  int *x;
+
+  new x;	// phase 0 will make this syntactically correct
+
+  *x = 1;
+
+  delete x;	// phase 0 will make this syntactically correct
+
+  return 0;
+}

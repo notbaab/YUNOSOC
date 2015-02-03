@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_8zTaux/file.rc", line 6: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_8zTaux/file.rc", line 8: 
+  Field x declared second time in struct.
+Error, "/tmp/cs131_testrunner_8zTaux/file.rc", line 9: 
+  Field y declared second time in struct.
+Error, "/tmp/cs131_testrunner_8zTaux/file.rc", line 15: 
+  Duplicate declaration of overloaded function foo.
+Compile: failure.

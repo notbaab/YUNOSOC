@@ -1,0 +1,25 @@
+structdef STFU {
+	int x;
+	STFU* child;
+};
+
+function : void main() {
+
+	int *x;
+	int *y;
+	float *a;
+	float *b;
+	bool *p;
+	bool *q;
+	STFU *r;
+	STFU *s;
+
+	bool z;
+	z = x == y;
+	z = x == nullptr;
+	z = a == b;
+	z = p == q;
+	z = r == s;
+	
+	static bool t = nullptr == nullptr;
+}

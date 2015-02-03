@@ -1,0 +1,21 @@
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 10: 
+  bool required for conditional test, int found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 11: 
+  bool required for conditional test, int found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 12: 
+  bool required for conditional test, int found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 13: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 14: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 15: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 16: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 17: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 18: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_eDTaux/file.rc", line 19: 
+  bool required for conditional test, float found.
+Compile: failure.

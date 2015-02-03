@@ -1,0 +1,15 @@
+Error, "/tmp/cs131_testrunner_EzTaux/file.rc", line 9: 
+  Initialization value of type float not assignable to constant/variable of type int.
+Error, "/tmp/cs131_testrunner_EzTaux/file.rc", line 10: 
+  Initialization value of type float not assignable to constant/variable of type bool.
+Error, "/tmp/cs131_testrunner_EzTaux/file.rc", line 14: 
+  Foreach array element of type int not assignable to value iteration variable x, of type bool.
+Error, "/tmp/cs131_testrunner_EzTaux/file.rc", line 21: 
+  Foreach array element of type int not equivalent to reference iteration variable x, of type float.
+Error, "/tmp/cs131_testrunner_EzTaux/file.rc", line 27: 
+  Foreach array element of type float* not assignable to value iteration variable x, of type float.
+Error, "/tmp/cs131_testrunner_EzTaux/file.rc", line 31: 
+  Foreach array element of type float[4] not assignable to value iteration variable x, of type float.
+Error, "/tmp/cs131_testrunner_EzTaux/file.rc", line 35: 
+  Foreach array element of type float[4] not assignable to value iteration variable x, of type float.
+Compile: failure.

@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_gDTaux/file.rc", line 4: 
+  bool required for conditional test, int found.
+Error, "/tmp/cs131_testrunner_gDTaux/file.rc", line 8: 
+  Incompatible type int to binary operator &&, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_gDTaux/file.rc", line 9: 
+  undeclared identifier 'f'.
+Error, "/tmp/cs131_testrunner_gDTaux/file.rc", line 12: 
+  Incompatible type int to unary operator !, equivalent to bool expected.
+Compile: failure.

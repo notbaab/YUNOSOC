@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_xBTaux/file.rc", line 8: 
+  Value of type float* not assignable to variable of type bool*.
+Compile: failure.

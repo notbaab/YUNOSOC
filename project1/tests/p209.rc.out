@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_XBTaux/file.rc", line 14: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Error, "/tmp/cs131_testrunner_XBTaux/file.rc", line 15: 
+  Argument passed to reference parameter y (type int) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_XBTaux/file.rc", line 16: 
+  Non-addressable argument of type int to address-of operator.
+Error, "/tmp/cs131_testrunner_XBTaux/file.rc", line 19: 
+  Invalid type cast. Type STRUCT to type int is not supported.
+Compile: failure.

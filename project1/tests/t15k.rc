@@ -1,0 +1,13 @@
+bool* bptr;
+
+function : bool* foo() { return nullptr; }
+
+function : int* foo2() { return foo(); return nullptr; }
+
+function : void main()
+{
+  bool* myP;
+  bool* myP2;
+  myP = foo();
+  myP2 = foo();
+}

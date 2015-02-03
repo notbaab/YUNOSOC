@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_BxTaux/file.rc", line 7: 
+  Type of return expression (float), not assignment compatible with function's return type (int).
+Compile: failure.

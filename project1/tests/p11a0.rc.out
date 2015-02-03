@@ -1,0 +1,25 @@
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 9: 
+  Type of expression referenced by array subscript (int) is not of array or pointer type.
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 10: 
+  Type of index expression in array reference (float) not equivalent to int.
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 14: 
+  Index value of 55 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 15: 
+  Index value of -99 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 16: 
+  Index value of 13 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 17: 
+  Index value of 12 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 18: 
+  Index value of 17 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 19: 
+  Index value of -9 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 20: 
+  Index value of 7 is outside legal range [0,2).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 21: 
+  Index value of -9 is outside legal range [0,10).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 22: 
+  Index value of 14 is outside legal range [0,2).
+Error, "/tmp/cs131_testrunner_8yTaux/file.rc", line 23: 
+  Index value of -12 is outside legal range [0,10).
+Compile: failure.

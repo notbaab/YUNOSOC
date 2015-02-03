@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_cDTaux/file.rc", line 6: 
+  bool required for conditional test, float found.
+Error, "/tmp/cs131_testrunner_cDTaux/file.rc", line 10: 
+  Incompatible type float to unary operator !, equivalent to bool expected.
+Error, "/tmp/cs131_testrunner_cDTaux/file.rc", line 14: 
+  Incompatible type int to unary operator !, equivalent to bool expected.
+Compile: failure.

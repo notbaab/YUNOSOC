@@ -1,0 +1,13 @@
+Error, "/tmp/cs131_testrunner_fATaux/file.rc", line 14: 
+  Referenced field missing_field not found in type TWO_INT_FIELDS.
+Error, "/tmp/cs131_testrunner_fATaux/file.rc", line 17: 
+  Referenced field missing_field_2 not found in type TWO_INT_FIELDS.
+Error, "/tmp/cs131_testrunner_fATaux/file.rc", line 20: 
+  Referenced field missing_function not found in type ONE_FUNCTION.
+Error, "/tmp/cs131_testrunner_fATaux/file.rc", line 37: 
+  Initialization value of type bool not assignable to constant/variable of type int.
+Error, "/tmp/cs131_testrunner_fATaux/file.rc", line 41: 
+  Initialization value of type int not assignable to constant/variable of type bool.
+Error, "/tmp/cs131_testrunner_fATaux/file.rc", line 45: 
+  Initialization value of type float* not assignable to constant/variable of type float.
+Compile: failure.

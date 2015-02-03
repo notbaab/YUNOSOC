@@ -1,0 +1,5 @@
+function : void foo(){
+	if(3.0) {
+	   int i = 3;
+	}
+}

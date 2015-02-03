@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_rATaux/file.rc", line 11: 
+  Referenced field f2 not found in type REC.
+Compile: failure.

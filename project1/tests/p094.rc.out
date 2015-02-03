@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_vyTaux/file.rc", line 12: 
+  Illegal call to overloaded function foo.
+Compile: failure.

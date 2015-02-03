@@ -1,0 +1,14 @@
+structdef _MYS { 
+    int x;
+    int y; 
+    int y; 
+    int x;  // duplicate id x, error #2 
+    function : void x() {}  // duplicate id x, error #1 
+    function : void f( int &x ) 
+    { x = x + 1; }  // No error with x (inner scope)
+    function : void foo() {} 
+};
+
+function: int main () {
+    _MYS x;
+}

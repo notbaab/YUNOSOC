@@ -1,0 +1,16 @@
+float af[10];
+float aff[10][20];
+int ai[10];
+
+float x[10][20];
+int y[10];
+float z[20];
+
+function : void foo(float &x[10][20], int &y[10][20], float &z[10][20]) {
+	z[19][9] = x[0][0] + y[0][0] + z[0][0];
+}
+
+function : void main()
+{
+	foo(z, x, x);
+}

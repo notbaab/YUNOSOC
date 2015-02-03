@@ -1,0 +1,11 @@
+Error, "/tmp/cs131_testrunner_UwTaux/file.rc", line 13: 
+  Number of arguments (1) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_UwTaux/file.rc", line 14: 
+  Argument of type float not assignable to value parameter x, of type int.
+Error, "/tmp/cs131_testrunner_UwTaux/file.rc", line 15: 
+  Argument of type bool not assignable to value parameter y, of type int.
+Error, "/tmp/cs131_testrunner_UwTaux/file.rc", line 16: 
+  Argument of type bool not assignable to value parameter x, of type int.
+Error, "/tmp/cs131_testrunner_UwTaux/file.rc", line 16: 
+  Argument of type float not assignable to value parameter y, of type int.
+Compile: failure.

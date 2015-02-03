@@ -1,0 +1,13 @@
+Error, "/tmp/cs131_testrunner_bATaux/file.rc", line 17: 
+  Duplicate declaration of overloaded function foostruct.
+Error, "/tmp/cs131_testrunner_bATaux/file.rc", line 33: 
+  Illegal call to overloaded function foostruct.
+Error, "/tmp/cs131_testrunner_bATaux/file.rc", line 39: 
+  Argument of type MYS not assignable to value parameter bart, of type MYS*.
+Error, "/tmp/cs131_testrunner_bATaux/file.rc", line 40: 
+  Argument of type MYS* not equivalent to reference parameter lisa, of type MYS.
+Error, "/tmp/cs131_testrunner_bATaux/file.rc", line 41: 
+  Number of arguments (3) differs from number of parameters (2).
+Error, "/tmp/cs131_testrunner_bATaux/file.rc", line 42: 
+  Number of arguments (3) differs from number of parameters (2).
+Compile: failure.

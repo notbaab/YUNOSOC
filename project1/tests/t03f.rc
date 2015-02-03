@@ -1,0 +1,6 @@
+function: void _foo() {    
+    int y[10];
+    
+    y = y;
+}
+

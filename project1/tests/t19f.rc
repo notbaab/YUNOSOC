@@ -1,0 +1,19 @@
+structdef MS {
+    int a;
+    int b;
+    int c;
+    int d;
+    bool e;
+    float f;
+    function : int doo(int i) { return this.c; }  // has no effect on size!
+};
+
+const int ccc = sizeof(MS) + sizeof(float) + (-sizeof(float) - sizeof(float));
+
+function : void main() {
+  float x[sizeof(float)];
+  float y[sizeof(MS)-sizeof(float)];
+
+  x[3] = x[4];
+  y[ccc*200 + -1] = y[19];
+}

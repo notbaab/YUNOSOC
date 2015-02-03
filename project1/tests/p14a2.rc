@@ -1,0 +1,11 @@
+structdef MYSTRUCT {
+	int a;
+};
+
+function : void main() {
+	int notastruct = 5;
+	int foo = notastruct.SomeField;
+	MYSTRUCT MyStruct;
+	int x = MyStruct.SomeField;
+	MyStruct.SomeFunc();
+}

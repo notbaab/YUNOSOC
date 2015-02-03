@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_ZHTaux/file.rc", line 6: 
+  Initialization value of type int****** not assignable to constant/variable of type float*.
+Error, "/tmp/cs131_testrunner_ZHTaux/file.rc", line 7: 
+  Initialization value of type int****** not assignable to constant/variable of type int*.
+Compile: failure.

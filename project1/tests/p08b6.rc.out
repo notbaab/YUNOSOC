@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_eyTaux/file.rc", line 1: 
+  Initialization value of type bool not assignable to constant/variable of type int.
+Compile: failure.

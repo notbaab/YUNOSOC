@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_LATaux/file.rc", line 12: 
+  Incompatible type STRUCT to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_LATaux/file.rc", line 13: 
+  Incompatible type STRUCT to unary dereference operator *, pointer expected.
+Error, "/tmp/cs131_testrunner_LATaux/file.rc", line 14: 
+  Incompatible type int to operator ->, pointer to struct expected.
+Error, "/tmp/cs131_testrunner_LATaux/file.rc", line 15: 
+  Incompatible type int* to operator ->, pointer to struct expected.
+Compile: failure.

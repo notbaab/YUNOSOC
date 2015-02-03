@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_ZBTaux/file.rc", line 8: 
+  Index value of 24 is outside legal range [0,20).
+Compile: failure.

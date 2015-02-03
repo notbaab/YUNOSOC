@@ -1,0 +1,9 @@
+function: void _foo() {    
+    const bool x = true;
+    float y;
+    int z;
+
+    x = y = z;
+    x = 2 = y;
+    y = x = z;
+}

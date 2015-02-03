@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_cwTaux/file.rc", line 3: 
+  Operand to ++ is not a modifiable L-value.
+Compile: failure.

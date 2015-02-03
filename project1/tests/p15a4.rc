@@ -1,0 +1,16 @@
+structdef STRUCT {
+	int x;
+};
+
+function : void main() {
+	
+	STRUCT s;
+	int a;
+	int *b;
+	int c;
+
+	a = s->x;
+	a = (*s).x;
+	c = a->x;
+	c = b->x;
+}

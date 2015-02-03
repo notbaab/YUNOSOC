@@ -1,0 +1,11 @@
+/* Check 0 (p00b.rc) */
+
+bool x;		// global x
+
+function : int main() {
+  int x;	// local x
+
+  x = 5;	// Fix this to find the local int x first !
+
+  return 0;
+}

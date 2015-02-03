@@ -1,0 +1,10 @@
+int a;
+const int i = 1;
+const int j = i;
+const int k = a;
+
+function : void main() {
+    const int x = 1;
+    const int y = x;
+    const int z = a;
+}

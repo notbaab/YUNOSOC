@@ -1,0 +1,7 @@
+Error, "/tmp/cs131_testrunner_VDTaux/file.rc", line 9: 
+  Argument passed to reference parameter a1 (type bool) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_VDTaux/file.rc", line 10: 
+  Argument passed to reference parameter a1 (type bool) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_VDTaux/file.rc", line 12: 
+  Return required in function, none found.
+Compile: failure.

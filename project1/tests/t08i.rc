@@ -1,0 +1,45 @@
+int xx;
+int xy;
+float xr;
+int xa;
+// Simple
+const int a = 10;
+const bool b = true;
+const float c = 1.2;
+// Simple Exprs
+const int d = 10 + 133;
+const int e = 10 * 123;
+const int f = 10 - 1;
+const float g = 10.0 / 3.0;
+const int h = 10 / 3;
+const int i = 10 % 3;
+const bool j = 10 < 5;
+const bool k = !true;
+const bool l = 5 == 100;
+// Complex Exprs
+const float m = a * c;
+const int n = a + (200 - 10);
+const float o = 3.14 * 2 / c;
+// Incorrect Exprs
+const int p = xx;
+const int q = xr;
+const int z1 = xx + 10;
+const int z2 = 10 + xx;
+const int z3 = xx + xy;
+const int r1 = xx / 10;
+const int r2 = 10 / xy;
+const int r3 = xx / xy;
+const float s1 = 10.0 / xr;
+const float s2 = xr / 5.12;
+const float s3 = xr / xa;
+const bool t1 = 10 < xx;
+const bool t2 = xx >= 10;
+const bool t3 = xx > xr;
+const bool u1 = xx == 10;
+const bool u2 = 5 == xy;
+const bool u3 = xx == xr;
+
+function : int main()
+{
+  return n;
+}

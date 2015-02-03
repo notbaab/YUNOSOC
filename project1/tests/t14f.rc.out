@@ -1,0 +1,9 @@
+Error, "/tmp/cs131_testrunner_4GTaux/file.rc", line 24: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_4GTaux/file.rc", line 24: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_4GTaux/file.rc", line 25: 
+  Referenced field z not found in type _MYS_2.
+Error, "/tmp/cs131_testrunner_4GTaux/file.rc", line 26: 
+  Return required in function, none found.
+Compile: failure.

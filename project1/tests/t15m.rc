@@ -1,0 +1,8 @@
+function : void main()
+{
+  int****** ptr0 = nullptr;
+  int* ptr1 = nullptr;
+  int* ptr2 = ptr1;
+  float* ptr3 = ptr0;
+  int* ptr4 = ptr0;
+}

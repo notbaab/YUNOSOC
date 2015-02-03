@@ -1,0 +1,25 @@
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 5: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 9: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 14: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 18: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 24: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 28: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 33: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 37: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 43: 
+  Break does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 46: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 50: 
+  Continue does not occur in a loop.
+Error, "/tmp/cs131_testrunner_uzTaux/file.rc", line 53: 
+  Break does not occur in a loop.
+Compile: failure.

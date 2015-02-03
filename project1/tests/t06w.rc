@@ -1,0 +1,10 @@
+function : int _foo(){
+
+   {
+      return 1;
+      return 40;
+   }
+
+}
+
+

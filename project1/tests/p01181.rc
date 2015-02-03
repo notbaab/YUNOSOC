@@ -1,0 +1,66 @@
+// Let's run all the same checks for each operator, just to be throrough.
+
+
+// Testing > ----------------------- > -----------------------------------------
+
+
+// Incompatible type bool to binary operator >, numeric expected.
+bool a = 0x5 > true;
+
+// Incompatible type bool to binary operator >, numeric expected.
+bool b = false > 0.0;
+
+// Incompatible type bool to binary operator >, numeric expected.
+bool c = 0644 > (0755 > false);
+
+// Makes sure the resulting type is bool.
+// Incompatible type bool to binary operator >, numeric expected.
+bool d = (0644 > 0x1A4) > 1;
+
+
+// Testing < ----------------------- < -----------------------------------------
+
+
+// Incompatible type bool to binary operator <, numeric expected.
+bool e = 0x5 < true;
+
+// Incompatible type bool to binary operator <, numeric expected.
+bool f = false < 0.0;
+
+// Incompatible type bool to binary operator <, numeric expected.
+bool g = 0644 < (0755 < false);
+
+// Incompatible type bool to binary operator <, numeric expected.
+bool h = (0644 < 0x1A4) < 1;
+
+
+// Testing >= ---------------------- >= ----------------------------------------
+
+
+// Incompatible type bool to binary operator >=, numeric expected.
+bool i = 0x5 >= true;
+
+// Incompatible type bool to binary operator >=, numeric expected.
+bool j = false >= 0.0;
+
+// Incompatible type bool to binary operator >=, numeric expected.
+bool k = 0644 >= (0755 >= false);
+
+// Incompatible type bool to binary operator >=, numeric expected.
+bool l = (0644 >= 0x1A4) >= 1;
+
+
+// Testing <= ---------------------- <= ----------------------------------------
+
+
+// Incompatible type bool to binary operator <=, numeric expected.
+bool m = 0x5 <= true;
+
+// Incompatible type bool to binary operator <=, numeric expected.
+bool n = false <= 0.0;
+
+// Incompatible type bool to binary operator <=, numeric expected.
+bool o = 0644 <= (0755 <= false);
+
+// Incompatible type bool to binary operator <=, numeric expected.
+bool p = (0644 <= 0x1A4) <= 1;

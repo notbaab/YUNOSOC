@@ -1,0 +1,20 @@
+/* Check 13 - p13c.rc */
+
+structdef FOO {
+    int a;
+    int b;
+    FOO* fp;
+};
+structdef FOO2 {
+    FOO* foo1;
+    FOO* fp;
+    FOO2* f2p;
+};
+structdef FOO3 {
+    FOO2* f2;
+    FOO3* f2;
+};
+function : int main() {
+    return 0;
+}
+

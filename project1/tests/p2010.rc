@@ -1,0 +1,10 @@
+const bool x = true;
+int y[10];
+int z;
+function : int main() {
+	const int a = (int) x;
+	const float b = 23.94;
+	z = y[(int) b];
+	z = y[9 + (int) x];
+	return 0;
+}

@@ -1,0 +1,19 @@
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 2: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 5: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 8: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 11: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 15: 
+  Incompatible type bool to operator ++, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 19: 
+  Incompatible type bool to operator --, equivalent to int, float, or pointer expected.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 22: 
+  Operand to ++ is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 25: 
+  Operand to -- is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_dwTaux/file.rc", line 29: 
+  Operand to -- is not a modifiable L-value.
+Compile: failure.

@@ -1,0 +1,8 @@
+int x;
+int y[10];
+const int d = (((5 + 8 - 12) * 8) % 7) - 5;  // -4
+
+function : void main()
+{
+  x = y[d];
+}

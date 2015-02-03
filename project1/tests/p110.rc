@@ -1,0 +1,17 @@
+function : int foo(int array[5]) {
+	return 0;
+}
+
+function : int bar(int array [10]) {
+	return 0;
+}
+
+function : void main() {
+	int a [5];
+	int c [10];
+	int b;
+	
+	b = foo(a); 	//valid
+	b = bar(c); 	//valid
+	
+}

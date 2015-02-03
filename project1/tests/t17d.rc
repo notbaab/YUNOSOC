@@ -1,0 +1,18 @@
+structdef MYS{
+    int x;
+    int y;
+    bool b;
+    MYS * recptr;
+};
+
+MYS* mptr;
+
+function : void main()
+{
+  mptr->recptr++;
+  --mptr;
+  --&mptr[0].recptr[-5];
+  &mptr[0].recptr[-5]++;
+  ++mptr[0].recptr;
+}
+

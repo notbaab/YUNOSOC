@@ -1,0 +1,25 @@
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 14: 
+  Type of new's operand must be of pointer type, int found.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 16: 
+  Type of delete's operand must be of pointer type, int found.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 22: 
+  Operand to "new" is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 23: 
+  Operand to "delete" is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 24: 
+  Operand to "new" is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 26: 
+  Operand to "delete" is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 37: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 41: 
+  Number of arguments (1) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 43: 
+  Argument of type bool not assignable to value parameter x, of type float.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 46: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 48: 
+  Type of new's operand must be of pointer type, MYS_B found.
+Error, "/tmp/cs131_testrunner_aBTaux/file.rc", line 50: 
+  Type of delete's operand must be of pointer type, MYS_B found.
+Compile: failure.

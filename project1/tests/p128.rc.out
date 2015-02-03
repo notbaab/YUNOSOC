@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_ozTaux/file.rc", line 1: 
+  syntax error near "break".
+Compile: failure.

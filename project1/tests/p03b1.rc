@@ -1,0 +1,28 @@
+// All these lines should compile without error.
+
+function : void yes() {
+    int a;
+    int b;
+    float c;
+    float d;
+    bool e;
+    bool f;
+
+    a = b = 4;
+
+    b = 0755;
+
+    a = 0xBADBEAD;
+
+    c = d = 5.0;
+
+    d = 5.1;
+
+    c = a;
+
+    d = 2;
+
+    e = f = true;
+
+    e = false;
+}

@@ -1,0 +1,5 @@
+Error, "/tmp/cs131_testrunner_1HTaux/file.rc", line 5: 
+  Type of return expression (bool[10]), not assignment compatible with function's return type (bool*).
+Error, "/tmp/cs131_testrunner_1HTaux/file.rc", line 11: 
+  Value of type bool not assignable to variable of type int.
+Compile: failure.

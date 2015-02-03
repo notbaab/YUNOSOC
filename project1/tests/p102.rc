@@ -1,0 +1,8 @@
+int arr [3];
+
+const int x = 5;
+int carr [x];
+float fubarr [x*2+4];
+
+
+float a[10];

@@ -1,0 +1,16 @@
+
+structdef MS {
+	int a;
+	int b;
+	function : int doo() { return 0; } // has no effect on size!
+};
+MS t;
+function : void main() {
+	int arr[4];
+	
+	const int x2 = sizeof(MS); // should be 8
+	arr[x2-4]=0;
+	
+	const int x3 = sizeof(float***); // should be 4
+	arr[x3-0]=0;
+}

@@ -1,0 +1,21 @@
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 7: 
+  Number of arguments (3) differs from number of parameters (2).
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 8: 
+  Number of arguments (1) differs from number of parameters (2).
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 11: 
+  Number of arguments (3) differs from number of parameters (2).
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 12: 
+  Argument of type float not assignable to value parameter i, of type int.
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 12: 
+  Argument of type bool not assignable to value parameter j, of type int.
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 17: 
+  Number of arguments (1) differs from number of parameters (2).
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 18: 
+  Argument of type bool not equivalent to reference parameter y, of type int.
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 22: 
+  Argument passed to reference parameter x (type int) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 23: 
+  Argument passed to reference parameter y (type int) is not a modifiable L-value.
+Error, "/tmp/cs131_testrunner_QwTaux/file.rc", line 26: 
+  Left-hand operand is not assignable (not a modifiable L-value).
+Compile: failure.

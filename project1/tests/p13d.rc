@@ -1,0 +1,14 @@
+/* Check 13 - p13d.rc */
+
+structdef MYSTRUCT {
+	MYSTRUCT* myRecursivePtr;
+};
+
+structdef MYSTRUCT2 {
+	MYSTRUCT2* myRecursiveStruct;
+};
+
+function : int main() {
+    return 0;
+}
+

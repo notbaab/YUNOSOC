@@ -1,0 +1,9 @@
+function: void foo() {    
+    int i;
+    float f1;
+    float f2;
+    bool b;
+
+    b = (b || (i > (f1 + i)) && (f1 == f2));
+    b = (i || (i > (f1 + i)) && (f1 == f2));
+}

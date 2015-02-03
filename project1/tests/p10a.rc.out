@@ -1,0 +1,3 @@
+Error, "/tmp/cs131_testrunner_NyTaux/file.rc", line 11: 
+  Index expression value (0) in array declaration must be > 0.
+Compile: failure.

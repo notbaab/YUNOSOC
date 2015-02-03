@@ -1,0 +1,45 @@
+structdef MYS {
+    int x;
+    int y;
+
+};
+
+
+
+function: int foostruct( MYS homer){//func_1
+    return 0;
+}
+
+function: void foostruct( MYS *marge){//func_2
+}
+function: void foostruct( MYS &marge, MYS homer){//func_3
+}
+function: int foostruct( MYS bart, MYS &lisa){//error func_4.
+    return 0;
+}
+
+function: int barstruct( MYS *bart, MYS &lisa){ //func_5
+    return 0;
+}
+
+
+
+function: int main(){
+    MYS x;
+    int y;
+
+
+    foostruct( x);//func_1
+    foostruct( y);//error
+
+    foostruct( x, x);//func_3
+    foostruct(&x);//func_2
+
+    barstruct( &x, x);//func_5    
+    barstruct( x, x);//error
+    barstruct( &x, &x);//error
+    barstruct( &x, x, &x);//error
+    barstruct( &x, x, y);//error
+
+    return 0;
+}

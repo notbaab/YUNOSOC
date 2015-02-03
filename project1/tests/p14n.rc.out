@@ -1,0 +1,12 @@
+Error, "/tmp/cs131_testrunner_zATaux/file.rc", line 21: 
+  Number of arguments (2) differs from number of parameters (0).
+Error, "/tmp/cs131_testrunner_zATaux/file.rc", line 28: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_zATaux/file.rc", line 29: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_zATaux/file.rc", line 31: 
+  Argument of type bool not assignable to value parameter x, of type float.
+Error, "/tmp/cs131_testrunner_zATaux/file.rc", line 32: 
+  Number of arguments (0) differs from number of parameters (1).
+Error, "/tmp/cs131_testrunner_zATaux/file.rc", line 34: 
+ 

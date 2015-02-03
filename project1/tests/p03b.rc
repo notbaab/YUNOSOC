@@ -1,0 +1,9 @@
+/* Check 3 (p03b.rc) */
+
+int i;
+float r;
+
+function : int main() {
+    i = r;
+    return 0;
+}
