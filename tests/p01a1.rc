@@ -1,5 +1,0 @@
-function : int main () {
-	int* x;
-	new x;
-	return 0;
-}

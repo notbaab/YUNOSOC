@@ -1,4 +1,0 @@
-int x;
-int a[4];
-int* r = &x;
-int* t = nullptr;

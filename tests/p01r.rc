@@ -1,8 +1,0 @@
-/* Check 1 (p01r.rc) */
-
-bool b;
-
-function : int main() {
-    b = true != 31;
-    return 0;
-} 

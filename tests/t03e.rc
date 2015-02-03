@@ -1,6 +1,0 @@
-function: void _foo() {    
-    int *x;
-    
-    &x = y;
-}
-

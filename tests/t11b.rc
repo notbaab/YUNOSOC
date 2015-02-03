@@ -1,8 +1,0 @@
-float a[10][10];
-int i;
-float r;
-
-function : void main()
-{
- r = a[i][i];
-}  

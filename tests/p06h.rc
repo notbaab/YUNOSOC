@@ -1,6 +1,0 @@
-function : int & f() {
-    return 4;
-}
-
-
-

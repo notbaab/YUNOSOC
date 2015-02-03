@@ -1,9 +1,0 @@
-/* Check 14 (p14b.rc) */
-
-float r;
-float ar[10];
-
-function : int main() {
-    r = ar.r;
-    return 0;
-}

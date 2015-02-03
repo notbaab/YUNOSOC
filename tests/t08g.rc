@@ -1,5 +1,0 @@
-function : void main()
-{
-  const float a = 1 / 2;
-  const bool b = !a;
-}

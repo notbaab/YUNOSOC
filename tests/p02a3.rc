@@ -1,9 +1,0 @@
-//All of these test should compile without error.
-
-function : int main() {
-	int dzero = 0;
-	int ozero = 00;
-	int hzero = 0x0;
-	int hzeroBig = 0X0;
-	return 0;
-}

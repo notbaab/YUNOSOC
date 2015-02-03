@@ -1,9 +1,0 @@
-function : void main () {
-
-int a = +1;
-int b = -1;
-int c = 1;
-int d = +10;
-int e = -10;
-
-}

@@ -1,9 +1,0 @@
-/* Check 5 (p05b.rc) */
-
-function : int fvr(float a) { return 0; }
-float r;
-int i;
-
-function : void main() {
-    fvr(r, i);
-} 

@@ -1,8 +1,0 @@
-function : int main() {
-    exit(0);
-    exit(0x1);
-    exit(-02);
-    exit(main());
-
-    return 0xE0F;
-}

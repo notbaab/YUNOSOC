@@ -1,5 +1,0 @@
-function : void foo() {
-float i = 1.0; 
-bool j = false;
-float k = i + j;
-}

@@ -1,8 +1,0 @@
-structdef MYSTRUCT { float a; };
-function : void main() {
-	int * x;
-	MYSTRUCT* m;
-	m->a = 2.5;
-	(*m).a = 1;
-	*x = 2;
-}

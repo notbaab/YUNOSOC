@@ -1,7 +1,0 @@
-function: int main() { 
-    if (true) {
-        break;
-    } else {
-        continue;
-    }
-}

@@ -1,8 +1,0 @@
-/* Check 1 (p01i.rc) */
-
-int i;
-
-function : int main() {
-    i = i / i;
-    return 0;
-}

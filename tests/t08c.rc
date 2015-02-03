@@ -1,6 +1,0 @@
-int i;
-const int foo = i;
-
-function : void main()
-{
-}

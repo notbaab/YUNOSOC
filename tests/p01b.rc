@@ -1,9 +1,0 @@
-/* Check 1 (p01b.rc) */
-
-int i;
-float r;
-
-function : int main() {
-    i = i - r;
-    return 0;
-}

@@ -1,7 +1,0 @@
-//valid exit
-
-function: void main() {
-while(false){ 
-exit(0);
-}
-}

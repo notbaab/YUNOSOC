@@ -1,4 +1,0 @@
-function : int main () {
-	int x = 050;
-	return x;
-}

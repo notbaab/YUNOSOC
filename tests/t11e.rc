@@ -1,6 +1,0 @@
-bool x;
-
-function : void main()
-{
-  x = x[4];
-}

@@ -1,7 +1,0 @@
-float x;
-float y;
-
-function : void main()
-{
-  y = *x;
-}

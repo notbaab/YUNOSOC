@@ -1,8 +1,0 @@
-const bool b1 = 1 < 2;
-const bool b2 = true != false;
-
-function : int main() {
-    const bool b3 = b1 && b2 || (2< 1);
-    bool b4 = b1 || b2;
-    return 0;
-}

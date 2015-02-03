@@ -1,3 +1,0 @@
-structdef STRUCT {
-	STRUCT* s;
-};

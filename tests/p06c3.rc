@@ -1,4 +1,0 @@
-
-function : int foo() {
-	int x = 3;
-}

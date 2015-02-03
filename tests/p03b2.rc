@@ -1,6 +1,0 @@
-function : int main() {
-	int x = 4;
-	float y = 3.3;
-	y = x;
-	return 0;
-}

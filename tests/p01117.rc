@@ -1,9 +1,0 @@
-function : bool main() {
-	bool x;
-
-	x = true >= 2;
-	x = 3 >= false;
-	x = true >= false;
-	
-	return x;
-}

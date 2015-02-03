@@ -1,7 +1,0 @@
-int *x = nullptr;
-
-function : void _main()
-{
-    *x;
-    *nullptr;
-}

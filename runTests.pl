@@ -7,7 +7,7 @@ use POSIX qw(strftime);
 use Getopt::Long qw(GetOptions);
 
 Getopt::Long::Configure qw(gnu_getopt);
-
+no warnings 'uninitialized';
 # This is the directory where all tests exist.
 my $RC_sh             = "RC";
 my $ref_rc            = "testrunner_client";
@@ -16,6 +16,8 @@ my $testing_directory = "tests";
 my $rc_output_suffix  = "out";
 my $rc_suffix         = "rc";
 my $failedDir         = "failedTests";
+my $p1_directory      = "project1";  # directory where all the project 1 tests are
+my $p2_directory      = "project2";  # directory where all the project 2 tests are
 my $start_date_text   = "";
 my $finish_date_text  = "";
 my $total_passed      = 0;
@@ -32,165 +34,48 @@ my @rc_output_files;
 my @compile_times;
 my @diff_outputs;
 my @results; # An array of bools => true if passed, false if failed.
-my $exclude;
-my $include;
-my $help;
 my $force;
 my @skip;
 my @only;
 my $pass;
 my $dir;
 my $resultFile;
-# make failed dir
-if(!(-e $failedDir)) {
-  print "Making dir";
-  mkdir $failedDir, 0777;
-}
 # Clean up any temporary files leftover since last time.
 `rm -f $testing_directory/*.tmp`;
 `rm -f $testing_directory/*.tmp1`;
 `rm -f $testing_directory/*.tmp2`;
 `rm $failedDir/*`; # could fail, nothing bad happens though
- # get command line options
-GetOptions(
-    'force|f' => \$force,
-    'skip|s=s' => \@skip,
-    'only|o=s' => \@only,
-    'help|h' => \$help,
-    'pass|p' => \$pass,
-    'dir|d=s' => \$dir,
-    'result|r=s' => \$resultFile,
-);
+
+DoCommandLineArguments();
 
 if($resultFile){
   $html_output = $resultFile . ".html"
 }
-# usage message
-if($help){
-  print "Usage: perlTest [so] range [d] directory [fp] 
-    Note: I don't handle command line options well. 
-    -o --only   only run tests that have the passed in prefix. A range 
-                is also accepted. See -s for range examples
-
-    -s --skip   skip files that have the passed in prefix. A range is also 
-                accepted. You can also split up arguments with a comma. 
-                EX:  ./runTests -s p08  <- skips any file that starts with 
-                                                 p08
-                     ./runTests -s p08-p10  <- skips any file that starts 
-                                                  with p08, p09, p10
-                     ./runTests -s p08-10,p12-13  <- skips any file that 
-                                                           starts with p08, p09,
-                                                           p10, p12, p13
-                     ./runTests -s p08-10 -s p12-13  <- skips any file that 
-                                                              starts with p08 p09
-                                                              p10 p12 p13
-    -d --dir    Run tests from a different directory other than the default
-                $testing_directory
-                EX: ./runTests -d testDir  <- runs only files in testDir
-                    ./runTests -d testDir -s p08  <- runs only files in 
-                                                           testDir and skips p08
-                    ./runTests -d testDir -o p08 <- runs only p08 tests in 
-                                                          testDir
-
-    -f --force  force output files to be generated with the reference compilers
-
-    -p --pass   automatically pass compilers
-
-    -r --result Specify a result file other than result.html 
-                EX: ./runTests -r otherresult
-
-    Doc(ish): YYUNOC test tool. The idiot proof test tool for cse 131.
-    Running without any arguments is the simplest way to use the tool. It will look for 
-    a folder $testing_directory for any .rc files and .rc.out files and run $RC_sh 
-    against the .rc files and compare the output to the .rc.out file. If no .rc.out 
-    files it will run the reference compiler $ref_rc against the .rc file and save 
-    that output as a .rc.out. There are options for specifying specific tests as well.\n";
-    exit;
-  
-}
-if($dir){
-  print color "blue";
-  print " Running tests in $dir instead of default $testing_directory\n"; 
+# can't test if we don't have a compiler to run...
+if(!(-e $RC_sh)){
+  print color "red";
+  print "No RC executable found, please put one in the same directory\n";
   print color "reset";
-  $testing_directory = $dir;
-}
-if($pass){
-  my $url = "http://youtu.be/V4UfAL9f74I?t=7s";
-  my $platform = $^O;
-  my $cmd;
-  if    ($platform eq 'darwin')  { $cmd = "open \"$url\"";          } # Mac OS X
-  elsif ($platform eq 'linux')   { $cmd = "x-www-browser \"$url\""; } # Linux
-  elsif ($platform eq 'MSWin32') { $cmd = "start $url";             } # Win95..Win7
-  if (defined $cmd) {
-    system($cmd);
-    exit;
-  } else {
-    print color "red";
-    print "You are probably ssh'd into ieng9, pass flag won't work :(\n";
-    print color "reset";
-    exit;
-  }
+  exit;
 }
 
-my @argList;
-if(@skip){
-  @argList = @skip;
-}
-if(@only){
-  @argList = @only;
-  if(@skip){
-    print color "red";
-    print "You think your fucking funny don't you? What the fuck am I supposed to do with the skip and only flag high?\n";
-    print color "reset";
-    exit;
-  }
-}
-
-# this is a demonstration of my terrible string manipulation
-foreach my $arg (@argList){
-  # did they pass multiple arguments or just split with comma
-  my @ranges = split(/,/, $arg);
-  foreach(@ranges){
-    my $letter = substr($_, 0, 1);
-    my $numRanges = substr($_, 1);
-    my @numRanges = split(/-/, $numRanges);
-    my @testRange;
-    if (scalar @numRanges == 1){
-      # push(@rangePrefixes, $numRanges[1]);
-      @testRange = ($numRanges[0]);
-    }else{
-      @testRange = ($numRanges[0] .. $numRanges[1]);
-    }
-    foreach my $numRange (@testRange){
-      # print $numRange . " " ;
-      $rangePrefixes{$letter . $numRange} = 1;
-    }
-  }
-}
-sub CheckSkip{
-  # checks if the file name passed in is skipable or not by checking the only
-  # and skip flag and the rangePrefixes
-  my ($file) = @_;
-  my $prefix = substr($file, 0, 3);
-  if(@skip && $rangePrefixes{$prefix}){
-    return 1;
-  }
-  if(@only && !$rangePrefixes{$prefix}){
-    return 1;
-  } 
-  return 0;
+# make failed dir
+if(!(-e $failedDir)) {
+  print "Making dir";
+  mkdir $failedDir, 0777;
 }
 
 # Let the user know what's happenin'
 print color "blue";
 print " Gathering list of files...";
+print color "reset";
 
 # Actually open the directory
 opendir(DIR, $testing_directory) or die $!;
 
 # Iterate through all rc files in the directory
 $rc_counter = 0;
-# $rc_output_counter = 0;
+
 while (my $file = readdir(DIR)) {
   # We only want files
   next unless (-f "$testing_directory/$file");
@@ -487,3 +372,156 @@ print " ===================================\n";
 `rm -f $testing_directory/*.tmp2`;
 exit 0;
 
+
+# handle command line arguments
+sub DoCommandLineArguments{
+  my $project;
+  my $pass;
+  my $help;
+
+  GetOptions(
+    'force|f' => \$force,
+    'skip|s=s' => \@skip,
+    'only|o=s' => \@only,
+    'help|h' => \$help,
+    'win|w' => \$pass,
+    'dir|d=s' => \$dir,
+    'result|r=s' => \$resultFile,
+    'project|p=s' => \$project,
+  );
+  while($project != 1 && $project != 2 && !$dir){
+    print "Didn't specify a project, which project suite would you like to run? (1) or (2) ";
+    $project = <>;
+    if ($project != 1 && $project != 2){
+      print color "red";
+      print "PICK 1 OR 2!(Better yet use the p flag)\n";
+      print color "reset";
+    }
+  }
+  chomp($project);
+  $testing_directory = "project$project/$testing_directory";
+
+  # usage message
+  if($help){
+    print "Usage: perlTest [so] range [d] directory [fp] 
+  Note: I don't handle command line options well. 
+  -p --project specifies the project you are testing. This dictates if the tool will 
+               look in $p1_directory for tests or $p2_directory. 
+               EX:  ./runTests -p 1   <- runs tests in $p1_directory/$testing_directory
+                    ./runTests -p 2   <- runs tests in $p2_directory/$testing_directory
+                    ./runTests -p 3   <- Display an angry message and prompt
+
+  -o --only    only run tests that have the passed in prefix. A range 
+               is also accepted. See -s for range examples
+
+  -s --skip    skip files that have the passed in prefix. A range is also 
+               accepted. You can also split up arguments with a comma. 
+               EX:  ./runTests -s p08  <- skips any file that starts with 
+                                                p08
+                    ./runTests -s p08-p10  <- skips any file that starts 
+                                                 with p08, p09, p10
+                    ./runTests -s p08-10,p12-13  <- skips any file that 
+                                                          starts with p08, p09,
+                                                          p10, p12, p13
+                    ./runTests -s p08-10 -s p12-13  <- skips any file that 
+                                                             starts with p08 p09
+                                                             p10 p12 p13
+  -d --dir     Run tests from a different directory other than the default
+               $testing_directory
+               EX: ./runTests -d testDir  <- runs only files in testDir
+                   ./runTests -d testDir -s p08  <- runs only files in 
+                                                          testDir and skips p08
+                   ./runTests -d testDir -o p08 <- runs only p08 tests in 
+                                                         testDir
+
+  -f --force   force output files to be generated with the reference compilers
+
+  -r --result  Specify a result file other than result.html 
+               EX: ./runTests -r otherresult
+
+  -w --win     automatically pass compilers
+
+  Doc(ish): YYUNOC test tool. The idiot proof test tool for cse 131.
+  Running without any arguments is the simplest way to use the tool. It will look for 
+  a folder $testing_directory for any .rc files and .rc.out files and run $RC_sh 
+  against the .rc files and compare the output to the .rc.out file. If no .rc.out 
+  files it will run the reference compiler $ref_rc against the .rc file and save 
+  that output as a .rc.out. There are options for specifying specific tests as well.\n";
+    exit;
+  
+  }
+  if($dir){
+    print color "blue";
+    print " Running tests in $dir instead\n"; 
+    print color "reset";
+    $testing_directory = $dir;
+  }
+
+  if($pass){
+    my $url = "http://youtu.be/V4UfAL9f74I?t=7s";
+    my $platform = $^O;
+    my $cmd;
+    if    ($platform eq 'darwin')  { $cmd = "open \"$url\"";          } # Mac OS X
+    elsif ($platform eq 'linux')   { $cmd = "x-www-browser \"$url\""; } # Linux
+    elsif ($platform eq 'MSWin32') { $cmd = "start $url";             } # Win95..Win7
+    if (defined $cmd) {
+      system($cmd);
+      exit;
+    } else {
+      print color "red";
+      print "You are probably ssh'd into ieng9, pass flag won't work :(\n";
+      print color "reset";
+      exit;
+    }
+  }
+
+  my @argList;
+  if(@skip){
+    @argList = @skip;
+  }
+  if(@only){
+    @argList = @only;
+    if(@skip){
+      print color "red";
+      print "You think your fucking funny don't you? What the fuck am I supposed to do with the skip and only flag high?\n";
+      print color "reset";
+      exit;
+    }
+  }
+
+  # this is a demonstration of my terrible string manipulation
+  foreach my $arg (@argList){
+    # did they pass multiple arguments or just split with comma
+    my @ranges = split(/,/, $arg);
+    foreach(@ranges){
+      my $letter = substr($_, 0, 1);
+      my $numRanges = substr($_, 1);
+      my @numRanges = split(/-/, $numRanges);
+      my @testRange;
+      if (scalar @numRanges == 1){
+        # push(@rangePrefixes, $numRanges[1]);
+        @testRange = ($numRanges[0]);
+      }else{
+        @testRange = ($numRanges[0] .. $numRanges[1]);
+      }
+      foreach my $numRange (@testRange){
+        # print $numRange . " " ;
+        $rangePrefixes{$letter . $numRange} = 1;
+      }
+    }
+  }
+}
+
+sub CheckSkip{
+  # checks if the file name passed in is skipable or not by checking the only
+  # and skip flag and the rangePrefixes
+  my ($file) = @_;
+  my $prefix = substr($file, 0, 3);
+  if(@skip && $rangePrefixes{$prefix}){
+    return 1;
+  }
+  if(@only && !$rangePrefixes{$prefix}){
+    return 1;
+  } 
+  return 0;
+}

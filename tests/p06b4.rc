@@ -1,8 +1,0 @@
-function : int &foo() {
-	bool b = false;
-	return b;
-}
-
-function : int &bar() {
-	return 5;
-}

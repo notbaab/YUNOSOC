@@ -1,4 +1,0 @@
-// All of these lines should compile without error.
-
-int a = 1 * 2 - 3;
-int b = (1 * 033) / 0x88;

@@ -1,5 +1,0 @@
-const int i = true;
-
-function : void main() {
-    const int j = true;
-}

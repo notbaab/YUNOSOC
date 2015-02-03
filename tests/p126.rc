@@ -1,5 +1,0 @@
-function: void foo(){
-	while(true){
-		break;
-	}
-}

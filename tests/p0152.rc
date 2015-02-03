@@ -1,5 +1,0 @@
-function : void foo() {
-bool i = true; 
-int j = 1;
-bool k = i / j;
-}

@@ -1,6 +1,0 @@
-bool* bad = nullptr;
-
-function : void main()
-{
-  bad->a = true;
-}

@@ -1,4 +1,0 @@
-function : void main() {
-	exit(false);
-	return;
-}

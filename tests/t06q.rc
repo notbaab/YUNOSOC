@@ -1,4 +1,0 @@
-function : float _foo()
-{
-	int x;
-}

@@ -1,9 +1,0 @@
-/* Check 3 (p03d.rc) */
-
-int i;
-bool b;
-
-function : int main() {
-    i = b;
-    return 0;
-}

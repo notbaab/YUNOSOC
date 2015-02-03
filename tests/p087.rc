@@ -1,4 +1,0 @@
-int i = 5/0;
-const int j = 0;
-int k = 10 / j;
-

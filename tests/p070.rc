@@ -1,9 +1,0 @@
-
-function : int foo() {
-	exit(3.4);
-	return 3;
-}
-
-function : void bar() {
-	exit(true);
-}

@@ -1,5 +1,0 @@
-function : void foo()
-{
-    float x;
-    x = +x;
-}

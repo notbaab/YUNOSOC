@@ -1,3 +1,0 @@
-structdef MYSTRUCT {
-	MYSTRUCT* myRecursivePtr;
-};

@@ -1,5 +1,0 @@
-function : int main() {
-	int b = 0x0011;
-	int c = 012;
-	return 0;
-}

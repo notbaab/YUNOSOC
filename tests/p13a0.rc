@@ -1,5 +1,0 @@
-structdef MYSTRUCT {
-        int x;
-        int y[2];
-        int *z;
-    };

@@ -1,9 +1,0 @@
-function : int* foo()
-{
-  return nullptr;
-}
-
-function : void main()
-{
-  delete foo();
-}

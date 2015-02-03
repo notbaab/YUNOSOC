@@ -1,4 +1,0 @@
-structdef TESTSTRUCT {
-        // syntax error near "=".
-        int x = 2;
-    };

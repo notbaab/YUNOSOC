@@ -1,9 +1,0 @@
-/* Check 1 (p01q.rc) */
-
-bool b;
-int i;
-
-function : int main() {
-    b = b != i;
-    return 0;
- }

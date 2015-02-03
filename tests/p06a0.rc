@@ -1,4 +1,0 @@
-// Return in function requires a result expression, none found.
-function : float no_return_value() {
-    return;
-}

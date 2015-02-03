@@ -1,6 +1,0 @@
-
-function : int main() {
-	int x = 3 ^ 23;
-	
-	return x;
-}
