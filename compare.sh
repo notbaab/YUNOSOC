@@ -2,10 +2,14 @@
 rm tmpRC.txt tmpRef.txt
 
 echo "Reference run"
-testrunner_client tests/$1 >> tmpRef.txt 
+testrunner_client project2/tests/$1 &> /dev/null 
+make compile
+./a.out >> tmpRef.txt
 
 echo "Our compiler"
 
-./RCdbg tests/$1 >> tmpRC.txt 
+./RC project2/tests/$1 &> /dev/null
+make compile
+./a.out >> tmpRC.txt 
 
 vimdiff tmpRC.txt tmpRef.txt 

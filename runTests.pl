@@ -144,7 +144,11 @@ for my $i (0 .. $#rc_files) {
     `./$RC_sh $testing_directory/$rc_files[$i] &> /dev/null`;
     # system("make", "compile");
     my $tmp = `make compile &> /dev/null"`;
-    `./a.out > $testing_directory/$rc_files[$i].tmp`;
+    if(-e "$testing_directory/$rc_files[$i].input") {
+      `./a.out < $testing_directory/$rc_files[$i].input > $testing_directory/$rc_files[$i].tmp`;
+    }else{
+      `./a.out > $testing_directory/$rc_files[$i].tmp`;
+    }
   }
   $tempTime2 = time;
   $compile_times[$i] = $tempTime2 - $tempTime1;
@@ -162,7 +166,11 @@ for my $i (0 .. $#rc_files) {
     }else {
       `$ref_rc $testing_directory/$rc_files[$i] &> /dev/null`;
       my $tmp = `make compile &> /dev/null"`;
-      `./a.out > $testing_directory/$rc_files[$i].out`;
+      if(-e "$testing_directory/$rc_files[$i].input"){
+        `./a.out < $testing_directory/$rc_files[$i].input > $testing_directory/$rc_files[$i].out`;
+      }else{
+        `./a.out > $testing_directory/$rc_files[$i].out`;
+      }
     }
   }
 
