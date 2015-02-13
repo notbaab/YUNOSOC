@@ -144,7 +144,7 @@ for my $i (0 .. $#rc_files) {
     `./$RC_sh $testing_directory/$rc_files[$i] &> /dev/null`;
     # system("make", "compile");
     my $tmp = `make compile &> /dev/null"`;
-    if(-e "$testing_directory/$rc_files[$i].input") {
+    if (-e "$testing_directory/$rc_files[$i].input") {
       `./a.out < $testing_directory/$rc_files[$i].input > $testing_directory/$rc_files[$i].tmp`;
     }else{
       `./a.out > $testing_directory/$rc_files[$i].tmp`;
@@ -157,25 +157,25 @@ for my $i (0 .. $#rc_files) {
 
   
   # compile with the given test compiler or use matching out file for speed
-  if(!(-e "$testing_directory/$rc_files[$i].out") || $force) {
+  if (!(-e "$testing_directory/$rc_files[$i].out") || $force) {
     print color "blue";
     print "No file found or force flag true, making one with ref compiler";
     print color "reset";
     if ($project == 1){
       `$ref_rc $testing_directory/$rc_files[$i] > $testing_directory/$rc_files[$i].out`;
-    }else {
+    } else {
       `$ref_rc $testing_directory/$rc_files[$i] &> /dev/null`;
       my $tmp = `make compile &> /dev/null"`;
-      if(-e "$testing_directory/$rc_files[$i].input"){
+      if (-e "$testing_directory/$rc_files[$i].input") {
         `./a.out < $testing_directory/$rc_files[$i].input > $testing_directory/$rc_files[$i].out`;
-      }else{
+      } else {
         `./a.out > $testing_directory/$rc_files[$i].out`;
       }
     }
   }
 
   # Do the same for the reference output if we are testing project 1
-  if($project == 1){
+  if ($project == 1) {
     my $compare_in  = "$testing_directory/$rc_files[$i].out";
     my $compare_out = "$testing_directory/$rc_files[$i].tmp2";
     open $in_file,  "<", $compare_in  or die "Couldn't open the correct output file \"$compare_in\": $!";
@@ -191,7 +191,8 @@ for my $i (0 .. $#rc_files) {
       }
     }    
   }
-  if($project == 1){
+
+  if ($project == 1) {
     # Close the intermediary files we've opened.
     close $in_file;
     close $out_file;    
@@ -199,7 +200,7 @@ for my $i (0 .. $#rc_files) {
 
   # Perform a diff on the two files you've created.
   my $diff_result;
-  if($project == 1){
+  if ($project == 1) {
     $diff_result = `diff $testing_directory/$rc_files[$i].tmp1 $testing_directory/$rc_files[$i].tmp2`;
   } else {
     $diff_result = `diff $testing_directory/$rc_files[$i].tmp $testing_directory/$rc_files[$i].out`;
@@ -426,7 +427,7 @@ sub DoCommandLineArguments{
     'result|r=s' => \$resultFile,
     'project|p=s' => \$project,
   );
-  while($project != 1 && $project != 2 && !$dir){
+  while ($project != 1 && $project != 2 && !$dir) {
     print "Didn't specify a project, which project suite would you like to run? (1) or (2) ";
     $project = <>;
     if ($project != 1 && $project != 2){
@@ -439,7 +440,7 @@ sub DoCommandLineArguments{
   $testing_directory = "project$project/$testing_directory";
 
   # usage message
-  if($help){
+  if ($help) {
     print "Usage: perlTest [so] range [d] directory [fp] 
   Note: I don't handle command line options well. 
   -p --project specifies the project you are testing. This dictates if the tool will 
@@ -447,6 +448,13 @@ sub DoCommandLineArguments{
                EX:  ./runTests -p 1   <- runs tests in $p1_directory/$testing_directory
                     ./runTests -p 2   <- runs tests in $p2_directory/$testing_directory
                     ./runTests -p 3   <- Display an angry message and prompt
+
+               It also will  dictate if the tool will be comparing the compiler 
+               output (p1) or actually running the program and program output(p2). 
+               The command it uses to compile and run the program are:
+               ./$RC_sh testfile
+               make compile
+               ./a.out
 
   -o --only    only run tests that have the passed in prefix. A range 
                is also accepted. See -s for range examples
@@ -478,6 +486,12 @@ sub DoCommandLineArguments{
 
   -w --win     automatically pass compilers
 
+  Tests Files:
+  All test files should be named with a leading identifier, followed by two more identifiers
+  in order for the command line arguments to work properly. For example: p12, 112, 212 
+  are all valid arguments. The first identifier is usually the phase letter or number, 
+  and the next 2 identifiers are the check number in the project.
+
   Doc(ish): YYUNOC test tool. The idiot proof test tool for cse 131.
   Running without any arguments is the simplest way to use the tool. It will look for 
   a folder $testing_directory for any .rc files and .rc.out files and run $RC_sh 
@@ -487,14 +501,14 @@ sub DoCommandLineArguments{
     exit;
   
   }
-  if($dir){
+  if ($dir) {
     print color "blue";
     print " Running tests in $dir instead\n"; 
     print color "reset";
     $testing_directory = $dir;
   }
 
-  if($pass){
+  if ($pass) {
     my $url = "http://youtu.be/V4UfAL9f74I?t=7s";
     my $platform = $^O;
     my $cmd;
@@ -513,12 +527,12 @@ sub DoCommandLineArguments{
   }
 
   my @argList;
-  if(@skip){
+  if (@skip) {
     @argList = @skip;
   }
-  if(@only){
+  if (@only) {
     @argList = @only;
-    if(@skip){
+    if (@skip) {
       print color "red";
       print "You think your fucking funny don't you? What the fuck am I supposed to do with the skip and only flag high?\n";
       print color "reset";
@@ -554,10 +568,10 @@ sub CheckSkip{
   # and skip flag and the rangePrefixes
   my ($file) = @_;
   my $prefix = substr($file, 0, 3);
-  if(@skip && $rangePrefixes{$prefix}){
+  if (@skip && $rangePrefixes{$prefix}) {
     return 1;
   }
-  if(@only && !$rangePrefixes{$prefix}){
+  if (@only && !$rangePrefixes{$prefix}) {
     return 1;
   } 
   return 0;
