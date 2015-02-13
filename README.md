@@ -27,13 +27,6 @@ And compare **only** the executable output. It does not care if ./RC compiles su
 
 **Do not write infinite loop code.** It makes the tool cry. Check and make sure your executable doesn't produce an infinite loop. The good news is it will be very obvious which test has one as there will be a half gig large .tmp file.
 
-If you are even more lazy, you don't have to run the perl script and look at an individual comparision with 
-
-    chmod +x compare.sh
-    ./compare.sh p00a.rc
-
-and that will give you vimdiff of that individual test. To exit vimdiff hit [ESC] :qall. It's a very boring script but it helps with giving you a better look at the compaision when you are working on one specific test. 
-
 ## Example Structure.
 Notice publicTest.pl needs to be in the same directory as RC and the test directory
 
