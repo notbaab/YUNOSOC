@@ -1,0 +1,12 @@
+function : int main(){
+   float f = 10;
+   cout << f << endl;
+   f = 1;
+   cout << f << endl;
+   f = 10.5;
+   cout << f << endl;
+   float g = 3.3;
+   cout << g << endl;
+
+   return 0;
+}

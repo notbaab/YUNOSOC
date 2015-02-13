@@ -1,0 +1,23 @@
+function : int main(){
+   int cafe = 0xCAFE;
+   int face = 0xFACE;
+   int ffff = 0xFFFF;
+   cout << 0xCAFE | 0xFACE << endl;
+   cout << cafe | face << endl;
+   cout << 0xCAFE & 0xFACE << endl;
+   cout << cafe & face << endl;
+   cout << 0xCAFE ^ 0xFACE << endl;
+   cout << cafe ^ face << endl;
+   cout << 0xCAFE | 0xFFFF << endl;
+   cout << cafe | ffff << endl;
+   cout << 0xCAFE & 0x0000 << endl;
+   cout << cafe & 0 << endl;
+   cout << 0xCAFE ^ 0xCAFE << endl;
+   cout << cafe ^ cafe << endl;
+
+   cout << endl;
+   cout << (-1) | cafe << endl;
+   cout << face ^ cafe ^ cafe << endl;
+
+   return 0;
+}

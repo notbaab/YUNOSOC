@@ -25,6 +25,7 @@ my $total_failed      = 0;
 my $start_time        = 0;
 my $finish_time       = 0;
 my %rangePrefixes     = ();
+my $project;
 my $html;
 my $index;
 my $rc_counter;
@@ -47,6 +48,7 @@ my $resultFile;
 `rm $failedDir/*`; # could fail, nothing bad happens though
 
 DoCommandLineArguments();
+print "testing dir is $testing_directory";
 
 if($resultFile){
   $html_output = $resultFile . ".html"
@@ -115,57 +117,85 @@ for my $i (0 .. $#rc_files) {
   print "   ";
   # Compile the rc file.
   $tempTime1 = time;
-  `./$RC_sh $testing_directory/$rc_files[$i] > $testing_directory/$rc_files[$i].tmp`;
+  my $in_file;
+  my $out_file;
+  if ($project == 1){
+    # run project 1 command
+    `./$RC_sh $testing_directory/$rc_files[$i] > $testing_directory/$rc_files[$i].tmp`;
+    
+    # Iterate through each line of the output and strip all lines starting with "Error"
+    my $compiled_in  = "$testing_directory/$rc_files[$i].tmp";
+    my $compiled_out = "$testing_directory/$rc_files[$i].tmp1";
+    open $in_file,  "<", $compiled_in  or die "Could't open temporary file \"$compiled_in\": $!";
+    open $out_file, ">", $compiled_out or die "Could't open temporary file \"$compiled_out\": $!";
+
+    # Go through each line our compiler spit out into the temp file.
+    while (my $line = <$in_file>) {
+      if ($line =~ m/^(Error)/i) {
+        # Don't save this line!
+      } else {
+        # Only save the line now.
+        print $out_file $line;
+      }
+    }
+  } else {
+    # run project 2 command, we are only interested in the a.out output though. 
+    # TODO: Need to modify this to take in object files
+    `./$RC_sh $testing_directory/$rc_files[$i] &> /dev/null`;
+    # system("make", "compile");
+    my $tmp = `make compile &> /dev/null"`;
+    `./a.out > $testing_directory/$rc_files[$i].tmp`;
+  }
   $tempTime2 = time;
   $compile_times[$i] = $tempTime2 - $tempTime1;
   $compile_sum += $compile_times[$i];
 
-  # Iterate through each line of the output and strip all lines starting with "Error"
-  my $compiled_in  = "$testing_directory/$rc_files[$i].tmp";
-  my $compiled_out = "$testing_directory/$rc_files[$i].tmp1";
-  open my $in_file,  "<", $compiled_in  or die "Could't open temporary file \"$compiled_in\": $!";
-  open my $out_file, ">", $compiled_out or die "Could't open temporary file \"$compiled_out\": $!";
 
-  # Go through each line our compiler spit out into the temp file.
-  while (my $line = <$in_file>) {
-    if ($line =~ m/^(Error)/i) {
-      # Don't save this line!
-    } else {
-      # Only save the line now.
-      print $out_file $line;
-    }
-  }
-
+  
   # compile with the given test compiler or use matching out file for speed
   if(!(-e "$testing_directory/$rc_files[$i].out") || $force) {
     print color "blue";
     print "No file found or force flag true, making one with ref compiler";
     print color "reset";
-    `$ref_rc $testing_directory/$rc_files[$i] > $testing_directory/$rc_files[$i].out`;
-  }
-
-  # Do the same for the reference output
-  my $compare_in  = "$testing_directory/$rc_files[$i].out";
-  my $compare_out = "$testing_directory/$rc_files[$i].tmp2";
-  open $in_file,  "<", $compare_in  or die "Couldn't open the correct output file \"$compare_in\": $!";
-  open $out_file, ">", $compare_out or die "Couldn't open temporary file \"$compare_out\": $!";
-
-  # Go through each line our compiler spit out into the temp file.
-  while (my $line = <$in_file>) {
-    if ($line =~ m/^(Error)/i) {
-      # Don't save this line!
-    } else {
-      # Only save the line now.
-      print $out_file $line;
+    if ($project == 1){
+      `$ref_rc $testing_directory/$rc_files[$i] > $testing_directory/$rc_files[$i].out`;
+    }else {
+      `$ref_rc $testing_directory/$rc_files[$i] &> /dev/null`;
+      my $tmp = `make compile &> /dev/null"`;
+      `./a.out > $testing_directory/$rc_files[$i].out`;
     }
   }
 
-  # Close the intermediary files we've opened.
-  close $in_file;
-  close $out_file;
+  # Do the same for the reference output if we are testing project 1
+  if($project == 1){
+    my $compare_in  = "$testing_directory/$rc_files[$i].out";
+    my $compare_out = "$testing_directory/$rc_files[$i].tmp2";
+    open $in_file,  "<", $compare_in  or die "Couldn't open the correct output file \"$compare_in\": $!";
+    open $out_file, ">", $compare_out or die "Couldn't open temporary file \"$compare_out\": $!";
+
+    # Go through each line our compiler spit out into the temp file.
+    while (my $line = <$in_file>) {
+      if ($line =~ m/^(Error)/i) {
+        # Don't save this line!
+      } else {
+        # Only save the line now.
+        print $out_file $line;
+      }
+    }    
+  }
+  if($project == 1){
+    # Close the intermediary files we've opened.
+    close $in_file;
+    close $out_file;    
+  }
 
   # Perform a diff on the two files you've created.
-  my $diff_result = `diff $testing_directory/$rc_files[$i].tmp1 $testing_directory/$rc_files[$i].tmp2`;
+  my $diff_result;
+  if($project == 1){
+    $diff_result = `diff $testing_directory/$rc_files[$i].tmp1 $testing_directory/$rc_files[$i].tmp2`;
+  } else {
+    $diff_result = `diff $testing_directory/$rc_files[$i].tmp $testing_directory/$rc_files[$i].out`;
+  }
 
   # Print out a hyphen and then the number of this test.
   print "- Test " . ($i + 1) . ": ";
@@ -375,7 +405,6 @@ exit 0;
 
 # handle command line arguments
 sub DoCommandLineArguments{
-  my $project;
   my $pass;
   my $help;
 

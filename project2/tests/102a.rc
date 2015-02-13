@@ -1,0 +1,3 @@
+function : void main(){
+   cout << "mehhhh\n\n\n\n\n" << endl << "booooooooooooooring test" << endl;
+}

@@ -1,0 +1,10 @@
+function : int main(){  
+   cout << 0xCAFE | 0xFACE << endl;
+   cout << 0xCAFE & 0xFACE << endl;
+   cout << 0xCAFE ^ 0xFACE << endl;
+   cout << 0xCAFE | 0xFFFF << endl;
+   cout << 0xCAFE & 0x0000 << endl;
+   cout << 0xCAFE ^ 0xCAFE << endl;
+
+   return 0;
+}

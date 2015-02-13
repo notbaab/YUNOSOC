@@ -1,0 +1,19 @@
+function : int main(){
+   int a = 3;
+   int b = 15;
+   int c = 7;
+
+   cout << a / a << ", ";
+   cout << a / b << ", ";
+   cout << a / c << endl;
+   
+   cout << b / a << ", ";
+   cout << b / b << ", ";
+   cout << b / c << endl;
+   
+   cout << c / a << ", ";
+   cout << c / b << ", ";
+   cout << c / c << endl;
+
+   return 0;
+}
