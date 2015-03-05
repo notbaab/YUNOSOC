@@ -1,0 +1,12 @@
+int x = 3;
+float y = 4.44;
+
+function : float foo(int x)
+{
+	return x;
+}
+
+function : void main() {
+
+	cout << "main" <<  foo(3) << "end" <<endl;
+}

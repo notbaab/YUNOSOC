@@ -1,0 +1,75 @@
+int y = 4;
+
+int recurse = 5;
+int r = 12;
+
+function: int foo5() {
+    recurse = recurse - 1;
+    if(recurse > 0) {
+        int rtn = foo5() + 1;
+        cout << r = r + 1 << ". foo5() - returning " << rtn << endl;
+        return rtn;
+    }
+    cout << r = r + 1 << ". foo5() - returning 1" << endl;
+    return 1;
+}
+
+
+function: int bar2() {
+    cout << "10. bar2() - returning 5" << endl;
+    return 5;
+}
+
+function: int bar1() {
+    cout << " 9. bar1() - returning 5 as direct" << endl;
+    return bar2();
+}
+
+function: int foo4() {
+    cout << " 7. foo4() - returning 4 as global" << endl;
+    return y;
+}
+
+function: int foo3() {
+
+    cout << " 5. foo3() - returning 3 as const local" << endl;
+    const int y = 3;
+    return y;
+}
+
+function: int foo2() {
+    cout << " 3. foo2() - returning 2 as local" << endl;
+    int y = 2;
+    return y;
+}
+
+function: int foo1() {
+    cout << " 1. foo1() - returning 1 as literal" << endl;
+
+    return 1;
+}
+
+function: void main() {
+    cout << "Testing function calls returning INT" << endl;
+
+    int x1 = foo1();
+    cout << " 2. foo1() -  received " << x1 << endl;
+
+    int x2 = foo2();
+    cout << " 4. foo2() -  received " << x2 << endl;
+
+    int x3 = foo3();
+    cout << " 6. foo3() -  received " << x3 << endl;
+
+    int x4 = foo4();
+    cout << " 8. foo4() -  received " << x4 << endl;
+
+    int b = bar1();
+    cout << "11. bar1() -  received " << b << endl;
+
+    cout << "12. foo5() - recursive start" << endl;
+    int x5 = foo5();
+    cout << r = r + 1 << ". foo5() - recursive end - final value: " << x5 << endl;
+
+
+}

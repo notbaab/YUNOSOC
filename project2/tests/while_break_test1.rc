@@ -1,0 +1,27 @@
+function : void main()
+{
+	int tinafey = 5;
+	
+	while (tinafey < 10)
+	{
+		cout << "should be printed 1" << endl;
+		while (true)
+		{
+			cout << "should be printed 2" << endl;
+			while (true)
+			{
+				cout << "should be printed 3" << endl;
+				while (true)
+				{
+					cout << "should be printed 4" << endl;
+					break;
+				}
+				break;
+			}
+			break;
+		}
+		cout << "tinafey counter: " << tinafey << endl;
+		tinafey++;
+	}
+
+}

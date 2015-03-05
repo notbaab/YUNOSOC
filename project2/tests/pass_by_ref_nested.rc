@@ -1,0 +1,18 @@
+function : void inner(int a, int & b, int c, int & d){
+    cout << "Inner Function: "; 
+    cout << a << endl;
+    cout << b << endl;
+    cout << c << endl;
+    cout << d << endl;
+}
+
+function : void outer(int x, int & y){
+    cout << "Outer Function: " << x << " " << y << endl;
+    inner(x,x,y,y);
+}
+
+function : void main(){
+    int x = 420;
+    int y = 69;
+    outer(x,y);
+}

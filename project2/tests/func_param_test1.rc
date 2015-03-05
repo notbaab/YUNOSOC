@@ -1,0 +1,20 @@
+function: void foo(int a, int b, float c)
+{
+    cout << "a is: " << a << endl;
+    cout << "b is: " << b << endl;
+    cout << "c is: " << c << endl;
+}
+
+
+function : void main() 
+{
+    int x = 5;
+    int y = 6;
+    float z = 22.22;
+    cout << x << endl;
+    cout << y << endl;
+    cout << z << endl;
+    
+    foo(x,y,z);
+    
+}

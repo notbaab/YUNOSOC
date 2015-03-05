@@ -1,0 +1,17 @@
+/*Testing function call with less than 6 parameters*/
+
+int ab = 5;
+int bc = 6;
+
+function: void foo(int x, int y, int z, int a, int b)
+{}
+function: void foobar(int &x, int &y, int z, int a, int b)
+{
+  cout<<"COMES IN foobar successfully"<<endl;
+}
+
+
+function: void main()
+{
+   foobar(ab, bc, 1,3,5);
+}

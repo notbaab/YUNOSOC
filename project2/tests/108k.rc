@@ -1,0 +1,14 @@
+function : int foo()
+{
+  return 0;
+}
+
+function : void main()
+{
+  cout << "SHOULD PRINT" << endl;
+
+  exit(foo()); // Tests funcSTO
+
+  cout << "SHOULD NOT PRINT" << endl;
+
+}

@@ -1,0 +1,147 @@
+int x7 = 7;
+int x8 = 8;
+
+////////////////////////////////////////////////////////////////////////////////
+// 1. value param as value arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo1_2(int x) {
+    cout << "foo1_2: received (should be 2): " << x << endl;
+    x = x * 2;
+    return x;    
+
+}
+
+function: int foo1_1(int x) {
+    cout << "foo1_1: received (should be 1): " << x << endl;
+    x = x + 1;
+    foo1_2(x);
+    cout << "foo1_1: value after foo1_2 (should be 2): " << x << endl;
+    return x;    
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 2. value param as reference arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo2_2(int & x) {
+    cout << "foo2_2: received (should be 3): " << x << endl;
+    x = x * 2;
+    return x;    
+}
+
+function: int foo2_1(int x) {
+    cout << "foo2_1: received (should be 2): " << x << endl;
+    x = x + 1;
+    foo2_2(x);
+    cout << "foo2_1: value after foo2_2 (should be 6): " << x << endl;
+    return x;    
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 3. reference param as value arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo3_2(int x) {
+    cout << "foo3_2: received (should be 4): " << x << endl;
+    x = x * 2;
+    return x;    
+
+}
+
+function: int foo3_1(int & x) {
+    cout << "foo3_1: received (should be 3): " << x << endl;
+    x = x + 1;
+    foo3_2(x);
+    cout << "foo3_1: value after foo3_2 (should be 4): " << x << endl;
+    return x;    
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 4. reference param as reference arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo4_2(int & x) {
+    cout << "foo4_2: received (should be 5): " << x << endl;
+    x = x * 2;
+    return x;    
+}
+
+function: int foo4_1(int & x) {
+    cout << "foo4_1: received (should be 4): " << x << endl;
+    x = x + 1;
+    foo4_2(x);
+    cout << "foo4_1: value after foo4_2 (should be 10): " << x << endl;
+    return x;    
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// 5. local variable as value arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo5(int x) {
+    cout << "foo5: received (should be 5): " << x << endl;
+    x = x * 2;
+    return x;    
+
+}
+////////////////////////////////////////////////////////////////////////////////
+// 6. local variable as reference arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo6(int & x) {
+    cout << "foo6: received (should be 6): " << x << endl;
+    x = x * 2;
+    return x;    
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 7. global variable as value arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo7(int x) {
+    cout << "foo7: received (should be 7): " << x << endl;
+    x = x * 2;
+    return x;    
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 8. global variable as reference arg
+////////////////////////////////////////////////////////////////////////////////
+function: int foo8(int & x) {
+    cout << "foo8: received (should be 8): " << x << endl;
+    x = x * 2;
+    return x;    
+}
+
+function: void main() {
+
+    int x1 = 1;
+    int x2 = 2;
+    int x3 = 3;
+    int x4 = 4;
+    int x5 = 5;
+    int x6 = 6;
+
+    int x1_rtn = foo1_1(x1);   
+    cout << "x1 after call (should be 1): " << x1 << "\nreturned value (should be 2):  " << x1_rtn << endl << endl;
+
+    int x2_rtn = foo2_1(x2);
+    cout << "x2 after call (should be  2): " << x2 << "\nreturned value (should be 6):  " << x2_rtn << endl << endl;
+
+    int x3_rtn = foo3_1(x3);
+    cout << "x3 after call (should be  4): " << x3 << "\nreturned value (should be 4):  " << x3_rtn << endl << endl;
+
+    int x4_rtn = foo4_1(x4);
+    cout << "x4 after call (should be 10): " << x4 << "\nreturned value (should be 10):  " << x4_rtn << endl << endl;
+
+    int x5_rtn = foo5(x5);
+    cout << "x5 after call (should be  5): " << x5 << "\nreturned value (should be 10):  " << x5_rtn << endl << endl;
+
+    int x6_rtn = foo6(x6);
+    cout << "x6 after call (should be 12): " << x6 << "\nreturned value (should be 12):  " << x6_rtn << endl << endl;
+
+    int x7_rtn = foo7(x7);
+    cout << "x7 after call (should be  7): " << x7 << "\nreturned value (should be 14):  " << x7_rtn << endl << endl;
+
+    int x8_rtn = foo8(x8);
+    cout << "x8 after call (should be 16): " << x8 << "\nreturned value (should be 16):  " << x8_rtn << endl << endl;
+}

@@ -1,0 +1,36 @@
+int ggg = 4;
+
+function : void foobaz(int &k, int &l, int &m)
+{
+	k = 555;
+	l = 666;
+	m = 777;
+}
+
+function : void bar(int &r, int &s, int &t)
+{
+	r = 7;
+	foobaz(r,s,t);
+}
+
+function : void foo(int &a, int &b, int &c)
+{
+    bar(a,b,c);
+}
+function : void main() 
+{
+  int y = 2;
+
+	int b = 5;
+    
+    cout << y << endl;
+	cout << b << endl;
+	cout << ggg << endl;
+    
+    foo(y,b,ggg);
+    
+    cout << "y is now: " << y << endl;
+	cout << "b is now: " << b << endl;
+	cout << "ggg is now: " << ggg << endl;
+
+}

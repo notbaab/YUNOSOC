@@ -1,0 +1,57 @@
+
+bool a = true;
+bool b = false;
+
+function : bool foo()  //return const literal
+{
+   return true;
+}
+
+function : bool foo1()  //return const literal
+{
+   return false;
+}
+
+function : bool foo2()  //return global var
+{
+   return a;
+}
+
+function : bool foo3(bool t) //return param
+{
+   return t;
+}
+
+function: void main()
+{
+  bool x = true;
+  bool y = false;
+
+  cout << !true << endl;//false
+  cout << !false << endl;//true
+  
+  cout << !a << endl;//false
+  cout << !b << endl;//true
+  cout << !x << endl;//false
+  cout << !y << endl;//true
+
+  cout << !a && !a << endl;//false
+  cout << !b && !b << endl;//true
+
+  cout << !a && !x << endl;//false
+  cout << !a && !y << endl;//false
+
+  cout << !foo() << endl; //false
+  cout << !foo1() << endl;//true
+  cout << !foo2() << endl;//false
+  cout << !foo3(true) << endl; // false
+  cout << !foo3(false) << endl; //true
+  cout << !foo3(x) << endl; //false
+  cout << !foo3(y) << endl;//true
+  cout << !foo3(a) << endl;//false
+  cout << !foo3(b) << endl;//true
+
+  cout << !foo3(b) && !foo3(b) << endl; //true
+  cout << !foo3(b) && !foo3(a) << endl; //false
+  
+}

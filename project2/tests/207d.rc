@@ -1,0 +1,97 @@
+function: void compareIntInt(int x, int y) {
+    cout << "(int,int): " << x << " == " << y << " = " << (x == y) << endl;
+    cout << "(int,int): " << x << " != " << y << " = " << (x != y) << endl;
+    cout << "(int,int): " << x << " >= " << y << " = " << (x >= y) << endl;
+    cout << "(int,int): " << x << "  > " << y << " = " << (x  > y) << endl;
+    cout << "(int,int): " << x << " <= " << y << " = " << (x <= y) << endl;
+    cout << "(int,int): " << x << "  < " << y << " = " << (x  < y) << endl;
+    cout << endl;
+}
+
+function: void compareFloatFloat(float x, float y) {
+    cout << "(float,float): " << x << " == " << y << " = " << (x == y) << endl;
+    cout << "(float,float): " << x << " != " << y << " = " << (x != y) << endl;
+    cout << "(float,float): " << x << " >= " << y << " = " << (x >= y) << endl;
+    cout << "(float,float): " << x << "  > " << y << " = " << (x  > y) << endl;
+    cout << "(float,float): " << x << " <= " << y << " = " << (x <= y) << endl;
+    cout << "(float,float): " << x << "  < " << y << " = " << (x  < y) << endl;
+    cout << endl;
+}
+
+function: void compareIntFloat(int x, float y) {
+    cout << "(int,float): " << x << " == " << y << " = " << (x == y) << endl;
+    cout << "(int,float): " << x << " != " << y << " = " << (x != y) << endl;
+    cout << "(int,float): " << x << " >= " << y << " = " << (x >= y) << endl;
+    cout << "(int,float): " << x << "  > " << y << " = " << (x  > y) << endl;
+    cout << "(int,float): " << x << " <= " << y << " = " << (x <= y) << endl;
+    cout << "(int,float): " << x << "  < " << y << " = " << (x  < y) << endl;
+    cout << endl;
+}
+
+function: void compareBool(bool x, bool y) {
+    cout << "(bool,bool): " << x << " == " << y << " = " << (x == y) << endl;
+    cout << "(bool,bool): " << x << " != " << y << " = " << (x != y) << endl;
+    cout << endl;
+}
+
+function: void compareAssign(int x, int y) {
+    bool b;
+
+    cout << "b = " << x << " == " << y << ":\t" << (b = x == y) << "\tb:\t" << b << endl;
+    cout << "b = " << x << " != " << y << ":\t" << (b = x != y) << "\tb:\t" << b << endl;
+    cout << "b = " << x << " >= " << y << ":\t" << (b = x >= y) << "\tb:\t" << b << endl;
+    cout << "b = " << x << "  > " << y << ":\t" << (b = x  > y) << "\tb:\t" << b << endl;
+    cout << "b = " << x << " <= " << y << ":\t" << (b = x <= y) << "\tb:\t" << b << endl;
+    cout << "b = " << x << "  < " << y << ":\t" << (b = x  < y) << "\tb:\t" << b << endl;
+}
+
+int i3g = 3;
+int i7g = 7;
+float f3g = 3.0;
+float f7g = 7.0;
+bool bTg = true;
+bool bFg = false;
+
+function: void main() {
+    int i3l = 3;
+    int i7l = 7;
+    float f3l = 3.0;
+    float f7l = 7.0;
+    bool bTl = true;
+    bool bFl = false;
+
+    const int i3c = 3;
+    const int i7c = 7;
+    const float f3c = 3.0;
+    const float f7c = 7.0;
+    const bool bTc = true;
+    const bool bFc = false;
+
+    compareIntInt(i3g, i3l);
+    compareIntInt(i7c, 3);
+    compareIntInt(10, 10);
+    compareIntInt(i7l, i3g);
+
+    compareFloatFloat(f3g, f3l);
+    compareFloatFloat(f7c, 3.0);
+    compareFloatFloat(10.0, 10.0);
+    compareFloatFloat(f7l, f3g);
+
+    compareIntFloat(i3g, f3l);
+    compareIntFloat(i7c, 3.0);
+    compareIntFloat(10, 10.0);
+    compareIntFloat(i7l, f3g);
+
+    compareBool(bTg, bFl);
+    compareBool(bTl, bFc);
+    compareBool(bTc, true);
+    compareBool(false, false);
+
+    compareAssign(i3g, i3l);
+    compareAssign(i7c, 3);
+    compareAssign(10, 10);
+    compareAssign(i7l, i3g);
+
+}
+
+

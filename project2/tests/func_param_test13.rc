@@ -1,0 +1,29 @@
+function : bool foo(float &a, int &r, bool k)
+{
+	cout << "r is: " << r << endl;
+	cout << "modifying a" << endl;
+    a = 351.22;
+	r = r + 1;
+	return false;
+}
+
+function : int main()
+{
+	float noob = 44.55;
+	bool pro = true;
+	int average = 22;
+	
+	cout << "noob is: " << noob << endl;
+	cout << "pro is: " << pro << endl;
+	cout << "average is: " << average << endl;
+
+	bool c = foo(noob, average, pro);
+
+    cout << "return val c is: " << c << endl;
+
+	cout << "noob is now: " << noob << endl;
+	cout << "pro is now: " << pro << endl;
+	cout << "average is now: " << average << endl;
+	
+	return 44;
+}

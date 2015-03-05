@@ -1,0 +1,19 @@
+bool success = true;
+
+function : bool fail (){
+   cout << "failure :PPPP " << endl;
+   success = false;
+   return true;
+}
+
+
+function : void main(){
+   bool a = true;
+   bool x = false;
+   bool b = a || fail();
+   b = x && fail();
+   
+   if (success){
+      cout << " great success >:3 " << endl;
+   }
+}

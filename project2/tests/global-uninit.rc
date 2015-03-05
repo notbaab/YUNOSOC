@@ -1,0 +1,8 @@
+int a;
+float b;
+bool c;
+function : void main(){
+    cout << a << endl;
+    cout << b << endl;
+    cout << c << endl;
+}

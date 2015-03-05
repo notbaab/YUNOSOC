@@ -1,0 +1,5 @@
+function : void main()
+{
+    float b = 5.2;
+    cout << b << endl;
+}

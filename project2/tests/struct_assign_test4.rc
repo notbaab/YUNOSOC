@@ -1,0 +1,22 @@
+structdef BAR {
+    int barA;
+    float barB;
+    bool barC;
+	  int lol[50];
+};
+
+static BAR bed;
+
+function : void main()
+{
+	bed.lol[5] = 1024;
+	bed.lol[7] = bed.lol[5];
+	bed.lol[13] = bed.lol[7];
+	
+	cout << bed.lol[5] << endl;
+	cout << bed.lol[7] << endl;
+	cout << bed.lol[13] << endl;
+}
+    
+    
+    

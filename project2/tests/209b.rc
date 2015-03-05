@@ -1,0 +1,20 @@
+function : void fib (int &a, int d){
+  if (d < 0) { 
+    return; 
+  }
+  cout << "a: " << a << " d: " << d << endl;
+
+  if (d < 1) {
+    a = a + 1;
+  }
+  fib(a, d-1);
+  fib(a, d-2);
+}
+
+function : int main(){
+  int i = 0;
+  fib (i, 10);
+  cout << i << endl;
+   
+  return 0;
+}

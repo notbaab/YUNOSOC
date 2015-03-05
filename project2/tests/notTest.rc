@@ -1,0 +1,20 @@
+function : void main()
+{
+  bool a = true;
+
+  cout << !a << endl; //false
+
+  bool b = false;
+
+  cout << !b << endl; //true
+
+  bool c = a && b; 
+
+  cout << c << endl; //false
+  cout << !c << endl; //true
+
+  bool d = a || b; 
+  
+  cout << d << endl; //true
+  cout << !d << endl; //false
+}

@@ -1,0 +1,24 @@
+structdef BAR {
+	int *a;
+	float b;
+	bool **c;
+};
+
+BAR bee;
+
+function : void main() 
+{
+    int k = 3;
+	bee.a = &k;
+	bee.b = 9.93;
+	bool snake = false;
+	bool *snake1 = &snake;
+	bee.c = &snake1;
+	
+	BAR *bird = &bee;
+	
+	cout << bird->b - 88.33 << endl;
+	cout << (*(bird->a) * 77) - 18833 << endl;
+	cout << (**(bird->c) && true) && false << endl;
+
+}

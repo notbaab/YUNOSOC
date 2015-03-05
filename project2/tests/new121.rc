@@ -1,0 +1,146 @@
+const int x = 0;
+static int y = 1;
+
+function : void main()
+{
+
+	int x = 0;
+	static int y = 1;
+
+
+	if(true)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(false)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(x == 0)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(y == 1)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(::x != 0)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(::y == 1)
+	{
+		cout << "YES!" << endl;
+	}
+
+
+	if(x+y == 1)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(x+::x != 0)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(::y-y != 0)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(x<y)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(x>y)
+	{
+		cout << "NO!" << endl;
+	}
+
+	if(x>=x)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(::y<=y)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(::x>=::y)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(::x==x)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(x==::y)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+	
+	if(x!=y)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(x!=::x)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(true&&true)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if((x==x)&&(y==y))
+	{
+		cout << "YES!" << endl;
+	}
+
+	if((::x==x) && (x==y))
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if((::x==x) || (x==y))
+	{
+		cout << "YES!" << endl;
+	}
+
+	if((::y==x) || (y==::x))
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(!true)
+	{
+		cout << "GOT YOU!" << endl;
+	}
+
+	if(!false)
+	{
+		cout << "YES!" << endl;
+	}
+
+	if(!((::x==x) || (x==y)))
+	{
+		cout << "NO!" << endl;
+	}
+
+	if(!((::x==x) && (x==y)))
+	{
+		cout << "YES!" << endl;
+	}
+}

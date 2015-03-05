@@ -1,0 +1,14 @@
+function : float foo1()
+{
+	return 4.44;
+}
+
+function : float foo ()
+{
+	return foo1();
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

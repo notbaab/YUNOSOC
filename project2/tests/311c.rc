@@ -1,0 +1,40 @@
+const int c = 10;
+structdef S1 {
+   int a[c];
+   float b[c];
+};
+structdef S2 {
+   int a[c];
+   float b[c];
+};
+structdef S3 {
+   float a[c];
+   int  b[c];
+};
+int a[2*c];
+int b[2*c];
+
+function : int main(){
+   int i =0;
+   S1 s1; 
+   S2 s2; 
+   S3 s3;
+   while (i < c){
+      s1.b[i] = s1.a[i] = i * i * i * i;
+      i++;
+   }
+
+   s2 = *(S2 *)&s1;
+   s3 = *(S3 *)&s2;
+   s1 = *(S1 *)&s3;
+
+   (*(S1 *)&a) = s1;
+   
+   i = 0; 
+   while (i < c){
+      cout << a[i] << endl;
+      i++;
+   }
+
+   return 0;
+}

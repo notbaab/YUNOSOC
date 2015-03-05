@@ -1,0 +1,15 @@
+static int x = 2;
+function: void main() {
+	cout << x << endl; //2
+	static int x = 3;
+	cout << x << endl; //3
+	if (true){
+	  static int x = 4; 
+	  cout << x << endl; //4
+	  if (true) {
+	    static int x = 5;
+	    cout << x << endl; //5
+	    cout << ::x << endl; //2
+	  }
+	}	
+}

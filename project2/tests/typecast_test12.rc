@@ -1,0 +1,11 @@
+function : void main()
+{
+    int b = 125151;
+    int *a = &b;
+	int **d = &a;
+	int ***e = &d;
+	int ****f = &e;
+    bool ****c = (bool ****)f;
+    
+    cout << ****c << endl; //true
+}

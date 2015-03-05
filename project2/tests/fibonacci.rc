@@ -1,0 +1,37 @@
+
+int gx;
+function : int fibonacci () {
+  int lx = gx;
+  int a = 0;
+  int b = 0;
+  if (lx <= 0) {
+    return 0;
+  } else {
+    if (lx <= 2) {
+      return 1;
+    } else {
+      gx = lx - 1;
+      a = fibonacci();
+      gx = lx - 2;
+      b = fibonacci();
+      return a + b;
+   }
+ }
+ return 0;
+}
+
+function : int main () {
+  gx = 0; cout << fibonacci() << endl;
+  gx = 1; cout << fibonacci() << endl;
+  gx = 2; cout << fibonacci() << endl;
+  gx = 3; cout << fibonacci() << endl;
+  gx = 4; cout << fibonacci() << endl;
+  gx = 5; cout << fibonacci() << endl;
+  gx = 6; cout << fibonacci() << endl;
+  gx = 7; cout << fibonacci() << endl;
+  gx = 8; cout << fibonacci() << endl;
+  gx = 9; cout << fibonacci() << endl;
+  gx = 10; cout << fibonacci() << endl;
+
+  return 0;
+}

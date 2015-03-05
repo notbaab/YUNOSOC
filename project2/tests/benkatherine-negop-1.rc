@@ -1,0 +1,19 @@
+//bool a = true;
+//bool b = false;
+int x;
+int y;
+
+function: void main()
+{
+  //x++; //x is 0, after this statement is 1
+  //++y; //y is 1 for execution
+
+  cout<< !(x!=y)<<endl; //should print out true
+  cout<< !true <<endl; //should print false.
+  cout<< !false<<endl; //should print out true.
+
+  x= 5;
+  y= 5;
+  cout<< !(x<y)<<endl; //should print out true
+  cout<< !(x==y)<<endl; //should print out false
+}

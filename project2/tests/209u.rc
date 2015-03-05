@@ -1,0 +1,9 @@
+function : int* foo(){
+	int i;
+	return &i;
+}
+
+function : void main(){
+	int * ptr = foo();
+	cout<<*ptr<<endl;
+}

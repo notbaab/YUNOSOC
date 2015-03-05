@@ -1,0 +1,6 @@
+int x = 2;
+
+function : void main() {
+
+	cout << x;
+}

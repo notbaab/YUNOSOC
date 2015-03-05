@@ -1,0 +1,35 @@
+bool b3;
+
+function: void main() {
+    
+    bool b1;
+    bool b2;
+    bool b4;
+    bool b5;
+
+    b1 = true;
+    cout << "b1: should be: true     " << b1 << endl;
+
+    b2 = b1;
+    b1 = false;
+    b5 = b4 = b2;
+
+    cout << "b1: should be: false    " << b1 << endl;
+    cout << "b2: should be: true     " << b2 << endl;
+    cout << "b3: should be: false    " << b3 << endl;
+    cout << "b4: should be: true     " << b4 << endl;
+    cout << "b5: should be: true     " << b5 << endl;
+
+    const bool x = true;
+    const bool y = false;
+    const bool w = true;
+    const bool z = y;
+
+    bool a = w;
+
+    cout << " x: should be: true     " << x << endl;
+    cout << " y: should be: false    " << y << endl;
+    cout << " w: should be: true     " << w << endl;
+    cout << " z: should be: false    " << z << endl;
+    cout << " a: should be: true     " << a << endl;
+}

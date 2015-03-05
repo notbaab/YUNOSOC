@@ -1,0 +1,7 @@
+static float x = 5.55;
+
+function : void main() {
+	bool x = false;
+
+	cout << "main" << ::x << "end" <<endl;
+}

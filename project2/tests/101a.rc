@@ -1,0 +1,37 @@
+float f1 = 5.0;
+float f2 = 6.0;
+float f3;
+
+int i1;
+int i2;
+int i3;
+
+bool b1;
+bool b2;
+bool b3;
+
+function : void main()
+{
+    cout << "f1 is: " << f1 << endl;
+    cout << "f2 is: " << f2 << endl;
+    
+    f3 = 7.0;
+    cout << "f3 is: " << f3 << endl;
+
+	i1 = 1;
+	i2 = 2;
+	i3 = i1;
+	
+	cout << "i1 is: " << i1 << endl;
+    cout << "i2 is: " << i2 << endl;
+    cout << "i3 is: " << i3 << endl;
+
+	b1 = true;
+	b2 = false;
+	b3 = b2;
+	
+	cout << "b1 is: " << b1 << endl;
+    cout << "b2 is: " << b2 << endl;
+    cout << "b3 is: " << b3 << endl;
+
+}

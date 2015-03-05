@@ -1,0 +1,18 @@
+function : void foo(int &x)
+{
+  cout << x << endl;
+ 
+  x = 2;
+
+  cout << x << endl;
+}
+
+function : void main()
+{
+  int a = 1;
+
+  foo(a);
+
+ cout << a << endl;
+
+}

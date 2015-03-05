@@ -1,0 +1,36 @@
+const int size = 5;
+
+structdef MYS
+{
+  int  a[3];
+};
+
+
+function : void main()
+{
+  MYS arr[3];
+  
+  int cnt = 0;
+  int cnt2 = 0;
+  while(cnt < size)
+  {
+    while( cnt2 < size )
+    {
+      arr[cnt].a[cnt2] = cnt2;
+      cnt2++;
+    }
+    cnt2 = 0;
+    cnt++;
+  }
+
+  int sum = 0;
+  foreach ( MYS st : arr )
+  {
+    foreach( int x : st.a )
+    {
+      sum = sum + x;
+    }
+  }
+
+  cout << sum << sum << sum << sum << endl;
+}

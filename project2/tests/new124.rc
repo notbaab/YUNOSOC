@@ -1,0 +1,21 @@
+function : int foo1()
+{
+	if(3<0)
+	{
+		return 1;
+		return 100;
+	}
+	if(3>0)
+	{
+		return 2;	
+		return 200;
+	}
+	return 3;
+	return 300;
+}
+
+function : void main()
+{
+
+	cout << foo1() << endl;
+}

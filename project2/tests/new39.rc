@@ -1,0 +1,7 @@
+static int x = 5;
+
+function : void main() {
+	bool x = false;
+
+	cout << "main" << ::x << "end" <<endl;
+}

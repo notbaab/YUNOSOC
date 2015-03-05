@@ -1,0 +1,10 @@
+function : int main(){
+   int *p;
+   new p;
+   *p = 10;
+   cout << *p;
+   delete p;
+   cout << p == nullptr << endl;
+   
+   return 0;
+}

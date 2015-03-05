@@ -1,0 +1,19 @@
+float f1;
+float f2;
+float f3;
+
+function : void main()
+{
+	float localf1 = 5.0;
+	float localf2 = 10.0;
+	float localf3 = 15.0;
+
+	f1 = localf1;
+	f2 = localf2;
+	f3 = localf3;
+
+ 	cout << "f1 is: " << f1 << endl;
+    cout << "f2 is: " << f2 << endl;
+    cout << "f3 is: " << f3 << endl;
+
+}

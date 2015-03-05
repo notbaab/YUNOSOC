@@ -1,0 +1,6 @@
+const float x = 3.33;
+
+function : void main() {
+
+	cout << "main" << ::x << x << "end" <<endl;
+}

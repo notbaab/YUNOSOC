@@ -1,0 +1,58 @@
+structdef LINK {
+	int sword;
+	bool shield;
+	float bow;
+	int canteen[10];
+};
+
+structdef MARIO {
+	int cap;
+	float mustache;
+	float pants[5];
+};
+
+LINK ** foo;
+MARIO * bar;
+LINK * baz;
+MARIO tonic;
+
+function : void main() 
+{
+	LINK magic;
+	
+	magic.sword = 54;
+	magic.shield = true;
+	magic.bow = 99.44;
+	int linkIndex = 0;
+	
+	while (linkIndex < 10)
+	{
+		magic.canteen[linkIndex] = 8;
+		linkIndex++;
+	}
+	
+	baz = &magic;
+	
+	cout << "baz's sword: " << (*baz).sword << endl;
+	cout << "baz's sheld: " << (*baz).shield << endl;
+	cout << "baz's bow: " << (*baz).bow << endl;
+	cout << "baz's canteen at index 3: " << (*baz).canteen[3] << endl;
+	
+	foo = &baz;
+	
+	cout << "foo's sword: " << (**foo).sword + 1344 << endl;
+	cout << "foo's sheld: " << (**foo).shield && false << endl;
+	cout << "foo's bow: " << (**foo).bow - 88.11 << endl;
+	cout << "foo's canteen at index 3: " << (**foo).canteen[3] * 13 << endl;
+	
+	tonic.cap = 20;
+	tonic.mustache = 4.44;
+	tonic.pants[2] = 2.11;
+	
+	bar = &*&*&tonic;
+	
+	cout << "bar's cap: " << (*bar).cap << endl;
+	cout << "bar's mustache: " << (*bar).mustache << endl;
+	cout << "bar's pants at index 2: " << (*bar).pants[2] << endl;
+
+}

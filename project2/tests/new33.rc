@@ -1,0 +1,7 @@
+int x = 3;
+
+function : void main() {
+	int x = 4;
+
+	cout << "main" << ::x << "end" <<endl;
+}

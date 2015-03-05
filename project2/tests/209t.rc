@@ -1,0 +1,29 @@
+function : void foo(bool a)
+{
+  cout << "true: " << a << endl;
+  a = false;
+}
+
+function : void foo2(bool a, bool b)
+{
+  cout << "true: " << a << endl;
+  cout << "true: " << b << endl;
+  a = false;
+  b = false;
+}
+
+
+function : void main()
+{
+  bool a = true;
+  bool b = true;
+
+  foo(a);
+  cout << "a true: " << a << endl;
+
+  foo2(a,b);
+  cout << "b true: " << b << endl;
+}
+
+
+

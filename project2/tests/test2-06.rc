@@ -1,0 +1,27 @@
+//short circuiting
+
+function: bool falseFunc() {
+	cout << "bad falseFunc!";
+	return false;
+}
+
+function: bool trueFunc() {
+	cout << "bad trueFunc!";
+	return true;
+}
+
+function: void main() {
+
+	int x = 1;
+
+	if (true || ++x > 1 || trueFunc()) {
+		if (false && ++x < 1 && falseFunc()) {
+			cout << "bad, shouldn't reach here!";
+		}
+		cout << "good! ";
+	}
+	
+	cout << x << endl;
+	
+
+}

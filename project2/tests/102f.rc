@@ -1,0 +1,11 @@
+/*Testing for print out string literal*/
+
+
+//int x = 0; 
+//int y = 5;
+//int z = x+y;
+function: void main()
+{
+ 
+   cout<<"HI, THIS IS KATHERINE"<<endl;	
+}

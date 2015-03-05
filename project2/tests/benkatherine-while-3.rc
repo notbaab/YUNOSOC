@@ -1,0 +1,16 @@
+function: void main()
+{
+  int y = 0;
+  while( y < 5 )
+  {
+    y = y + 1;
+  }
+  while( y < 10 )
+  {
+    y = y + 1;
+  }
+
+  cout << y << endl;
+
+
+}

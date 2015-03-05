@@ -1,0 +1,40 @@
+int x;
+float y;
+bool z;
+
+function : void main()
+{
+  x = 1;
+  y = 2.2;
+  z = true;
+
+  cout << x << endl; // 1
+  cout << y << endl; // 2.20
+  cout << z << endl; // true
+
+  int a = 5;
+  float b = 3.3;
+  bool c = false;
+
+  cout << a << endl; // 5
+  cout << b << endl; // 3.30
+  cout << c << endl; //false
+
+  a = x;
+  b = y;
+  c = z;
+
+  cout << a << endl; // 1
+  cout << b << endl; // 2.20
+  cout << c << endl; //true
+  
+  a = a + x;
+  b = b + y;
+  c = c && z;
+
+  cout << a << endl; // 2
+  cout << b << endl; // 4.40
+  cout << c << endl; // true
+
+
+}

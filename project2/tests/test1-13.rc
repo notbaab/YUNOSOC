@@ -1,0 +1,15 @@
+//integer arithmetic
+
+
+function: void main() {
+
+	int i = 4;
+	int j = 5;
+	cout << i << " + " << j << " = "; 	// 4 + 5 =
+	
+	//crazy integer addition here..	
+	int k = i + j;
+
+	cout << k << endl;
+
+}

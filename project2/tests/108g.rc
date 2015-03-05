@@ -1,0 +1,7 @@
+function: void main() {
+    int x = 0;
+    cout << "exit(0) as local" << endl;
+    exit(x);
+
+    cout << "SHOULD NOT PRINT" << endl;
+}

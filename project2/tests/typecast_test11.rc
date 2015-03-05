@@ -1,0 +1,9 @@
+function : void main()
+{
+    int b = 0;
+    int *a = &b;
+    bool *c = (bool *)a;
+    
+    cout << *c << endl; //false
+	cout << *c || true << endl; //true
+}

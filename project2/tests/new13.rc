@@ -1,0 +1,12 @@
+int x = 3;
+
+function : int foo ()
+{
+	cout << "foo" << endl;
+	return x;
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

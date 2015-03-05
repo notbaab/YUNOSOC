@@ -1,0 +1,12 @@
+i1: should be: 1     1
+i1: should be: 2     2
+i2: should be: 1     1
+i3: should be: 0     0
+i4: should be: 1     1
+i5: should be: 1     1
+ x: should be: 0     0
+ y: should be: 1     1
+ a: should be: 1     1
+ b: should be: 2     2
+ c: should be: 4     4
+ w: should be: 4     4

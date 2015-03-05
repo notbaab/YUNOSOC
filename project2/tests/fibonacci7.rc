@@ -1,0 +1,27 @@
+function : float fibonacci (int n) {
+    float fibArr[250];
+    fibArr[0] = 0;
+    fibArr[1] = 1;
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    int i=2;
+    while(i <= n) {
+        fibArr[i] = fibArr[i-1] + fibArr[i-2];
+        i++;
+    }
+    return fibArr[n];
+}
+
+function : int main () {
+  int i=1;
+  while(i < 188) {
+    cout << fibonacci(i) << endl;
+    i++;
+  }
+
+  return 0;
+}

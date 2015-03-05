@@ -1,0 +1,15 @@
+function : void main()
+{
+    int x = 0;
+    int y = 5;
+    while (x < 5)
+    {
+        while (y < 15)
+		{
+			cout << "Hello y" << endl;
+			y++;
+		}
+		cout << "Hello x" << endl;
+        x++;
+    }
+}

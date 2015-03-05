@@ -1,0 +1,6 @@
+bool x;
+
+bool y = false;
+bool z = true;
+
+function : void main() {}

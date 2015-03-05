@@ -1,0 +1,7 @@
+static int x = 3;
+static float y = 4.44;
+
+function : void main() {
+
+	cout << "main" << ++x << ++::x << ++y << ++::y << "end" <<endl;
+}

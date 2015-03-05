@@ -1,0 +1,23 @@
+function : void foo(float & x, float & y)
+{
+ x = 7.0;
+ y = 8.0;
+}
+
+function : void main()
+{
+  float a = 1.0;
+  float b = 2.0;
+
+  foo(a,b);
+
+  cout << a << b << endl;
+
+  float c = 3.0;
+  float d = 4.0;
+
+  foo(c,d);
+
+  cout << c << d << endl;
+
+}

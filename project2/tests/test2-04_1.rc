@@ -1,0 +1,15 @@
+//basic float test using >
+
+function: void main() {
+
+	float onePointOne = 1.1;
+	float twoPointTwo = 2.2;
+	
+	cout << twoPointTwo << " > " << onePointOne << " ? " << (twoPointTwo > onePointOne);
+	
+	if (twoPointTwo > onePointOne) {
+		cout << " indeed" << endl;
+	}
+	
+
+}

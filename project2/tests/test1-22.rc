@@ -1,0 +1,10 @@
+//local var * var multiplication
+
+function: void main() {
+	int k = 3;
+	int l = 4;
+	int m = k * l;
+	
+	cout << k << " * " << l << " = " << m << endl;
+
+}

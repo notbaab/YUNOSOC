@@ -1,0 +1,33 @@
+float shakespeare;
+float marlowe;
+float goethe;
+float shelley;
+
+function : void main()
+{
+    shakespeare = 9000.00;
+    marlowe = 5000.00;
+    goethe = 12000.00;
+    shelley = 7000.00;
+    
+    int twilightSeries = 5000;
+    int reallyReally = 1000;
+    int sucksAlot = 9000;
+    
+    float byron = twilightSeries + (shakespeare - marlowe) - 5.60 * 9.20;
+    float tennyson = (byron - shelley) * 1.0 - reallyReally;
+    float wordsworth = (tennyson - byron) - 9999.50;
+    float lilwayne = (shakespeare - byron + tennyson) * 1.00 + sucksAlot;
+    
+    cout << shakespeare << endl; // 9000
+    cout << marlowe << endl; // 5000
+    cout << goethe << endl; // 12000
+    cout << shelley << endl; // 7000
+    cout << byron << endl; // 8948.00
+    cout << tennyson << endl; // 948.48
+    cout << wordsworth << endl; // -17999.50
+    cout << lilwayne << endl; // 10000.00
+    cout << twilightSeries << endl; // 5000
+    cout << reallyReally << endl; // 1000
+    cout << sucksAlot << endl; // 9000
+}

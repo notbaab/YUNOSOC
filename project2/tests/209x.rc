@@ -1,0 +1,13 @@
+function : int foo(float x) { return 1; }
+function : int foo(float x, float y, float z) {  return 2;}
+function : int main() {
+ int a   = foo(0.0);
+ cout << a << endl;
+ float b = foo(0.0);
+ cout << b << endl;
+ int c   = foo(0.0,0.0,0.0);
+ cout << c << endl;
+ float d = foo(0.0,0.0,0.0);
+ cout << d << endl;
+ return 0;
+}

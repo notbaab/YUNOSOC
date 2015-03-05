@@ -1,0 +1,26 @@
+function : float foo1()
+{
+  cout << "SHOULD PRINT 1" << endl;
+  return 6.6; //return constant literal float
+}
+
+function : float foo2()
+{
+  cout << "SHOULD PRINT 2" << endl;
+  float x = 3.3;
+  return x; //return float VarSTO 
+}
+
+
+
+function : void main()
+{
+  float a = foo1();
+  float b = foo2();
+
+  cout << "print 6.6: " <<  a << endl;
+  cout << "print 3.3: " <<  b << endl;
+
+  cout << "SHOULD PRINT LAST" << endl;
+}
+

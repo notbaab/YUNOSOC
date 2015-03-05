@@ -1,0 +1,14 @@
+float a = 5.5;
+int b = 3;
+bool c = false;
+
+function : bool foo(int x, float y, bool z){
+	
+	cout << x << endl << y << endl << z << endl;
+	return false;
+}
+
+function : void main() {
+
+	cout << "testing"<< endl << foo(34, 5.55, false);
+}

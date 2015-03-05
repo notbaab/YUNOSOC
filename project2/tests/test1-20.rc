@@ -1,0 +1,14 @@
+//multi assignment in global scope
+
+const int k = 3;
+int j = k + 3;
+
+function: void main() {
+	int l = 3 + j;
+	int m = 3 + l;
+	int n = k;
+	int o = n + 3;
+
+	cout << k << " " << j << " " << l << " " << m << " " << n << " " << o << endl; 	// 3 6 9 12 3 6
+
+}

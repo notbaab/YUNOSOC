@@ -1,0 +1,10 @@
+static const int x = 3;
+static const int y = 8;
+
+function : void main() {
+
+	static const int x = 4;
+	static const int y = 2;
+
+	cout << "main" << x << y << ::x << :: y << "end" <<endl;
+}

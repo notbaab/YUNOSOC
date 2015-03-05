@@ -1,0 +1,7 @@
+const int i = 10;
+
+function : void main()
+{
+    int b = i;
+    cout << b << endl;
+}

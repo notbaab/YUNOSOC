@@ -1,0 +1,50 @@
+
+const int x = 1;
+const int y = 2;
+
+bool i0 = x > y; //false
+bool i1 = x > 5; //false
+bool i2 = 5 > x; // true
+bool i3 = 50 > 50; // false
+
+
+const float fx = 5.43;
+const float fy = 3.26;
+float fz = 5.43;
+
+bool f0 = fx > fy; // true
+bool f1 = fx > 6.32; // false
+bool f2 = 5.22 > fy; // true
+bool f3 = 5.32 > 5.32; // false
+
+
+function : void main(){
+	
+	bool i4 = 50 > 25; // true
+	bool i5 = 50 > (x + y); // true
+	bool i6 = -50 > (x + y); // false
+	
+	cout << i0 << endl; // false
+	cout << i1 << endl; // false
+	cout << i2 << endl; // true
+	cout << i3 << endl; // false
+	cout << i4 << endl; // true
+	cout << i5 << endl; // true
+	cout << i6 << endl; // false
+	
+	cout << endl;
+	
+	
+	bool f4 = 5.32 > 3.1; //true
+	bool f5 = 94.3 > (fx + fy); // true
+	bool f6 = -97.24 > (fx + fy); // false
+	
+	cout << f0 << endl; //true
+	cout << f1 << endl; // false
+	cout << f2 << endl; // true
+	cout << f3 << endl; //false
+	cout << f4 << endl; //true
+	cout << f5 << endl; //true
+	cout << f6 << endl; //false
+
+}

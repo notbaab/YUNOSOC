@@ -1,0 +1,11 @@
+
+
+function : bool foo ()
+{
+	return true;
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

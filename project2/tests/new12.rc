@@ -1,0 +1,11 @@
+
+function : int foo ()
+{
+	cout << "foo" << endl;
+	return 1;
+}
+
+function : void main() {
+
+	cout << 0 << foo() << "end" <<endl;
+}

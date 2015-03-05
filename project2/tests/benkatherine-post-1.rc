@@ -1,0 +1,14 @@
+int a = 5;
+int b = 6;
+
+function: void main()
+{
+    cout<<a++<<endl; //should print out 5
+    cout<<a++<<endl; //should print out 6
+    cout<<a<<endl; //should print out 7
+    cout<<a--<<endl;//should print out 7
+    cout<<a<<endl; //should print 6
+
+
+
+}

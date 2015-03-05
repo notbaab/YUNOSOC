@@ -1,0 +1,18 @@
+int x;
+int y;
+int z;
+
+function : void main()
+{
+    int localX = 5;
+    int localY = 10;
+    int localZ = 50;
+    
+    x = localX + localY + localZ;
+    y = localY + (localX - x);
+    z = x + ((y + localZ + localZ + y) + x);
+    
+    cout << x << endl; // 65
+    cout << y << endl; // -50
+    cout << z << endl; // 130
+}

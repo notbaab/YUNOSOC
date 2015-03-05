@@ -1,0 +1,47 @@
+int x = 10;
+int y = 12;
+int z = 14;
+float a = 20.0;
+float b = 30.0;
+float c = 20.0;
+
+function : void main()
+{
+    if (5 == 5)
+    {
+        cout << "5 is equal to 5" << endl;
+    }   
+    if (x != 10)
+    {
+        cout << "no print" << endl;
+    }
+    if (y > 12)
+    {
+        cout << "no print" << endl;
+    }
+    if (y >= 12)
+    {
+        cout << "y is greater than or equal to 12" << endl;
+    }
+    if (z > 15)
+    {
+        cout << "no print" << endl;
+    }
+    if (z >= 14)
+    {
+        cout << "z is greater than or equal to 14" << endl;
+    }
+    if (y != 12)
+    {
+        cout << "no print" << endl;
+    }
+    if (a > b)
+    {
+        cout << "no print" << endl;
+    }
+    if (a >= c)
+    {
+        cout << "a is greater than or equal to c" << endl;
+    }
+    
+}

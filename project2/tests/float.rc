@@ -1,0 +1,37 @@
+float f3;
+
+function: void main() {
+    
+    float f1;
+    float f2;
+    float f4;
+    float f5;
+
+    f1 = 1.0;
+    cout << "f1: should be: 1.00    " << f1 << endl;
+
+    f2 = f1;
+    f1 = 2.0;
+    f5 = f4 = f2;
+
+    cout << "f1: should be: 2.00    " << f1 << endl;
+    cout << "f2: should be: 1.00    " << f2 << endl;
+    cout << "f3: should be: 0.00    " << f3 << endl;
+    cout << "f4: should be: 1.00    " << f4 << endl;
+    cout << "f5: should be: 1.00    " << f5 << endl;
+
+    const float x = 0;
+    const float y = 1;
+    const float a = y;
+    const float b = 2.0;
+    const float c = 5.0;
+
+    float z = y;
+
+    cout << " x: should be: 0.00    " << x << endl;
+    cout << " y: should be: 1.00    " << y << endl;
+    cout << " a: should be: 1.00    " << a << endl;
+    cout << " b: should be: 2.00    " << b << endl;
+    cout << " c: should be: 5.00    " << c << endl;
+    cout << " z: should be: 1.00    " << z << endl;
+}

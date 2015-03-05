@@ -1,0 +1,7 @@
+const float f = 5.5;
+float g = f;
+
+function : void main()
+{
+
+}

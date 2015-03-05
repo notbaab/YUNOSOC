@@ -1,0 +1,28 @@
+
+function : void main()
+{
+  float f[3];
+  f[0] = 1.0;
+
+  cout << f[0] << endl; //1
+
+  f[1] = 2;
+  cout << f[1] << endl; // 2
+
+  float g[5];
+
+  g[2] = 3;
+
+  float a = g[2];
+  cout << a << endl; //3
+  cout << g[2] << endl; //3
+
+  f[0] = f[1];
+
+  cout << f[0] << endl; // 2
+
+  cout << f[0] = f[1] << endl; // 2
+
+
+
+}

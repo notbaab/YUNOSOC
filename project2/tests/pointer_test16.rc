@@ -1,0 +1,32 @@
+function : void main() 
+{
+    int k = 11222;
+	int *p = &k;
+
+	p++;
+	p++;
+	--p;
+	--p;
+	
+	p++;
+	
+	p--;
+		
+	int **hey = &p;
+	
+	hey++;
+	hey--;
+	
+	int ***lol = &hey;
+	
+	lol--;
+	++lol;
+	
+	int ****dust = &lol;
+	
+	++dust;
+	dust--;
+	
+	cout << ((****dust) - 4311) + 33.22 << endl;
+
+}

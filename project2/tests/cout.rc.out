@@ -1,0 +1,6 @@
+should print 5:                      5
+should print 5.50:                   5.50
+should print true:                   true
+should print false:                  false
+should print test2:                  test2
+should print all above on same line: 55.50truefalsetest2

@@ -1,0 +1,15 @@
+function : int main(){
+   int a = 0;
+   float f = 0;
+   bool b = true;
+   
+   cout << (int)a << " " << (int)f << " " << (int)b  << endl;
+   
+   f = 15354.43;
+   a = -1343;
+   b = false;
+   
+   cout << (int)a << " " << (int)f << " " << (int)b << " " << (int)(-f)  << endl;
+   
+   return 0;
+}

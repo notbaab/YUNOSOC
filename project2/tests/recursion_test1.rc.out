@@ -1,0 +1,12 @@
+recursive foo call 2
+recursive foo call 3
+recursive foo call 4
+recursive foo call 5
+recursive foo call 6
+recursive foo call 7
+recursive foo call 8
+recursive foo call 9
+recursive foo call 10
+recursive foo call 11
+breaking out of foo recursive call
+rec, in the end, is: 11

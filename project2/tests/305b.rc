@@ -1,0 +1,22 @@
+function : void f1(int &a){ a = 10; }
+function : void f2(int &a){ a--; }
+function : void f3(int &a){ a++; }
+function : void f4(int &a){ --a; }
+function : void f5(int &a){ ++a; }
+
+function : int main(){
+   int a;
+   
+   f1(a);
+   cout << a << " ";
+   f2(a);
+   cout << a << " ";
+   f3(a);
+   cout << a << " ";
+   f4(a);
+   cout << a << " ";
+   f5(a);
+   cout << a << endl;
+   
+   return 0;
+}

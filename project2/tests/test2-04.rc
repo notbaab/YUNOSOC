@@ -1,0 +1,34 @@
+//if using <, >, <=, >=, !=, --
+
+function: void main() {
+
+	float onePointOne = 1.1;
+	float twoPointTwo = 2.2;
+	float threePointThree = 3.3;
+	
+	if (twoPointTwo > onePointOne) {
+		if (twoPointTwo < 3.3) {
+			if (threePointThree <= 4.4) {
+				if (4.4 >= 5.5) {
+					cout << "bad! " << endl;
+				}
+				if (3.3 == threePointThree) {
+					cout << "good ";
+				}
+				cout << "job ";
+			}
+			cout << "dude, ";
+			if (twoPointTwo != threePointThree) {
+				cout << "you've ";
+			}
+			if (3.3 != threePointThree) {
+				cout << "bad! ";
+			}
+			cout << "got ";
+		}
+		cout << "it!" << endl;
+	}
+	cout << "fin~~" << endl;
+	
+
+}

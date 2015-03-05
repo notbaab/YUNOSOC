@@ -1,0 +1,26 @@
+structdef S{int a; int b;};
+structdef S2{S * a; S * b;};
+
+function : void foo (S2 & a){
+   cout << a.a->a << " " << a.a->b << "; ";
+   cout << a.b->a << " " << a.b->b << endl;
+   a.a->a = a.a->a + 1; 
+   a.a->b = a.a->b + 2;
+   a.b->a = a.b->a + 3; 
+   a.b->b = a.b->b + 4;
+}
+
+function : int main(){
+   S a;
+   S b;
+   a.a = (a.b = 0) + 1;
+   b = a;
+   S2 s;
+   s.a = &a; 
+   s.b = &b;
+   foo(s);
+   foo(s);
+   foo(s);
+
+   return 0;
+}

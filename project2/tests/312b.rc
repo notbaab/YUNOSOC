@@ -1,0 +1,5 @@
+int *p;
+function : int main(){
+   delete p;
+   return 0;
+}

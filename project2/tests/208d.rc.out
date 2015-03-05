@@ -1,0 +1,29 @@
+X should be printed 5 times
+Y should be printed 10 times
+Z should be printed 10 times
+Z0
+Y4
+Z0
+Y3
+X0
+Z0
+Y4
+Z0
+Y3
+X1
+Z0
+Y4
+Z0
+Y3
+X2
+Z0
+Y4
+Z0
+Y3
+X3
+Z0
+Y4
+Z0
+Y3
+X4
+END TEST

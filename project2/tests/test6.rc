@@ -1,0 +1,31 @@
+
+function : int * f (int * &p, int * &q) {
+   delete p;
+   p = q;
+   return p;
+}
+
+function : int f2 (int * &p) {
+   new p;
+   return *p;
+}
+
+int * p;
+
+function : void main() {
+   int * q;
+   int * r;
+
+   f2(p); cout << p == nullptr;
+   new q;
+   cin >> *q;
+   cout << *p << *q << "\n";
+   r = f(p, q);
+   cout << *p << *q << *r << p==q << "\n";
+   cin >> *q;
+   cout << *p << *q << *r << q==r << "\n";
+   new p;
+   cout << *p << *q << *r << p==q << "\n";
+   delete r;
+   delete p;
+}

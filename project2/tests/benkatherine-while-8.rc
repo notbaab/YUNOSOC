@@ -1,0 +1,15 @@
+function : void main()
+{
+  int x = 0;
+
+   while(x <= 5)
+   {
+      x = x + 1;
+      continue;
+      cout << "shouldn't print" << endl;
+   }
+
+   cout << x << endl;
+
+
+}

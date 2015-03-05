@@ -1,0 +1,33 @@
+/*Testing function calls with passing in arrays as arguments*/
+function : void foo(int &a[5])
+{
+  int i = 0;
+  while(i<5)
+  {
+    cout << a[i] << endl;
+    i++;
+  }
+}
+
+function : void main()
+{
+  int array[5];
+
+  int i = 0;
+  int j = 5;
+
+  while(i<5)
+  {
+     array[i++] = j--;
+  }
+
+  i = 0;
+  while(i<5)
+  {
+    cout << array[i] << endl;
+    i++;
+  }
+
+  foo(array);
+
+}

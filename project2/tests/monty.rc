@@ -1,0 +1,769 @@
+const int a=97; const int b=98; const int c=99; const int d=100; const int e=101; const int f=102; 
+const int g=103; const int h=104; const int i=105; const int j=106; const int k=107; const int l=108; 
+const int m=109; const int n=110; const int o=111; const int p=112; const int q=113; const int r=114; 
+const int s=115; const int t=116; const int u=117; const int v=118; const int w=119; const int x=120; 
+const int y=121; const int z=122; 
+const int cA=65; const int cB=66; const int cC=67; const int cD=68; const int cE=69; const int cF=70; 
+const int cG=71; const int cH=72; const int cI=73; const int cJ=74; const int cK=75; const int cL=76; 
+const int cM=77; const int cN=78; const int cO=79; const int cP=80; const int cQ=81; const int cR=82; 
+const int cS=83; const int cT=84; const int cU=85; const int cV=86; const int cW=87; const int cX=88; 
+const int cY=89; const int cZ=90; 
+const int space=32; const int nl=10; const int period=46; const int tab=9; 
+const int comma=44; const int squote=39; const int dquote=34; const int excl=33; 
+const int ques=63; 
+int newCount = 0;
+
+function : void printchar(int ch) {
+	if(ch == a) { cout << "a"; } if(ch == b) { cout << "b"; } if(ch == c) { cout << "c"; } if(ch == d) { cout << "d"; } 
+	if(ch == e) { cout << "e"; } if(ch == f) { cout << "f"; } if(ch == g) { cout << "g"; } if(ch == h) { cout << "h"; } 
+	if(ch == i) { cout << "i"; } if(ch == j) { cout << "j"; } if(ch == k) { cout << "k"; } if(ch == l) { cout << "l"; } 
+	if(ch == m) { cout << "m"; } if(ch == n) { cout << "n"; } if(ch == o) { cout << "o"; } if(ch == p) { cout << "p"; } 
+	if(ch == q) { cout << "q"; } if(ch == r) { cout << "r"; } if(ch == s) { cout << "s"; } if(ch == t) { cout << "t"; } 
+	if(ch == u) { cout << "u"; } if(ch == v) { cout << "v"; } if(ch == w) { cout << "w"; } if(ch == x) { cout << "x"; } 
+	if(ch == y) { cout << "y"; } if(ch == z) { cout << "z"; } 
+
+	if(ch == cA) { cout << "A"; } if(ch == cB) { cout << "B"; } if(ch == cC) { cout << "C"; } if(ch == cD) { cout << "D"; } 
+	if(ch == cE) { cout << "E"; } if(ch == cF) { cout << "F"; } if(ch == cG) { cout << "G"; } if(ch == cH) { cout << "H"; } 
+	if(ch == cI) { cout << "I"; } if(ch == cJ) { cout << "J"; } if(ch == cK) { cout << "K"; } if(ch == cL) { cout << "L"; } 
+	if(ch == cM) { cout << "M"; } if(ch == cN) { cout << "N"; } if(ch == cO) { cout << "O"; } if(ch == cP) { cout << "P"; } 
+	if(ch == cQ) { cout << "Q"; } if(ch == cR) { cout << "R"; } if(ch == cS) { cout << "S"; } if(ch == cT) { cout << "T"; } 
+	if(ch == cU) { cout << "U"; } if(ch == cV) { cout << "V"; } if(ch == cW) { cout << "W"; } if(ch == cX) { cout << "X"; } 
+	if(ch == cY) { cout << "Y"; } if(ch == cZ) { cout << "Z"; } 
+
+	if(ch == space) { cout << " "; } if(ch == nl) { cout << endl; } if(ch == period) { cout << "."; } 
+	if(ch == tab) { cout << "\t"; } if(ch == comma) { cout << ","; } if(ch == squote) { cout << "'"; } 
+	if(ch == dquote) { cout << "'"; } if(ch == excl) { cout << "!"; } if(ch == ques) { cout << "?"; } 
+}
+
+structdef CHAR {
+   int ch;
+   CHAR* nc;
+};
+
+structdef WORD {
+   CHAR* cl;
+   WORD* nw;
+};
+
+structdef LINE {
+   WORD* wl;
+   LINE* nl;
+};
+
+LINE* sl;
+
+function : void writetext(LINE* start) {
+	LINE* lp = nullptr;
+	WORD* wp = nullptr;
+	CHAR* cp = nullptr;
+	
+    lp = start;
+	
+    while (lp != nullptr) {
+		wp = lp->wl;
+		
+        while (wp != nullptr) {
+			cp = wp->cl;
+
+			while (cp != nullptr) {
+				printchar(cp->ch);
+				cp = cp->nc;
+			}
+
+			printchar(space);
+			wp = wp->nw;
+		}
+
+		printchar(nl);
+		lp = lp->nl;
+	}
+}
+
+function : void deletechar(CHAR* &cp) {
+	if(cp->nc != nullptr) { deletechar(cp->nc); }
+	delete cp; newCount--;
+}
+
+function : void deleteword(WORD* &wp) {
+	if(wp->nw != nullptr) { deleteword(wp->nw); }
+	if(wp->cl != nullptr) { deletechar(wp->cl); }
+	delete wp; newCount--;
+}
+
+function : void deleteline(LINE* &lp) {
+	if(lp->nl != nullptr) { deleteline(lp->nl); }
+	if(lp->wl != nullptr) { deleteword(lp->wl); }
+	delete lp; newCount--;
+}
+
+function : void deletetext(LINE* &start) {
+	if(start != nullptr) { deleteline(start); }
+}
+
+function : void text() {
+	LINE* lp = nullptr;
+	WORD* wp = nullptr;
+	CHAR* cp = nullptr;
+
+	newCount++; new lp; sl = lp; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cI;newCount++; new cp->nc; cp = cp->nc; cp->ch = m; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = m; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc;
+
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cK; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = p; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = v; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = b; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cH; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = g; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cH; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = g; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = z; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; cp->ch = g; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = k; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cD; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = v; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cH; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = m; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = m; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cW; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = m; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cF; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = c; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cH; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cA; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cW; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = w; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = j; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cS; newCount++; new cp->nc; cp = cp->nc; cp->ch = c; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = g; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cT; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = squote; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cN; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = z; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = squote; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = c; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = squote; newCount++; new cp->nc; cp = cp->nc; cp->ch = b; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = squote; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cS; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = m; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = p; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = m; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = p; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cJ; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cS; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cM; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = w; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = f; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = p; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = p; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = c; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cP; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = c; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = k; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = w; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = squote; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = k; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = v; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = y; newCount++; new cp->nc; cp = cp->nc; cp->ch = excl; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cA; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cA; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; cp->ch = g; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = f; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cH; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = b; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = f; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cD; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = m; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cA; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cR; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cD; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = c; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = k; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = f; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = dquote; newCount++; new cp->nc; cp = cp->nc; cp->ch = cI; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = d; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = k; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = o; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cI; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = m; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = period; newCount++; new cp->nc; cp = cp->nc; cp->ch = dquote; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cY; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cS; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = c; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = m; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = f; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = p; newCount++; new cp->nc; cp = cp->nc; cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = c; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = u; newCount++; new cp->nc; cp = cp->nc; cp->ch = l; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = m; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = cA; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = o; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = v; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = y; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = l; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = i; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = k; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = r; newCount++; new cp->nc; cp = cp->nc; cp->ch = comma; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = t; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = a; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = b; newCount++; new cp->nc; cp = cp->nc; cp->ch = u; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = g; newCount++; new cp->nc; cp = cp->nc; cp->ch = g; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = r; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = w; newCount++; new cp->nc; cp = cp->nc; cp->ch = h; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = n; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = h; newCount++; new cp->nc; cp = cp->nc; cp->ch = e; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = squote; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	
+	newCount++; new wp->nw; wp = wp->nw; newCount++; new wp->cl; cp = wp->cl;
+	cp->ch = p; newCount++; new cp->nc; cp = cp->nc; cp->ch = i; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = s; newCount++; new cp->nc; cp = cp->nc; cp->ch = s; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = e; newCount++; new cp->nc; cp = cp->nc; cp->ch = d; newCount++; new cp->nc; cp = cp->nc; 
+	cp->ch = period; newCount++; new cp->nc; cp = cp->nc; 
+	newCount++; new lp->nl; lp = lp->nl; newCount++; new lp->wl; wp = lp->wl; newCount++; new wp->cl; cp = wp->cl;
+}	
+
+function : void main() {
+	text();
+	writetext(sl);
+	deletetext(sl);
+    cout << "Difference in number of new's and delete's : " << newCount << endl;
+}

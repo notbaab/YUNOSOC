@@ -1,0 +1,14 @@
+function : void foo (){
+   exit(0);
+}
+
+function : int main(){
+   cout << "mehhhh" << endl;
+   
+   foo();
+   
+   cout << "failure" << endl;
+
+   return 0;
+}
+

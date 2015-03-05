@@ -1,0 +1,12 @@
+const float bee = 2.1;
+float found = 4.22 + bee;
+
+function : void main()
+{
+	float a = 9.44 + 4.11 + found;
+	
+	//Subtracting its total sum by itself
+	bool cast = (bool)((float)a - 19.87) || true;
+	
+	cout << cast << endl;
+}

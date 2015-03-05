@@ -1,0 +1,46 @@
+bool pass = true;
+bool fail = false;
+
+function : void main()
+{
+  if(pass)
+  {
+    cout << "pass" << endl;
+
+    if(fail)
+    {
+      cout << "fail" << endl;
+    }
+    else
+    {
+      cout << "pass" << endl;
+    }
+  }
+  else
+  {
+    if(pass)
+    {
+      cout << "fail" << endl;
+    }
+    else
+    {
+      cout << "fail" << endl;
+    }
+  }
+    
+  if(fail)
+  {
+     cout << "fail" << endl;
+  }
+  else
+  {
+      if(pass)
+      {
+        cout << "pass" << endl;
+      }
+      else
+      {
+        cout << "fail" << endl;
+      }
+  }
+}

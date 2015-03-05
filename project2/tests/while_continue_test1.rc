@@ -1,0 +1,33 @@
+function : void main()
+{
+	int ahoy = 10;
+	int hola = 12;
+	
+	while (ahoy < 15)
+	{
+		cout << "should be printed 1" << endl;
+		hola = 10;
+		while (hola < 14)
+		{
+			cout << "should be printed 2" << endl;
+			while (true)
+			{
+				cout << "should be printed 3" << endl;
+				while (true)
+				{
+					cout << "should be printed 4" << endl;
+					break;
+				}
+				break;
+			}
+			hola++;
+			continue;
+			cout << "AGAIN, SHOLD NOT BE PRINTED" << endl;
+		}
+		cout << "ahoy counter: " << ahoy << endl;
+		ahoy++;
+		continue;
+		cout << "SHOULD NOT BE PRINTED" << endl;
+	}
+
+}

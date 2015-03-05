@@ -1,0 +1,27 @@
+int arr[10][10];
+
+function : void main(){
+	float padding[30000];
+	int i;
+	int j;
+	i = 0;
+	while(i < 10){
+		j = 0;
+		while(j < 10){
+			arr[i][j] = i * 10 + j;
+			j++;
+		}
+		++i;
+	}
+	cout<<"arr[1][3] should be 13: "<<arr[1][3]<<endl;
+	int *t = &arr[3][7];
+	cout<<"*t=*&arr[3][7] should be 37: "<<*t<<endl;
+	cout<<"*++t++ should be 38: "<<(*++t)++<<endl;
+	cout<<"*t should be 39: "<<*t<<endl;
+	i = 0;
+	while(i < 10){
+		i++;
+		t++;
+	}
+	cout<<"*t should be 48: "<<*t<<endl;
+}

@@ -1,0 +1,85 @@
+function : void func4(){
+    int i;
+    i = i + i;
+}
+
+function : void func4(int &a){
+    int i;
+    i = i + i;
+    return;
+}
+
+structdef AA {
+    int integer;
+    function : void x() { return;}
+    function : void y(int b) { return; }
+    function : int foo() { return 0; }
+    function : int foo(int a) { return a; }
+    function : int foo(bool a) { return (int) a;}
+    function : float foo(float a, float b) { return a + b + 2; }
+    function : int foo(int &a, int &b) { a = 100; b = 200; return a + b + 4; }
+};
+
+structdef BB {
+    int integer;
+    function : void x() { return;}
+    function : void y(int b) { return; }
+    function : int foo() { return 0; }
+    function : int foo(int a) { return a; }
+    function : int foo(int a, int b) { return a + b + 2; }
+    function : float foo(float a, float b) { return a + b + 4; }
+};
+
+function : void x() { return;}
+function : void y(int b) { return; }
+function : int foo() { return 0; }
+function : int foo(int a) { return a; }
+function : int foo(int a, int b) { return a + b; }
+function : float foo(float a, float b) { return a + b; }
+
+
+function : BB functest(AA b)
+{
+    BB *ptr;
+    return *((BB *) ((int *) &ptr));
+}
+
+function : AA functest(BB a)
+{
+    AA *ptr;
+    return *((AA *) ((bool *) &ptr));
+}
+
+function : int main() {
+
+    float e;
+    float f;
+    int i;
+    int j;
+    const int l = 0; 
+    const int m = 1; 
+    AA a;
+    BB b;
+
+    cout << a.foo() << endl;
+    cout << a.foo(e, f) << endl;
+    f = (float) a.foo() + b.foo();
+    cout << f << endl;
+    cout << a.foo((int)((float)((int)( (int *) false)))) << endl;
+    
+    cout << a.foo() << endl;
+    cout << a.foo(1) << endl;
+    cout << a.foo(true) << endl;
+    cout << a.foo(1.0, 1.0) << endl;
+    cout << a.foo(i, j) << endl;
+    cout << i << endl;
+    cout << j << endl;
+
+    cout << b.foo() << endl;
+    cout << b.foo(1) << endl;
+    cout << b.foo(1,1) << endl;
+    cout << b.foo(2.0, 2.0) << endl;
+
+
+    return 0;
+}

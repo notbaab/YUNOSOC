@@ -1,0 +1,16 @@
+bool x = true;
+
+function : bool foo1()
+{
+	return ::x;
+}
+
+function : bool foo ()
+{
+	return foo1();
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

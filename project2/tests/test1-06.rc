@@ -1,0 +1,5 @@
+int x = 99;
+function: void main() {
+	cout << x << endl;
+
+}

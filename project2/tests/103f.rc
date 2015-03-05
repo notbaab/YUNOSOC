@@ -1,0 +1,13 @@
+function: void main() {
+
+    const int c1 = 210;
+    const int c2 = sizeof(c1) + c1;
+
+    cout << "420:\t\t" << c1 + 210 << endl;
+    cout << "214:\t\t" << c2 << endl;
+
+    const float r1 = 420.25;
+
+    cout << "1082.75:\t" << r1 + 662.50 << "\n";
+    cout << "4:\t\t" << sizeof(r1) << endl;
+}

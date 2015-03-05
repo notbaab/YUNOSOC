@@ -1,0 +1,41 @@
+function : void boolnest(){
+    bool a = false;
+    bool * b = &a;
+    cout << *b << endl;
+    bool ** c = &b;
+    cout << *(*c) << endl;
+    bool *** d = &c;
+    cout << *(*(*d)) << endl;
+    bool **** e = &d;
+    cout << *(*(*(*(e)))) << endl;
+    bool ***** f = &e;
+    cout << *(*(*(*(*f)))) << endl;
+}
+function : void floatnest(){
+    float a = 7331.99;
+    float * b = &a;
+    cout << *b << endl;
+    float ** c = &b;
+    cout << *(*c) << endl;
+    float *** d = &c;
+    cout << *(*(*d)) << endl;
+    float **** e = &d;
+    cout << *(*(*(*(e)))) << endl;
+    float ***** f = &e;
+    cout << *(*(*(*(*f)))) << endl;
+    boolnest();
+}
+function : void main(){
+    int a = 1337;
+    int * b = &a;
+    cout << *b << endl;
+    int ** c = &b;
+    cout << *(*c) << endl;
+    int *** d = &c;
+    cout << *(*(*d)) << endl;
+    int **** e = &d;
+    cout << *(*(*(*(e)))) << endl;
+    int ***** f = &e;
+    cout << *(*(*(*(*f)))) << endl;
+    floatnest();
+}

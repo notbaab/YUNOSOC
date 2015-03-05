@@ -1,0 +1,7 @@
+const int x = 4;
+const int y = 5;
+
+int z = x + y;
+
+function : void main()
+{}

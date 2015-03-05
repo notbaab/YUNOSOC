@@ -1,0 +1,8 @@
+function: void main()
+{
+    int x = 0x10;
+    int y = 0152;
+
+    cout << "x (should be  16): " << x << endl;
+    cout << "y (should be 106): " << y << endl;
+}

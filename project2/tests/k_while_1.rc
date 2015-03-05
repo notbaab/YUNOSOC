@@ -1,0 +1,18 @@
+function : void main()
+{
+    float y = 4.5;
+    float x = 5 + -y;
+    
+    while (y > 0)
+    {
+        cout << "ahha" << endl;
+        y--;
+        continue;
+        cout << "asdfsd" << endl;
+        
+    }
+    cout << "1234" << endl;
+    
+
+}
+

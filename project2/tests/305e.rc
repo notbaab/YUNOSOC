@@ -1,0 +1,87 @@
+function : void foo(int  a[5])
+{
+  cout << "11: " << a[0] << endl;
+
+  a[0] = 10; // 10, 22, 33, 44, 55
+  a[1] = 5;  // 10, 5, 33, 44, 55
+  a[4] = 999; // 10, 5, 33, 44, 999
+  a[2] = a[3]; // 10, 5, 44, 44, 999
+
+  int x1 = a[2]; //44
+  cout << "x1 44: " << x1 << endl;
+
+  int x;
+  x = a[2];
+  cout << "x 44: " << x << endl;
+}
+
+
+function : void foo2(float b[5])
+{ 
+  cout << "11.11: " << b[0] << endl;
+
+  b[0] = 1.1;
+  b[1] = 5.5;
+  b[4] = 999.99;
+  b[2] = b[3];
+
+  float y1 = b[2];
+  cout << "y1 44.44: " << y1 << endl;
+
+  float y;
+  y = b[2];
+  cout << "y 44.44: " << y << endl;
+}
+
+function : void foo3(bool c[2])
+{
+  cout << "false: " << c[0] << endl;
+
+  c[0] = true;
+  c[1] = c[0];
+
+  bool z1 = c[0];
+  cout << "c1 true: " << z1 << endl;
+}
+
+function : void main()
+{
+  int arr[5];// = {11, 22, 33, 44, 55};
+  arr[0] = 11;
+  arr[1] = 22;
+  arr[2] = 33;
+  arr[3] = 44;
+  arr[4] = 55;
+
+  cout << "---INTEGERS---" << endl;
+  foo(arr);
+  cout << "after 10: " << arr[0] << endl;
+  cout << "after 5: " << arr[1] << endl;
+  cout << "after 999: " << arr[4] << endl;
+  cout << "after 44: " << arr[2] << endl;
+
+
+  float arr2[5];// = {11.11, 22.22, 33.33, 44.44, 55.55};
+  arr2[0] = 11.11;
+  arr2[1] = 22.22;
+  arr2[2] = 33.33;
+  arr2[3] = 44.44;
+  arr2[4] = 55.55;
+  cout << "---FLOATS---" << endl;
+  foo2(arr2);
+  cout << "after 1.10: " << arr2[0] << endl;
+  cout << "after 5.50: " << arr2[1] << endl;
+  cout << "after 999.99: " << arr2[4] << endl;
+  cout << "after 44.44: " << arr2[2] << endl;
+
+  bool arr3[2];
+  arr3[0] = false; 
+  arr3[1] = false;
+  cout << "---BOOLS---" << endl;
+  foo3(arr3);
+  cout << "after true: " << arr3[0] << endl;
+  cout << "after true: " << arr3[1] << endl;
+
+}
+
+

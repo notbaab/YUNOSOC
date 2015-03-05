@@ -1,0 +1,23 @@
+int x = 5;
+static float y = 5.55;
+
+function : void main()
+{
+	const int x = 3;
+	static float y = 3.33;
+	
+	cout << 1.11 > 3.33 << endl;
+	cout << 3.33 > 1.11 << endl;
+	cout << 3.33 > y << endl;
+	cout << y > 3.33 << endl;
+	cout << x > 3.33 << endl;
+	cout << 3.33 > x << endl;
+	cout << 3.33 > ::x <<endl;
+	cout << ::x > 3.33 <<endl;
+	cout << ::y > 3.33 <<endl;
+	cout << 3.33 > ::y <<endl;
+	cout << 3 > ::x << endl;
+	cout << ::x > 3 << endl;
+	cout << ::y > 3 << endl;
+	cout << 3 > ::y << endl;
+}

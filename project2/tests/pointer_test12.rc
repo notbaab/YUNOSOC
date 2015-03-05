@@ -1,0 +1,27 @@
+structdef BAR {
+	int *a;
+	float b;
+	bool **c;
+};
+
+int wow[10000];
+
+BAR bee;
+
+function : void main() 
+{
+  int k = 3;
+	bee.a = &k;
+	bee.b = 9.93;
+	bool snake = false;
+	bool *snake1 = &snake;
+	bee.c = &snake1;
+	
+	BAR *bird = &bee;
+	
+	wow[9000] = 1337;
+
+	bird->a = &wow[9000];
+	
+	cout << *(bird->a) << endl;
+}

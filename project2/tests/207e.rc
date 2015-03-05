@@ -1,0 +1,81 @@
+function: void main() {
+int x = 5;
+int y = 10;
+int z = 20;
+bool b = true;
+bool c = false;
+
+
+if((x < y) && (!c) && (z>x) && b) { 
+        cout << "expression was true correct" << endl;
+}
+else {
+    cout << "expression was false wrong"  << endl;
+}
+
+if((x < y) && (!c) && (z>x) && !b) {
+        cout << "expression was true wrong" << endl;
+}
+else {
+    cout << "expression was false correct"  << endl;
+}
+
+if((x < y) && (!c) && (z>x) && (z>x)) {
+        cout << "expression was true correct" << endl;
+}
+else {
+    cout << "expression was false wrong"  << endl;
+}
+
+
+if((x > y) && (!b)) {
+        cout << "expression was true wrong" << endl;
+}
+else {
+    cout << "expression was false correct"  << endl;
+}
+
+if((x < y) && (!b)) {
+        cout << "expression was true wrong" << endl;
+}
+else {
+    cout << "expression was false correct"  << endl;
+}
+
+if((x < y) && (b)) {
+        cout << "expression was true correct" << endl;
+}
+else {
+    cout << "expression was false wrong"  << endl;
+}
+
+if((x > y) && (b)) {
+        cout << "expression2 was true wrong" << endl;
+}
+else {
+    cout << "expression2 was false correct"  << endl;
+}
+
+if((x > y) && (true)) {
+        cout << "expression2 was true wrong" << endl;
+}
+else {
+    cout << "expression2 was false correct"  << endl;
+}
+
+if((true) && (true)) {
+        cout << "expression2 was true correct" << endl;
+}
+else {
+    cout << "expression2 was false wrong"  << endl;
+}
+
+if((true) && (false)) {
+        cout << "expression2 was true wrong" << endl;
+}
+else {
+    cout << "expression2 was false correct"  << endl;
+}
+
+
+}

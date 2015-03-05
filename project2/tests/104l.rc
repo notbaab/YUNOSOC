@@ -1,0 +1,21 @@
+const int a = 0;
+const int b = 1;
+
+int c = a ^ b; //1
+
+function : void main()
+{
+   int d = a ^ b; // 1
+   int e = a ^ b; // 1
+   int f = d ^ b; // 0 
+
+   int g = 1;
+   int h = 1;
+   int i = g ^ h; // 0
+
+   cout << c << endl; //1
+   cout << d << endl; //1
+   cout << e << endl; //1
+   cout << f << endl; //0
+   cout << i << endl; //0
+}

@@ -1,0 +1,23 @@
+structdef FOO {
+	int a;
+	float b;
+	float c[1000];
+};
+
+function : void main()
+{
+	int b = 1;
+	int a = 500 + 500 - 1 + b - b;
+	
+	FOO gandalf;
+	
+	gandalf.c[b] = 9;
+	
+	cout << gandalf.c[b] << endl;
+	
+	gandalf.c[a] = 100;
+	
+	cout << gandalf.c[a] << endl;
+	
+	gandalf.c[a+1] = 200; //error
+}

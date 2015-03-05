@@ -1,0 +1,49 @@
+int x;
+float y;
+bool z;
+
+int a[10];
+float b[10];
+bool c[10];
+
+function : void main()
+{
+  cout << x << endl; //0
+  cout << y << endl; //0.0
+  cout << z << endl; //false
+
+
+  cout << a[0] << endl; //0
+  cout << a[1] << endl; //0
+  cout << a[2] << endl; //0
+  cout << a[3] << endl; //0
+  cout << a[4] << endl; //0
+  cout << a[5] << endl; //0
+  cout << a[6] << endl; //0
+  cout << a[7] << endl; //0
+  cout << a[8] << endl; //0
+  cout << a[8] << endl; //0
+
+  cout << b[0] << endl; //0.0
+  cout << b[1] << endl; //0.0
+  cout << b[2] << endl; //0.0
+  cout << b[3] << endl; //0.0
+  cout << b[4] << endl; //0.0
+  cout << b[5] << endl; //0.0
+  cout << b[6] << endl; //0.0
+  cout << b[7] << endl; //0.0
+  cout << b[8] << endl; //0.0
+  cout << b[9] << endl; //0.0
+
+  cout << c[0] << endl; //false
+  cout << c[1] << endl; //false
+  cout << c[2] << endl; //false
+  cout << c[3] << endl; //false
+  cout << c[4] << endl; //false
+  cout << c[5] << endl; //false
+  cout << c[6] << endl; //false
+  cout << c[7] << endl; //false
+  cout << c[8] << endl; //false
+  cout << c[9] << endl; //false
+
+}

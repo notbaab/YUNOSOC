@@ -1,0 +1,19 @@
+const int a = 1;
+const int b = 2;
+const int c = 3;
+const int f = 10;
+
+int d = a + b; //3
+const int e = a + b + c; //6
+int g = a + b + c + e + f; //22
+
+function : void main()
+{
+  cout << "a " << a << endl; // 1
+  cout << "b " << b << endl; // 2
+  cout << "c " << c << endl; // 3
+  cout << "d " << d << endl; // 3
+  cout << "e " << e << endl; // 6
+  cout << "f " << f << endl; // 10
+  cout << "g " << g << endl; // 22
+}

@@ -1,0 +1,12 @@
+//simple > operation
+
+function: void main() {
+	
+	int a = 4123;
+	int b = 4119;
+	bool c = a > b;
+	bool d = b > a;
+
+	cout << c << " " << d << endl;
+	
+}

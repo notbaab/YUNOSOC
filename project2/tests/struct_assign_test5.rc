@@ -1,0 +1,37 @@
+structdef BAR {
+    int barA;
+    float barB;
+    bool barC;
+	int lol[50];
+	bool rofl[20];
+};
+
+static BAR flux;
+
+function : void main()
+{
+	BAR lime;
+	static BAR laser;
+	
+	lime.rofl[15] = true; // true
+	flux.barC = lime.rofl[15]; //true
+	laser.rofl[4] = flux.barC && false; //false
+	
+	int i = 0;
+	while (i < 20)
+	{
+		lime.lol[i] = 1337;
+		cout << "lime.lol[" << i << "]: " << lime.lol[i] << endl;
+		i++;
+	}
+	
+	laser.barA = lime.lol[9];
+	
+	cout << laser.barA << endl;
+	cout << lime.rofl[15] << endl;
+	cout << flux.barC << endl;
+	cout << laser.rofl[4] << endl;
+}
+    
+    
+    

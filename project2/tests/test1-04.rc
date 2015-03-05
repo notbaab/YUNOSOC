@@ -1,0 +1,6 @@
+function: void main() {
+
+bool a = true;
+cout << a;
+
+}

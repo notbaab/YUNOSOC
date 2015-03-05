@@ -1,0 +1,57 @@
+structdef MYS{
+    int x;
+    float y;
+};
+
+structdef MYS2{
+    MYS * s1;
+    MYS * s2;
+};
+
+structdef MYS3{
+    MYS2 * ds1;
+    MYS2 * ds2;
+    MYS3 * ds3;
+};
+
+function : void main(){
+    MYS3 st;
+    new st.ds2;
+    new st.ds2->s2;
+    st.ds1->s1->x = 100;
+    st.ds2->s2->x = 10000;
+    cout << st.ds1->s1->x << endl;
+    cout << st.ds2->s2->x << endl;
+    cout << sizeof(st) << endl;
+
+    MYS3 * stp;
+    new stp;
+    new stp->ds2;
+    new stp->ds2->s2;
+    stp->ds2->s2->x = 20;
+
+    cout << stp->ds2->s2->x << endl;
+    
+    stp->ds2->s1->y = 12.32;
+    cout << stp->ds2->s1->y << endl;
+
+    new stp->ds3;
+    new stp->ds3->ds2;
+    new stp->ds3->ds2->s2;
+
+    stp->ds3->ds1->s1->x = 321;
+    stp->ds3->ds2->s2->y = 432.432;
+
+    cout << stp->ds3->ds1->s1->x << endl;
+    cout << stp->ds3->ds2->s2->y << endl;
+
+    delete st.ds2->s2;
+    delete st.ds2;
+    delete stp->ds2->s2;
+    delete stp->ds2;
+    delete stp->ds3->ds2->s2;
+    delete stp->ds3->ds2;
+    delete stp->ds3;
+    delete stp;
+
+}

@@ -1,0 +1,19 @@
+function : void main(){
+    int x = 100;
+    float f = 99.99;
+    float d = 0;
+    int z = 0;
+    bool b = true;
+    bool c = false;
+    cout << (float) x << endl;
+    cout << (int) f << endl;
+    cout << (bool) z << endl;
+    cout << (bool) x << endl;
+    cout << (bool) f << endl;
+    cout << (bool) d << endl;
+
+    cout << (int) b << endl;
+    cout << (int) c << endl;
+    cout << (float) b << endl;
+    cout << (float) c << endl;
+}

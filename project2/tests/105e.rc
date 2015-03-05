@@ -1,0 +1,49 @@
+bool luke = true;
+bool wedge = false;
+bool goldFive = true;
+bool redFive = true;
+
+function : void main()
+{
+	if (luke == true)
+	{
+		cout << "luke is true" << endl;
+	}
+	if (wedge == false)
+	{
+		cout << "wedge is false" << endl;
+	}
+	if (luke != false)
+	{
+		cout << "luke is not false" << endl;
+	}
+	if (wedge != true)
+	{
+		cout << "wedge is not true" << endl;
+	}
+	if (luke == redFive)
+	{
+		cout << "luke is red five" << endl;
+	}
+	if (wedge != goldFive)
+	{
+		cout << "wedge is not gold five" << endl;
+	}
+	if (true == true)
+	{
+		cout << "true is true" << endl;
+	}
+	if (false == false)
+	{
+		cout << "false is false" << endl;
+	}
+	if (true != false)
+	{
+		cout << "true is not false" << endl;
+	}
+	if (false != true)
+	{
+		cout << "false is not true" << endl;
+	}
+
+}

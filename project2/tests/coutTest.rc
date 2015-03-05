@@ -1,0 +1,18 @@
+function : void main()
+{
+  cout << "hello1" << "hello2" << "hello3" << endl;
+   
+  int x = 5;
+  cout << x << endl;
+
+  int y = 10;
+  cout << y << x << endl;
+  float f = 10.10;
+  cout << f << endl;
+
+  bool z = true;
+  bool w = false;
+  cout << z << endl;
+  cout << w << endl;
+}
+

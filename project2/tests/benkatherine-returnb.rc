@@ -1,0 +1,32 @@
+/*Testing function return by boolean*/
+
+bool a = true;
+bool b = false;
+
+
+function: void bar()
+{
+
+return;
+}
+
+function: int foo()
+{
+
+return 1;
+
+}
+
+function: bool foobar()
+{
+   bool a = foobar();
+   return a;
+
+}
+
+function: void main()
+{
+ bool a = foobar();
+ cout<<a<<endl; //should out true;
+
+}

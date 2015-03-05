@@ -1,0 +1,12 @@
+print 3: 3
+print 4: 4
+print 6: 6
+print 8: 8
+print 10: 10
+print 1: 1
+print true: true
+print false: false
+print 3.3: 3.30
+print 7.5: 7.50
+print 2.5: 2.50
+print 15.0: 15.00

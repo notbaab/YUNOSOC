@@ -1,0 +1,44 @@
+function : void main()
+{
+
+   // dereference int
+   int a = 5;
+   int * b = &a;
+   int ** d = &b;
+   int c = **d;
+   cout << a << " = " << c << endl;
+
+   // dereference bool
+   bool e = false;
+   bool * f = &e;
+   bool g = *f;
+
+   cout << e << " = " << g << endl;
+
+   // dereference float
+   float h = 5.5;
+   float * i = &h;
+   float j = *i;
+
+   cout << h << " = " << j << endl;
+
+
+   // dereference int
+   int x = 8;
+   int * y = &x;
+   cout << "SHOULD BE 8: " << *y << endl; 
+   int z = 9;
+   *y = 9;
+   cout << "SHOULD BE 9: " << *y << endl;
+
+   // dereference int
+   int k = 5;
+   int * l = &k;
+
+   int m = 8;
+   int * n = &m;
+   int ** o = &n;
+   *l = **o;
+
+   cout << "Should be 8: " << **o << endl;
+}

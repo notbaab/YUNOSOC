@@ -1,0 +1,23 @@
+float x[4];
+
+function : void main()
+{
+  x[2] = 2.0;
+  x[3] = 3.0;
+
+  cout << x[2] << endl;
+  cout << x[3] << endl;
+
+  bool a = x[2] > x[3]; // false
+  bool b = x[2] >= x[3]; // false
+  bool c = x[2] < x[3]; // true
+  bool d = x[2] <= x[3]; // true
+
+  cout << a << endl;
+  cout << b << endl;
+  cout << c << endl;
+  cout << d << endl;
+
+  float e = x[2] + x[3];
+  cout << e << endl;
+}

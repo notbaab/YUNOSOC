@@ -1,0 +1,8 @@
+function : int foo() {
+    cout << "second ";
+    return 0;
+}
+
+function : void main() {
+    cout << "first " << foo();
+}

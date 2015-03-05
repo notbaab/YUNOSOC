@@ -1,0 +1,33 @@
+function : void foo1(int * x, bool * y, float * z, bool * w)
+{
+  cout << "Should be 5: " << *x << endl;
+  cout << "Should be false: " << *y << endl;
+  cout << "Should be 6.6: " << *z << endl;
+  cout << "Should be true: " << *w << endl;
+
+}
+
+function : void main()
+{
+   int a = 5;
+   int * b = &a;
+   
+   bool c = false;
+   bool * d = &c;
+
+   float e = 6.6;
+   float * f = &e;
+   
+   bool g = true;
+   bool * h = &g;
+
+
+
+   cout << "Should be 5: " << *b << endl;
+   cout << "Should be false: " << *d << endl;
+   cout << "Should be 6.6: " << *f << endl;
+   cout << "Should be true: " << *h << endl;
+
+   foo1(b, d, f, h);
+ 
+}

@@ -1,0 +1,46 @@
+function : void main()
+{
+	if(true)
+	{
+		cout << "YES!" << endl;
+		if(3<0)
+		{
+			cout << "NO!" << endl;
+		}
+		else
+		{
+			cout << "YES!" << endl;
+			if(5.33 > 5.32)
+			{
+				if(2.5 < 1)
+				{
+					cout << "NO!" << endl;
+				}
+				else
+				{
+					cout << "YES!" << endl;
+				}
+				cout << "YES!" << endl;
+			}
+			else
+			{
+				cout << "NO!" << endl;
+			}
+			cout << "YES!" << endl;
+		}
+	}
+	else
+	{
+		cout << "NO!" << endl;
+	}
+
+	if(false)
+	{
+		cout << "NO!!" << endl;
+	}
+	else
+	{
+		cout << "YES!" << endl;
+	}
+
+}

@@ -1,0 +1,24 @@
+int a = 5;
+
+function: void woo(int &k)
+{
+      k = 999;
+}
+function: void wohoo(int &j)
+{
+    j = 9;
+    woo(j);
+}
+function: void woohooo2( int &a)
+{
+    wohoo(a);
+}
+
+function: void main()
+{
+
+   int y = 6;
+   cout<<"y is: " <<y<<endl;
+   woohooo2(y);
+   cout<<"y is now" <<y<<endl; 
+}

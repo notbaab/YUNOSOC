@@ -1,0 +1,42 @@
+float x = 10.1;
+float y = 0.1;
+function : void main(){
+    cout << "GLOBAL TO GLOBAL ASSIGN" << endl;
+    cout << x << endl;
+    x = y;
+    cout << x << endl;
+    cout << endl;
+    
+    cout << "GLOBAL TO LOCAL ASSIGN" << endl;
+    float z = 100.1;
+    cout << z << endl;
+    z = x;
+    cout << z << endl;
+    cout << endl;
+
+    cout << "CONSTANT TO GLOBAL ASSIGN" << endl;
+    cout << x << endl;
+    x = 2000.1;
+    cout << x << endl;
+    cout << endl;
+
+    cout << "CONSTANT TO LOCAL ASSIGN" << endl;
+    cout << z << endl;
+    z = 1000.1;
+    cout << z << endl;
+    cout << endl;
+
+    cout << "LOCAL TO GLOBAL ASSIGN" << endl;
+    cout << x << endl;
+    x = z;
+    cout << x << endl;
+    cout << endl;
+
+    cout << "LOCAL TO LOCAL ASSIGN" << endl;
+    float a = 9001.9001;
+    cout << z << endl;
+    z = a;
+    cout << z << endl;
+
+
+}

@@ -1,0 +1,13 @@
+function : int foo()
+{
+    int b = 555;
+	cout << "b is: " << b << endl;
+    return b;
+}
+
+function : void main()
+{
+    int c = foo();
+
+    cout << "c is: " << c << endl;
+}

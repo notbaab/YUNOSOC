@@ -1,0 +1,14 @@
+function : void main()
+{
+	int a = 5;
+	int b = 6;
+	int c = 7;
+    
+	a = ++b + c; // a = 14, b = 7
+	b = ++a + ++c; // a = 15, c = 8, b = 23
+	c = ++a - --b; // c = -6, a = 16, b = 22
+	
+	cout << "a is: " << a << endl; // 16
+	cout << "b is: " << b << endl; // 22
+	cout << "c is: " << c << endl; // -6
+}

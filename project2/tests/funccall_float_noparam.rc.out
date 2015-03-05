@@ -1,0 +1,20 @@
+Testing function calls returning FLOAT
+ 1. foo1() - returning 1 as literal
+ 2. foo1() -  received 1.00
+ 3. foo2() - returning 2 as local
+ 4. foo2() -  received 2.00
+ 5. foo3() - returning 3 as const local
+ 6. foo3() -  received 3.00
+ 7. foo4() - returning 4 as global
+ 8. foo4() -  received 4.00
+ 9. bar1() - returning 5 as direct
+10. bar2() - returning 5
+11. bar1() -  received 5.00
+12. foo5() - recursive start
+13. foo5() - returning 1
+14. foo5() - returning 2.00
+15. foo5() - returning 3.00
+16. foo5() - returning 4.00
+17. foo5() - returning 5.00
+18. foo5() - recursive end - final value: 5.00
+All 1.00 for recursive returns is correct until float arithmatic works

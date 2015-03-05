@@ -1,0 +1,47 @@
+function : void fubaz()
+{
+  int x;
+  int y;
+  int z;
+  float a;
+  float b;
+  float c;
+  bool d;
+  bool e;
+  bool f;
+
+  cout << "second call" << endl;
+
+  //save 36 bytes
+}
+
+function : void foo()
+{
+  int x; 
+
+  fubaz();
+  cout << "first call" << endl;
+
+  int y; 
+
+  //counter 2, save 8 bytes
+}
+
+
+
+function : void main()
+{
+  int x;
+  float y;
+  bool z; 
+
+  foo();
+
+  cout << "main" << endl;
+  cout << "CORRECT ORDER : second->first->main" << endl;
+  int a; 
+  float b; 
+  bool c; //counter 6, save 24
+  
+}
+

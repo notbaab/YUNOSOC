@@ -1,0 +1,10 @@
+function: int foo(){
+  cout<<"second";
+  return 0;
+}
+
+function: void main(){
+	//cout<<foo();
+	cout<<"first"<<foo()<<endl;
+	//cout<<"\n";
+}

@@ -1,0 +1,34 @@
+structdef MS {
+  int a;
+  int b;
+};
+
+structdef MS2 {
+  MS * a;
+  float b[5];
+  MS * c;
+  int d[5];
+};
+
+MS2 r;
+
+function : void f (MS2 &r, int i, float &b) {
+   b = -b;
+   i = i + 1;
+   r.d[i] = i;
+   r.b[i] = b;
+   cout << i << " " << b << "\n";
+}
+
+int i;
+
+function : void main() {
+   cin >> i;
+   r.d[0] = i;
+   cout << r.d[0] << " " << r.d[i] << " " << r.b[i] << "\n";
+   cin >> r.b[i];
+   f(r, r.d[0], r.b[i]);
+   cout << r.d[0] << " " << r.d[i] << " " << r.b[i] << "\n";
+   cout << r.d[i+1] << " " << r.b[i+1] << "\n";
+   cout << r.c->a << endl;
+}

@@ -1,0 +1,26 @@
+const int c = 11;
+structdef STRUCCY { float a [c]; STRUCCY * reccy; };
+
+function : int main(){
+   
+   STRUCCY st;
+   st.a;
+   
+   int i;
+   i = 0; 
+   while ( i < c ){
+      st.a[i] = i/3.33;
+      i ++;
+   }
+   
+   i = 0; 
+   while ( i + 1 < c ){
+      cout << st.a[i] << ",";
+      i ++;
+   }
+
+   cout << st.a[i] << endl;
+   
+   return 0;
+}
+

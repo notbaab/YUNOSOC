@@ -1,0 +1,25 @@
+main() - foo_recur(x): foo_recur() - x: 10
+foo_recur() - x: 9
+foo_recur() - x: 8
+foo_recur() - x: 7
+foo_recur() - x: 6
+foo_recur() - x: 5
+foo_recur() - x: 4
+foo_recur() - x: 3
+foo_recur() - x: 2
+foo_recur() - x: 1
+foo_recur() - x: 0
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+foo_recur() - x: -1
+-1

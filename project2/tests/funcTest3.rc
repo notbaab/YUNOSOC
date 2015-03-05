@@ -1,0 +1,18 @@
+function : int foo1()
+{
+  cout << "SHOULD PRINT 1" << endl;
+  int x = 5;
+  x = 1 + 2;
+  return x; //return int with changed value
+}
+
+
+
+function : void main()
+{
+  int a = foo1();
+
+
+  cout << a << endl;
+  cout << "SHOULD PRINT LAST" << endl;
+}

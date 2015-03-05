@@ -1,0 +1,38 @@
+Basic Literals
+----------------
+true  && true:  should be true   true
+true  && false: should be false  false
+false && false: should be false  false
+
+true  || true:  should be true   true
+true  || false: should be true   true
+false || false: should be false  false
+
+Basic Locals
+----------------
+true  && true:  should be true   true
+true  && false: should be false  false
+false && false: should be false  false
+
+true  || true:  should be true   true
+true  || false: should be true   true
+false || false: should be false  false
+
+Short Circuits
+----------------
+((a = 3 < 2) && (b = 3 > 2)): should be false  false
+                           a: should be false  false
+                           b: should be false  false
+
+((a = 3 > 2) && (b = 3 > 2)): should be true  true
+                           a: should be true  true
+                           b: should be true  true
+
+((a = 3 > 2) || (b = 3 < 2)): should be true  true
+                           a: should be true  true
+                           b: should be true  true
+
+((a = 3 < 2) || (b = 3 < 2)): should be false  false
+                           a: should be false  false
+                           b: should be false  false
+

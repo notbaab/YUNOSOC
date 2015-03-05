@@ -1,0 +1,16 @@
+float x = 6.66;
+
+function : float foo1()
+{
+	return x;
+}
+
+function : float foo ()
+{
+	return foo1();
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

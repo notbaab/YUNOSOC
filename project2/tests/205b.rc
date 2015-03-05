@@ -1,0 +1,86 @@
+int i3g = 3;
+int i6g = 6;
+int i7g = 7;
+
+float f3g = 3;
+float f6g = 6;
+float f7g = 7;
+
+function: void main() {
+    int i3l = 3;
+    int i6l = 6;
+    int i7l = 7;
+
+    float f3l = 3;
+    float f6l = 6;
+    float f7l = 7;
+
+    const int i3c = 3;
+    const int i6c = 6;
+    const int i7c = 7;
+
+    const float f3c = 3;
+    const float f6c = 6;
+    const float f7c = 7;
+
+    // Addition
+    cout << "1.\t" << 3.0 << " + " << 6   << "\t" << 3.0 + 6   << "\t" << 3.0 + 6 == 9.0 << endl;
+    cout << "2.\t" << 6.0 << " + " << i7g << "\t" << 6.0 + i7g << "\t" << 6.0 + i7g == 13.0 << endl;
+    cout << "3.\t" << 7.0 << " + " << i3l << "\t" << 7.0 + i3l << "\t" << 7.0 + i3l == 10.0 << endl;
+    cout << "4.\t" << 3.0 << " + " << i6c << "\t" << 3.0 + i6c << "\t" << 3.0 + i6c == 9.0 << endl;
+
+    cout << "5.\t" << f3g << " + " << i6g << "\t" << f3g + i6g << "\t" << f3g + i6g == 9.0 << endl; 
+    cout << "6.\t" << f6g << " + " << i7l << "\t" << f6g + i7l << "\t" << f6g + i7l == 13.0 << endl; 
+    cout << "7.\t" << f7g << " + " << i3c << "\t" << f7g + i3c << "\t" << f7g + i3c == 10.0 << endl; 
+
+    cout << "8.\t" << f3l << " + " << i6l << "\t" << f3l + i6l << "\t" << f3l + i6l == 9.0 << endl; 
+    cout << "9.\t" << f6l << " + " << i7c << "\t" << f6l + i7c << "\t" << f6l + i7c == 13.0 << endl; 
+
+    cout << "10.\t" << f3c << " + " << i6c << "\t" << f3c + i6c << "\t" << f3c + i6c == 9.0 << endl; 
+
+
+    // Subtraction
+    cout << "11.\t" << 3.0 << " - " << 6   << "\t" << 3.0 - 6   << "\t" << 3.0 - 6   == -3.0 << endl;
+    cout << "12.\t" << 6.0 << " - " << i7g << "\t" << 7.0 - i7g << "\t" << 6.0 - i7g == -1.0 << endl;
+    cout << "13.\t" << 7.0 << " - " << i3l << "\t" << 7.0 - i3l << "\t" << 7.0 - i3l == 4.0 << endl;
+    cout << "14.\t" << 3.0 << " - " << i6c << "\t" << 3.0 - i6c << "\t" << 3.0 - i6c == -3.0 << endl;
+
+    cout << "15.\t" << f3g << " - " << i6g << "\t" << f3g - i6g << "\t" << f3g - i6g == -3.0 << endl; 
+    cout << "16.\t" << f6g << " - " << i7l << "\t" << f6g - i7l << "\t" << f6g - i7l == -1.0 << endl; 
+    cout << "17.\t" << f7g << " - " << i3c << "\t" << f7g - i3c << "\t" << f7g - i3c == 4.0 << endl;
+
+    cout << "18.\t" << f3l << " - " << i6l << "\t" << f3l - i6l << "\t" << f3l - i6l == -3.0 << endl; 
+    cout << "19.\t" << f6l << " - " << i7c << "\t" << f6l - i7c << "\t" << f6l - i7c == -1.0 << endl; 
+
+    cout << "20.\t" << f3c << " - " << i6c << "\t" << f3c - i6c << "\t" << f3c - i6c == -3.0 << endl; 
+
+
+    // Multiplication
+    cout << "21.\t" << 3.0 << " * " << 6   << "\t" << 3.0 * 6   << "\t" << 3.0 * 6   == 18.0 << endl;
+    cout << "22.\t" << 6.0 << " * " << i7g << "\t" << 7.0 * i7g << "\t" << 6.0 * i7g == 42.0 << endl;
+    cout << "23.\t" << 7.0 << " * " << i3l << "\t" << 7.0 * i3l << "\t" << 7.0 * i3l == 21.0 << endl;
+    cout << "24.\t" << 3.0 << " * " << i6c << "\t" << 3.0 * i6c << "\t" << 3.0 * i6c == 18.0 << endl;
+
+    cout << "25.\t" << f3g << " * " << i6g << "\t" << f3g * i6g << "\t" << f3g * i6g == 18.0 << endl; 
+    cout << "26.\t" << f6g << " * " << i7l << "\t" << f6g * i7l << "\t" << f6g * i7l == 42.0 << endl; 
+    cout << "27.\t" << f7g << " * " << i3c << "\t" << f7g * i3c << "\t" << f7g * i3c == 21.0 << endl; 
+
+    cout << "28.\t" << f3l << " * " << i6l << "\t" << f3l * i6l << "\t" << f3l * i6l == 18.0 << endl; 
+    cout << "29.\t" << f6l << " * " << i7c << "\t" << f6l * i7c << "\t" << f6l * i7c == 42.0 << endl; 
+
+    cout << "30.\t" << f3c << " * " << i6c << "\t" << f3c * i6c << "\t" << f3c * i6c == 18.0 << endl; 
+
+    // Division
+    cout << "31.\t" << 3.0 << " / " << 6   << "\t" << 3.0 / 6   << "\t" << 3.0 / 6   == 0.5 << endl;
+    cout << "32.\t" << 6.0 << " / " << i7g << "\t" << 7.0 / i7g << "\t" << 6.0 / i7g == 6.0 / 7.0 << endl;
+    cout << "33.\t" << 7.0 << " / " << i3l << "\t" << 7.0 / i3l << "\t" << 7.0 / i3l == 7.0 / 3.0 << endl; 
+    cout << "34.\t" << 3.0 << " / " << i6c << "\t" << 3.0 / i6c << "\t" << 3.0 / i6c == 0.5 << endl;
+
+    cout << "35.\t" << f3g << " / " << i6g << "\t" << f3g / i6g << "\t" << f3g / f6g == 0.5 << endl; 
+    cout << "36.\t" << f6g << " / " << i7l << "\t" << f6g / i7l << "\t" << f6g / i7l == 6.0 / 7.0 << endl; 
+    cout << "37.\t" << f7g << " / " << i3c << "\t" << f7g / i3c << "\t" << f7g / i3c == 7.0 / 3.0 << endl; 
+    cout << "38.\t" << f3l << " / " << i6l << "\t" << f3l / i6l << "\t" << f3l / i6l == 0.5 << endl; 
+    cout << "39.\t" << f6l << " / " << i7c << "\t" << f6l / i7c << "\t" << f6l / i7c == 6.0 / 7.0 << endl; 
+
+    cout << "40.\t" << f3c << " / " << i6c << "\t" << f3c / i6c << "\t" << f3c / i6c == 0.5 << endl; 
+}

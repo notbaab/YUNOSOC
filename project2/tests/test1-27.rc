@@ -1,0 +1,26 @@
+//integer division (local, global, constant)
+//integer modulus (local, global, constant)
+
+const int i = 10;
+const int j = 2;
+int k = i / j; // 5
+
+
+function: void main() {
+	
+	int a = 20;
+	int b = 5;
+	int c = a / b; // 4
+	int d = a / i; // 2
+	int e = a / 2; //10
+	
+	cout << k << " " << c << " " << d << " " << e << " " << 30 / b << " " << a << endl;
+
+	a = a + 1; //21
+	b = a % 4; // 1
+	c = 103 % 26; //25
+	d = c % a; //4
+	
+	cout << a << " " << b << " " << c << " " << d << " " << e % 4 << " " << 22 % 14 << endl;
+	
+}

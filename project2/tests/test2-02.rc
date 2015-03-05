@@ -1,0 +1,19 @@
+//thurough testing of the +/- ops for floats
+
+float gblf = 12.95;
+
+function: void main() {
+
+	float f = 6.0;
+	f = -f;
+	f = +f;
+	cout << f << " " << -f << " " << +f << endl; //-6.00 6.00 -6.00
+	
+	cout << gblf << " " << -gblf << " " << +gblf << endl; //12.95 -12.95 12.95
+	
+	float f2 = -gblf;
+	gblf = +f2;
+	
+	cout << gblf << " " << -gblf << " " << +gblf << endl; //-12.95 12.95 -12.95
+
+}

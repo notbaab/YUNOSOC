@@ -1,0 +1,32 @@
+function : void main()
+{
+  //PHASE 1 only ">" op implemented
+
+  int x = 1;
+
+  if( x > 1 )
+  {
+    cout<<"PRINT NOTHING"<<endl;
+  }
+
+  if( x > 0 )
+  {
+    cout<<"CORRECT PRINT"<<endl; //should print
+  }
+
+
+  if(x > -5)
+  {
+    if(x > -4)
+    {
+      if(x > -1)
+      {
+        if(x > 0)
+	{
+          cout << "YAYYY CODE MADE IT" << endl; //should print
+        }
+      }
+    }
+  }
+
+}

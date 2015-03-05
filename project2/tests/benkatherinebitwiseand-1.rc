@@ -1,0 +1,21 @@
+const int a = 0;
+const int b = 1;
+
+int c = a & b; //0
+
+function : void main()
+{
+   int d = a & b; // 0
+   int e = b & b; // 1
+   int f = d & b; // 0 
+
+   int g = 1;
+   int h = 1;
+   int i = g & h; // 1
+
+   cout << c << endl; //0
+   cout << d << endl; //0
+   cout << e << endl; //1
+   cout << f << endl; //0
+   cout << i << endl; //1
+}

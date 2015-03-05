@@ -1,0 +1,6 @@
+function : void main(){
+    cout << "Null dereference check" << endl;
+    int * x;
+    *x = 10;
+    cout << "IF YOU SEE THIS YOU LOST THE GAME, TRY AGAIN" << endl;
+}

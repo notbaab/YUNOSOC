@@ -1,0 +1,19 @@
+function : void main()
+{
+   int x[2];
+
+   x[1] = 1;
+
+   x[1]++;
+
+   cout << x[1] << endl; //2
+
+   float y[2];
+
+   y[1] = 1.0;
+
+   y[1]++;
+
+   cout << y[1] << endl; //2
+
+}

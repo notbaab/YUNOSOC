@@ -1,0 +1,13 @@
+function : void main() 
+{
+    int k = 8233;
+	int *p = &k;
+
+	p++;
+	p++;
+	--p;
+	--p;
+	
+	cout << *p << endl;
+
+}

@@ -1,0 +1,12 @@
+// function call float functions:
+
+function : void foo4() {
+	cout << "You should see this";
+	return;
+	cout << ", but not this." << endl;
+	
+}
+
+function: void main() {
+	foo4();
+}

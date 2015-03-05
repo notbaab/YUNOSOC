@@ -1,0 +1,31 @@
+function : int main(){
+   int a = 3;
+   float b = 3.14;
+   float c = 123456;
+   
+   cout << a + a << ", ";
+   cout << a + b << ", ";
+   cout << a + c << endl;
+   
+   cout << b + a << ", ";
+   cout << b + b << ", ";
+   cout << b + c << endl;
+   
+   cout << c + a << ", ";
+   cout << c + b << ", ";
+   cout << c + c << endl;
+
+   cout << -a + a << ", ";
+   cout << -a + b << ", ";
+   cout << -a + c << endl;
+   
+   cout << b + -a << ", ";
+   cout << b + -b << ", ";
+   cout << b + -c << endl;
+   
+   cout << -c + -a << ", ";
+   cout << -c + -b << ", ";
+   cout << -c + -c << endl;
+
+   return 0;
+}

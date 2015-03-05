@@ -1,0 +1,18 @@
+function : int bar (int b){
+   cout << b;
+   return b + 100;
+}
+
+function : void foo (int & f){
+   cout << f;
+   f = bar(f);
+
+}
+function : int main(){
+   int a = 15;
+   cout << a;
+   foo(a);
+   cout << " " << a << endl;
+   
+   return 0;
+}

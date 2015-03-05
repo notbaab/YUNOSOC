@@ -1,0 +1,7 @@
+float x = 3.33;
+
+function : void main() {
+	int x = 4;
+
+	cout << "main" << ::x << "end" <<endl;
+}

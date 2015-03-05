@@ -1,0 +1,16 @@
+function : void main()
+{
+	int a = 5;
+	int b = 6;
+	int c;
+    
+	cout << "a before post++ is: " << a << endl;
+	
+	c = a++ - b;
+	
+	cout << "a after post++ is: " << a << endl;
+	cout << "c should be: " << c << endl; // -1
+	
+	c = ++a + b;
+	cout << "c should be: " << c << endl; // 13	
+}

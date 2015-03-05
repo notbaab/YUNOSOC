@@ -1,0 +1,15 @@
+//simple comparison operation
+
+function: void main() {
+	
+	int ten = 10;
+	int twenty = 20;
+
+	cout << (ten < twenty) << " " << (ten > twenty) << " " << (twenty != twenty) << " ";
+	cout << (ten == ten) << endl;
+
+	//and just to be safe:
+	cout << (ten > twenty) << " " << (ten < twenty) << " " << (twenty == twenty) << " ";
+	cout << (ten != ten) << endl;	
+	
+}

@@ -1,0 +1,34 @@
+structdef MYS{
+    int x;
+    int y;
+    int arr[10];
+};
+
+structdef ST{
+    MYS * s1;
+    MYS * s2;
+    MYS * sp2;
+};
+
+function : void main(){
+    ST ss;
+    ST * sp;
+    sp = &ss;
+
+    ST many[10];
+
+    int x = 0;
+    while( x < 10 ){
+        many[x].s1->arr[x] = x;
+        sp = &many[x];
+        sp->s2->arr[x] = x + 100;
+        x++;
+    }
+    x = 0;
+    while( x < 10 ){
+        cout << many[x].s1->arr[x] << endl;
+        sp = &many[x];
+        cout << sp->s2->arr[x] << endl;
+        x++;
+    }
+}

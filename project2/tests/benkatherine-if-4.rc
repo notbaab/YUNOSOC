@@ -1,0 +1,21 @@
+int x = 4;
+int y = 5;
+
+function : void main()
+{
+  if(x>y)
+  {
+    cout << "Katherine ";
+    if(x>y)
+    {
+      cout << "is ";
+    }
+    
+    cout << "a ";
+  }
+
+  if(y>x)
+  {
+    cout << "loser" << endl;
+  }
+}

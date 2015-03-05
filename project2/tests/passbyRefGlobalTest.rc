@@ -1,0 +1,35 @@
+int a = 1;
+float b = 1.1;
+bool c = true;
+
+
+function : void foo(int &x)
+{
+  x = 2;
+}
+
+function : void foo1(float &y)
+{
+  y = 2.2;
+}
+
+function : void foo2(bool &z)
+{
+  z = false;
+}
+
+
+function : void main()
+{
+  cout << "before a: 1: " << a << endl;
+  foo(a);
+  cout << "after a: 2: " << a << endl;
+
+  cout << "before b: 1.10: " << b << endl;
+  foo1(b);
+  cout << "after b: 2.20: " << b << endl;
+
+  cout << "before c: true: " << c << endl;
+  foo2(c);
+  cout << "after c: false: " << c << endl;
+}

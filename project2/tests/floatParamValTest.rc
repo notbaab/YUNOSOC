@@ -1,0 +1,76 @@
+function : void foo(float a)
+{
+  cout << "print 1.1: " << a << endl;
+  a = 10.10;
+}
+
+
+function : void foo2(float a, float b)
+{
+  cout << "print 1.1: " << a << endl;
+  cout << "print 2.2: " << b << endl;
+  a = 10.10;
+  b = 10.10;
+}
+
+function : void foo3(float a, float b, float c)
+{
+  cout << "print 1.1: " << a << endl;
+  cout << "print 2.2: " << b << endl;
+  cout << "print 3.3: " << c << endl;
+  a = 10.10;
+  b = 10.10;
+  c = 10.10;
+}
+
+function : void foo4(float a, float b, float c, float d)
+{
+  cout << "print 1.1: " << a << endl;
+  cout << "print 2.2: " << b << endl;
+  cout << "print 3.3: " << c << endl;
+  cout << "print 4.4: " << d << endl;
+  a = 10.10;
+  b = 10.10;
+  c = 10.10;
+  d = 10.10;
+}
+
+function : void foo5(float a, float b, float c, float d, float e)
+{
+  cout << "print 1.1: " << a << endl;
+  cout << "print 2.2: " << b << endl;
+  cout << "print 3.3: " << c << endl;
+  cout << "print 4.4: " << d << endl;
+  cout << "print 5.5: " << e << endl;
+  a = 10.10;
+  b = 10.10;
+  c = 10.10;
+  d = 10.10;
+  e = 10.10;
+}
+
+
+
+function : void main()
+{
+  float x = 1.1;
+  float y = 2.2;
+  float z = 3.3;
+  float w = 4.4;
+  float u = 5.5;
+
+  foo(x);
+  cout << "1.1: " << x << endl;
+
+  foo2(x,y);
+  cout << "2.2: " << y << endl;
+
+  foo3(x,y,z);
+  cout << "3.3: " << z << endl;
+
+  foo4(x,y,z,w);
+  cout << "4.4: " << w << endl;
+
+  foo5(x,y,z,w,u);
+  cout << "5.5: " << u << endl;
+}

@@ -1,0 +1,22 @@
+function : int main() {
+ int a = 3;
+ int x[5];
+ foreach (int & i : x) {
+   i = a++;
+ }
+ int  y[3];
+ int p = 0;
+ foreach (int i: x) {
+ 	cout << i << endl;
+ }
+ foreach (int i : x) {
+ 	p = p + i;
+ 	foreach (int & s : y) {
+ 		s = p;
+        }
+        foreach (int s : y) {
+ 		cout << s << endl;
+ 	}
+ }
+ return 0;
+}

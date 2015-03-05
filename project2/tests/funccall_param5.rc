@@ -1,0 +1,66 @@
+// 5. local variable as value arg        - load from it's location (ex. %fp - 4) into register (ex. %o0)
+
+function: void foo6(int x, int y, float z, float a, bool b, bool c) {
+    cout << "foo6(x, y, z, a, b, c): (" << x++ << "," << y++ << "," << z++ << "," << a++ << "," << b << "," << c << ")" << endl;
+    b = !b;
+    c = !c;
+    cout << "foo6(x, y, z, a, b, c): (" << x << "," << y << "," << z << "," << a << "," << b << "," << c << ")" << endl;
+}
+
+function: void foo5(int x, int y, float z, float a, bool b) {
+    cout << "foo5(x, y, z, a, b): (" << x++ << "," << y++ << "," << z++ << "," << a++ << "," << b << ")" << endl;
+    b = !b;
+    cout << "foo5(x, y, z, a, b): (" << x << "," << y << "," << z << "," << a << "," << b << ")" << endl;
+}
+
+function: void foo4(int x, int y, float z, float a) {
+    cout << "foo4(x, y, z, a): (" << x++ << "," << y++ << "," << z++ << "," << a++ << ")" << endl;
+    cout << "foo4(x, y, z, a): (" << x << "," << y << "," << z << "," << a << ")" << endl;
+}
+
+function: void foo3(int x, int y, float z) {
+    cout << "foo3(x, y, z): (" << x++ << "," << y++ << "," << z++ << ")" << endl;
+    cout << "foo3(x, y, z): (" << x << "," << y << "," << z << ")" << endl;
+}
+
+function: void foo2(int x, int y) {
+    cout << "foo2(x, y): (" << x++ << "," << y++ << ")" << endl;
+    cout << "foo2(x, y): (" << x << "," << y << ")" << endl;
+}
+
+function: void foo1(int x) {
+    cout << "foo1(x): (" << x++ << ")" << endl;
+    cout << "foo1(x): (" << x << ")" << endl;
+}
+
+function: void main() {
+
+    int x = 1;
+    const int y = 2;
+    float z = 3.0;
+    const float a = 4.0;
+    bool b = true;
+    const bool c = false;
+
+    foo1(x);
+    foo2(x, y);
+    foo3(x, y, z);
+    foo4(x, y, z, a);
+    foo5(x, y, z, a, b);
+    foo6(x, y, z, a, b, c);
+
+    cout << "main(x, y, z, a, b, c): (" << x << "," << y << "," << z << "," << a << "," << b << "," << c << ")" << endl;
+}
+
+
+
+
+    // Local and global variables as value args
+    // 1. value param as value arg         - put in out register (ex. %o0)
+    // 2. value param as reference param     - store in param location (ex. %fp + 68)
+    // 3. reference param as value arg       - load from address into out register (ex. %o0)
+    // 4. reference param as reference arg - put address in register (ex. %o0)
+    // 6. local variable as reference arg    - load address of location (ex. %fp - 4) into register (ex. %o0) 
+    // 7. global variable as value arg       - load value from it's location (ex. %g0 + local)
+    // 8. global variable as reference arg - load address of location into register (ex. %o0)
+

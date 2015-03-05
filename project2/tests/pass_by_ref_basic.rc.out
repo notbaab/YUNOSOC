@@ -1,0 +1,22 @@
+Every other variable, starting with the top is passbyref
+before func
+12
+100
+12.00
+100.00
+false
+true
+Function
+24
+80
+24.00
+80.00
+true
+false
+after func
+24
+100
+24.00
+100.00
+true
+true

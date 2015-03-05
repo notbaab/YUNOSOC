@@ -1,0 +1,7 @@
+static int x = 3;
+
+function : void main() {
+	static int x = 4;
+
+	cout << "main" << ::x << x << "end" <<endl;
+}

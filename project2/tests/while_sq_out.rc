@@ -1,0 +1,14 @@
+int x = 20;
+function : int p(int x, int y, int z, int a, int b, int c){
+    cout << x << "   " << y << "   " << z << "   " << a << "   " << b << "   " << c << endl;
+    return x + 1;
+}
+function : float main(){
+    int i = 50;
+    while( i  < 60 ){
+        i = p(i, i+1, i+2, i+3, i+4, i+5);
+        continue;
+        x = p(x, x+1, x+2, x+3, x+4, x+5);
+    }
+    return 1.2;
+}

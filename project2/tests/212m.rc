@@ -1,0 +1,18 @@
+structdef S{int a; int b;};
+
+function : void foo (S & a){
+  cout << a.a << " " << a.b << endl;
+  a.a = a.a + 1;
+  a.b = a.b + 2;
+}
+
+
+S s;
+
+function : int main(){
+  foo(s);
+  foo(s);
+  foo(s);
+
+  return 0;
+}

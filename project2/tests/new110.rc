@@ -1,0 +1,12 @@
+function: void main()
+{
+   int x  = 5;
+  cout << 6 > x << endl;
+  cout << 6 > x << endl;
+  cout << 6 > x << endl;
+  cout << x > 6 << endl;
+  cout << 2 > 3 <<  endl;
+  cout << 3 > 2 << endl;
+  
+
+}

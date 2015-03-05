@@ -1,0 +1,17 @@
+function : void main()
+{
+
+  float x = 10.0;
+  float y = 1.0;
+
+  float z = 5.23;
+  float w = 2.22;
+
+  if( x > y )
+  {
+    if( z > w )
+    {
+      cout << "ONLY THIS SHOULD PRINT YAYYY" << endl;
+    }
+  }
+}

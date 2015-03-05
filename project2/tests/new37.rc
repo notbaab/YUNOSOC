@@ -1,0 +1,7 @@
+bool x = true;
+
+function : void main() {
+	bool x = false;
+
+	cout << "main" << x << "end" <<endl;
+}

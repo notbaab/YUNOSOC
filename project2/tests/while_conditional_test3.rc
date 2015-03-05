@@ -1,0 +1,29 @@
+function : void main()
+{
+    int x = 0;
+    int y = 13;
+	int z = 50;
+	
+	int amoeba = 42;
+	
+    while (x < 5)
+    {
+        while (y < 15)
+		{
+			cout << "Hello y" << endl;
+			y++;
+			while (z <= 50)
+			{
+				cout << "Hello z ONCE" << endl;
+				z++;
+			}
+			while (amoeba < 44)
+			{
+				cout << "It's an amoeba" << endl;
+				amoeba++;
+			}
+		}
+		cout << "Hello x" << endl;
+        x++;
+    }
+}

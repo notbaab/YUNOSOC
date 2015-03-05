@@ -1,0 +1,28 @@
+function : void main()
+{
+    int w = 0;
+    int x = 1;
+    int y = -5;
+    int z = ((x|y^y)&w) & 2147000000;
+    cout << "((x|y^y)&w)&2147000000 EXPECTED OUTPUT: 0"<< " ACTUAL OUTPUT: " << z << endl;
+
+
+    int x2 = 0xA; //1010    base10: 10
+    int y2 = 0xB; //1011    base11: 11
+    int z2 = x2^y2;
+
+    cout << "x2^y2 EXPECTED OUTPUT: 1" << " ACTUAL OUTPUT: " << z2 << endl;
+
+    int z3 = (x2^y2) & (x2^y2); //1 & 1 == 1
+    cout << "(x2^y2) & (x2^y2) , EXPECTED OUTPUT: 1" << " ACTUAL OUTPUT: " << z3 << endl;
+
+    int z4 = (x2^y2) | (x2^y2); //1|1 == 1
+    cout << "(x2^y2) | (x2^y2) , EXPECTED OUTPUT: 1" << " ACTUAL OUTPUT: " << z4 << endl;
+
+    int x3 = 012; //2+8= 10 in base 10, 0xA base16, 1010 binary
+    int z5 = x3^y2; //1010 ^ 1011 == 1
+
+    cout << "x3^y2 EXPECTED OUTPUT: 1" << " ACTUAL OUTPUT: " << z5 << endl;
+
+
+}

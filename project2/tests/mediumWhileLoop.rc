@@ -1,0 +1,24 @@
+function : void main()
+{
+  int x = 0;
+  while(x < 1)
+  {
+    cout << "in x loop" << endl;
+    int y = 0;
+    while(y < 1)
+    {
+      y = y + 1;
+      cout << "in y loop" << endl;
+      int z = 0;
+      while(z < 1)
+      {
+        z = z + 1;
+        cout << "in z loop" << endl;
+      }
+
+    }
+    x = x + 1;
+  }
+
+
+}

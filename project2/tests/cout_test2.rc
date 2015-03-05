@@ -1,0 +1,20 @@
+// tests cout with various arithmetic operations
+
+int x = 1; 
+
+function : void main(){
+
+int x = 5;
+int y = 10; 
+
+cout << 1+0 << endl;   // 1
+cout << 3-1 << endl;   // 2
+cout << 3*1 << endl;   // 3
+cout << 8/2 << endl;   // 4
+
+cout << x+y << endl;   // 15
+cout << y-x << endl;   // 5
+cout << x*y << endl;   // 50
+cout << y/x << endl;   // 2
+
+}

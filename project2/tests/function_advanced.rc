@@ -1,0 +1,73 @@
+int gi = 0xff;
+float gf = 1.618;
+int* gpi;
+float* gpf;
+
+structdef S{
+	int padding[20000];
+	int id;
+};
+
+S gs;
+S* gps;
+
+function : S foo(int &ri, float &rf, int *pi, float *pf, int* &rpi, float* &rpf, S& rs, S* ps, S* &rps, S s, int &arr[3]){
+	cout<<ri<<endl;
+	cout<<rf<<endl;
+	cout<<*pi<<endl;
+	cout<<*pf<<endl;
+	cout<<*rpi<<endl;
+	cout<<*rpf<<endl;
+	cout<<rs.id<<endl;
+	cout<<ps->id<<endl;
+	cout<<rps->id<<endl;
+	cout<<s.id<<endl;
+	cout<<arr[1]<<endl;
+	ri++;
+	rf++;
+	pi = &gi;
+	pf = &gf;
+	rpi = &gi;
+	rpf = &gf;
+	rs.id++;
+	ps = &gs;
+	rps = &gs;
+	s.id = 0;
+	arr[1]++;
+	return s;
+}
+
+int arr[3];
+
+function : void foo1(S* &rps){
+	cout<<rps->id<<endl<<endl;
+	rps = &gs;
+}
+
+function : void main(){
+	arr[1] = 33333;
+	int li = 1111;
+	int *lpi = &li;
+	float lf = 3.14;
+	float *lpf = &lf;
+	S ls;
+	S* lps = &ls;
+	ls.id = 0xffff;
+	gs.id = 23333;
+	gps = &ls;
+	gpi = &li;
+	gpf = &lf;
+	S res = foo(gi, gf, gpi, gpf, lpi, lpf, gs, gps, lps, ls, arr);
+	cout<<gi<<endl;
+	cout<<gf<<endl;
+	cout<<*gpi<<endl;
+	cout<<*gpf<<endl;
+	cout<<*lpi<<endl;
+	cout<<*lpf<<endl;
+	cout<<gs.id<<endl;
+	cout<<gps->id<<endl;
+	cout<<lps->id<<endl;
+	cout<<ls.id<<endl;
+	cout<<arr[1]<<endl;
+	cout<<res.id<<endl;
+}

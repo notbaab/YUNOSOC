@@ -1,0 +1,45 @@
+function : void main()
+{
+	int puppy;
+	float kitten;
+	int kitty;
+	float dog;
+	
+	puppy = 5;
+	kitten = 9.0;
+	kitty = 3;
+	dog = 14.5;
+	
+	int unwanted = 4;
+	int awesome = 8;
+	
+	while (kitty < puppy)
+	{
+		if (dog > kitten)
+		{
+			while (unwanted < awesome)
+			{
+				cout << "unwanted is less than awesome" << endl;
+				unwanted++;
+			}
+			
+			unwanted = 4;
+			
+			while (unwanted < awesome)
+			{
+				cout << "unwanted is still less than awesome" << endl;
+				unwanted = unwanted + 2;
+			}
+		
+		}
+		
+		if (puppy > kitten)
+		{
+			cout << "this should not be printed" << endl;
+		}
+		
+		kitty++;
+	}
+	
+}
+

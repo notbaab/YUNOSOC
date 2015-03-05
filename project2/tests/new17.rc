@@ -1,0 +1,16 @@
+bool x = false;
+bool y = true;
+
+function : bool foo ()
+{
+	static bool x = true;
+	static bool y = false;
+
+	cout << "foo" << ::x << ::y << x << y << endl;
+	return x;
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

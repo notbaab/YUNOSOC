@@ -1,0 +1,22 @@
+FLOAT
+----------------------------------------------------
+Pre Increment
+-------------
+should print 3.00: 3.00
+should print 3.00: 3.00
+
+Post Increment
+-------------
+should print 2.00: 2.00
+should print 3.00: 3.00
+
+Pre Decrement
+-------------
+should print 1.00: 1.00
+should print 1.00: 1.00
+
+Post Decrement
+-------------
+should print 2.00: 2.00
+should print 1.00: 1.00
+

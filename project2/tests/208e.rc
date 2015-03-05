@@ -1,0 +1,13 @@
+function : void main()
+{
+  int x = 0; 
+  while(x < 3)
+  {
+    x++;
+    cout << "Should print" << endl;
+    continue;
+    cout << "Should NOT print" << endl;
+  }
+
+  cout << "End Test" << endl;
+}

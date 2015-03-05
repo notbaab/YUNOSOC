@@ -1,0 +1,10 @@
+function : void main () {
+
+      float c;
+
+      c = 1.5;
+
+      cout << c << endl;
+
+}
+

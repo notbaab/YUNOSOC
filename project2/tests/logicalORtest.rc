@@ -1,0 +1,33 @@
+function : void main()
+{
+  bool a = true;
+  bool b = false;
+  bool c = true;
+
+  cout << "THREE STATEMENTS SHOULD PRINT" << endl;
+
+  if( a || b )
+  {
+    //true || false
+    cout << "SHOULD PRINT" << endl;
+  }
+
+  if( b || b )
+  {
+    //false || false
+    cout << "DO NOT PRINT" << endl;
+  }
+
+  if( a || c )
+  {
+    //true || true
+    cout << "SHOULD PRINT" << endl;
+  }
+
+  if( b || c )
+  {
+    //false || true
+    cout << "SHOULD PRINT" << endl;
+  }
+
+}

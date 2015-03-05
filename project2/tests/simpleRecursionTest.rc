@@ -1,0 +1,22 @@
+function : int foo(int n)
+{
+
+  if( n == 0 )
+  {
+    return n;
+  }
+  else
+  {
+    return foo(n-1);
+  }
+  return 333;
+
+}
+
+
+function : void main()
+{
+  cout << "SHOULD BE 0: " << foo(3) << endl;
+
+
+}

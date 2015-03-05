@@ -1,0 +1,29 @@
+float a = 4.5;
+int b = 5;
+int x[3];
+float y[4];
+
+function : void main()
+{
+  float c = 4;
+  float d = b;
+
+  cout << c << endl; //4
+  cout << d << endl; //5
+
+  x[2] = 3;
+
+  float e = x[2]; 
+
+  cout << x[2] << endl; // 3
+  cout << e << endl; // 3.00
+
+  y[3] = 3.3;
+
+  cout << y[3] << endl; //3.3
+
+  float f = y[3];
+
+  cout << f << endl; //3.3
+
+}

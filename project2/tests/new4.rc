@@ -1,0 +1,6 @@
+bool x = true;
+bool y = false;
+
+function : void main() {
+	cout << x << endl << y;
+}

@@ -1,0 +1,39 @@
+/*Testing UnarySign for int*/
+/*
+float x = -5;
+float y = -6.0;
+
+function: void main()
+{
+   float a = x*y;
+   float b = x-y;
+   float c = x+y; 
+   float d = y/x;
+   cout<<a<<endl; // should print out 30
+   cout<<b<<endl; // should print out 1
+   cout<<c<<endl; // should print out -11
+   cout<<d<<endl; // should print out 1.2
+   cout<<4<< endl; // 4
+   cout<<a+b<<endl; // 31
+   cout<<x+y<<endl; // -11
+   cout<<x<<endl; //-5
+}*/
+
+
+float a = 5;
+float b = 10;
+
+
+function: void main()
+{
+   float t = a * b;
+   float u = -5;
+   float v = -t + u;
+   float w = -v;
+
+   cout << u << endl; // -5.00
+   cout<< v <<endl; // should be -55
+   cout<< w <<endl; // should be 55
+   cout<< v+w << endl; // should be 0
+
+}

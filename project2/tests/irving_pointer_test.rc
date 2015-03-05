@@ -1,0 +1,91 @@
+structdef MYS
+{
+	int x;
+	int y;
+	bool z;
+	float e[32];
+};
+
+function : int * lots( int a, int b, int c )
+{
+	return &a;
+}
+
+function : int foo( int x )
+{
+	return x;
+}
+
+function : int * bar(int y)
+{
+	int * x;
+	new x;
+
+	*x = y;
+
+	return x;
+}
+
+function : int *** bar2(int y)
+{
+	int *** x;
+	new x;
+	new *x;
+	new **x;
+
+	***x = y;
+	return x;
+}
+
+int q;
+int * ptr;
+
+function : void main( )
+{
+	int * x;
+	int y = 5;
+	int ** z;
+	bool barr[10];
+
+	new x;
+	new z;
+	new *z;
+
+	y = *x;
+	y = **z;
+	*x = 5;
+	
+	*x = **z = *x = *x;
+
+	cout << *x << endl;
+
+	int a[10];
+
+	a[*x] = 3;
+
+	cout << a[foo(*x)] = 3 << endl;
+
+	y = *bar(*x);
+
+	cout << y << endl;
+	
+	cout << *bar(*x) = 3 << endl;
+
+	cout << ***bar2(*x) = 30 << endl;
+
+	cout << *bar(a[*x = 3]) = 90 << endl;
+
+	MYS * ccc;
+	new ccc;
+
+	(*ccc).x = 42;
+	(*ccc).x = (*ccc).x;
+
+	cout << (*ccc).x << endl;
+
+	x++;
+
+	ccc++;
+
+	*lots(*x, **z, *x) = 3;
+}

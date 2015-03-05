@@ -1,0 +1,6 @@
+function : void main(){
+	int a = 3;
+	float b = 2.10;
+	bool c = true;
+	cout << a << " " << b << " " << c << endl;
+}

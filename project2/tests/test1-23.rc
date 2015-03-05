@@ -1,0 +1,11 @@
+//global integer var * var multiplication
+
+const int k = 3;
+const int l = 4;
+int m = k * l;
+
+function: void main() {
+	
+	cout << k << " * " << l << " = " << m << endl;
+
+}

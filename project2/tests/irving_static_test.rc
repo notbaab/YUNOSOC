@@ -1,0 +1,44 @@
+const int x = 4;
+static int y = x + 7;
+
+function : void recurse( int x )
+{
+	static int y = 3;
+	cout << y << endl;
+
+	if( y < 5 )
+	{
+		y++;
+		recurse( y );
+	}
+}
+
+int * b;
+
+function : void main()
+{
+	int x;
+
+	cout << y << endl;
+
+	int y = y + 1;
+	static float z = 3.12;
+	static int * ptr;
+
+	ptr = &y;
+	b = &y;
+
+	cout << *ptr << endl;
+	cout << *b << endl;
+	cout << y << endl;
+
+	{
+		int y = y + 1;
+		cout << y << endl;
+	}
+
+	cout << y << endl;
+	cout << z << endl;
+
+	recurse( 0 );
+}

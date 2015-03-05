@@ -1,0 +1,35 @@
+//thorough float * / ops
+
+const float gblf = 12.80;
+float gvlfConstTimesConst = 2.3 * 12.80; 							//29.44
+float gblfConstTimesGlobal = 2.1 * gblf;							//26.88
+const float gblfTimesConst = gblf * 2.2;									//28.16
+float gblfTimesGlbl = gblf * gblfTimesConst;						//360.45
+
+float gblfConstDivConst = 81.92 / 20.48;							//4.00
+float gblfConstDivGlobal = 81.92 / gblf;							//6.40
+const float gblfDivConst = gblf / 1.9;									//6.74
+float gblfDivGlbl = gblf / gblfDivConst;							//1.90
+
+function: void main() {
+
+	float localFloat = 3.5;											//3.50
+	float localConstTimesConst = 3.2 * 3.4;							//10.88
+	float localConstTimesLocalFloat = 3.0 * localFloat;				//10.50
+	float localFloatTimesConst = localFloat * 3.7;					//12.95
+	float localFloatTimesLocal = localFloat * localFloatTimesConst; //45.33
+	float localFloatTimesGlobal = localFloat * gblf;				//44.80
+	
+	float localConstDivConst = 69.0 / 23.0;							//3.00
+	float localFloatDivConst = localFloatTimesConst / 3.8;			//3.41
+	float localFloatDivLocal = localFloatDivConst / localFloat;		//0.97
+	float localFloatDivGlobal = localFloatTimesGlobal / gblf;		//3.50
+	
+	cout << gblf << " " << gvlfConstTimesConst << " " << gblfConstTimesGlobal << " " << gblfTimesConst << " " << gblfTimesGlbl << endl;
+	cout << gblfConstDivConst << " " << gblfConstDivGlobal << " " << gblfDivConst << " " << gblfDivGlbl << endl << endl;
+	
+	cout << localFloat << " " << localConstTimesConst << " " << localConstTimesLocalFloat << " ";
+	cout << localFloatTimesConst << " " << localFloatTimesLocal << " " << localFloatTimesGlobal << endl;
+	cout << localConstDivConst << " " << localFloatDivConst << " " << localFloatDivLocal << " " << localFloatDivGlobal << " ";
+
+}

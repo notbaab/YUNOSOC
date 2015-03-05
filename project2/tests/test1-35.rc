@@ -1,0 +1,10 @@
+// basic integer function call
+
+function : int foo() {
+	return 123;
+}
+
+function: void main() {
+	int x = foo();
+	cout << x << endl;
+}

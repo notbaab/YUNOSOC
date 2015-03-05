@@ -1,0 +1,10 @@
+bool a = true;
+
+function: void main()
+{
+  a = false;
+  bool b = true;
+  cout<<a<<endl; // should print out false
+  cout<<b<<endl; // should print out true
+
+}

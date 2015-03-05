@@ -1,0 +1,24 @@
+int i;
+bool b1;
+function : void foo(int j) 
+{
+    cout << b1 = i > 0 << endl;
+    if (b1 = i >0)
+    {
+        i=i-1;
+        cout << i << endl;
+        foo(i=i-1);
+    }
+    
+}
+
+function : void main()
+{
+    i = 4;
+    
+    foo(4);
+
+
+}
+
+

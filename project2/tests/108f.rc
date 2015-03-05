@@ -1,0 +1,6 @@
+function: void main() {
+    cout << "exit(0) as literal" << endl;
+    exit(0);
+
+    cout << "SHOULD NOT PRINT" << endl;
+}

@@ -1,0 +1,18 @@
+int x = 4;
+int y = 5;
+
+function : void main()
+{
+   if(x>y)
+   {
+     cout << 4 << endl;
+   }
+   if(x>y)
+   {
+     cout << 5 << endl;
+   }
+   if(y>x)
+   {
+       cout << 6 << endl;
+   }
+}

@@ -1,0 +1,9 @@
+int *woo;
+
+function : void main()
+{
+	new woo;
+	*woo = 99;
+	
+	cout << *woo << endl;
+}

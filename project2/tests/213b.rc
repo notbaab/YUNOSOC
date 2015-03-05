@@ -1,0 +1,14 @@
+const int c = 10;
+float f[c];
+int i[c];
+bool b[c];
+
+
+function : int main(){
+   int i = 0;
+   while (i < c){
+      cout << f[i] << ::i[i] << b[i] << endl;
+      ++i;
+   }
+   return 0;
+}

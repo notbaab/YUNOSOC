@@ -1,0 +1,21 @@
+const int a = 0;
+const int b = 1;
+
+int c = a | b; //1
+
+function : void main()
+{
+   int d = a | b; // 1
+   int e = a | a; // 0
+   int f = d | b; // 1 
+
+   int g = 1;
+   int h = 0;
+   int i = g | h; // 0
+
+   cout << c << endl; //1
+   cout << d << endl; //1
+   cout << e << endl; //0
+   cout << f << endl; //1
+   cout << i << endl; //1
+}

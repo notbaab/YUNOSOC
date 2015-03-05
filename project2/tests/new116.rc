@@ -1,0 +1,68 @@
+int x = 5;
+static float y = 5.55;
+
+function : float foo1()
+{
+	return 3;
+}
+
+function : bool foo2(int x, float y ,bool z)
+{
+	bool a = false;
+
+	cout  << a == z << endl; //22,30
+	cout << z == a << endl;	//23,31
+
+	cout << x == y << endl;//24,32
+	cout << y == x << endl;//25,33
+
+	cout  << y == x+x << endl;//26,34
+	cout << x*y == y << endl;//27,35
+	cout << x/5 == foo1() << endl;//28,36
+
+	return (x*x == y*y);
+}
+
+function : bool foo3()
+{
+	return false;
+}
+
+function : void main()
+{
+	const int x = 3;
+	static float y = 3.33;
+
+	cout << 3 == 3 << endl;  //1
+	cout << 4.44 == 4.44 << endl;  //2	
+	cout << x+0.33 == y << endl;   //3
+	cout << x == y-0.33 << endl;  //4
+	cout << 3 == 3.00 << endl;    //5
+	cout << foo1() == 3.00 << endl; //6
+	cout << 3.00 == foo1() << endl; //7
+	cout << 3 == foo1() << endl; //8
+	cout << foo1() == 3 << endl;  //9
+	cout << true == true << endl;  //10
+	cout << false == false << endl; //11
+	cout << foo3() == foo3() << endl; //12
+	
+
+	cout << true == false << endl;  //13
+	cout << false == true << endl; //14
+
+	cout << 3 == 3.33+3 << endl; //15
+	cout << 3.33+3 == 3 << endl; //16
+
+	cout << 3.33+3 == 3.33 << endl;//17
+	cout << 3.33 == 3.33+3 << endl;//18
+
+	cout << 5 == foo1() << endl;//19
+	cout << 5 == foo1()+foo1() << endl;//20
+	cout << 5+foo1() == x << endl;//21
+
+	cout << foo2(x,y,true); //29
+
+	cout <<foo2(::x,::y,true); //37
+	
+	
+}

@@ -1,0 +1,24 @@
+int blood = 111;
+int *vampire;// = &blood;
+
+function : void something(int ** p){
+   **p = 22;
+   p = &vampire;
+}
+
+function : void main()
+{	
+	vampire = &blood;
+	int white = 44;
+	int *whitePtr = &white;
+	
+	cout << "white is: " << white << endl; //44
+	
+	int ** cool = &whitePtr;
+	
+	something(cool);
+	
+	cout << "white is: " << white << endl; //22
+	cout << "cool's value is: " << **cool << endl; //22
+
+}

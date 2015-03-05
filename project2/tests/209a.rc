@@ -1,0 +1,18 @@
+function : int fib (int a){
+  if ( a < 2 ) { 
+    return 1; 
+  }
+   
+   return fib(a-1) + fib(a-2);
+}
+
+function : int main(){
+   int i = 0;
+   while (i < 10){
+      cout << fib(i) << ", " ;
+      i++;
+   }
+   cout << fib(i) << endl;
+   
+   return 0;
+}

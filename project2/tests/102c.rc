@@ -1,0 +1,23 @@
+function : void main(){
+    int x = 10;
+    int y = 32;
+    int z = x + y + 123;
+    float f = 12.32;
+    cout << "EXPECT 10: ";
+    cout << x << endl;
+    cout << "EXPECT 12.32: ";
+    cout << f << endl;
+    cout << "EXPECT 165: ";
+    cout << z << endl;
+    float d = f + 123.3;
+    cout << "EXPECT 135.62: ";
+    cout << d << endl;
+    
+    int x1 = 6 * 9 * 4;
+    cout << "EXPECT 64: ";
+    cout << (8*8) << endl;
+    cout << "EXPECT 216: ";
+    cout << x1 << endl;
+
+
+}

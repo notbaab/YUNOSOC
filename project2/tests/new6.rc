@@ -1,0 +1,7 @@
+
+function : void main() {
+	static int x = 3;
+	static int y = 55;
+
+	cout << x << endl << y;
+}

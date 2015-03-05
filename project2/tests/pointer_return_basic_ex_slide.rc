@@ -1,0 +1,14 @@
+int useless = 0;
+function : int * foo(int x){
+    int * toy;
+    new toy;
+    *toy = 100;
+    cout << *toy << endl;
+    return toy;
+}
+
+function : void main(){
+    int * good;
+    good = foo(useless);
+    cout << *good << endl;
+}

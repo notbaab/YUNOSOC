@@ -1,0 +1,94 @@
+function: void main() {
+    int x;
+    int y;
+
+    x = 0;
+    while(x < 100) {
+        x++;
+    }
+    cout << "x: should be 100\t" << x << "\t" << x == 100 << endl;
+
+/////////////
+    x = 0;
+    while(x >= -7) {
+        x--;
+    }
+    cout << "x: should be -8\t\t" << x << "\t" << x == -8 << endl;
+
+/////////////
+
+    x = 0;
+    while(true) {
+        break;
+        x++;
+    }
+
+    cout << "x: should be 0\t\t" << x << "\t" << x == 0 << endl;
+
+/////////////
+
+    x = 0;
+    while(true) {
+        if(x == 3){
+            break;
+        }
+
+        x++;
+    }
+    cout << "x: should be 3\t\t" << x << "\t" << x == 3 << endl;
+
+/////////////
+
+    x = 0;
+    while(x == 3) {
+        x++;
+    }
+
+    cout << "x: should be 0\t\t" << x << "\t" << x == 0 << endl;
+
+/////////////
+
+    x = 0;
+    y = 0;
+    while(y <= 4) {
+        y++;
+        if(y != 3) {
+            continue;
+        }
+        x++;
+    }
+    cout << "x: should be 1\t\t" << x << "\t" << x == 1 << endl;
+
+/////////////
+
+    x = 0;
+    while(true) {
+        x = x + 100;
+        while(true){
+            x = x + 10;
+            while(true){
+                x = x + 1;
+                break;
+            }
+            break;
+        }
+        break;
+    }
+    cout << "x: should be 111\t" << x << "\t" << x == 111 << endl;
+
+/////////////
+
+    x = 0;
+    y = 0;
+
+    while(y < 3) {
+        if(y == 1) {
+            y = 3;
+            continue;
+        }
+        x++;
+        y++;
+    }
+    cout << "x: should be 1\t\t" << x << "\t" << x == 1 << endl;
+
+}

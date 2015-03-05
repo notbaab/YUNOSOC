@@ -1,0 +1,221 @@
+int gX;
+float gY;
+bool gZ;
+
+int g_X [3];// = {10,11,12};
+float g_Y [3];// = {5.5,6.6,7.7};
+bool g_Z [2];// = {false, true};
+
+
+function : void main()
+{
+	g_X[0] = 10;
+	g_X[1] = 11;
+	g_X[2] = 12;
+	g_Y[0] = 5.5;
+	g_Y[1] = 6.6;
+	g_Y[2] = 7.7;
+	g_Z[0] = false;
+	g_Z[1] = true;
+  //------------------------ INT -----------------------------
+  int x[3];// = {1,2,3};
+  x[0] = 1;
+  x[1] = 2;
+  x[2] = 3;
+
+  int a;
+  a = x[0];
+  int b;
+  b = x[1];
+  int c;
+  c = x[2];
+
+  cout << "INT: LOCAL VAR ASSIGN WITH ARR" << endl;
+  cout << "1: "  <<  a << endl; //1 
+  cout << "2: "  <<  b << endl; //2
+  cout << "3: "  <<  c << endl; //3
+  cout << endl;
+
+  //a = g_X[0];
+  //cout << "INT: LOCAL VAR ASSIGN WITH GLOBAL ARR"<< endl;
+  //cout << "10: " << a << endl; //10
+
+
+  int y[3];// = {10, 11, 12};
+  y[0] = 10;
+  y[1] = 11;
+  y[2] = 12;
+  y[0] = x[0];
+  y[1] = x[1];
+  y[2] = x[2];
+
+  cout << "INT: LOCAL ARR ASSIGN WITH ARR" << endl;
+  cout << "1: "  <<  y[0] << endl; //1
+  cout << "2: "  <<  y[1] << endl; //2
+  cout << "3: "  <<  y[2] << endl; //3
+  cout << endl;
+
+  
+  cout << "INT: GLOBAL VAR ASSIGN WITH ARR" << endl;
+  gX = x[0];
+  cout << "1: "  <<  gX << endl; //1
+  cout << endl;
+  
+
+  cout << "INT: GLOBAL ARR ASSIGN WITH ARR" << endl;
+  g_X[0] = x[0];
+  g_X[1] = x[1];
+  g_X[2] = x[2];
+  cout << "1: "  <<  g_X[0] << endl; //1
+  cout << "2: "  <<  g_X[1] << endl; //2
+  cout << "3: "  <<  g_X[2] << endl; //3
+  cout << endl;
+
+  cout << "INT: ASSIGN VAR INTO ARRAY" << endl;
+  gX = 5;
+  x[0] = gX;
+  a = 5;
+  x[1] = a;
+
+  cout << "5: " << x[0] << endl; //5
+  cout << "5: " << x[1] << endl; //5
+  cout << endl;
+  
+  x[0] = 1;
+  x[1] = 2;
+  gX = 1;
+
+
+  //------------------------- BOOL -----------------------------
+  bool b_1[2];// = {true, false};
+  b_1[0] = true;
+  b_1[1] = false;
+  bool b1;
+  b1 = b_1[0];
+  bool b2;
+  b2 = b_1[1];
+
+  cout << "BOOL: LOCAL VAR ASSIGN WITH ARR" << endl;
+  cout << "true: " << b1 << endl; //true
+  cout << "false: " << b2 << endl; //false
+  cout << endl;
+
+
+  bool b_2[2];
+  b_2[0] = false;
+  b_2[1] = true;
+  b_2[0] = b_1[0];
+  b_2[1] = b_1[1];
+
+  cout << "BOOL: LOCAL ARR ASSIGN WITH ARR" << endl;
+  cout << "true: " << b_2[0] << endl; //true
+  cout << "false: " << b_2[1] << endl; //false
+  cout << endl;
+
+  cout << "BOOL: GLOBAL VAR ASSIGN WITH ARR" << endl;
+  gZ = b_1[0];
+  cout << "true: "  <<  gZ << endl; //true
+  cout << endl;
+
+
+  cout << "BOOL: GLOBAL ARR ASSIGN WITH ARR" << endl;
+  g_Z[0] = b_1[0];
+  g_Z[1] = b_1[1];
+  cout << "true: " << g_Z[0] << endl; //true
+  cout << "false: " << g_Z[1] << endl; //false
+  cout << endl;
+
+  cout << "BOOL: ASSIGN VAR INTO ARRAY" << endl;
+  gZ = true;
+  b_1[1] = gZ;
+  b1 = false;
+  b_1[0] = b1;
+
+  cout << "true: " << b_1[1] << endl;
+  cout << "false: " << b_1[0] << endl;
+  cout << endl;
+
+ 
+
+
+
+  //------------------------ FLOAT ----------------------------
+  float f_1[3];// = {1.1, 2.2, 3.3};
+	f_1[0] = 1.1;
+	f_1[1] = 2.2;
+	f_1[2] = 3.3;
+  float f1;
+  f1 = f_1[0];
+  float f2;
+  f2 = f_1[1];
+  float f3;
+  f3 = f_1[2];
+
+  cout << "FLOAT: LOCAL VAR ASSIGN WITH ARR" << endl;
+  cout << "1.1: " << f1 << endl; //1.1 
+  cout << "2.2: " << f2 << endl; //2.2
+  cout << "3.3: " << f3 << endl; //3.3
+  cout << endl;
+
+
+  float f_2[3];// = {5.5, 6.6, 7.7};
+  f_2[0] = 5.5;
+  f_2[1] = 6.6;
+  f_2[2] = 7.7;
+
+  f_2[0] = f_1[0];
+  f_2[1] = f_1[1];
+  f_2[2] = f_1[2];
+
+  cout << "FLOAT: LOCAL ARR ASSIGN WITH ARR" << endl;
+  cout << "1.1: " << f_2[0] << endl; //1.1
+  cout << "2.2: " << f_2[1] << endl; //2.2
+  cout << "3.3: " << f_2[2] << endl; //3.3
+  cout << endl;
+
+
+  f_2[0] = x[0];
+  f_2[1] = x[1];
+  f_2[2] = x[2];
+
+  cout << "FLOAT: LOCAL ARR ASSIGN WITH ARR : FITOS" << endl;
+  cout << "1.0: " << f_2[0] << endl; //1.0
+  cout << "2.0: " << f_2[1] << endl; //2.0
+  cout << "3.0: " << f_2[2] << endl; //3.0
+  cout << endl;
+
+
+  cout << "FLOAT: GLOBAL VAR ASSIGN WITH ARR" << endl;
+  gY = f_1[0];
+  cout << "1.1: " << gY << endl; // 1.1
+  cout << endl;
+
+  cout << "FLOAT: GLOBAL ARR ASSIGN WITH ARR" << endl;
+  g_Y[0] = f_1[0];
+  g_Y[1] = f_1[1];
+  g_Y[2] = f_1[2];
+  cout << "1.1: " << g_Y[0] << endl; //1.1
+  cout << "2.2: " << g_Y[1] << endl; //2.2
+  cout << "3.3: " << g_Y[2] << endl; //3.3
+  cout << endl;
+
+
+  cout << "FLOAT: GLOBAL ARR ASSIGN WITH ARR : FITOS" << endl;
+  g_Y[0] = x[0];
+  g_Y[1] = x[1];
+  g_Y[2] = x[2];
+  cout << "1.0: " << g_Y[0] << endl; //1.0
+  cout << "2.0: " << g_Y[1] << endl; //2.0
+  cout << "3.0: " << g_Y[2] << endl; //3.0
+  cout << endl;
+
+
+  cout << "FLOAT: ASSIGN VAR INTO ARRAY" << endl;
+  gY = 111.11;
+  g_Y[0] = gY;
+  f1 = 33.33;
+  g_Y[1] = f1;
+  
+  cout << "111.11: " << g_Y[0] << endl; //111.11
+  cout << "33.33: " << g_Y[1] << endl; //33.33
+}

@@ -1,0 +1,7 @@
+int x = 99;
+function: void main() {
+	//testing global scope
+	int x = 7;
+	cout << x << " " << ::x << endl;
+
+}

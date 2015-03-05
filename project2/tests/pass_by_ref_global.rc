@@ -1,0 +1,60 @@
+int x = 100;
+int y = 70;
+float f = 200.00;
+float d = 70.00;
+bool b = false;
+bool c = false;
+
+function : void space(){
+    cout << endl << endl << endl;
+}
+
+function : void intmod(int & x, int y){
+    x = x * x / x * x;
+    y = y - 1;
+    space();
+    cout << "After int calculations " << endl;
+    cout << x << endl;
+    cout << y << endl;
+}
+
+function : void floatmod(float & f, float d){
+    f = f * f * f / f;
+    d = d - 0.31;
+    space();
+    cout << "After float calculations " << endl;
+    cout << f << endl;
+    cout << d << endl;
+}
+
+function : void boolmod(bool & b, bool c){
+    b = b || b && b || b && b || b;
+    c = true;
+    space();
+    cout << "After bool calculations " << endl;
+    cout << b << endl;
+    cout << c << endl;
+}
+
+function : void main(){
+    space();
+    cout << "GLOBAL PASS BY REFERENCE" << endl;
+    cout << x << endl;
+    cout << y << endl;
+    cout << f << endl;
+    cout << d << endl;
+    cout << b << endl;
+    cout << c << endl;
+    intmod(x, y);
+    floatmod(::f, ::d);
+    boolmod(b, c);
+    space();
+    cout << "AFTER FUNCTION CALLS" << endl;
+    cout << x << endl;
+    cout << y << endl;
+    cout << f << endl;
+    cout << d << endl;
+    cout << b << endl;
+    cout << c << endl;
+}
+

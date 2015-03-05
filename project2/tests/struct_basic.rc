@@ -1,0 +1,40 @@
+structdef MYSTRUCT{
+	int id;
+	int i[10];
+	float f[10];
+	MYSTRUCT* next;
+};
+
+MYSTRUCT mystruct_g;
+
+function : void main(){
+	MYSTRUCT  myarr[10];
+	MYSTRUCT * myptr = &myarr[0];
+	int i = 0;
+	while(i < 10){
+		myarr[i].id = i;
+		myarr[7].i[i] = i;
+		myarr[7].f[i] = i * 10.7;
+		myarr[i].next = &(myptr[i+1]);
+		i++;
+	}
+	myarr[9].next = *myarr;
+	mystruct_g = myarr[7];
+	myptr = &mystruct_g;
+	i = 0;
+	while(i < 10){
+		cout<<mystruct_g.i[i]<<"\t"<<mystruct_g.f[i]<<endl;
+		i++;
+	}
+	i = 0;
+	while(i < 10){
+		cout<<myptr->id<<endl;
+		myptr = myptr->next;
+		i++;
+	}
+	i = 0;
+	while(i < 10){
+		cout<<myptr->i[i]<<"\t"<<myptr->f[i]<<endl;
+		i++;
+	}
+}

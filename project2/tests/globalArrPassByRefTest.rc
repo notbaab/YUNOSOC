@@ -1,0 +1,79 @@
+int gA[5];
+float gB[5];
+bool gC[5];
+
+function : void foo(int &a[5])
+{
+  a[0] = 10;
+  a[4] = a[0];
+
+  int a1 = a[1];
+  cout << "a1 2: " << a1 << endl;
+
+  a1 = a[2];
+  cout << "a1 3: " << a1 << endl;
+}
+
+
+function : void foo1(float &b[5])
+{
+  b[0] = 10.10;
+  b[4] = b[0];
+
+  float b1 = b[1];
+  cout << "b1 2.20: " << b1 << endl;
+
+  b1 = b[2];
+  cout << "b1 3.30: " << b1 << endl;
+}
+
+function : void foo2(bool &c[5])
+{ 
+  c[0] = true;
+  c[4] = c[0];
+
+  bool c1 = c[1];
+  cout << "c1 false: " << c1 << endl;
+
+  c1 = c[2];
+  cout << "c1 true: " << c1 << endl;
+
+
+}
+
+
+function : void main()
+{
+	gA[0] = 1;
+	gA[1] = 2;
+	gA[2] = 3;
+	gA[3] = 4;
+	gA[4] = 5;
+	gB[0] = 1.1;
+	gB[1] = 2.2;
+	gB[2] = 3.3;
+	gB[3] = 4.4;
+	gB[4] = 5.5;
+	gC[0] = false;
+	gC[1] = false;
+	gC[2] = true;
+	gC[3] = false;
+	gC[4] = false;
+  foo(gA);
+
+  cout << "-----INTEGER-----" << endl;
+  cout << "10: " << gA[0] << endl;
+  cout << "10: " << gA[4] << endl;
+
+  foo1(gB);
+
+  cout << "-----FLOAT-----" << endl;
+  cout << "10.10: " << gB[0] << endl;
+  cout << "10.10: " << gB[4] << endl;
+
+  foo2(gC);
+
+  cout << "-----BOOL-----" << endl;
+  cout << "true: " << gC[0] << endl;
+  cout << "true: " << gC[4] << endl;
+}

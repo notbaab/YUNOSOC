@@ -1,0 +1,6 @@
+function : void main()
+{
+  const float a = 5.75;
+  const float b = a;
+
+}

@@ -1,0 +1,20 @@
+int array[5];
+
+function : void main()
+{
+   array[2] = 5;
+
+   int x = array[2];
+
+   int y = array[2] + 7;
+
+   int z = 4 + array[2];
+
+   cout << z << endl;
+
+   cout << y << endl;
+
+   cout << x << endl;
+
+
+}

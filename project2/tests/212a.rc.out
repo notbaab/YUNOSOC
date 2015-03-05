@@ -1,0 +1,7 @@
+a.a: 10 a.b: false a.c: 10.10
+b.a: 1 b.b: true b.c: 9.60
+a.a: 1 a.b: true a.c: 9.60
+b.a: 10 b.b: false b.c: 10.10
+a.a: 10 a.b: false a.c: 10.10
+b.a: 10 b.b: false b.c: 10.10
+c.a: 10 c.b: false c.c: 10.10

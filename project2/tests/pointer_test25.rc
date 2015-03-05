@@ -1,0 +1,15 @@
+function : float & moby(float &a)
+{   
+    a++;
+    return a;
+}
+
+function : void main()
+{
+    float dick = 44;
+    
+    moby(dick);
+    
+    cout << "dick is: " << dick << endl;
+    
+}

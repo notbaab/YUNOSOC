@@ -1,0 +1,12 @@
+f1: should be: 1.00    1.00
+f1: should be: 2.00    2.00
+f2: should be: 1.00    1.00
+f3: should be: 0.00    0.00
+f4: should be: 1.00    1.00
+f5: should be: 1.00    1.00
+ x: should be: 0.00    0.00
+ y: should be: 1.00    1.00
+ a: should be: 1.00    1.00
+ b: should be: 2.00    2.00
+ c: should be: 5.00    5.00
+ z: should be: 1.00    1.00

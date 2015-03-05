@@ -1,0 +1,11 @@
+function: void foo() {
+	exit(4);
+}
+
+function: void main() {
+
+	cout << 8;
+	foo();
+	cout << 9;
+
+}

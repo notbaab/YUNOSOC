@@ -1,0 +1,21 @@
+static const float x = 3.33;
+static const float y = 4.44;
+
+function : float getX()
+{
+	cout << "getX";
+	return ::x;
+}
+
+function : float getY()
+{
+	cout << "getY1";
+	cout << getX();
+	cout << "getY2";
+	return ::y;
+}
+
+function : void main() {
+
+	cout << "main" << endl << getX() << getY() << endl << "end" <<endl;
+}

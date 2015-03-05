@@ -1,0 +1,12 @@
+function : void foo()
+{
+  cout << "SHOULD PRINT 1" << endl;
+}
+
+function : void main()
+{
+  foo();
+  cout << "SHOULD PRINT 2" << endl;
+}
+
+

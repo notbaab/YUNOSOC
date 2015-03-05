@@ -1,0 +1,5 @@
+
+function : void main() {
+
+	cout << "main" << 1+2+3 << "end" <<endl;
+}

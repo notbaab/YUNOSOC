@@ -1,0 +1,20 @@
+int c = 0;
+function : void rec() {
+    if (c < 5) {
+	    int y = 4;
+		static float z = 4;
+		y++;
+		z++;
+		cout << y << endl; //should be 5 everytime
+		cout << z << endl; //should start at 5.00 and go to 9.00
+		c++;
+		rec();
+	} else {
+	  return;
+	}
+}
+
+function : void main(){
+	rec();
+}
+

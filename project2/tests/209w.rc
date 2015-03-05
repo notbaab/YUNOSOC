@@ -1,0 +1,7 @@
+function : float foo(float x) { return 1.0; }
+function : float foo(float x, float y, float z) { return 0.0;  }
+function : int main() {
+ cout << foo(1.0) << endl; // error9_Illegal
+ cout << foo(1.0, 1.0, 1.0);
+ return 0;
+}

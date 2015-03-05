@@ -1,0 +1,11 @@
+function : void main(){
+   int i; 
+   float f;
+   cout << "i: ";
+   cin >> i;
+   cout << endl << "i = " << i << endl;
+   
+   cout << "f: ";
+   cin >> f;
+   cout << endl << "f = " << f << endl;
+}

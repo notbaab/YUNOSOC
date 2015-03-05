@@ -1,0 +1,11 @@
+const int c1 = 2; 
+const int c2 = 4; 
+int x1[10]; 
+
+function: void main()
+{
+ 
+   x1[5] = 5;
+   cout << (x1[5]);
+
+}

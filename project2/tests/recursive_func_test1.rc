@@ -1,0 +1,13 @@
+function : int foo (int a, int b) {
+	cout << a << endl << b << endl; 
+	if ( b > 0 ){
+		return foo (a, b - 1);
+	}
+	else{
+		return 5;
+	}
+	return 0;
+} 
+function : void main () {
+	cout << foo ( 10, foo (4, 5) ) << endl;
+}

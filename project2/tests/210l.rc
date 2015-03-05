@@ -1,0 +1,34 @@
+float farray[5];
+
+function : void main()
+{
+
+   farray[2] = 5.5;
+
+   float x = farray[2];
+
+   float y = farray[2] + 7.0;
+
+   float z = farray[2] + 7;
+
+   float a = 3 + farray[2];
+
+   float b = 3.0 + farray[2];
+
+   float c = farray[2] + 3;
+
+   cout << farray[2] << endl; // 5.5
+
+   cout << x << endl; // 5.5
+
+   cout << y << endl; // 12.5
+
+   cout << z << endl; // 12.5
+
+   cout << a << endl; // 8.5
+
+   cout << b << endl; // 8.5
+  
+   cout << c <<endl; // 8.5
+
+}

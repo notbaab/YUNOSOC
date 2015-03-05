@@ -1,0 +1,9 @@
+structdef REC {
+    float r;
+};
+
+function : void main() {
+    REC e;
+    cout << e.r << endl; 
+//    e.r;
+}

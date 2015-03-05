@@ -1,0 +1,47 @@
+function : void foo(int &x)
+{
+  cout << "ref: before a 5: " << x << endl;
+  x = 10;
+}
+
+function : void foo2(int y)
+{
+  cout << "val: before a 5: " << y << endl;
+  y = 10;
+}
+
+function : void foo3(int &a, int &b, int &c)
+{
+  cout << "val: before a 1: " << a << endl;
+  cout << "val: before b 2: " << b << endl;
+  cout << "val: before c 3: " << c << endl;
+  a = 11;
+  b = 22;
+  c = 33;
+
+}
+
+
+
+function : void main()
+{
+  int a = 5;
+  
+  foo(a);
+  cout << "ref: after a 10: " << a << endl;
+
+  int b = 5;
+  foo2(b);
+  cout << "val: after a 5: " << b << endl;
+
+
+  int i = 1;
+  int j = 2;
+  int k = 3;
+  foo3(i,j,k);
+  cout << "val: after i 11: " << i << endl;
+  cout << "val: after j 22: " << j << endl;
+  cout << "val: after k 33: " << k << endl;
+
+
+}

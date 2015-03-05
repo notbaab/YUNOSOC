@@ -1,0 +1,11 @@
+// pass constant by value int
+
+int x = 10;
+
+function: void foo (int x) {
+	cout << x;
+}
+
+function: void main() {
+	foo(5);
+}

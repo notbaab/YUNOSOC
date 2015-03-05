@@ -1,0 +1,23 @@
+function : void main()
+{
+  cout << "TWO YAYS SHOULD PRINT" << endl;
+
+  if(true)
+  {
+    cout << "YAY IT PRINTED" << endl;
+  }
+  else
+  {
+    cout << "THIS SHOULD NOT PRINT" << endl;
+  }
+
+  if(false)
+  {
+    cout << "THIS SHOULD NOT PRINT" << endl;
+  }
+  else
+  {
+    cout << "YAY THIS PRINTED!" << endl;
+  }
+
+}

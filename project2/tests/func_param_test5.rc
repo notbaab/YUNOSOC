@@ -1,0 +1,20 @@
+function : void foo(int &a, int b)
+{
+	a = 999;
+	b = 1000;
+}
+
+function : void main()
+{
+	int thesmiths = 5;
+	int theramones = 6;
+	
+	cout << "thesmiths is: " << thesmiths << endl;
+	cout << "theramones is: " << theramones << endl;
+	
+	foo(thesmiths, theramones);
+	
+	cout << "thesmiths is now: " << thesmiths << endl;
+	cout << "theramones is now: " << theramones << endl;
+
+}

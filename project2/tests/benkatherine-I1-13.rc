@@ -1,0 +1,6 @@
+int a = 4;
+
+function : void main()
+{
+  int b = a;
+}

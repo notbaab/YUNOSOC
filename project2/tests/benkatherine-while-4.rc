@@ -1,0 +1,12 @@
+int x = 0;
+
+function : void main()
+{
+  while(x < 5)
+  {
+    x = x + 1;
+    break;
+  }
+
+  cout << x << endl;
+}

@@ -1,0 +1,12 @@
+function : float foo(int b)
+{
+    cout << "b is: " << b << endl;
+    return b;
+}
+
+function : void main()
+{
+    float c = foo(5);
+
+    cout << "c is: " << c << endl;
+}

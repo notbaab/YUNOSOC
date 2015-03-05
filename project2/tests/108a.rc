@@ -1,0 +1,11 @@
+
+function : int main(){
+   cout << "mehhhh" << endl;
+   
+   exit(0);
+   
+   cout << "failure" << endl;
+
+   return 0;
+}
+

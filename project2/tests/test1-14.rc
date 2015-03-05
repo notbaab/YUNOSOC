@@ -1,0 +1,13 @@
+//integer arithmetic with mixed var and constant
+
+function: void main() {
+
+	int i = 4;
+	cout << i << " + " << 5 << " = "; 	// 4 + 5 =
+	
+	//crazy integer addition here..	
+	int k = i + 5;
+
+	cout << k << endl;
+
+}

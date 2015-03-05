@@ -1,0 +1,22 @@
+function : int fibonacci (int n, int memo[50]) {
+    if (n == 1 || n == 2) {
+        return 1;
+    }
+    if (memo[n] != 0) {
+        return memo[n];
+    }
+    memo[n] = fibonacci (n-1, memo) + fibonacci (n-2, memo);
+    return memo[n];
+}
+
+
+int memo[50];
+function : int main () {
+  int i=1;
+  while(i < 47) {
+    cout << fibonacci(i, memo) << endl;
+    i++;
+  }
+
+  return 0;
+}

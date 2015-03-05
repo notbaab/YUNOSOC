@@ -1,0 +1,46 @@
+function : int main(){
+   int a = 100;
+   int b = 5; 
+   
+   if ( a <= b ) { 
+      cout << "fail1" << endl;
+   }
+   else {
+      a = a / 20;
+      
+      if ((a <= b) != (a >= b)) { 
+         cout << "fail2" << endl;
+      }
+      else {
+         if ((a - 20.0) >= 0.1){
+            cout << "fail3" << endl;
+         }
+         else {
+            int c = a;
+            if (++c == a) {
+               cout << "fail4" << endl;
+            }
+            else {
+               if (-0x84343 > a ) {
+                  cout << "fail5" << endl;
+               }
+               else {
+                  if (010 == 10){
+                     cout << "fail6" << endl;
+                  }
+                  else {
+                     if (10.5 > 10){
+                        cout << "pass" << endl;
+                     }
+                     else{
+                        cout << "fail7" << endl;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   
+   return 0;
+}

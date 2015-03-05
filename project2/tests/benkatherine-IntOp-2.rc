@@ -1,0 +1,22 @@
+/*Testing Binary operation for Interger*/
+
+int x = 5;
+int y = 6;
+int a = 3;
+int b = 4;
+int z = 5*6;
+
+function: void main()
+{
+  x = 5*5*5; // should be 125
+  y = 6*5; //should be 30
+
+  cout<<x<<endl;// should be 125
+  cout<<y<<endl;//should be 30
+  cout<<1*4<<endl;//should be 4
+  cout<<x*5<<endl;//should be 625
+  cout<<x/5<<endl; //should be 25
+  cout<<y/5*5%5<<endl; // should be 0
+  cout<<a*b*a<<endl;//should be 36
+
+}

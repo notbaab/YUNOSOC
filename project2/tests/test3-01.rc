@@ -1,0 +1,13 @@
+// pointers: local, integer
+// address of, dereference
+
+function: void main() {
+	
+	int * iptr;
+	int i = 12;
+	iptr = &i;
+	int j = *iptr;
+	
+	cout << j << endl;
+		
+}

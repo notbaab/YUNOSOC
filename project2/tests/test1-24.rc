@@ -1,0 +1,12 @@
+//mixed global/local integer var * var multiplication
+
+int k = 30;
+int l = 40;
+
+function: void main() {
+
+	int m = k * l;
+	
+	cout << k << " * " << l << " = " << m << endl;
+
+}

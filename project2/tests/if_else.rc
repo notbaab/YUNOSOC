@@ -1,0 +1,57 @@
+function: void main() {
+
+    cout << "simple:       ";
+    if(false) {
+        cout << "DOES NOT WORK " << endl;
+    }
+    else {
+        cout << "works " << endl;
+    }
+
+    cout << "else if:      ";
+    if(false) {
+        cout << "DOES NOT WORK  " << endl;
+    }
+    else {
+        cout << "works ";
+        if(true) {
+            cout << "works " << endl;
+        }
+    }
+
+    cout << "if if:        ";
+    if(true) {
+        cout << "works ";
+        if(true) {
+            cout << "works " << endl;
+        }
+    }
+    else {
+        cout << "DOES NOT WORK " << endl;
+        if(true) {
+            cout << "DOES NOT WORK " << endl;
+        }
+    }
+
+    cout << "if else else: ";
+    if(true) {
+        cout << "works ";
+        if(false) {
+            cout << "DOES NOT WORK " << endl;
+        } else {
+            cout << "works ";
+            if(false) {
+                cout << "DOES NOT WORK " << endl;
+            }
+            else {
+                cout << "works " << endl;
+            }
+        }
+    }
+    else {
+        cout << "DOES NOT WORK " << endl;
+        if(true) {
+            cout << "DOES NOT WORK " << endl;
+        }
+    }
+}

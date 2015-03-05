@@ -1,0 +1,12 @@
+function: void main() {
+    
+    int i1;
+    float f1;
+    float f2;
+
+    i1 = 2;
+    f1 = 1;
+    f2 = i1;
+    cout << "f1: should be: 1.00  " << f1 << endl;
+    cout << "f2: should be: 2.00  " << f2 << endl;
+}

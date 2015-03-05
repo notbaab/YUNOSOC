@@ -1,0 +1,11 @@
+function : void foo(float x, float y, float z)
+{
+  cout << x << y << z << endl;
+}
+
+function : void main()
+{
+  float a = 7.0;
+  foo(5.0,6.0,a);
+
+}

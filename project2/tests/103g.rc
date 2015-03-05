@@ -1,0 +1,76 @@
+//globals
+
+int i;
+float f;
+bool b;
+
+float fooey;
+int pooey;
+
+function : int foo()
+{
+  cout << "second ";
+  return 0;
+}
+
+function : void main()
+{
+  int x = 20;
+  bool y = true;
+  float z = -1.23;
+
+  float z2 = x*2*2+0; //80
+  cout << "z2 EXPECTED: 80 ACTUAL: " << z2 << endl;
+
+  float z3 = x*x*x+0.11; //8000.11
+  cout << "z3 EXPECTED: 8000.11 ACTUAL: " << z3 << endl;
+
+  int x2 = sizeof(int)+(sizeof(float)*2) + sizeof(bool); //16
+  cout << "x2 EXPECTED: 16 ACTUAL: " << x2 << endl;
+
+  int x3 = sizeof(x2)+sizeof(z2); //8
+  cout << "x3 EXPECTED: 8 ACTUAL: " << x3 << endl;
+
+  int x4 = -077; //-63
+  int x5 = sizeof(x4)+x4; //-59
+  cout << "x5 EXPECTED: -59 ACTUAL: " << x5 << endl;
+
+
+  float z4 = x4-x5 +(i*2.2223)+f + 0.1; //-3.9
+  cout << "z4 EXPECTED: -3.9 ACTUAL: " << z4 << endl;
+
+  int i = 13; //13
+  float f = ++i; 
+  i--; //13
+  bool b = false||true; //true
+
+  float z5 = ::i-i; //-13
+  cout << "z5 EXPECTED: -13 ACTUAL: " << z5 << endl;
+
+  float z6 = f*f*f*f*f*0; //0
+  cout << "z6 EXPECTED: 0 ACTUAL: " << z6 << endl;
+
+  x=20;
+  float z7 = 077+1 + 0xA+x+i +1.2; //107.2
+  cout << "z7 EXPECTED: 107.2 ACTUAL: " << z7 << endl;
+
+  z = sizeof(z); //4
+  cout << "z EXPECTED: 4 ACTUAL: " << z << endl;
+
+  cout << "first " << foo() << endl;
+  cout << "EXPECTED: 'first second 0'" << endl; 
+
+  float a = -1.1+1.1+(1.1*0)+ (x-5)+(x-5)+1.1; //31.1
+  cout << "a EXPECTED: 31.1 ACTUAL: " << a << endl;
+
+  i=13;
+  float a2 = i+fooey+pooey+1.5+::i; //14.5
+  cout << "a2 EXPECTED: 14.5 ACTUAL: " << a2 << endl;
+
+  ::i++;
+  cout << "::i++ EXPECTED: 1 ACTUAL: " << ::i << endl;
+
+  cout << "i EXPECTED: 13 ACTUAL: " << i << endl;
+
+}
+

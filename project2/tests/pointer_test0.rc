@@ -1,0 +1,14 @@
+int * b; 
+function : void main(){
+	int a = 5;
+	b = &a;
+	cout << a << endl; // 5
+	cout << *b << endl; // 5
+	*b = 10; 
+	cout << a << endl; // 10
+	cout << *b << endl; // 10
+	int ** c = &b;
+	**c = 12;
+	cout << a << endl; //12
+	cout << *b << endl; //12
+}

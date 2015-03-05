@@ -1,0 +1,11 @@
+float x;
+
+float a = 5.75;
+float b;
+
+function : void main()
+{
+cout<<5.75;
+int w;
+
+}

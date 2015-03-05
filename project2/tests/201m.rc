@@ -1,0 +1,13 @@
+/* Testing float adding operation on a global scope*/
+
+float x = 5.5;
+float y;
+float z;
+
+function: void main()
+{
+	z = x+y;
+   cout<<z<<endl;
+
+
+}

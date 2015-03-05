@@ -1,0 +1,14 @@
+function : int main(){
+   float f = 2.17;
+   const int c = 10;
+   int i = 0;
+   while ( i++ < c){
+      cout << f << endl;
+      cout << (int)f << endl;
+      cout << *(int*)&f << endl;
+      f = f*i;
+      cout << "----" << endl;
+   }
+
+   return 0;
+}

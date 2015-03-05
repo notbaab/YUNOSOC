@@ -1,0 +1,16 @@
+//integer arithmetic with mixed var and constant
+int i = 4;
+int j = 5;
+function: void main() {
+	
+	int i = 1;
+	int j = 2;
+
+	cout << i << " + " << j << " + " << 3 << " + " << ::i << " + " << ::j << " = "; 	// 1 + 2 + 3 + 4 + 5 =
+	
+	//crazy integer addition here..	
+	int k = i + j + 3 + ::i + ::j;
+
+	cout << k << endl; // 15
+
+}

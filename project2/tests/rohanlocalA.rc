@@ -1,0 +1,8 @@
+function : void main () {
+
+      int c;
+
+      cout << c << endl;
+
+}
+

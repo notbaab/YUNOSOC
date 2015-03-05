@@ -1,0 +1,7 @@
+float f = 5.5;
+
+function : void main()
+{
+  float g = f;
+
+}

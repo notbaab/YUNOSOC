@@ -1,0 +1,452 @@
+int gx = 20, gx2;
+int *gptr1;
+int **gptr2;
+int ***gptr3;
+static int gsy = 30;
+static int *gyptr1;
+static int **gyptr2;
+static int ***gyptr3;
+
+function : void local_ints() {
+    cout << "Local Ints: " << endl;
+    int x = 1;
+    int *ptr = &x;
+    cout << "\tx = 1: " << x << endl;
+    *ptr = 3;
+    cout << "\tx = 3: " << x << endl;
+
+    int y = 2;
+    ptr = &y;
+    *ptr = 4;
+    cout << "\ty = 4: " << y << endl;
+    *ptr = 10;
+    cout << "\ty = 10: " << y << endl;
+    cout << "\t*ptr = 10: " << *ptr << endl;
+
+    ptr = &x;
+    int **double_ptr = &ptr;
+    cout << "\tx = 3: " << x << endl;
+    **double_ptr = 5;
+    cout << "\tx = 5: " << x << endl;
+    cout << "\t**double_ptr = 5: " << **double_ptr << endl;
+    
+    int ***triple_ptr = &double_ptr;
+    cout << "\tx = 5: " << x << endl;
+    ***triple_ptr = 7;
+    cout << "\tx = 7: " << x << endl;
+    cout << "\t***triple_ptr = 7: " << ***triple_ptr << endl;
+
+    int added = (***triple_ptr) + (**double_ptr) + (*ptr);
+    cout << "\tadded: 21 = " << added << endl;
+
+    cout << "\t++(***triple_ptr) : 8 = " << ++(***triple_ptr) << endl;
+    ++(***triple_ptr); // 9 here we come baby
+    cout << "\t***triple_ptr : 9 = " << ***triple_ptr << endl;
+    cout << "\tx : 9 = " << x << endl;
+    (***triple_ptr)++; // 9 here we come baby
+    cout << "\t***triple_ptr : 10 = " << (***triple_ptr)++ << endl;
+    cout << "\t***triple_ptr : 11 = " << ***triple_ptr << endl;
+
+    cout << "\t++(***triple_ptr) : 12 = " << --(***triple_ptr) << endl;
+    --(***triple_ptr); // 11 here we come baby
+
+    cout << "\t(***triple_ptr) : 11 = " << (***triple_ptr)-- << endl;
+    cout << "\t(***triple_ptr) : 10 = " << (***triple_ptr) << endl;
+}
+
+function : void global_int() {
+    cout << "\nGlobal Ints: " << endl;
+    cout << "\tgx: 20 = " << gx << endl;
+    gptr1 = &gx;
+    *gptr1 = 15;
+    cout << "\tgx: 15 = " << gx << endl;
+    cout << "\t*gptr1: 15 = " << *gptr1 << endl;
+
+    gptr2 = &gptr1;
+    **gptr2 = 10;
+    cout << "\tgx: 10 = " << gx << endl;
+    cout << "\t**gptr2: 10 = " << **gptr2 << endl;
+
+    gptr3 = &gptr2;
+    ***gptr3 = 5;
+    cout << "\tgx: 5 = " << gx << endl;
+    cout << "\t***gptr3: 5 = " << ***gptr3 << endl;
+
+    gx2 = gx;
+    cout << "\tgx2: 5 = " << gx2 << endl;
+    gptr1 = &gx2;
+
+    int added = (***gptr3) + (**gptr2) + (*gptr1);
+    cout << "\tadded: 15 = " << added << endl;
+
+    cout << "\t++(***gptr3) : 6 = " << ++(***gptr3) << endl;
+    ++(***gptr3);
+    cout << "\t***gptr3 : 7 = " << ***gptr3 << endl;
+    cout << "\tx : 5 = " << gx << endl;
+    (***gptr3)++;
+    cout << "\t***gptr3 : 8 = " << (***gptr3)++ << endl;
+    cout << "\t***gptr3 : 9 = " << ***gptr3 << endl;
+
+    cout << "\t***gptr3 : 9 = " << (***gptr3)-- << endl;
+    cout << "\t***gptr3 : 7 = " << --(***gptr3) << endl;
+
+    cout << "\tgx: 5 = " << gx << endl;
+    cout << "\tgx2: 7 = " << gx2 << endl;
+}
+
+function : void mix_gOnl() {
+    cout << "\nXXX Global On Local Int Action XXX: " << endl;
+    int *ptr1o1 = &gx;
+    int *ptr2o1 = &gx;
+
+    cout << "\tgx: 5 = " << gx << endl;
+    cout << "\t*ptr1o1: 5 = " << *ptr1o1 << endl;
+    cout << "\t*ptr2o1: 5 = " << *ptr2o1 << endl;
+
+    *ptr1o1 = 10;
+    cout << "\tgx: 10 = " << gx << endl;
+    cout << "\t*ptr1o1: 10 = " << *ptr1o1 << endl;
+    cout << "\t*ptr2o1: 10 = " << *ptr2o1 << endl;
+    *ptr2o1 = 20;
+    cout << "\tgx: 20 = " << gx << endl;
+    cout << "\t*ptr1o1: 20 = " << *ptr1o1 << endl;
+    cout << "\t*ptr2o1: 20 = " << *ptr2o1 << endl;
+
+    int lx = 100;
+    gptr1 = &lx;
+    gptr2 = &gptr1;
+    cout << "\tlx: 100 = " << lx << endl;
+    cout << "\t*gptr1: 100 = " << *gptr1 << endl;
+    cout << "\t**gptr2: 100 = " << **gptr2 << endl;
+
+    *gptr1 = 50;
+    cout << "\tlx: 50 = " << lx << endl;
+    cout << "\t*gptr1: 50 = " << *gptr1 << endl;
+    cout << "\t**gptr2: 50 = " << **gptr2 << endl;
+
+    **gptr2 = 150;
+    cout << "\tlx: 150 = " << lx << endl;
+    cout << "\t*gptr1: 150 = " << *gptr1 << endl;
+    cout << "\t**gptr2: 150 = " << **gptr2 << endl;
+}
+
+function : void global_static_int() {
+    cout << "\nGlobal Statics Ints: " << endl;
+    gyptr1 = &gsy;
+    gyptr2 = &gyptr1;
+    gyptr3 = &gyptr2;
+    
+    cout << "\tgsy: 30 = " << gsy << endl;
+    *gyptr1 = 40;
+    cout << "\tgsy: 40 = " << gsy << endl;
+    cout << "\t*gyptr1: 40 = " << *gyptr1 << endl;
+
+    **gyptr2 = 65;
+    cout << "\tgsy: 65 = " << gsy << endl;
+    cout << "\t**gyptr2: 65 = " << **gyptr2 << endl;
+
+    ***gyptr3 = 100;
+    cout << "\tgsy: 100 = " << gsy << endl;
+    cout << "\t***gyptr3: 100 = " << ***gyptr3 << endl;
+
+    cout << "\t***gyptr3 : 100 = " << ***gyptr3 << endl;
+}
+
+function : void local_static_int() {
+    cout << "\nLocal Statics Ints: " << endl;
+
+    static int lsi = 1333;
+    static int *lsptr1, **lsptr2, ***lsptr3;
+    lsptr1 = &lsi;
+    lsptr2 = &lsptr1;
+    lsptr3 = &lsptr2;
+
+
+    cout << "\tlsi: 1333 = " << lsi << endl;
+    *lsptr1 = 1222;
+    cout << "\tlsi: 1222 = " << lsi << endl;
+    cout << "\t*lsptr1: 1222 = " << *lsptr1 << endl;
+
+    **lsptr2 = 65;
+    cout << "\tlsi: 65 = " << lsi << endl;
+    cout << "\t**lsptr2: 65 = " << **lsptr2 << endl;
+
+    ***lsptr3 = 100;
+    cout << "\tlsi: 100 = " << lsi << endl;
+    cout << "\t***lsptr3: 100 = " << ***lsptr3 << endl;
+    
+    cout << "\t***lsptr3 : 100 = " << ***lsptr3 << endl;
+}
+
+function : void local_bools() {
+    cout << "\nLocal Bools: " << endl;
+
+    bool b = true;
+    bool a = false;
+    bool *bptr1 = &b;
+    bool **bptr2 = &bptr1;
+
+    cout << "\tb: true = " << b << endl;
+    cout << "\t*bptr1: true = " << *bptr1 << endl;
+    cout << "\t**bptr2: true = " << **bptr2 << endl;
+
+    *bptr1 = false;
+    cout << "\tb: false = " << b << endl;
+    cout << "\t*bptr1: false = " << *bptr1 << endl;
+    cout << "\t**bptr2: false = " << **bptr2 << endl;
+
+    **bptr2 = true;
+    cout << "\tb: true = " << b << endl;
+    cout << "\t*bptr1: true = " << *bptr1 << endl;
+    cout << "\t**bptr2: true = " << **bptr2 << endl;
+
+    bool *bptr12 = &a;
+    cout << "\ta: false = " << a << endl;
+    cout << "\t*bptr12: false = " << *bptr12 << endl;
+    cout << "\t*bptr1: true = " << *bptr1 << endl;
+    bptr1 = bptr12;
+    cout << "\t*bptr1: false = " << *bptr1 << endl;
+
+    cout << "\t!(*bptr1) : true = " << !(*bptr1) << endl;
+    cout << "\t*bptr1 : false = " << *bptr1 << endl;
+    cout << "\t(*bptr1 && **bptr2) || !(*bptr1) : true = " << (*bptr1 && **bptr2) || !(*bptr1) << endl;
+}
+
+function : void local_floats_ops() {
+    cout << "\nLocal Floats Ops: " << endl;
+    float a = 1.55;
+    float b = 2.55;
+
+    cout << "\ta: 1.55 = " << a << endl;
+    cout << "\tb: 2.55 = " << b << endl;
+
+    float *aptr = &a;
+    float *bptr = &b;
+
+    aptr = bptr;
+
+    float **aptrptr = &aptr;
+    float **bptrptr = &bptr;
+
+    cout << "\tb + b = " << b + b << " = " << *aptr + *bptr << " = " << **aptrptr + **bptrptr << endl;
+    cout << "\t++(**aptrptr): 3.55 = " << ++(**aptrptr) << endl;
+    cout << "\t(**aptrptr)++: 3.55 = " << (**aptrptr)++ << endl;
+    cout << "\t**aptrptr: 4.55 = " << **aptrptr << endl;
+    cout << "\tb * b = " << b * b << " = " << *aptr * *bptr << " = " << **aptrptr * **bptrptr << endl;
+    cout << "\t--(**aptrptr): 3.55 = " << --(**aptrptr) << endl;
+    cout << "\t(**aptrptr)--: 3.55 = " << (**aptrptr)-- << endl;
+    cout << "\t**aptrptr: 2.55 = " << **aptrptr << endl;
+}
+
+
+float ga = 33.33;
+float gb = 66.67;
+float *gap, **gapp;
+
+function : void global_floats_ops() {
+    cout << "\nGlobal Floats Ops: " << endl;
+
+    cout << "\tga: 33.33 = " << ga << endl;
+    cout << "\t\gb: 66.67 = " << gb << endl;
+
+    gap = &ga;
+    float *gbp = &gb;
+   
+    gap = gbp;
+    *gap = 55.55;
+    gapp = &gap;
+    float **gbpp = &gbp;
+    **gbpp = 10.37;
+    cout << "\t*gap 10.37 = " << *gap << endl;
+    cout << "\t*gbp: 10.37 = " << *gbp << endl;
+    cout << "\t**gapp: 10.37 = " << **gapp << endl;
+    cout << "\t**gbpp: 10.37 = " << **gbpp << endl;
+    
+    cout << "\tgb + gb = " << gb + gb << " = " << *gap + *gbp << " = " << **gapp + **gbpp << endl;
+    cout << "\t++(**gapp): 11.37 = " << ++(**gapp) << endl;
+    cout << "\t(**gapp)++: 11.37 = " << (**gapp)++ << endl;
+    cout << "\t**gapp: 12.37 = " << **gapp << endl;
+    cout << "\tgb * gb = " << gb * gb << " = " << *gap * *gbp << " = " << **gapp * **gbpp << endl;
+    cout << "\t--(**gbpp): 11.37 = " << --(**gbpp) << endl;
+    cout << "\t(**gbpp)--: 11.37 = " << (**gbpp)-- << endl;
+    cout << "\t**gbpp: 10.37 = " << **gbpp << endl;
+}
+
+float sa = 1.33;
+static float *sap = &sa;
+static float **sapp = &sap;
+
+function : void static_floats_ops() {
+    cout << "\nStatic Floats Ops: " << endl;
+
+    static float sb = 33.33;
+    static float *sbp = &sb;
+    *sap = 100.99;
+    *sbp = -100.33;
+    sbp = sap;
+    static float **sbpp = &sbp;
+    **sapp = 0.31;
+    
+    cout << "\tsb + sb = " << sa + sa << " = " << *sap + *sbp << " = " << **sapp + **sbpp << endl;
+    cout << "\t++(**sapp): 1.31 = " << ++(**sapp) << endl;
+    cout << "\t(**sapp)++: 1.31 = " << (**sapp)++ << endl;
+    cout << "\t**sapp: 2.31 = " << **sapp << endl;
+    cout << "\tsb * sb = " << sa * sa << " = " << *sap * *sbp << " = " << **sapp * **sbpp << endl;
+    cout << "\t--(**sbpp): 1.31 = " << --(**sbpp) << endl;
+    cout << "\t(**sbpp)--: 1.31 = " << (**sbpp)-- << endl;
+    cout << "\t**sbpp: 0.31 = " << **sbpp << endl;
+}
+
+function : void main() {
+    local_ints();
+    global_int();
+    mix_gOnl();
+    global_static_int();
+    local_static_int();
+    local_bools();
+    local_floats_ops();
+    global_floats_ops();
+    static_floats_ops();
+}
+
+/*
+
+Local Ints: 
+	x = 1: 1
+	x = 3: 3
+	y = 4: 4
+	y = 10: 10
+	*ptr = 10: 10
+	x = 3: 3
+	x = 5: 5
+	**double_ptr = 5: 5
+	x = 5: 5
+	x = 7: 7
+	***triple_ptr = 7: 7
+	added: 21 = 21
+	++(***triple_ptr) : 8 = 8
+	***triple_ptr : 9 = 9
+	x : 9 = 9
+	***triple_ptr : 10 = 10
+	***triple_ptr : 11 = 11
+	++(***triple_ptr) : 12 = 10
+	(***triple_ptr) : 11 = 9
+	(***triple_ptr) : 10 = 8
+
+Global Ints: 
+	gx: 20 = 20
+	gx: 15 = 15
+	*gptr1: 15 = 15
+	gx: 10 = 10
+	**gptr2: 10 = 10
+	gx: 5 = 5
+	***gptr3: 5 = 5
+	gx2: 5 = 5
+	added: 15 = 15
+	++(***gptr3) : 6 = 6
+	***gptr3 : 7 = 7
+	x : 5 = 5
+	***gptr3 : 8 = 8
+	***gptr3 : 9 = 9
+	***gptr3 : 9 = 9
+	***gptr3 : 7 = 7
+	gx: 5 = 5
+	gx2: 7 = 7
+
+XXX Global On Local Int Action XXX: 
+	gx: 5 = 5
+	*ptr1o1: 5 = 5
+	*ptr2o1: 5 = 5
+	gx: 10 = 10
+	*ptr1o1: 10 = 10
+	*ptr2o1: 10 = 10
+	gx: 20 = 20
+	*ptr1o1: 20 = 20
+	*ptr2o1: 20 = 20
+	lx: 100 = 100
+	*gptr1: 100 = 100
+	**gptr2: 100 = 100
+	lx: 50 = 50
+	*gptr1: 50 = 50
+	**gptr2: 50 = 50
+	lx: 150 = 150
+	*gptr1: 150 = 150
+	**gptr2: 150 = 150
+
+Global Statics Ints: 
+	gsy: 30 = 30
+	gsy: 40 = 40
+	*gyptr1: 40 = 40
+	gsy: 65 = 65
+	**gyptr2: 65 = 65
+	gsy: 100 = 100
+	***gyptr3: 100 = 100
+	***gyptr3 : 100 = 100
+
+Local Statics Ints: 
+	lsi: 1333 = 1333
+	lsi: 1222 = 1222
+	*lsptr1: 1222 = 1222
+	lsi: 65 = 65
+	**lsptr2: 65 = 65
+	lsi: 100 = 100
+	***lsptr3: 100 = 100
+	***lsptr3 : 100 = 100
+
+Local Bools: 
+	b: true = true
+	*bptr1: true = true
+	**bptr2: true = true
+	b: false = false
+	*bptr1: false = false
+	**bptr2: false = false
+	b: true = true
+	*bptr1: true = true
+	**bptr2: true = true
+	a: false = false
+	*bptr12: false = false
+	*bptr1: true = true
+	*bptr1: false = false
+	!(*bptr1) : true = true
+	*bptr1 : false = false
+	(*bptr1 && **bptr2) || !(*bptr1) : true = true
+
+Local Floats Ops: 
+	a: 1.55 = 1.55
+	b: 2.55 = 2.55
+	b + b = 5.10 = 5.10 = 5.10
+	++(**aptrptr): 3.55 = 3.55
+	(**aptrptr)++: 3.55 = 3.55
+	**aptrptr: 4.55 = 4.55
+	b * b = 20.70 = 20.70 = 20.70
+	--(**aptrptr): 3.55 = 3.55
+	(**aptrptr)--: 3.55 = 3.55
+	**aptrptr: 2.55 = 2.55
+
+Global Floats Ops: 
+	ga: 33.33 = 33.33
+	gb: 66.67 = 66.67
+	*gap 10.37 = 10.37
+	*gbp: 10.37 = 10.37
+	**gapp: 10.37 = 10.37
+	**gbpp: 10.37 = 10.37
+	gb + gb = 20.74 = 20.74 = 20.74
+	++(**gapp): 11.37 = 11.37
+	(**gapp)++: 11.37 = 11.37
+	**gapp: 12.37 = 12.37
+	gb * gb = 153.02 = 153.02 = 153.02
+	--(**gbpp): 11.37 = 11.37
+	(**gbpp)--: 11.37 = 11.37
+	**gbpp: 10.37 = 10.37
+
+Static Floats Ops: 
+	sb + sb = 0.62 = 0.62 = 0.62
+	++(**sapp): 1.31 = 1.31
+	(**sapp)++: 1.31 = 1.31
+	**sapp: 2.31 = 2.31
+	sb * sb = 5.34 = 5.34 = 5.34
+	--(**sbpp): 1.31 = 1.31
+	(**sbpp)--: 1.31 = 1.31
+	**sbpp: 0.31 = 0.31
+
+*/

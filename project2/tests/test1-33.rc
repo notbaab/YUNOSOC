@@ -1,0 +1,30 @@
+//complex if
+
+function: void main() {
+	
+	int x = 5;
+	bool t = true;
+	bool f = false;
+	
+	if (true) {
+		if (t) {
+			x = 10;
+		}
+	}
+	if (t) {
+		int y = 12;
+		if (f) {
+			x = 14;
+		}
+	}
+	if (true){
+		if (true) {
+			if (true) {
+				x = x + 1;
+			}
+		}
+	}
+	
+	cout << x;
+	
+}

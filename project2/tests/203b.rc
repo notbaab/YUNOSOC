@@ -1,0 +1,12 @@
+function : bool t(){
+    static int t = 0;
+    cout << t++ << " ";
+    return true;
+}
+
+function : int main(){
+    if (false && t() && t() && t()){
+    }
+    
+    return 0;
+}

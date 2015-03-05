@@ -1,0 +1,19 @@
+function : void main() 
+{
+    int k = 11222;
+	int *p = &k;
+
+	p++;
+	p++;
+	--p;
+	--p;
+	
+	p++;
+	
+	p--;
+	
+	int *hey = p;
+	
+	cout << *hey << endl;
+
+}

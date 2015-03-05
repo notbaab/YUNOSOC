@@ -1,0 +1,17 @@
+const int c = 50000 - 50000 + 10;
+
+structdef TT {
+  int a;
+  bool b;
+  float c;
+};
+
+TT a[c];  // TT[10] a;
+
+function : void main() {
+   cout << a[0].a << a[0].b << a[0].c << endl;
+   cout << a[9].a << a[8].b << a[7].c << endl;
+   cin >> a[9].c;  // a[9].c = 7999.40;
+   cin >> a[8].a;  // a[8].a = -9000
+   cout << a[8].a + a[9].a << a[9].b << a[8].c + a[9].c << endl;
+}

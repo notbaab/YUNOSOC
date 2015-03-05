@@ -1,0 +1,19 @@
+// pass vars by value, int, bool, float
+
+int x = 55;
+bool y = false;
+float z = 1.23;
+
+function: void foo (int x, bool y, float z) {
+	cout << x << " " << y << " " << z << endl;
+}
+
+function: void main() {
+	int a = 922;
+	bool b = true;
+	float c = 112233.44;
+	
+	foo(a, b, c);
+	
+	cout << x << " " << y << " " << z << endl;
+}

@@ -1,0 +1,43 @@
+function : void foo(float &a)
+{
+  cout << "ref before 5.5 a: " << a << endl;
+  a = 10.10;
+}
+
+function : void foo1(float a)
+{
+  cout << "val before 5.5 a: " << a << endl;
+  a = 10.10;
+}
+
+
+function : void foo2(float &a, float &b, float &c)
+{
+  cout << "ref before 1.1 a: " << a << endl;
+  cout << "ref before 2.2 b: " << b << endl;
+  cout << "ref before 3.3 c: " << c << endl;
+  a = 11.11;
+  b = 22.22;
+  c = 33.33;
+}
+
+function : void main()
+{
+  float x = 5.5;
+ 
+  foo(x);
+  cout << "after 10.10: " << x << endl;
+
+  float y = 5.5;
+  foo1(y);
+  cout << "after 5.5: " << y << endl;
+
+  float i = 1.1;
+  float j = 2.2;
+  float k = 3.3;
+  foo2(i,j,k);
+  cout << "after 11.11: " << i << endl;
+  cout << "after 22.22: " << j << endl;
+  cout << "after 33.33: " << k << endl;
+
+}

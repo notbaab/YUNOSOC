@@ -1,0 +1,8 @@
+function : void main()
+{
+  cout << "should print" << endl;
+  int x = 1;
+  int y = 3;
+  exit(x + y); //constant folding
+  cout << "should NOT print" << endl;
+}

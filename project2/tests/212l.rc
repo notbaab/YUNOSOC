@@ -1,0 +1,20 @@
+structdef STRUCCY { int y; int a; STRUCCY * reccy; };
+
+function : int main(){
+   
+   STRUCCY st;
+   
+   st.reccy = &st;
+
+   st.a = 1;
+   cout << st.a << endl;
+   
+   cout << st.reccy->a << endl;
+   
+   st.reccy->a = 0;
+   cout << st.a << endl;
+   cout << st.reccy->a << endl;
+   
+   return 0;
+}
+

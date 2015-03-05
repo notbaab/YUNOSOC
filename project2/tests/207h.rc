@@ -1,0 +1,41 @@
+function : void main()
+{
+
+  if(true)
+  {
+    if(false)
+    {
+      cout << "SHOULD NOT PRINT" << endl;
+    }
+    else
+    {
+      if(true)
+      {
+        if(false)
+	{
+          cout << "SHOULD NOT PRINT" << endl;
+	}
+	else
+	{
+          if(true)
+	  {
+            cout << "MADE IT!!!" << endl;
+	  }
+	  else
+	  {
+            cout << "SHOULD NOT PRINT" << endl;
+	  }
+	}
+      }
+      else
+      {
+        cout << "SHOULD NOT PRINT" << endl;
+      }
+    }
+  }
+  else
+  {
+    cout << "SHOULD NOT PRINT" << endl;
+  }
+
+}

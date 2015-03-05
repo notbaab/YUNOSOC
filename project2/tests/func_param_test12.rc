@@ -1,0 +1,22 @@
+function : float foo(float &a, int r)
+{
+	cout << "r is: " << r << endl;
+	cout << "modifying a" << endl;
+    a = 351.22;
+	return r;
+}
+
+function : int main()
+{
+
+	float noob = 44.55;
+	
+	cout << "noob is: " << noob << endl;
+	float c = foo(noob, 88);
+
+    cout << "c is: " << c << endl;
+
+    cout << "noob is now: " << noob << endl;
+	
+	return 44;
+}

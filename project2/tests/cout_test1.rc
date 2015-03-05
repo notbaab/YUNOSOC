@@ -1,0 +1,15 @@
+int x; 
+
+function : void main(){
+
+int x = 1337; 
+
+cout << "this "; 
+cout << "is "; 
+cout << "a message."; 
+
+cout << 10 << endl; 
+cout << x << endl;     // 1337
+cout << ::x << endl;   // 0
+
+}

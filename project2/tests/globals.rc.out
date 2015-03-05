@@ -1,0 +1,22 @@
+INT
+---------------------------------
+i0: should be 0:  0
+i1: should be 1:  1
+i2: should be 2:  2
+i3: should be 3:  3
+i4: should be 4:  4
+i5: should be 5:  5
+BOOL
+---------------------------------
+b0: should be false: false
+b1: should be true:  true
+b2: should be true:  true
+b3: should be false: false
+FLOAT
+---------------------------------
+f0: should be 0.00:  0.00
+f1: should be 1.00:  1.00
+f2: should be 2.00:  2.00
+f3: should be 3.00:  3.00
+f4: should be 4.00:  4.00
+f5: should be 5.00:  5.00

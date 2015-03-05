@@ -1,0 +1,9 @@
+const int w = 5;
+const int v = 0;
+
+int x;
+int y;
+
+int z;
+
+function : void main() {}

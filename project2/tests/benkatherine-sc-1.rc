@@ -1,0 +1,17 @@
+const bool a = true;
+const bool b = false;
+
+bool c = a && a;
+bool d = b || a;
+
+function: void main()
+{
+  cout<<c<<endl; //should print out true
+  cout<<d<<endl; // should print out ture
+  cout<<a&&b<<endl; // should print out false
+  cout<<b&&b<<endl;//should print out false
+
+  cout<<a||b<<endl; // should print out true
+  cout<<b||b<<endl;//should print out false
+
+}

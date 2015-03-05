@@ -1,0 +1,4 @@
+global: 5.50 * 12 = 66.00
+global * const: 5.50 * 5 = 27.50
+local * global: 27.50 * 66.00 = 1815.00
+int const * float const: 7 * 191.00 = 1337.00

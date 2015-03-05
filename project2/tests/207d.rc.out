@@ -1,0 +1,120 @@
+(int,int): 3 == 3 = true
+(int,int): 3 != 3 = false
+(int,int): 3 >= 3 = true
+(int,int): 3  > 3 = false
+(int,int): 3 <= 3 = true
+(int,int): 3  < 3 = false
+
+(int,int): 7 == 3 = false
+(int,int): 7 != 3 = true
+(int,int): 7 >= 3 = true
+(int,int): 7  > 3 = true
+(int,int): 7 <= 3 = false
+(int,int): 7  < 3 = false
+
+(int,int): 10 == 10 = true
+(int,int): 10 != 10 = false
+(int,int): 10 >= 10 = true
+(int,int): 10  > 10 = false
+(int,int): 10 <= 10 = true
+(int,int): 10  < 10 = false
+
+(int,int): 7 == 3 = false
+(int,int): 7 != 3 = true
+(int,int): 7 >= 3 = true
+(int,int): 7  > 3 = true
+(int,int): 7 <= 3 = false
+(int,int): 7  < 3 = false
+
+(float,float): 3.00 == 3.00 = true
+(float,float): 3.00 != 3.00 = false
+(float,float): 3.00 >= 3.00 = true
+(float,float): 3.00  > 3.00 = false
+(float,float): 3.00 <= 3.00 = true
+(float,float): 3.00  < 3.00 = false
+
+(float,float): 7.00 == 3.00 = false
+(float,float): 7.00 != 3.00 = true
+(float,float): 7.00 >= 3.00 = true
+(float,float): 7.00  > 3.00 = true
+(float,float): 7.00 <= 3.00 = false
+(float,float): 7.00  < 3.00 = false
+
+(float,float): 10.00 == 10.00 = true
+(float,float): 10.00 != 10.00 = false
+(float,float): 10.00 >= 10.00 = true
+(float,float): 10.00  > 10.00 = false
+(float,float): 10.00 <= 10.00 = true
+(float,float): 10.00  < 10.00 = false
+
+(float,float): 7.00 == 3.00 = false
+(float,float): 7.00 != 3.00 = true
+(float,float): 7.00 >= 3.00 = true
+(float,float): 7.00  > 3.00 = true
+(float,float): 7.00 <= 3.00 = false
+(float,float): 7.00  < 3.00 = false
+
+(int,float): 3 == 3.00 = true
+(int,float): 3 != 3.00 = false
+(int,float): 3 >= 3.00 = true
+(int,float): 3  > 3.00 = false
+(int,float): 3 <= 3.00 = true
+(int,float): 3  < 3.00 = false
+
+(int,float): 7 == 3.00 = false
+(int,float): 7 != 3.00 = true
+(int,float): 7 >= 3.00 = true
+(int,float): 7  > 3.00 = true
+(int,float): 7 <= 3.00 = false
+(int,float): 7  < 3.00 = false
+
+(int,float): 10 == 10.00 = true
+(int,float): 10 != 10.00 = false
+(int,float): 10 >= 10.00 = true
+(int,float): 10  > 10.00 = false
+(int,float): 10 <= 10.00 = true
+(int,float): 10  < 10.00 = false
+
+(int,float): 7 == 3.00 = false
+(int,float): 7 != 3.00 = true
+(int,float): 7 >= 3.00 = true
+(int,float): 7  > 3.00 = true
+(int,float): 7 <= 3.00 = false
+(int,float): 7  < 3.00 = false
+
+(bool,bool): true == false = false
+(bool,bool): true != false = true
+
+(bool,bool): true == false = false
+(bool,bool): true != false = true
+
+(bool,bool): true == true = true
+(bool,bool): true != true = false
+
+(bool,bool): false == false = true
+(bool,bool): false != false = false
+
+b = 3 == 3:	true	b:	true
+b = 3 != 3:	false	b:	false
+b = 3 >= 3:	true	b:	true
+b = 3  > 3:	false	b:	false
+b = 3 <= 3:	true	b:	true
+b = 3  < 3:	false	b:	false
+b = 7 == 3:	false	b:	false
+b = 7 != 3:	true	b:	true
+b = 7 >= 3:	true	b:	true
+b = 7  > 3:	true	b:	true
+b = 7 <= 3:	false	b:	false
+b = 7  < 3:	false	b:	false
+b = 10 == 10:	true	b:	true
+b = 10 != 10:	false	b:	false
+b = 10 >= 10:	true	b:	true
+b = 10  > 10:	false	b:	false
+b = 10 <= 10:	true	b:	true
+b = 10  < 10:	false	b:	false
+b = 7 == 3:	false	b:	false
+b = 7 != 3:	true	b:	true
+b = 7 >= 3:	true	b:	true
+b = 7  > 3:	true	b:	true
+b = 7 <= 3:	false	b:	false
+b = 7  < 3:	false	b:	false

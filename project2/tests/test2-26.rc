@@ -1,0 +1,53 @@
+// wrapped while loops
+
+function: void main() {
+	
+	int i;
+	int j = 1;
+	
+	
+	while (j < 20) {
+		cout << "BEGIN OF MAIN WHILE LOOP:" << endl;
+		i = 1; //should only ever be 1, 2, 3, 4
+	
+		cout << i << " " << j << endl;
+		
+		cout << "CONTINUE LOOP:" << endl;
+		while (i < 5) {
+			++j;
+			++i;
+			cout << i << " " << j << endl;
+			
+			continue;
+			exit(1); //shouldn't do this...
+		}
+		cout << "NO BREAK OR CONTINUE LOOP:" << endl;
+		while (i < 9) {
+			++j;
+			++i;
+			cout << i << " " << j << endl;
+		}
+
+		cout << "WHILE LOOP WITH FALSE STATEMENT:" << endl;
+		while (i < 1) {
+			++j;
+			++i;
+			cout << i << " " << j << endl;
+			return;
+		}
+		
+		cout << "BREAK LOOP:" << endl;
+		while (i < 12) {
+			++i;
+			++j;
+			cout << i << " " << j << endl;
+			break;
+			exit(1);
+		}
+		cout << "END OF MAIN WHILE LOOP:\ni: " << i << ", j: " << j << endl;
+		++j;
+	}
+	cout << "END" << "\n";
+	
+	
+}

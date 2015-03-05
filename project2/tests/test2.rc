@@ -1,0 +1,22 @@
+structdef MS {
+  int a;
+  int b;
+  int c;
+  int d;
+};
+
+MS myGlob[10];
+
+function : void main() {
+  int i = 99;
+  foreach ( MS &s : myGlob ) {
+    s.a = ++i;
+    s.b = 2 * i;
+    if ( i % 2 == 1 ) { continue; }
+    s.c = 4 * i;
+    s.d = i / 2;
+  }
+  foreach ( MS &s : myGlob ) {
+    cout << s.a << " " << s.b << " " << s.c << " " << s.d << endl;
+  }
+}

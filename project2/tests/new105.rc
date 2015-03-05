@@ -1,0 +1,9 @@
+
+
+function : void main() {
+
+ int x = 3;
+ float y = 4.44;
+
+	cout << "main" << x-- << x-- << y-- << y-- <<"end" <<endl;
+}

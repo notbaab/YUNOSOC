@@ -1,0 +1,10 @@
+function : void foo(float x, float y)
+{
+  cout << x << y<<endl;
+}
+
+function : void main()
+{	
+  int a = 2;
+  foo(777, a);
+}

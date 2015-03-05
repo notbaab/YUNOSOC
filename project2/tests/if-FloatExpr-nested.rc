@@ -1,0 +1,18 @@
+function : void main(){
+	float a = 1.0;
+	float b = 2.0;
+	float c = 3.0;
+	float d = 4.0;
+
+	if(b>a){
+		if(c>b){
+			cout<<"if-float-branch-success-test";
+		}
+	}
+
+	if(b>a){
+		if(b>c){
+			cout<<"if-float-branch-SHOULD-FAIL!!!!";
+		}
+	}
+}

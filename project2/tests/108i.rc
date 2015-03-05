@@ -1,0 +1,10 @@
+function : void main()
+{
+  cout << "SHOULD PRINT" << endl;
+
+  const int x = 0;
+  exit(x); // Tests const variable
+
+  cout << "SHOULD NOT PRINT" << endl;
+
+}

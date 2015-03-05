@@ -1,0 +1,4 @@
+int *p;
+function : int main(){
+   return *p;
+}

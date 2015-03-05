@@ -1,0 +1,16 @@
+int x;
+int y;
+
+function: void main()
+{
+  x = 5;
+  y = 6;
+  cout<<x<<endl;
+}
+
+function: void foo()
+{
+  main();
+  main();
+
+}

@@ -1,0 +1,28 @@
+int x[5];
+float y[5];
+bool z[5];
+
+function : void main()
+{
+  cout << "int array x" << endl;
+  cout << x[0] << endl; // 0  - ind 1
+  cout << x[1] << endl; // 0  - ind 2
+  cout << x[2] << endl; // 0  - ind 3
+  cout << x[3] << endl; // 0  - ind 4
+  cout << x[4] << endl; // 0  - ind 5
+
+  cout << "float array y" << endl;
+  cout << y[0] << endl; // 0.0  - ind 1
+  cout << y[1] << endl; // 0.0  - ind 2
+  cout << y[2] << endl; // 0.0  - ind 3
+  cout << y[3] << endl; // 0.0  - ind 4
+  cout << y[4] << endl; // 0.0  - ind 5
+
+
+  cout << "bool array z" << endl;
+  cout << z[0] << endl; // false  - ind 1
+  cout << z[1] << endl; // false  - ind 2
+  cout << z[2] << endl; // false  - ind 3
+  cout << z[3] << endl; // false  - ind 4
+  cout << z[4] << endl; // false  - ind 5
+}

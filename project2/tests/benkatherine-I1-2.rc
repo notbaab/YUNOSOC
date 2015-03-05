@@ -1,0 +1,10 @@
+int x;
+int y;
+
+int a = 4;
+int b = 0;
+
+function: void main(){
+int x;
+int y;
+}

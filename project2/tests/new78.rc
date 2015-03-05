@@ -1,0 +1,18 @@
+int x = 3;
+float y = 4.44;
+
+function : int boo(int y)
+{
+	return y;
+}
+
+function : float foo(int x)
+{
+	int z = 1;
+	return boo(z)+boo(x);
+}
+
+function : void main() {
+
+	cout << "main" << foo(boo(200)) << "end" <<endl;
+}

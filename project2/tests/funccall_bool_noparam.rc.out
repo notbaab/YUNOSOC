@@ -1,0 +1,19 @@
+Testing function calls returning BOOL
+ 1. foo1() - returning true as literal
+ 2. foo1() -  received true
+ 3. foo2() - returning false as local
+ 4. foo2() -  received false
+ 5. foo3() - returning true as const local
+ 6. foo3() -  received true
+ 7. foo4() - returning false as global
+ 8. foo4() -  received false
+ 9. bar1() - returning true as direct
+10. bar2() - returning true
+11. bar1() -  received true
+12. foo5() - recursive start
+13. foo5() - returning true
+14. foo5() - returning true
+15. foo5() - returning true
+16. foo5() - returning true
+17. foo5() - returning true
+18. foo5() - recursive end - final value: true

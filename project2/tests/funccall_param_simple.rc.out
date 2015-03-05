@@ -1,0 +1,40 @@
+foo1_1: received (should be 1): 1
+foo1_2: received (should be 2): 2
+foo1_1: value after foo1_2 (should be 2): 2
+x1 after call (should be 1): 1
+returned value (should be 2):  2
+
+foo2_1: received (should be 2): 2
+foo2_2: received (should be 3): 3
+foo2_1: value after foo2_2 (should be 6): 6
+x2 after call (should be  2): 2
+returned value (should be 6):  6
+
+foo3_1: received (should be 3): 3
+foo3_2: received (should be 4): 4
+foo3_1: value after foo3_2 (should be 4): 4
+x3 after call (should be  4): 4
+returned value (should be 4):  4
+
+foo4_1: received (should be 4): 4
+foo4_2: received (should be 5): 5
+foo4_1: value after foo4_2 (should be 10): 10
+x4 after call (should be 10): 10
+returned value (should be 10):  10
+
+foo5: received (should be 5): 5
+x5 after call (should be  5): 5
+returned value (should be 10):  10
+
+foo6: received (should be 6): 6
+x6 after call (should be 12): 12
+returned value (should be 12):  12
+
+foo7: received (should be 7): 7
+x7 after call (should be  7): 7
+returned value (should be 14):  14
+
+foo8: received (should be 8): 8
+x8 after call (should be 16): 16
+returned value (should be 16):  16
+

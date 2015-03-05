@@ -1,0 +1,14 @@
+function : void main()
+{
+    int w = 0;
+    int x = 1;
+    int y = -5;
+    int z = (x*x*( (x*y)/y))%9000;
+    cout << "x*x* ((x*y)/y))%9000, EXPECTED OUTPUT: 1"<< " ACTUAL OUTPUT: " << z << endl; //1%9000
+
+
+    int x1 = -2/2*2; //-22 
+    int y1 = (-7%3)%9; //2%9 == 2
+    int z1 = x1%y1;
+    cout << "x1%y1 , EXPECTED OUTPUT: 0" << " ACTUAL OUTPUT: " << z1 << endl;
+}

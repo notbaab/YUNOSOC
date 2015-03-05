@@ -1,0 +1,8 @@
+function : void main () {
+
+      float c;
+
+      cout << c << endl;
+
+}
+

@@ -1,0 +1,17 @@
+structdef FOO {
+	int b;
+	float r;
+};
+
+FOO bong;
+int kong = 55;
+
+function : void main() 
+{
+    float p = 42.33 + kong;
+	bong.r = p;
+
+	FOO *bell = &bong;
+
+	cout << (*bell).r << endl;
+}

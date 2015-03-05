@@ -1,0 +1,80 @@
+int dream1 = 6;
+int dream2 = 5;
+int dream3 = 4;
+int dream4 = 3;
+int dream5 = 2;
+int dream6 = 1;
+bool winning = true;
+
+function : void main()
+{
+	if (dream1 > dream2)
+	{
+		cout << "First level of Inception" << endl;
+		if (dream2 > dream3)
+		{
+			cout << "Second level of Inception" << endl;
+			if (dream3 > dream4)
+			{
+				cout << "Third level of Inception" << endl;
+				if (dream4 > dream5)
+				{
+					cout << "Fourth level of Inception" << endl;
+					if (dream5 > dream6)
+					{
+						cout << "Fifth level of Inception" << endl;
+						if (winning)
+						{
+							cout << "Bonzai!" << endl;
+						}
+					}
+				}
+			}
+		}
+		cout << "Second level of Inception" << endl;
+		if (dream3 > dream4)
+		{
+			cout << "Third level of Inception" << endl;
+			if (dream4 > dream5)
+			{
+				cout << "Fourth level of Inception" << endl;
+				if (dream5 > dream6)
+				{
+					cout << "Fifth level of Inception" << endl;
+					if (winning)
+					{
+						cout << "Bonzai!" << endl;
+					}
+				}
+			}
+			cout << "Third level of Inception" << endl;
+			if (dream4 > dream5)
+			{
+				cout << "Fourth level of Inception" << endl;
+				if (dream5 > dream6)
+				{
+					cout << "Fifth level of Inception" << endl;
+					if (winning)
+					{
+						cout << "Bonzai!" << endl;
+					}
+				}
+				cout << "Fourth level of Inception" << endl;
+				if (dream5 > dream6)
+				{
+					cout << "Fifth level of Inception" << endl;
+					if (winning)
+					{
+						cout << "Bonzai!" << endl;
+					}
+				}
+				cout << "Fifth level of Inception" << endl;
+				if (winning)
+				{
+					cout << "Bonzai!" << endl;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,27 @@
+int i;
+int j;
+int * ip;// = &i;
+
+function : void foo1(int * &p){
+   *p = 5;
+   p = &j;
+}
+function : void foo2(int * p){
+   *p = 7;
+   p = &j;
+}
+
+function : void main()
+{
+	ip = &i;
+	foo1(ip);
+	
+	cout << "i is: " << i << endl;
+	cout << "value of ip is: " << *ip << endl;
+	
+	j = 99;
+	
+	//ip should now print out a non-null value, which is 99
+	cout << "value of ip is: " << *ip << endl;
+
+}

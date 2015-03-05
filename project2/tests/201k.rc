@@ -1,0 +1,18 @@
+function : void main()
+{
+  int x = 1;
+  int y = -1;
+  int z = 10;
+
+  cout << x << endl; // 1
+  cout << y << endl; //-1
+  cout << x + y << endl; //0
+  cout << x + y + z << endl; //10
+  cout << x + x + x + x + x + x << endl; //6
+  cout << x + 2 << endl; // 3
+  cout << 2 + x << endl; // 3
+
+  const int w = 5;
+  cout << w + x << endl; // 6
+  cout << x + w << endl; // 6
+}

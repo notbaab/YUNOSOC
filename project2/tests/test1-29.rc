@@ -1,0 +1,18 @@
+//and, or, xor
+
+const int i = 28; // 0001 1100
+const int j = 34; // 0010 0010
+int k = i | j; // 0011 1110, 62
+
+
+function: void main() {
+	
+	int a = 255; // 1111 1111
+	int b = 85;  // 0101 0101
+	int c = a ^ b; // 1010 1010, 170
+
+	int d = a & b; // 0101 0101, 85
+	
+	cout << k << " " << c << " " << d << " " << a | 256 << " " << 14 & 3 << endl;
+	
+}

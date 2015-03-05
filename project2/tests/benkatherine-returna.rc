@@ -1,0 +1,16 @@
+/*Testing function return with float type. type promotion is required. */
+function: float foo()
+{
+    int x;
+     x = 2;
+
+     return x;
+}
+
+function: void main(){
+    float c = foo();
+    cout<<c<<endl;
+
+
+
+}

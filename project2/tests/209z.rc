@@ -1,0 +1,59 @@
+function : void foo(float f)
+{
+  cout << f << endl;
+}
+function : void foo()
+{
+  cout << "SD" << endl;
+}
+
+function : void foo(float &f, int i)
+{
+  cout << f << endl;
+  f = 1200;
+  cout << i << endl;
+}
+
+function : void foo(int i, float f)
+{
+  cout << i << endl;
+  cout << f << endl;
+}
+
+function : void foo2(float f)
+{
+  cout << f << endl;  
+}
+
+function : void foo3(int i)
+{
+  cout << i << endl;  
+}
+
+function: float foo4(float &x) 
+{
+  x = 21000;
+  return 0;
+}
+
+function: bool foo4() 
+{
+  return false;
+}
+
+function : int main()
+{
+  int x = 1;
+  float y = 2;
+  foo3(x);
+  foo();
+  foo(1.0);
+  foo(y,1);
+  foo(1, 1.5);
+  cout << foo4() << endl;
+  float x1;
+  float x2 = foo4(x1);
+  cout << x2 << endl;
+  return 0;
+
+}

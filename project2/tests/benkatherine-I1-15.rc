@@ -1,0 +1,6 @@
+const int a = 4;
+
+function : void main()
+{
+  const int b = a;
+}

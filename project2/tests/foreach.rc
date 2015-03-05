@@ -1,0 +1,17 @@
+
+function : void main() {
+ int arr[5];
+ int i = 0;
+ while(i<5){
+  arr[i] = i;
+  i++;
+ }
+ foreach (int x : arr)
+ {
+   x = 1; 
+ }
+ foreach (int z : arr)
+ {  cout << z << endl;
+
+ }
+}

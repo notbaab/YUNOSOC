@@ -1,0 +1,20 @@
+function : int main(){
+   int a[10];
+   int i;
+   
+   i = 0;
+   while ( i< 10) {
+      a[i] = i;
+      i++;
+   }
+   
+   i = 0; 
+   while ( i< 10) {
+      cout << a[i];
+      i++;
+   }
+   
+   cout << endl;
+   
+   return 0;
+}

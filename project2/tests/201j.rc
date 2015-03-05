@@ -1,0 +1,16 @@
+function : void main()
+{
+    int x = 1;
+    int y = -5;
+    int z = -20+20-369+369+ (((x+y)+x)-x);// 0+-2=-4
+    cout << "-20+20-369+369+ (((x+y)+x)-x), EXPECTED OUTPUT: -4"<< endl;
+    cout << "ACTUAL OUTPUT: " << z << endl;
+
+
+    int x1 = -3+6-9; //-6
+    int y1 = 0+0+10-5000; //-4990
+    int z1 = x1+y1-y1; //-6
+
+    cout << "x1+y1-y1 , EXPECTED OUTPUT: -6" << endl;
+    cout << "ACTUAL OUTPUT: " << z1 << endl;
+}

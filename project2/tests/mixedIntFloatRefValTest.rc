@@ -1,0 +1,30 @@
+function : void foo(int a, float b, int &c, float &d)
+{
+  a = 1;
+  b = 1.1;
+  c = 33;
+  d = 33.33;
+}
+
+
+
+function : void main()
+{
+  int x = 5;
+  float y = 5.5;
+  int z = 111;
+  float w = 222.22;
+
+  cout << "before x 5: " << x << endl;
+  cout << "before y 5.5: " << y << endl;
+  cout << "before z 111.11: " << z << endl;
+  cout << "before w 222.22: " << w << endl;
+ 
+  foo(x, y, z, w);
+
+  cout << "after x 5: " << x << endl;
+  cout << "after y 5.5: " << y << endl;
+  cout << "after z 33: " << z << endl;
+  cout << "after w 33.33: " << w << endl;
+
+}

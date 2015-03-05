@@ -1,0 +1,10 @@
+function : void main () {
+
+      bool c;
+
+      c = true;
+
+      cout << c << endl;
+
+}
+

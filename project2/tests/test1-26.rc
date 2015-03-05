@@ -1,0 +1,17 @@
+//super multiplicaiton test, includes float coersion
+
+const float f1 = 5.5;
+const int i = 12;
+float f2 = i * f1; // f2 = 66
+
+function: void main() {
+	
+	float f2 = f1 * 5; //27.5
+	float f3 = f2 * ::f2; // 1815.00
+	
+	cout << "global: " << f1 << " * " << i << " = " << ::f2 << endl; //global: 5.5 * 12 = 66.00
+	cout << "global * const: " << f1 << " * " << 5 << " = " << f2 << endl; //global * const: 5.50 * 5 = 27.50
+	cout << "local * global: " << f2 << " * " << ::f2 << " = " << f3 << endl; //local * global: 27.50 * 66.00 = 1815.00
+	cout << "int const * float const: " << 7 << " * " << 191.0 << " = " << 7 * 191.0 << endl; //7 * 191.00 = 1337.00
+
+}

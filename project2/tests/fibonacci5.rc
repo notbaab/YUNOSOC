@@ -1,0 +1,35 @@
+function : int fibonacci (int x) {
+    int t[2];
+    int s;
+    int i;
+
+    if (x <= 0) {
+        return 0;
+    } else {
+        t[0] = 0; t[1] = 1; s = 0;
+        i = 0;
+        while(i < x) {
+            t[s] = t[s] + t[(s+1)%2];
+            s = (s+1)%2;
+            i++;
+        }
+        return t[s];
+    }
+    return 0;
+}
+
+function : int main () {
+  cout << fibonacci(0) << endl;
+  cout << fibonacci(1) << endl;
+  cout << fibonacci(2) << endl;
+  cout << fibonacci(3) << endl;
+  cout << fibonacci(4) << endl;
+  cout << fibonacci(5) << endl;
+  cout << fibonacci(6) << endl;
+  cout << fibonacci(7) << endl;
+  cout << fibonacci(8) << endl;
+  cout << fibonacci(9) << endl;
+  cout << fibonacci(10) << endl;
+
+  return 0;
+}

@@ -1,0 +1,40 @@
+structdef S1{
+    int x;
+};
+structdef S2{
+    int y;
+    S1 * xs[100];
+};
+
+function : void main(){
+    S2 lot[100];
+    int i = 0;
+    int k = 0;
+    int v = 0;
+    while( i < 100 ){
+        k = 0;
+        while ( k < 100 ){
+            lot[i].xs[k]->x = v;
+            v++;
+            k++;
+        }
+        i++;
+    }
+    i = 0;
+    k = 0;
+    v = 0;
+    while( i < 100 ){
+        k = 0;
+        while ( k < 100 ){
+            cout << lot[i].xs[k]->x;
+            cout << "       ";
+            v++;
+            if( v % 10 == 0){
+                cout << endl;
+            }
+            k++;
+        }
+        i++;
+    }
+
+}

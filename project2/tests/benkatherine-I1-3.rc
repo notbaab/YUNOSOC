@@ -1,0 +1,17 @@
+/* Testing variables declaration, base registers, offset, and locality*/
+
+
+int x;  //x, 0, false
+int y; // y, 0, false
+bool z; // z, 0, false
+
+function: void foo(){
+	int x; //%fp, -4, true
+	int y; //%fp, -8, true
+}
+function: void main(){
+	int x; //%fp, -4,true
+	int y; //%fp, -8, true
+	bool z; //%fp, -12, true
+}
+

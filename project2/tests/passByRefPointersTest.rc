@@ -1,0 +1,18 @@
+
+function : void foo(int * & x, int & y)
+{
+  x = &y;
+}
+
+
+function : void main()
+{
+   int a = 5;
+   int * b = &a;
+   int c = 8;
+
+   cout << "Should be 5: " << *b << endl;
+   foo(b, c);
+   cout << "Should be 8: " << *b << endl;
+
+}

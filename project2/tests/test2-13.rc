@@ -1,0 +1,42 @@
+// if/else
+
+function: void main() {
+
+	bool f = false;
+	bool t = true;
+	
+	if (f) {
+		cout << "INCORRECT!";
+	}
+	if (true) {
+		if (false) {		
+			cout << "INCORRECT!";
+		}
+		else {
+			if (true) {
+				if (false) {
+					cout << "INCORRECT!";
+				} else {
+					if (true) {
+						cout << "IF/ELSE WORKS ";
+					} else {
+						cout << "INCORRECT!";
+					}
+				}	
+			}
+		}
+	}
+	
+	if (t) {
+		cout << "100% ";
+	} else {
+		cout << "INCORRECT!";
+	}
+
+	if (f) {
+		cout << "INCORRECT!";
+	} else {
+		cout << "CORRECT!";
+	}
+		
+}

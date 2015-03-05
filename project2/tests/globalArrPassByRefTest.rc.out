@@ -1,0 +1,15 @@
+a1 2: 2
+a1 3: 3
+-----INTEGER-----
+10: 10
+10: 10
+b1 2.20: 2.20
+b1 3.30: 3.30
+-----FLOAT-----
+10.10: 10.10
+10.10: 10.10
+c1 false: false
+c1 true: true
+-----BOOL-----
+true: true
+true: true

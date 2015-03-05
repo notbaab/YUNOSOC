@@ -1,0 +1,38 @@
+
+
+
+GLOBAL PASS BY REFERENCE
+100
+70
+200.00
+70.00
+false
+false
+
+
+
+After int calculations 
+10000
+69
+
+
+
+After float calculations 
+40000.00
+69.69
+
+
+
+After bool calculations 
+false
+true
+
+
+
+AFTER FUNCTION CALLS
+10000
+70
+40000.00
+70.00
+false
+false

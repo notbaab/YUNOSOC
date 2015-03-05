@@ -1,0 +1,7 @@
+int x = 99;
+function: void main() {
+	//testing local reassignment
+	x = 7;
+	cout << x << endl;
+
+}

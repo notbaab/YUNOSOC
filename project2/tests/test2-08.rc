@@ -1,0 +1,23 @@
+//mixed expressions
+
+float gf = 3.45;
+int gi	= 678;
+
+
+function: void main() {
+
+	int li = 3;
+	float lf = 6.7;
+	
+	int ithree = 123;
+	float fthree = 123.00;
+	
+	float lall = li + lf + gf + gi + 100 + 101.22; //892.37
+	
+	cout << lall << " " << 4 + 5.5 << endl;
+	cout << (gf < gi) << " " << (gi < gf) << endl;
+	cout << (gf > gi) << " " << (gi > gf) << endl;
+	cout << (ithree == fthree) << " " << (ithree != fthree) << endl;
+	cout << (ithree <= fthree) << " " << (ithree >= fthree) << endl;
+
+}

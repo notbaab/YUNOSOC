@@ -1,0 +1,19 @@
+bool a;
+bool b;
+bool c;
+bool d;
+bool e;
+int f;
+int g;
+int h;
+int i;
+int j;
+float k;
+float l;
+float m;
+float n;
+
+function : void main() {
+
+	cout << "main" << c << " " << h << " " << m << "end" <<endl;
+}

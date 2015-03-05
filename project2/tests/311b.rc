@@ -1,0 +1,6 @@
+function : int main(){
+   int a[10];
+   int b = -1;
+   a[b];
+   return 0;
+}

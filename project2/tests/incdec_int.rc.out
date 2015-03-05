@@ -1,0 +1,18 @@
+INT
+----------------------------------------------------
+Pre Increment-------------
+should print 3: 3
+should print 3: 3
+
+Post Increment-------------
+should print 2: 2
+should print 3: 3
+
+Pre Decrement-------------
+should print 1: 1
+should print 1: 1
+
+Post Decrement-------------
+should print 2: 2
+should print 1: 1
+

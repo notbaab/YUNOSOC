@@ -1,0 +1,13 @@
+int *p;
+function : int &foo(){
+   new p;
+   *p = 101010;
+   return *p;
+}
+
+function : int main(){
+   int x = foo();
+   cout << x << endl;
+   delete p;
+   return 0;
+}

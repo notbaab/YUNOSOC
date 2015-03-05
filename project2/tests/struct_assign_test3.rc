@@ -1,0 +1,37 @@
+structdef BAR {
+    int barA;
+    float barB;
+    bool barC;
+};
+
+BAR bed;
+
+function : void main()
+{
+	BAR cyclops;
+	
+	bed.barA = 44;
+	bed.barB = 99.33;
+	bed.barC = true;
+	
+	cyclops.barA = 55;
+	cyclops.barB = bed.barB;
+	cyclops.barC = bed.barC && false;
+	
+	BAR star = cyclops;
+    
+    cout << "star.barA: " << star.barA << endl;
+    cout << "star.barB: " << star.barB << endl;
+    cout << "star.barC: " << star.barC << endl;
+
+	cout << "cyclops.barA: " << cyclops.barA << endl;
+    cout << "cyclops.barB: " << cyclops.barB << endl;
+    cout << "cyclops.barC: " << cyclops.barC << endl;
+
+	cout << "bed.barA: " << bed.barA << endl;
+    cout << "bed.barB: " << bed.barB << endl;
+    cout << "bed.barC: " << bed.barC << endl;
+}
+    
+    
+    

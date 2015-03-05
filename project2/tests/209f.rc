@@ -1,0 +1,11 @@
+function : void foo(int x, int y, int z)
+{
+  cout << x << y << z << endl;
+}
+
+function : void main()
+{
+  int a = 7;
+  foo(5,6,a);
+
+}

@@ -1,0 +1,49 @@
+int davis;
+int coltrane;
+int parker;
+int ellington;
+int mingus;
+int monk;
+int brubeck;
+
+function : void main()
+{
+	davis = 10;
+	coltrane = 9;
+	parker = 8;
+	ellington = 7;
+	mingus = 6;
+	monk = 5;
+	brubeck = 4;
+	
+	if (davis > brubeck)
+	{
+		cout << "jazzy jazz jazz" << endl;
+		if (coltrane > parker)
+		{
+			cout << "jazzy jazz jazz" << endl;
+		}
+		if (parker > ellington)
+		{
+			cout << "jazzy jazz jazz" << endl;
+			if (ellington > mingus)
+			{
+				cout << "jazzy jazz jazz" << endl;
+				if (mingus > ellington)
+				{
+					cout << "no print" << endl;
+				}
+				cout << "jazzy jazz jazz" << endl;
+				if (monk > brubeck)
+				{
+					cout << "jazzy jazz jazz" << endl;
+				}
+				if (brubeck > monk)
+				{
+					cout << "no print" << endl;
+ 				}
+			}
+		}
+		cout << "jazzy jazz jazz" << endl;
+	}
+}

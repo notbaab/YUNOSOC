@@ -1,0 +1,23 @@
+function : void output(float &val) {
+  cout << val << endl;
+}
+
+float arr[3];
+
+function : void main() {
+  int i = 0;
+  while ( ++i <= 3 ) {
+    cin >> arr[0];
+    cin >> arr[1];
+    cin >> arr[2];
+    foreach ( float &f : arr ) {
+      ++f;
+      if ( f >= 2.99 && f <= 3.01 ) { cout << "C" << endl; continue; }
+      if ( f >= 18.99 && f <= 19.01 ) { cout << "B" << endl; break; }
+      output(f);
+    }
+    cout << arr[0] << " ";
+    cout << arr[1] << " ";
+    cout << arr[2] << endl;
+  }
+}

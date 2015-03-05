@@ -1,0 +1,7 @@
+function : void main()
+{
+    static int i = 0;
+    static int j;
+    static float k = 2.0;
+    static bool m = false;
+}

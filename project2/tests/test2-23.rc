@@ -1,0 +1,22 @@
+// mixed pass local + global bool by ref
+
+bool x = false;
+bool y = false;
+
+function: void foo (bool & x, bool y) {
+	x = true;
+	y = true;
+}
+
+function: void foo2 (bool x, bool & y) {
+	x = true;
+	y = true;
+}
+
+function: void main() {
+	cout << x << " " << y << endl;
+	foo(x,y);
+	cout << x << " " << y << endl;
+	foo2(x,y);
+	cout << x << " " << y << endl;
+}

@@ -1,0 +1,13 @@
+// pass global int by ref
+
+int x = 10;
+
+function: void foo (int & x) {
+	x = 4;
+}
+
+function: void main() {
+	cout << x << " ";
+	foo(x);
+	cout << x << endl;
+}

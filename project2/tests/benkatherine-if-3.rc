@@ -1,0 +1,16 @@
+int x = 5;
+int y = 6;
+
+function : void main()
+{
+  if(x>y)
+  {
+
+  }
+
+  if(y>x)
+  {
+
+  }
+
+}

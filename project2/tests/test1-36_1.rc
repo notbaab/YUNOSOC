@@ -1,0 +1,13 @@
+// function call float functions:
+
+float glb3 = 66.99;
+
+function : float foo4() {
+	return 99.44;
+}
+
+function: void main() {
+	float d = foo4();
+	
+	cout << d << " " << glb3 << endl;
+}

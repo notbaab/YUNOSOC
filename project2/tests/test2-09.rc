@@ -1,0 +1,12 @@
+//assignment expressions
+
+bool b = false;
+
+function: void main() {
+
+	if (b = 5 > 3) {
+		cout << "I am the greatest? ";
+	}
+	cout << b << endl;
+
+}

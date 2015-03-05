@@ -1,0 +1,24 @@
+function : void foo (int &a[10]){
+	int i = 0;
+	while (i < 10){
+		a[i] = i * 2;
+		cout << "a is: " << a[i] << endl;
+		i++;
+	}
+} 
+
+function : void main () {
+	int  b[10];
+	int i = 0;
+	int f = 0; 
+	while (i < 10){
+		b[i] = i;
+		cout << "old b is: " << b[i] << endl;
+		i++;
+	} 
+	foo (b); 
+	while (f < 10){
+		cout << "new b is: " << b[f] << endl;
+		f++;
+	}
+}

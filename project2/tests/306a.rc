@@ -1,0 +1,21 @@
+function : int &ref(){
+   static int i = 0;
+   return i;
+}
+
+function : int main(){
+   const int c = 5;
+   int failBreak = c*2;
+   while ( ref() < c){
+      cout << ref()++ << endl;
+      if (--failBreak <= 0){
+         cout << "epic fail q.q" << endl;
+         exit(1);
+         break;
+      }
+   }
+   if (failBreak == c){
+      cout << "passed :>" << endl;
+   }
+   return 0;
+}

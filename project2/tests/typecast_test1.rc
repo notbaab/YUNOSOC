@@ -1,0 +1,8 @@
+function : void main()
+{
+	const float a = 5.00;
+	
+	int b = (int)a;
+	
+	cout << b << endl;
+}

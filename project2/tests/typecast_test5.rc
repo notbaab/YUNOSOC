@@ -1,0 +1,11 @@
+const float bee = 2.1;
+float found = 4.22 + bee;
+
+function : void main()
+{
+	float a = 9.44 + 4.11 + found;
+	
+	int cast = (int)a;
+	
+	cout << cast << endl;
+}

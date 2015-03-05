@@ -1,0 +1,21 @@
+bool rick = true;
+bool ankur = false;
+bool rickAndAnkur;
+
+function : void main()
+{
+	bool a = true;
+	bool b = a;
+	
+	rickAndAnkur = ankur;
+	ankur = a;
+	rick = b;
+	rickAndAnkur = rick;
+	
+ 	cout << "rick is: " << rick << endl;
+    cout << "ankur is: " << ankur << endl;
+    cout << "rickAndAnkur is: " << rickAndAnkur << endl;
+ 	cout << "a is: " << a << endl;
+ 	cout << "b is: " << b << endl;
+
+}

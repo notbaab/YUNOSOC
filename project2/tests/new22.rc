@@ -1,0 +1,14 @@
+function : int foo1()
+{
+	return 4;
+}
+
+function : int foo ()
+{
+	return foo1();
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

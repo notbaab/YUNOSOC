@@ -1,0 +1,16 @@
+// tests  global resolution and simple assignment
+int x; 
+
+function: void main(){
+int x = 5;
+
+cout << ::x << endl;  // 0 
+cout << x << endl;    // 5
+
+int y = ::x; 
+int z = x; 
+
+cout << y << endl;  // 0
+cout << z << endl;  // 5
+
+}

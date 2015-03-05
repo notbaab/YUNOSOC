@@ -1,0 +1,34 @@
+
+
+function : void main() 
+{
+    
+    int x = 5;
+    int y = 8;
+    int *a = &x;
+    int *z = &x;
+    int **b = &a;
+
+
+
+
+    cout << "**b is: " << **b << endl; // **b is: 5
+
+    a = &y;
+
+    cout << "*a is: " << *a << endl; // *a is: 8
+    cout << "**b is: " << **b << endl; // **b is: 8
+    
+	**b = x;
+	
+	cout << "**b is: " << **b << endl; // **b is: 5
+	cout << "*a is: " << *a << endl; // *a is: 5
+	
+	**b = 588585;
+	*b = z;
+	
+	cout << "*a is: " << *a << endl; // *a is: 58858
+	cout << "**b is: " << **b << endl; // **b is: 5
+	
+
+}

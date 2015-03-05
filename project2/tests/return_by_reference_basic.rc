@@ -1,0 +1,26 @@
+int x = 0;
+float f = 0.0;
+bool b = true;
+function : int & pass1(){
+    return x;
+}
+function : float & pass2(){
+    return f;
+}
+function : bool & pass3(){
+    return b;
+}
+function : void main(){
+    cout << "Before return by reference function calls and modification" << endl;
+    cout << x << endl;
+    cout << f << endl;
+    cout << b << endl;
+
+    pass1() = 10;
+    pass2() = 9999.99;
+    pass3() = false;
+
+    cout << x << endl;
+    cout << f << endl;
+    cout << b << endl;
+}

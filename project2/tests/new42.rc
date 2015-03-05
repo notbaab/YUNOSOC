@@ -1,0 +1,7 @@
+static float x = 3.33;
+
+function : void main() {
+	static float x = 4.44;
+
+	cout << "main" << ::x << x << "end" <<endl;
+}

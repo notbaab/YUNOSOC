@@ -1,0 +1,10 @@
+function : void main()
+{
+  int x[3];
+
+  x[1] = 666;
+
+  cout << x[0] = x[1] << endl; //666
+  cout << x[1] << endl; //666
+
+}

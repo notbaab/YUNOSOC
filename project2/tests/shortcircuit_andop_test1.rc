@@ -1,0 +1,57 @@
+function : void main()
+{
+	bool x = true;
+	bool y = false;
+	
+	int ix = 4;
+	int iy = 50;
+	
+	if ( x && y)
+	{
+		cout << "this should not be printed 1" << endl;
+	
+	}
+	
+	if ( x && (y = true))
+	{
+		cout << "1" << endl;
+		cout << "y's value: " << y << endl; // y's value: true;
+	}
+	
+	bool z = false;
+	bool a = false;
+	
+	if ( z && (a = true) )
+	{
+		cout << "this should not be printed 2" << endl;
+	
+	}
+
+	cout << "a's value: " << a << endl; // a's value: false;
+	
+	if( x && (y = true) && (z = true))
+	{
+		cout << "2" << endl;
+		cout << "y's value: " << y << endl; //y's value: true
+		cout << "z's value: " << z << endl; // z's value: true
+		
+	}
+	
+	bool b = x && y;
+	
+	cout << "b's value: " << b << endl; //b's value: true
+	
+	if( (b = false) && x && y && z && (a = true) )
+	{
+		cout << "this should not be printed 3" << endl;
+	
+	}
+	
+	cout << "b's value: " << b << endl; // b's value: false
+	cout << "a's value: " << a << endl; // a's value: false
+	
+	
+	
+	
+
+}

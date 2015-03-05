@@ -1,0 +1,26 @@
+structdef MS {
+  MS* g;
+  int j;
+};
+int x;
+float y;
+MS* z;
+
+function : void main()
+{
+  cout << (((int) (((bool) (x = 1)) && true)) % 5) << endl;
+  new z;
+  new z->g;
+  cin >> y;
+  cin >> z->g->j;
+  x = (int) y;
+  cout << x << endl;
+  x = (int) (x + 5.9);
+  cout << x << endl;
+  y = (float) (int) (65.3);
+  cout << y << endl;
+  cout << (int) (MS*) (z->g->j) << endl;
+  delete z->g;
+  delete z;
+}
+

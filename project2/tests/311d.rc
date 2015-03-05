@@ -1,0 +1,12 @@
+function : void main()
+{
+	int a[500];
+	
+	a[400] = 5;
+	
+	a[499] = 9;
+	
+	int b = 1;
+	
+	a[499+b] = 10; //error
+}

@@ -1,0 +1,7 @@
+int x[3];
+
+function : void main()
+{
+  x[2] = 5;
+  cout<<x[2]<<endl;
+}

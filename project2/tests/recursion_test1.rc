@@ -1,0 +1,23 @@
+int rec;
+
+function : void foo()
+{
+	rec++;
+	cout << "recursive foo call " << rec << endl;
+	if (rec > 10)
+	{
+		cout << "breaking out of foo recursive call" << endl;
+		return;
+	}
+	
+	foo();
+}
+
+function : void main()
+{
+	rec = 1;
+	
+	foo();
+	
+	cout << "rec, in the end, is: " << rec << endl;
+}

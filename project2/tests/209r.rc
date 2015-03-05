@@ -1,0 +1,14 @@
+function : void foo(bool &a)
+{
+  cout << "before ref true: " << a << endl;
+  a = false;
+}
+
+function : void main()
+{
+  bool x = true;
+  foo(x);
+  cout << "after x false: " << x << endl;
+
+}
+

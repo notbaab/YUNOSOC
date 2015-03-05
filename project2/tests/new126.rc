@@ -1,0 +1,21 @@
+function : void main()
+{
+	if(true)
+	{
+		cout << "YES!" << endl;
+	}
+	else
+	{
+		cout << "NO!" << endl;
+	}
+
+	if(false)
+	{
+		cout << "NO!!" << endl;
+	}
+	else
+	{
+		cout << "YES!" << endl;
+	}
+
+}

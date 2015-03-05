@@ -1,0 +1,9 @@
+2 -5
+ true = true, false = false
+95.95 1234567.00 -0.01
+10 -50
+ false = true, false = true
+1.00 7654321.00 -100.01
+2 -5
+ true = true, false = false
+95.95 1234567.00 -0.01

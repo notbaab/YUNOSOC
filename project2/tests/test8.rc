@@ -1,0 +1,29 @@
+structdef M {
+  int i;
+  M* next;
+  function : M* & getNext() {
+    return this.next;
+  }
+};
+
+M m1;
+M m2;
+M m3;
+
+function : void main() {
+  m1.next = &m2;
+  m2.next = &m3;
+  m3.next = &m1;
+
+  m1.getNext()->i = 17;
+  m1.getNext()->getNext()->i = 27;
+  m1.getNext()->getNext()->getNext()->i = -3;
+  cout << m1.i << " " << m2.i << " " << m3.i << endl;
+
+  m1.getNext()->getNext()->next = &m2;
+
+  m1.getNext()->i = 33;
+  m1.getNext()->getNext()->i = 44;
+  m1.getNext()->getNext()->getNext()->i = 55;
+  cout << m1.i << " " << m2.i << " " << m3.i << endl;
+}

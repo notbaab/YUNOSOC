@@ -1,0 +1,10 @@
+function : void main()
+{
+  cout << "SHOULD PRINT" << endl;
+
+  int x = 0;
+  exit(x); // Tests varSTO
+
+  cout << "SHOULD NOT PRINT" << endl;
+
+}

@@ -1,0 +1,21 @@
+/*Testing assignment in a global scope*/
+
+int x;
+int y;
+int z = 10;
+float q = 5;
+const int w = 5;
+
+function: void main()
+{
+int a = x; 
+int b = x+x+z;
+cout<<a<<endl;// should print out 0
+cout<<b<<endl;//should print out 10
+float c = w+q; // there should be a bit promotion
+float d = 5+5+5+5+5;
+cout<<c<<endl; //should print out 10.0
+cout<<d<<endl; //should be 25.00
+cout<<d+c<<endl; //should be 35.00
+
+}

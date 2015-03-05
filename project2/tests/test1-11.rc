@@ -1,0 +1,9 @@
+//constant folding:
+
+function: void main() {
+
+	const int c1 = 105 + 105; //c1 should be 210
+	cout << c1 << endl;
+	cout << c1 + 210 << endl;
+
+}

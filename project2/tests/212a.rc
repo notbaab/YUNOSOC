@@ -1,0 +1,31 @@
+structdef STRUCTY{ int a; bool b; float c;};
+
+const int c = 20;
+function : int main(){
+   STRUCTY a;
+   STRUCTY b;
+   STRUCTY c;
+   a.a = 10; 
+   a.b = false; 
+   a.c = 10.1010;
+   b.a = 1; 
+   b.b = true; 
+   b.c = 9.59595;
+   cout << "a.a: " << a.a << " a.b: " << a.b << " a.c: " << a.c << endl;
+   cout << "b.a: " << b.a << " b.b: " << b.b << " b.c: " << b.c << endl;
+
+   c = b;
+   b = a;
+   a = c;
+   
+   cout << "a.a: " << a.a << " a.b: " << a.b << " a.c: " << a.c << endl;
+   cout << "b.a: " << b.a << " b.b: " << b.b << " b.c: " << b.c << endl;
+   
+   c = (a = b);
+   (b=c).a = 10;
+   cout << "a.a: " << a.a << " a.b: " << a.b << " a.c: " << a.c << endl;
+   cout << "b.a: " << b.a << " b.b: " << b.b << " b.c: " << b.c << endl;
+   cout << "c.a: " << c.a << " c.b: " << c.b << " c.c: " << c.c << endl;
+
+   return 0;
+}

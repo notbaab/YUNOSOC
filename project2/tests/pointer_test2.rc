@@ -1,0 +1,8 @@
+
+function : void main() 
+{
+    float p = 99.99;
+    float *a = &*&*&p;
+
+    cout << *&*&*a << endl;
+}

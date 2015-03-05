@@ -1,0 +1,30 @@
+float g = 5.00;
+function : void main() {
+    // Literals
+    cout << endl << "Literals" << endl << "-----------------------" << endl;
+    cout << "should print  2.00:  "<< +2.00 << endl;
+    cout << "should print -2.00: "<< -2.00 << endl;
+
+    // Locals
+    cout << endl << "Locals" << endl << "-----------------------" << endl;
+    float x = 5.00;
+    cout << "should print  5.00:  "<< +x << endl;
+    cout << "should print -5.00: "<< -x << endl;
+
+    x = +x; 
+    cout << "should print  5.00:  "<< +x << endl;
+
+    x = -x; 
+    cout << "should print -5.00: "<< x << endl;
+
+    // Globals
+    cout << endl << "Locals" << endl << "-----------------------" << endl;
+    cout << "should print  5.00:  "<< +g << endl;
+    cout << "should print -5.00: " << -g << endl;
+
+    g = +g; 
+    cout << "should print  5.00:  " << +g << endl;
+
+    g = -g; 
+    cout << "should print -5.00: "<< g << endl;
+}

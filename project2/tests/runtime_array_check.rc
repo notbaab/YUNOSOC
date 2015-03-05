@@ -1,0 +1,12 @@
+function : void main(){
+    int stuff[5];
+	stuff[0] = 0;
+	stuff[1] = 1;
+	stuff[2] = 2;
+	stuff[3] = 3;
+	stuff[4] = 4;
+    int x = 5;
+    cout << stuff[4] << endl;
+    stuff[x] = -1;
+    cout << "IF THIS PRINTS YOU LOSE, TRY AGAIN" << endl;
+}

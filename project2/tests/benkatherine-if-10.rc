@@ -1,0 +1,18 @@
+float x = 6.0;
+int y = 5;
+
+function : void main()
+{
+  if(x>y)
+  {
+    cout << "Katherine ";
+    if(x>y)
+    {
+      cout << "is ";
+    }
+    
+    cout << "a ";
+  }
+
+  cout << "loser" << endl;
+}

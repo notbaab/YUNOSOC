@@ -1,0 +1,19 @@
+int a = 4;
+int b = 3;
+
+function: void main()
+{
+   int a = 5;
+   int b = 6;
+   int c = a-b;
+   int d = c;
+
+   cout<<5+5<<endl; //should print 10
+   cout<<a<<endl; // Should print out 5
+   cout<<b<<endl; // should print out 6
+   cout<<a+b<<endl; // should print out 11
+   cout<<b-b-b-b<<endl;//should print out -12
+   cout<<c<<endl; // should print out -1
+   cout<<d<<endl; //should print out -1
+
+}

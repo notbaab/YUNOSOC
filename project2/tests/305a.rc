@@ -1,0 +1,12 @@
+function : void foo (int &a){
+   a = 5;
+}
+
+function : int main(){
+   int a = 10;
+   foo(a);
+   
+   cout << a << endl;
+   
+   return 0;
+}

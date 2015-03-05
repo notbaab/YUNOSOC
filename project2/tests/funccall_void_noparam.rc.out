@@ -1,0 +1,16 @@
+Testing function calls returning VOID
+ 1. foo() - before
+ 2. foo1()
+ 3. foo() - after
+ 4. foo1() - before
+ 5. foo2() - before foo2()
+ 6. foo3()
+ 7. foo2() - after foo2()
+ 8. foo1() - after
+ 9. foo4() - recursive start
+10. foo4()
+11. foo4()
+12. foo4()
+13. foo4()
+14. foo4()
+15. foo4() - recursive end

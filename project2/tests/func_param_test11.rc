@@ -1,0 +1,23 @@
+function : int bar()
+{
+	return 99;
+}
+
+function : float foo()
+{
+    float b = 2992.22;
+	cout << "b is: " << b << endl;
+    return b;
+}
+
+function : void main()
+{
+    float c = foo();
+
+    cout << "c is: " << c << endl;
+
+	c = bar();
+	
+	cout << "c is: " << c << endl;
+
+}

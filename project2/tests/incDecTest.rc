@@ -1,0 +1,13 @@
+function : void main()
+{
+  int x = 1;
+
+  cout << x++ << endl; // 1 
+  cout << ++x << endl; // 3
+  cout << x-- << endl; // 3
+  cout << --x << endl; // 1
+
+  int y = 1;
+
+  //cout << x++ + --y << endl; //2
+}

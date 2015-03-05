@@ -1,0 +1,60 @@
+int x = 45;
+int y = 20;
+
+function : void main(){
+	
+	if( true )
+	{
+		cout << "1" << endl;
+	
+	}
+	
+	if( false )
+	{
+		cout << "should not be printed 1" << endl;
+	
+	}
+	
+	
+	if( x == 45)
+	{
+		cout << "2" << endl;
+	
+	}
+	else
+	{
+		cout << "should not be printed 2" << endl;
+	
+	}
+	
+	if( x > y )
+	{
+	
+		cout << "3" << endl;
+		
+		if ( x > 30 )
+		{
+			cout << "4" << endl;
+		
+		
+		}
+		else
+		{
+			cout << "should not be printed 3" << endl;
+		
+		}
+		
+		if ( x > (y + 5) )
+		{
+			cout << "5" << endl;
+		
+		}
+		else
+		{
+			cout << "should not be printed 5" << endl;
+		
+		}
+
+	}
+
+}

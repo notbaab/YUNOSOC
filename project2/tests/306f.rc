@@ -1,0 +1,50 @@
+function : float okayReally(float y){
+    int x = (int) y;
+    return x;
+}
+
+function : float * youreJoking(float y, float * doge){
+    float * thisIsSPARTA;
+    cout << *doge << endl;
+    *doge = okayReally(y);
+    thisIsSPARTA = doge;
+    return thisIsSPARTA;
+}
+
+function : float * deepEnough(float y){
+    float * twolevels;
+    new twolevels;
+    *twolevels = y;
+    return twolevels;
+}
+
+function : float * going(float y){
+    float * isThis;
+    isThis = deepEnough(y);
+    float * noWeNeedMoarFunctions = isThis;
+    return noWeNeedMoarFunctions;
+}
+
+function : float * fun(float y){
+    float * q;
+    new q;
+    *q = y;
+    return q;
+}
+
+
+function : void main(){
+    float * test = fun(123.431);
+    float * hah;
+    hah = fun(64564.546);
+    cout << *test << endl;
+    cout << *hah << endl;
+    cout << "whats this? moar pointers and functions!??" << endl;
+    float * howMany;
+    howMany = going(1111.1);
+    cout << *howMany << endl;
+    cout << *(going(80085.1337)) << endl;
+    cout << *(going((*(going(80085.13))))) << endl;
+    cout << "such functions, many wow, much pointer" << endl;
+    cout << *youreJoking(6969.42,(going(1337.69))) << endl;
+}

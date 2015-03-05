@@ -1,0 +1,9 @@
+int b = 2;
+
+function : void main()
+{
+    int a;
+    a = b;
+
+    cout << a << endl;
+}

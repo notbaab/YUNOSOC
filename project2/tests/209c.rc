@@ -1,0 +1,9 @@
+function : void foo(float a, int b){
+   cout << a << " " << b << endl;
+}
+
+function : int main(){
+   foo(1,1);
+
+   return 0;
+}

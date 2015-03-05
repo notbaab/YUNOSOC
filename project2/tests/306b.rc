@@ -1,0 +1,24 @@
+function : int &ref(){
+   static int i = 0;
+   return i;
+}
+function : int &ref2(){
+   return ref();
+}
+
+function : int main(){
+   const int c = 5;
+   int failBreak = c*2;
+   while ( ref2() < c){
+      cout << ref2()++ << endl;
+      if (--failBreak <= 0){
+         cout << "epic fail q.q" << endl;
+         exit(1);
+         break;
+      }
+   }
+   if (failBreak == c){
+      cout << "passed :>" << endl;
+   }
+   return 0;
+}

@@ -1,0 +1,17 @@
+structdef FOO {
+	int a;
+	float b;
+	float c[1000];
+};
+
+function : void main()
+{
+	FOO aaa;
+	
+	aaa.c[400] = 512.55;
+	int *a = (int *)&aaa.c[400];
+	
+	bool convert1 = (bool)*a;
+
+	cout << convert1 << endl;
+}

@@ -1,0 +1,75 @@
+function : void foo(int a) //test one parameter
+{
+  cout << "print 5: " << a << endl;
+  a = 2;
+}
+
+function : void foo2(int a, int b) //test two parameters
+{
+  cout << "print 5: " << a << endl;
+  cout << "print 10: " << b << endl;
+  a = 2;
+  b = 2;
+}
+
+function : void foo3(int a, int b, int c)
+{
+  cout << "print 5: " << a << endl;
+  cout << "print 10: " << b << endl;
+  cout << "print 15: " << c << endl;
+  a = 2;
+  b = 2;
+  c = 2;
+}
+
+function : void foo4(int a, int b, int c, int d)
+{
+  cout << "print 5: " << a << endl;
+  cout << "print 10: " << b << endl;
+  cout << "print 15: " << c << endl;
+  cout << "print 20: " << d << endl;
+  a = 2;
+  b = 2;
+  c = 2;
+  d = 2;
+}
+
+function : void foo5(int a, int b, int c, int d, int e)
+{
+  cout << "print 5: " << a << endl;
+  cout << "print 10: " << b << endl;
+  cout << "print 15: " << c << endl;
+  cout << "print 20: " << d << endl;
+  cout << "print 25: " << e << endl;
+  a = 2;
+  b = 2;
+  c = 2;
+  d = 2;
+  e = 2;
+}
+
+
+function : void main()
+{
+  int x = 5;
+  int y = 10;
+  int z = 15;
+  int w = 20;
+  int u = 25;
+
+  foo(x);
+  cout << "print 5: " << x << endl; //test pass by value
+
+  foo2(x,y);
+  cout << "print 10: " << y << endl; // test pass by value
+
+  foo3(x,y,z);
+  cout << "print 15: " << z << endl;
+  
+  foo4(x,y,z,w);
+  cout << "print 20: " << w << endl;
+
+  foo5(x,y,z,w,u);
+  cout << "print25: " << u << endl;
+
+}

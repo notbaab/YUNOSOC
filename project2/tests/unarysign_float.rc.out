@@ -1,0 +1,19 @@
+
+Literals
+-----------------------
+should print  2.00:  2.00
+should print -2.00: -2.00
+
+Locals
+-----------------------
+should print  5.00:  5.00
+should print -5.00: -5.00
+should print  5.00:  5.00
+should print -5.00: -5.00
+
+Locals
+-----------------------
+should print  5.00:  5.00
+should print -5.00: -5.00
+should print  5.00:  5.00
+should print -5.00: -5.00

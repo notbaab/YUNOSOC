@@ -1,0 +1,32 @@
+// break continue
+
+function: void main() {
+
+	int i = 0;
+	
+	while ( i < 7 ) {
+
+		i++;
+	
+		if (i > 2) {
+			if (i == 5) {
+				cout << "big i: " << i << endl;
+				break;
+			}
+			else {
+				cout << "middle i: " << i << endl;
+			}
+			continue;
+		}
+		else {
+			cout << "small i: " << i << endl;
+			continue;
+		}
+		cout << "INCORRECT!";
+	
+	}
+	
+	cout << "End of life: " << i << endl;
+	
+		
+}

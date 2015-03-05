@@ -1,0 +1,15 @@
+//float pre/post increment/decrement
+
+function: void main() {
+
+	float f1 = 3.50;
+	float f2 = f1++;
+
+	cout << f2 << " " << f1 << " " ; //3.50 4.50
+
+	f1 = ++f1;
+	f2 = --f2;
+
+	cout << f2 << " " << f1++ << " " << f1 << endl; // 2.50 5.50 6.50
+	
+}

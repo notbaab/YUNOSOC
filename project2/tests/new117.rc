@@ -1,0 +1,81 @@
+
+bool a = true;
+bool b = false;
+
+function : bool foo()  //return const literal
+{
+   return true;
+}
+
+function : bool foo1()  //return const literal
+{
+   return false;
+}
+
+function : bool foo2()  //return global var
+{
+   return a;
+}
+
+function : bool foo3(bool t) //return param
+{
+   return t;
+}
+
+function : void main()
+{
+   bool x = true;
+   bool y = false;
+
+   int r = 3;
+   int s = 5;
+   int t = 7;
+   
+   cout << true && true << endl;    //true 
+   cout << false && false << endl;  //false
+   cout << true && false << endl;  //false
+   cout << false && true << endl;  //false
+
+   cout << a && true << endl; // true
+   cout << a && false << endl; // false
+   cout << a && x << endl;     //true
+   cout << a && y << endl;    // false
+
+   cout << (r < s ) && true << endl; //true
+   cout << true && (r < s) << endl;  //true
+
+   cout << (s < r) && true << endl; //false
+   cout << false && (s < r) << endl; //false
+
+   cout << (r < s) && (r < s) << endl; //true
+   cout << (s < r) && (s < r) << endl; // false
+   cout << (s < r) && (r < s) << endl; // false
+   cout << (r < s) && (s < r) << endl; // false
+
+   cout << foo1() && foo() << endl; //false
+   cout << foo() && foo1() << endl; //false
+   cout << foo() && foo() << endl;  //true
+   cout << foo1() && foo1() << endl; //false
+  
+   cout << foo2() && foo() << endl; //true
+   cout << foo() && foo2() << endl; //true
+   cout << foo1() && foo2() << endl; //false
+   cout << foo2() && foo1() << endl; //false
+
+   cout << foo2() && foo3(true) << endl; //true
+   cout << foo2() && foo3(false) << endl; //false
+   cout << foo2() && foo3(x) << endl; //true
+   cout << foo2() && foo3(y) << endl; //false
+
+   cout << foo3(true) && foo3(true) << endl; //true
+   cout << foo3(false) && foo3(false) << endl; //false
+   cout << foo3(true) && foo3(false) << endl; //false
+   cout << foo3(false) && foo3(true) << endl; //false
+
+   cout << foo3(x) && foo3(y) << endl; //false
+   cout << foo3(x) && foo3(x) << endl; //true
+   cout << foo3(y) && foo3(x) << endl; //false
+   cout << foo3(y) && foo3(y) << endl; //false   
+
+   
+}

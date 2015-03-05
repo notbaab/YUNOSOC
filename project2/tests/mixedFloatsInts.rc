@@ -1,0 +1,12 @@
+
+float gf = 1 + 2.2 - 3 * 4.412 / 5; // 0.55
+
+
+function : void main()
+{
+  float f = 1 + 2.2 - 3 * 4.412 / 5; // 0.55
+
+  cout << f << endl;
+  cout << gf << endl;
+
+}

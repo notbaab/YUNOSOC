@@ -1,0 +1,79 @@
+structdef MYS
+{
+	int x;
+	int y;
+	bool z;
+	float e[32];
+	MYS * recursive;
+};
+
+
+function : int foo( int x )
+{
+	return x;
+}
+
+function : int * bar(int y)
+{
+	int * x;
+	return x;
+}
+
+function : int *** bar2(int y)
+{
+	int *** x;
+	return x;
+}
+
+int q;
+int * ptr;
+
+function : void main( )
+{
+	int * x;
+	int y;
+	int z = 3 + y;
+	bool ** aa;
+	MYS * struct;
+	new x;
+
+	*x = 5;
+	y = *x;
+
+	cout << *x << endl;
+	cout << y << endl;
+
+	delete x;
+
+	cout << sizeof( MYS ) << endl;
+	cout << sizeof( struct ) << endl;
+
+	new struct;
+
+	(*struct).x = 3;
+	(*struct).z = true;
+	y = (*struct).x;
+
+	if( (*struct).z )
+	{
+		cout << (*struct).x << endl;
+		cout << y << endl;
+	}
+
+	new (*struct).recursive;
+
+	(*((*struct).recursive)).x = 53;
+
+	cout << (*((*struct).recursive)).x << endl;
+
+
+	new aa;
+	new *aa;
+
+	**aa = true;
+	cout << **aa << endl;
+
+	delete x;
+
+	cout << "Never seen." << endl;
+}

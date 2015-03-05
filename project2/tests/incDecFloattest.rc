@@ -1,0 +1,19 @@
+float gf = 5.5;
+
+function : void main()
+{
+  float f = 1.1;
+
+  cout << f++ << endl; //1.10
+  cout << ++f << endl; //3.10
+
+  cout << gf++ << endl; // 5.50
+  cout << ++gf << endl; // 7.50
+
+  cout << f-- << endl; // 3.10
+  cout << --f << endl; // 1.10
+
+  cout << gf-- << endl; //7.50
+  cout << --gf << endl; //5.50
+
+}

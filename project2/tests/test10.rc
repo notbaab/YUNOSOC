@@ -1,0 +1,12 @@
+
+function : void main() {
+ int* ip;
+ float* fp;
+ new ip;
+ cin >> *ip;
+ fp = (int*) ip;
+ cout << *ip << " converted to FP: " << *fp << endl;
+ cin >> *fp;
+ cout << *fp << " converted to int: " << *ip << endl;
+ delete fp;
+}

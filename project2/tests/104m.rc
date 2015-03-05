@@ -1,0 +1,141 @@
+int i3g = 3;
+int i6g = 6;
+int i7g = 7;
+
+function: void main() {
+    int i3l = 3;
+    int i6l = 6;
+    int i7l = 7;
+
+    const int i3c = 3;
+    const int i6c = 6;
+    const int i7c = 7;
+
+    // Addition
+    cout << 3 << " + " << 6 << "\t" << 3 + 6 << "\t" << 3 + 6 == 9 << endl;
+    cout << 6 << " + " << i7g << "\t" << 7 + i7g << "\t" << 6 + i7g == 13 << endl;
+    cout << 7 << " + " << i3l << "\t" << 7 + i3l << "\t" << 7 + i3l == 10 << endl;
+    cout << 3 << " + " << i6c << "\t" << 3 + i6c << "\t" << 3 + i6c == 9 << endl;
+
+    cout << i3g << " + " << i6g << "\t" << i3g + i6g << "\t" << i3g + i6g == 9 << endl; 
+    cout << i6g << " + " << i7l << "\t" << i6g + i7l << "\t" << i6g + i7l == 13 << endl; 
+    cout << i7g << " + " << i3c << "\t" << i7g + i3c << "\t" << i7g + i3c == 10 << endl; 
+
+    cout << i3l << " + " << i6l << "\t" << i3l + i6l << "\t" << i3l + i6l == 9 << endl; 
+    cout << i6l << " + " << i7c << "\t" << i6l + i7c << "\t" << i6l + i7c == 13 << endl; 
+
+    cout << i3c << " + " << i6c << "\t" << i3c + i6c << "\t" << i3c + i6c == 9 << endl; 
+
+
+    // Subtraction
+    cout << 3 << " - " << 6 << "\t" << 3 - 6 << "\t" << 3 - 6 == -3 << endl;
+    cout << 6 << " - " << i7g << "\t" << 7 - i7g << "\t" << 6 - i7g == -1 << endl;
+    cout << 7 << " - " << i3l << "\t" << 7 - i3l << "\t" << 7 - i3l == 4 << endl;
+    cout << 3 << " - " << i6c << "\t" << 3 - i6c << "\t" << 3 - i6c == -3 << endl;
+
+    cout << i3g << " - " << i6g << "\t" << i3g - i6g << "\t" << i3g - i6g == -3 << endl; 
+    cout << i6g << " - " << i7l << "\t" << i6g - i7l << "\t" << i6g - i7l == -1 << endl; 
+    cout << i7g << " - " << i3c << "\t" << i7g - i3c << "\t" << i7g - i3c == 4 << endl; 
+
+    cout << i3l << " - " << i6l << "\t" << i3l - i6l << "\t" << i3l - i6l == -3 << endl; 
+    cout << i6l << " - " << i7c << "\t" << i6l - i7c << "\t" << i6l - i7c == -1 << endl; 
+
+    cout << i3c << " - " << i6c << "\t" << i3c - i6c << "\t" << i3c - i6c == -3 << endl; 
+
+
+    // Multiplication
+    cout << 3 << " * " << 6 << "\t" << 3 * 6 << "\t" << 3 * 6 == 18 << endl;
+    cout << 6 << " * " << i7g << "\t" << 7 * i7g << "\t" << 6 * i7g == 42 << endl;
+    cout << 7 << " * " << i3l << "\t" << 7 * i3l << "\t" << 7 * i3l == 21 << endl;
+    cout << 3 << " * " << i6c << "\t" << 3 * i6c << "\t" << 3 * i6c == 18 << endl;
+
+    cout << i3g << " * " << i6g << "\t" << i3g * i6g << "\t" << i3g * i6g == 18 << endl; 
+    cout << i6g << " * " << i7l << "\t" << i6g * i7l << "\t" << i6g * i7l == 42 << endl; 
+    cout << i7g << " * " << i3c << "\t" << i7g * i3c << "\t" << i7g * i3c == 21 << endl; 
+
+    cout << i3l << " * " << i6l << "\t" << i3l * i6l << "\t" << i3l * i6l == 18 << endl; 
+    cout << i6l << " * " << i7c << "\t" << i6l * i7c << "\t" << i6l * i7c == 42 << endl; 
+
+    cout << i3c << " * " << i6c << "\t" << i3c * i6c << "\t" << i3c * i6c == 18 << endl; 
+
+
+    // Division
+    cout << 3 << " / " << 6 << "\t" << 3 / 6 << "\t" << 3 / 6 == 0 << endl;
+    cout << 6 << " / " << i7g << "\t" << 7 / i7g << "\t" << 6 / i7g == 0 << endl;
+    cout << 7 << " / " << i3l << "\t" << 7 / i3l << "\t" << 7 / i3l == 2 << endl;
+    cout << 3 << " / " << i6c << "\t" << 3 / i6c << "\t" << 3 / i6c == 0 << endl;
+
+    cout << i3g << " / " << i6g << "\t" << i3g / i6g << "\t" << i3g / i6g == 0 << endl; 
+    cout << i6g << " / " << i7l << "\t" << i6g / i7l << "\t" << i6g / i7l == 0 << endl; 
+    cout << i7g << " / " << i3c << "\t" << i7g / i3c << "\t" << i7g / i3c == 2 << endl; 
+
+    cout << i3l << " / " << i6l << "\t" << i3l / i6l << "\t" << i3l / i6l == 0 << endl; 
+    cout << i6l << " / " << i7c << "\t" << i6l / i7c << "\t" << i6l / i7c == 0 << endl; 
+
+    cout << i3c << " / " << i6c << "\t" << i3c / i6c << "\t" << i3c / i6c == 0 << endl; 
+
+
+    // Modulus
+    cout << 3 << " % " << 6 << "\t" << 3 % 6 << "\t" << 3 % 6 == 3 << endl;
+    cout << 6 << " % " << i7g << "\t" << 7 % i7g << "\t" << 6 % i7g == 6 << endl;
+    cout << 7 << " % " << i3l << "\t" << 7 % i3l << "\t" << 7 % i3l == 1 << endl;
+    cout << 3 << " % " << i6c << "\t" << 3 % i6c << "\t" << 3 % i6c == 3 << endl;
+
+    cout << i3g << " % " << i6g << "\t" << i3g % i6g << "\t" << i3g % i6g == 3 << endl; 
+    cout << i6g << " % " << i7l << "\t" << i6g % i7l << "\t" << i6g % i7l == 6 << endl; 
+    cout << i7g << " % " << i3c << "\t" << i7g % i3c << "\t" << i7g % i3c == 1 << endl; 
+
+    cout << i3l << " % " << i6l << "\t" << i3l % i6l << "\t" << i3l % i6l == 3 << endl; 
+    cout << i6l << " % " << i7c << "\t" << i6l % i7c << "\t" << i6l % i7c == 6 << endl; 
+
+    cout << i3c << " % " << i6c << "\t" << i3c % i6c << "\t" << i3c % i6c == 3 << endl; 
+
+
+    // Bitwise And
+    cout << 3 << " & " << 6 << "\t" << 3 & 6 << "\t" << (3 & 6) == 2 << endl;
+    cout << 6 << " & " << i7g << "\t" << 7 & i7g << "\t" << (6 & i7g) == 6 << endl;
+    cout << 7 << " & " << i3l << "\t" << 7 & i3l << "\t" << (7 & i3l) == 3 << endl;
+    cout << 3 << " & " << i6c << "\t" << 3 & i6c << "\t" << (3 & i6c) == 2 << endl;
+
+    cout << i3g << " & " << i6g << "\t" << i3g & i6g << "\t" << (i3g & i6g) == 2 << endl; 
+    cout << i6g << " & " << i7l << "\t" << i6g & i7l << "\t" << (i6g & i7l) == 6 << endl; 
+    cout << i7g << " & " << i3c << "\t" << i7g & i3c << "\t" << (i7g & i3c) == 3 << endl; 
+
+    cout << i3l << " & " << i6l << "\t" << i3l & i6l << "\t" << (i3l & i6l) == 2 << endl; 
+    cout << i6l << " & " << i7c << "\t" << i6l & i7c << "\t" << (i6l & i7c) == 6 << endl; 
+
+    cout << i3c << " & " << i6c << "\t" << i3c & i6c << "\t" << (i3c & i6c) == 2 << endl; 
+
+
+    // Bitwise Or
+    cout << 3 << " | " << 6 << "\t" << 3 | 6 << "\t" << (3 | 6) == 7 << endl;
+    cout << 6 << " | " << i7g << "\t" << 7 | i7g << "\t" << (6 | i7g) == 7 << endl;
+    cout << 7 << " | " << i3l << "\t" << 7 | i3l << "\t" << (7 | i3l) == 7 << endl;
+    cout << 3 << " | " << i6c << "\t" << 3 | i6c << "\t" << (3 | i6c) == 7 << endl;
+
+    cout << i3g << " | " << i6g << "\t" << i3g | i6g << "\t" << (i3g | i6g) == 7 << endl; 
+    cout << i6g << " | " << i7l << "\t" << i6g | i7l << "\t" << (i6g | i7l) == 7 << endl; 
+    cout << i7g << " | " << i3c << "\t" << i7g | i3c << "\t" << (i7g | i3c) == 7 << endl; 
+
+    cout << i3l << " | " << i6l << "\t" << i3l | i6l << "\t" << (i3l | i6l) == 7 << endl; 
+    cout << i6l << " | " << i7c << "\t" << i6l | i7c << "\t" << (i6l | i7c) == 7 << endl; 
+
+    cout << i3c << " | " << i6c << "\t" << i3c | i6c << "\t" << (i3c | i6c) == 7 << endl; 
+
+
+    // Bitwise Xor
+    cout << 3 << " ^ " << 6 << "\t" << 3 ^ 6 << "\t" << (3 ^ 6) == 5 << endl;
+    cout << 6 << " ^ " << i7g << "\t" << 7 ^ i7g << "\t" << (6 ^ i7g) == 1 << endl;
+    cout << 7 << " ^ " << i3l << "\t" << 7 ^ i3l << "\t" << (7 ^ i3l) == 4 << endl;
+    cout << 3 << " ^ " << i6c << "\t" << 3 ^ i6c << "\t" << (3 ^ i6c) == 5 << endl;
+
+    cout << i3g << " ^ " << i6g << "\t" << i3g ^ i6g << "\t" << (i3g ^ i6g) == 5 << endl; 
+    cout << i6g << " ^ " << i7l << "\t" << i6g ^ i7l << "\t" << (i6g ^ i7l) == 1 << endl; 
+    cout << i7g << " ^ " << i3c << "\t" << i7g ^ i3c << "\t" << (i7g ^ i3c) == 4 << endl; 
+
+    cout << i3l << " ^ " << i6l << "\t" << i3l ^ i6l << "\t" << (i3l ^ i6l) == 5 << endl; 
+    cout << i6l << " ^ " << i7c << "\t" << i6l ^ i7c << "\t" << (i6l ^ i7c) == 1 << endl; 
+
+    cout << i3c << " ^ " << i6c << "\t" << i3c ^ i6c << "\t" << (i3c ^ i6c) == 5 << endl; 
+
+}

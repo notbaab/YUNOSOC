@@ -1,0 +1,60 @@
+structdef NODE {
+   NODE *prev;
+   NODE *next;
+   int val;
+};
+
+const int c = 15;
+
+function : void linklist(NODE &head){
+   head.val = 1;
+   new head.next;
+   head.next->val = 1;
+   head.next->prev = &head;
+   
+   NODE *node = head.next;
+   int i = 0; 
+   while (i < c){
+      new node->next;
+      node->next->val = node->val + node->prev->val;
+      node->next->prev = node;
+      node = node->next;
+      i++;
+   }
+}
+
+function : int main(){
+   NODE head;
+   NODE *node;
+   
+   linklist(head);
+   
+   node = head.next;
+   
+   int i = 0; 
+   while (i < c){
+      cout << node->val << " ";
+      node = node->next;
+      i++;
+   }
+   cout << endl;
+      
+   i = 0; 
+   while (i < c){
+      node = node->prev;
+      cout << node->val << " ";
+      i++;
+   }
+   cout << endl;
+   
+   i = 0; 
+   while (i < c){
+      node = node->next;
+      delete node->prev;
+      i++;
+   }
+   delete node;
+
+   return 0;
+}
+

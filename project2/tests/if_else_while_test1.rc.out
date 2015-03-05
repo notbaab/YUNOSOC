@@ -1,0 +1,24 @@
+Should be printed 1
+ajax is still: true
+ajax's value is: true
+priam section should only be printed once
+hector is less than 5.55
+paris is: 99
+paris is: 98
+homer is: 10
+ajax's value is: true
+priam section should only be printed once
+hector is less than 5.55
+homer is: 11
+ajax's value is: true
+priam section should only be printed once
+hector is less than 5.55
+homer is: 12
+ajax's value is: true
+priam section should only be printed once
+hector is less than 5.55
+homer is: 13
+ajax's value is: true
+priam section should only be printed once
+hector is less than 5.55
+homer is: 14

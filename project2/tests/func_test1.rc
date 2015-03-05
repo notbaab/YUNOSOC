@@ -1,0 +1,9 @@
+function : int foo(){
+	int x = 5;
+	return x;
+}
+
+function : void main(){
+	
+	cout << foo();
+}

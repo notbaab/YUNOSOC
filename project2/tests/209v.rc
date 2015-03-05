@@ -1,0 +1,15 @@
+function : float foo(float x) {  
+  cout << x << endl;
+  return x;
+}
+function : float foo(float x, float y, float z) {  
+  cout << x << endl;
+  cout << y << endl;
+  cout << z << endl;
+  return x + y + z;
+}
+function : int main() {
+ cout << foo(1.0) << endl;
+ cout << foo(1.0, 2.0, 2.0) << endl;
+ return 0;
+}

@@ -1,0 +1,12 @@
+
+const int x = 4;
+int y;
+int z = x;
+const int c = 5;
+function : int main() {
+  y = 11;
+  z = c - y;
+  z = z + x;
+  cout << z << endl;
+  return -2;
+}

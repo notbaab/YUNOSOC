@@ -1,0 +1,9 @@
+function : void main(){
+	bool a = true;
+	bool b = false;
+	if(a){
+		if(b){
+			cout << "oh hai" << endl; 
+		}
+	}
+}

@@ -1,0 +1,17 @@
+float a = 5.0;
+float b;
+
+function: void main()
+{
+
+float c = b;
+c = a++; 
+c++;
+b = a++;
+cout<<b<<endl; //should print out 6.0
+cout<<a<<endl; //should print out 7.0
+cout<<c<<endl; //should printout 6.00
+cout<<c--<<endl; //should printout 6.00
+cout<<c<<endl; //should print out 5.00
+
+}

@@ -1,0 +1,10 @@
+static const bool x = true;
+static const bool y = false;
+
+function : void main() {
+
+	static const bool x = false;
+	static const bool y = true;
+
+	cout << "main" << x << y << ::x << :: y << "end" <<endl;
+}

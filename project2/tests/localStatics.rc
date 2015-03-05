@@ -1,0 +1,11 @@
+function : void main()
+{
+  static int x = 10;
+  static float y = 2.22;
+  static bool z = false;
+  cout << x << endl; //10
+  cout << y << endl; //2.22
+  cout << z << endl; //false
+
+
+}

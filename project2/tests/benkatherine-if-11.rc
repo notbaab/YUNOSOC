@@ -1,0 +1,25 @@
+int x = 6;
+int y = 7;
+
+function : void main()
+{
+  if(y>x)
+  {
+    cout << "mike"<< endl;
+  }
+  else
+  {
+    cout << "sucks" << endl;
+  }
+
+  if(y<x)
+  {
+    cout<< "mie" << endl;
+  }
+  else
+  {
+    cout << "sucks" << endl;
+  }
+
+
+}

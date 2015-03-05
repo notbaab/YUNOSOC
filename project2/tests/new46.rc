@@ -1,0 +1,7 @@
+const bool x = true;
+const bool y = false;
+
+function : void main() {
+
+	cout << "main" << x << y << "end" <<endl;
+}

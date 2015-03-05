@@ -1,0 +1,10 @@
+// local var address of, then deref
+
+function: void main() {
+	
+	int i = 17;
+	int j = *&i;
+	
+	cout << j << endl;
+		
+}

@@ -1,0 +1,8 @@
+function : void main()
+{
+    const int c1 = 210;
+    const int c2 = sizeof(c1) + c1;
+
+    cout << c1 + 210 << endl;
+    cout << c2 << endl;
+}

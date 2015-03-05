@@ -1,0 +1,8 @@
+bool x;
+int y;
+float z;
+
+function : void main() {
+
+	cout << "main" << x << " " << y << " " << z << "end" <<endl;
+}

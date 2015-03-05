@@ -1,0 +1,24 @@
+int gi = 123;
+float gf = 0.0001;
+int *gpi;
+float* gpf;
+bool gbT = true;
+bool gbF = false;
+
+function : void main(){
+	gpi = nullptr;
+	gpf = nullptr;
+	cout<<(float)gbT<<endl;
+	cout<<(float)gbF<<endl;
+	cout<<(float)gi<<endl;
+	cout<<(float)gf<<endl;
+	cout<<(float)gpi<<endl;
+	cout<<(float)gpf<<endl;
+	cout<<endl;
+	cout<<(bool)gi<<endl;
+	cout<<(bool)gf<<endl;
+	cout<<(bool)gpi<<endl;
+	cout<<(bool)gpf<<endl;
+	cout<<endl;
+	cout<<*(int*)&gf<<endl;
+}

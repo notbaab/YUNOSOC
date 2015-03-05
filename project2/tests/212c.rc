@@ -1,0 +1,10 @@
+structdef STRUCTY{ int a; bool b; float c;};
+
+function : int main(){
+   STRUCTY s;
+   s.a = 10;
+   s.b = true;
+   s.c = 50/0xF;
+   cout << "s.a: " << s.a << " s.b: " << s.b << " s.c: " << s.c << endl;
+   return 0;
+}

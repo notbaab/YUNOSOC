@@ -1,0 +1,31 @@
+float f1 = 1.0;
+float f2 = 2.0;
+float f3 = 3.0;
+
+function : void main()
+{
+	float localf1 = 5.0;
+	float localf2 = 10.0;
+	float localf3 = 15.0;
+
+	float f1 = localf1;
+	float f2 = localf2;
+	float f3 = localf3;
+	
+	localf1 = ::f1;
+	localf2 = ::f2;
+	localf3 = ::f3;
+
+ 	cout << "::f1 is: " << ::f1 << endl;
+    cout << "::f2 is: " << ::f2 << endl;
+    cout << "::f3 is: " << ::f3 << endl;
+
+ 	cout << "f1 is: " << f1 << endl;
+    cout << "f2 is: " << f2 << endl;
+    cout << "f3 is: " << f3 << endl;
+
+ 	cout << "localf1 is: " << localf1 << endl;
+    cout << "localf2 is: " << localf2 << endl;
+    cout << "localf3 is: " << localf3 << endl;
+
+}

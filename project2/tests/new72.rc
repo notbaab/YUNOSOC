@@ -1,0 +1,13 @@
+int x = 3;
+float y = 4.44;
+
+function : float foo(int x)
+{
+	int z = 1;
+	return x+z;
+}
+
+function : void main() {
+
+	cout << "main" <<  foo(2) << "end" <<endl;
+}

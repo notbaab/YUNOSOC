@@ -1,0 +1,8 @@
+function : void main(){
+   int i = 55;
+   while (i-- > 0){
+      if (i % 2 == 0) { continue; }
+      cout << i;
+   }
+   cout << endl;
+}

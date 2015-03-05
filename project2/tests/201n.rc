@@ -1,0 +1,11 @@
+float x;
+float y;
+
+function: int main()
+{
+    x = 94.25;
+    y = (x+1)/x;
+    cout<<y;
+
+    return 0;
+}

@@ -1,0 +1,25 @@
+function: void foo(int &a, int &b, float &c)
+{
+    a = a + 1;
+    b = 9;
+    c = 44.44;
+}
+
+
+function : void main() 
+{
+    int x = 5;
+    int y = 6;
+    float z = 22.22;
+    
+    cout << x << endl;
+    cout << y << endl;
+    cout << z << endl;
+    
+    foo(x,y,z);
+    
+    cout << "x is now: " << x << endl;
+    cout << "y is now: " << y << endl;
+    cout << "z is now: " << z << endl;
+    
+}

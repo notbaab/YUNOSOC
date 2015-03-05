@@ -1,0 +1,16 @@
+int x = 3;
+float y = 4.44;
+bool z = true;
+bool a = false;
+
+
+function : float foo(int a, float b, bool c, bool d)
+{
+	cout << "foo" << a << b << c << d;
+	return b;
+}
+
+function : void main() {
+
+	cout << "main" <<  foo(x,y,z,a) << "end" <<endl;
+}

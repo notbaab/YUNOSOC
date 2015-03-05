@@ -1,0 +1,9 @@
+function : int addr(int &x){
+   return (int)&x;
+}
+
+function : int main(){
+   static int x;
+   cout << (int)&x == addr(x) << endl;
+   return 0;
+}

@@ -1,0 +1,31 @@
+function : void main()
+{
+   int x[3];
+
+   x[1] = 5;
+   x[0] = 6;
+   x[2] = 7;
+
+   cout << x[1] << endl; //5
+   cout << x[0] << endl; //6
+   cout << x[2] << endl; //7
+
+   int a = x[1];
+   cout << a << endl; //5
+
+   int b = x[1] + x[0];
+   cout << b << endl;  //11
+
+   int y[3];
+
+   y[0] = 1;
+   y[1] = 2;
+   y[2] = 3;
+
+   cout << y[0] << endl; //1
+   cout << y[1] << endl; //2
+   cout << y[2] << endl; //3
+
+   cout << y[0] + y[1] << endl; //3
+
+}

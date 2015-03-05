@@ -1,0 +1,24 @@
+const int x = 4;
+const int y = 3;
+
+  bool b = x > y; // true
+  bool c = x < y; // false
+  bool d = x >= y; // true
+  bool e = x <= y; // false
+
+function : void main()
+{
+  bool f = x > y; // true
+  bool g = x < y; // false
+  bool h = x >= y; // true
+  bool i = x <= y; // false
+
+  cout << b << endl;
+  cout << c << endl;
+  cout << d << endl;
+  cout << e << endl;
+  cout << f << endl;
+  cout << g << endl;
+  cout << h << endl;
+  cout << i << endl;
+}

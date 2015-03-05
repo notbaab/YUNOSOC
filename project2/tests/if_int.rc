@@ -1,0 +1,40 @@
+function : void main() {
+    cout << "basic if:    ";
+    if(true) {
+        cout << "works" << endl;
+    }
+    if(false) {
+        cout << "SHOULD NOT SEE THIS" << endl;
+    }
+
+    cout << "nested if:   ";
+    if(true) {
+        if(true) {
+            cout << "works" << endl;
+        }
+    }
+    if(true) {
+        if(false) {
+            cout << "SHOULD NOT SEE THIS" << endl;
+        }
+    }
+
+    cout << "literal if:  ";
+    if(2 > 1) {
+        cout << "works" << endl;
+    }
+    if(1 > 2) {
+        cout << "SHOULD NOT SEE THIS" << endl;
+    }
+
+    int x = 5;
+
+    cout << "variable if: ";
+    if(x > 4) {
+        cout << "works" << endl;
+    }
+
+    if(4 > x) {
+        cout << "SHOULD NOT SEE THIS" << endl;
+    }
+}

@@ -1,0 +1,60 @@
+function : void main()
+{
+	bool achilles = true;
+	bool odysseus = false;
+	bool ajax = true;
+	bool priam = false;
+	
+	float hector = 5.5;
+	
+	int homer = 10;
+	int paris = 99;
+	
+	if (achilles || ajax)
+	{
+		cout << "Should be printed 1" << endl;
+	}
+	else
+	{
+		cout << "should not be printed" << endl;
+	}
+	if (!achilles && (ajax = false))
+	{
+		cout << "ajax should not be assigned to false" << endl;
+	}
+	else
+	{
+		cout << "ajax is still: " << ajax << endl;
+		while (homer < 15)
+		{
+			if (ajax == true)
+			{
+				cout << "ajax's value is: " << ajax << endl;
+				while (priam == false)
+				{
+					cout << "priam section should only be printed once" << endl;
+					break;
+				}
+			}
+			if (hector < 5.55)
+			{
+				cout << "hector is less than 5.55" << endl;
+				while (paris > 97)
+				{
+					cout << "paris is: " << paris << endl;
+					--paris;
+				}
+			}
+			else
+			{
+				cout << "hector section should not be printed" << endl;
+			}
+		
+			cout << "homer is: " << homer << endl;
+			++homer;
+		}
+		
+	
+	}
+
+}

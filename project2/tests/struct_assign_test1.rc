@@ -1,0 +1,35 @@
+
+structdef FOO {
+    float a;
+    float b;
+    float c;
+};
+
+structdef BAR {
+    int barA;
+    float barB;
+    bool barC;
+};
+
+FOO food;
+BAR bed;
+
+function : void main()
+{
+    food.a = 5.00;
+    food.b = 6.00;
+    food.c = 7.00;
+
+    FOO food1;
+    
+    food1 = food;
+    
+    cout << food1.a << endl;
+    cout << food1.b << endl;
+    cout << food1.c << endl;
+
+
+}
+    
+    
+    

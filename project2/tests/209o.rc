@@ -1,0 +1,22 @@
+function: void bar( int &b, int &c)
+{
+
+      b = 777; 
+      c = b+c; //778
+}
+function: void foo( int &a, int &b)
+{
+      bar(a, b);
+}
+function: void main()
+{
+
+   int i = 5;
+   int j = 1;
+
+    cout<<"before calling foo, i is "<<i<< " and j is" <<j<<endl;
+    foo(i, j);  //i is 5, j is 1
+
+    cout<<"after calling foo, i is modified, and is now "<<i<< " and j is "<<j<<endl; //i is 777, j is 778
+
+}

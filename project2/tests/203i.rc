@@ -1,0 +1,53 @@
+bool global1 = true==false==(0x5 == 5.0); //false
+
+function : void main()
+{
+  float x = 5.0*2.5; //12.5
+  bool b = x==12.5;
+  cout << "x==12.5 EXPECTED : true ACTUAL: " << b << endl;
+
+
+  float x3 = 01  + 0.1 - 0.1 + 0xB - 0xB; //1
+  float y3 = 012; //10    
+  float z3 = -0.3+x3+y3+0.5; //11.2
+
+  bool b0 = true!=false==false; //false
+  bool b1 = true==true==true==true; //true
+  bool b2 = 0xAA==170; //true
+  bool b3 = 0xAA>170;//false
+  bool b4 = b2; //true
+
+  bool b5 = 0xAA <= 170; //true
+  bool b6 = 0xAA != 170; //false
+
+  bool b7 = (b5==b6) ==(b2==b3); //false==false -> true
+  bool b8 = 2000.14342 < 2001.9987+0xCF-056; //true
+  bool b9 = (x-x)==0; //true
+  bool b10 = (5!=5)==false; //true
+  bool b11 = (107 != 107.0); //false
+  bool b12 = (0x987 / 2.0) == (-1* (0x987/2.0)); //false
+  bool b13 = -997 <= 997+2.11+x; //true
+  bool b14 = 0333 != ( 0333 +0x1 - 1); //false
+  bool b15 = global1==false; //true
+
+ cout << "b0" << " EXPECTED OUTPUT: false ACTUAL OUTPUT: " << b0 << endl;
+ cout << "b1" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b1 << endl;
+ cout << "b2" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b2 << endl;
+ cout << "b3" << " EXPECTED OUTPUT: false ACTUAL OUTPUT: " << b3 << endl;
+ cout << "b4" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b4 << endl;
+ cout << "b5" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b5 << endl;
+ cout << "b6" << " EXPECTED OUTPUT: false ACTUAL OUTPUT: " << b6 << endl;
+ cout << "b7" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b7 << endl;
+ cout << "b8" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b8 << endl;
+ cout << "b9" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b9 << endl;
+ cout << "b10" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b10 << endl;
+// Impossible to do floating point comparisons this returns true
+// cout << "b11" << " EXPECTED OUTPUT: false ACTUAL OUTPUT: " << b11 << endl;
+ cout << "b12" << " EXPECTED OUTPUT: false ACTUAL OUTPUT: " << b12 << endl;
+ cout << "b13" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b13 << endl;
+ cout << "b14" << " EXPECTED OUTPUT: false ACTUAL OUTPUT: " << b14 << endl;
+
+ cout << "b15" << " EXPECTED OUTPUT: true ACTUAL OUTPUT: " << b15 << endl;
+
+
+}

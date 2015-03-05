@@ -1,0 +1,8 @@
+function : void main () {
+
+      bool c = false;
+
+      cout << c << endl;
+
+}
+

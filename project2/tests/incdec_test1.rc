@@ -1,0 +1,27 @@
+// test increments and decrements, both pre and post
+
+function : void main(){
+int x = 1;
+int y = 1; 
+
+cout << x++ << endl;    // 1
+cout << ++y << endl;    // 2
+
+// x = 2, y = 2
+
+cout << x++ + y << endl; // 4
+cout << ++x + y << endl; //  6
+
+// x = 4 , y = 2
+
+cout << x-- << endl; // 4
+cout << --x << endl; // 2
+
+// x = 2, y = 2
+
+cout << x - y-- << endl; // 0 
+
+// x = 2, y = 1
+cout << --x - y << endl; // 0 
+
+} 

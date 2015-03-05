@@ -1,0 +1,28 @@
+int x = 3;
+float y = 4.44;
+bool z = true;
+bool a = false;
+
+
+function : int foo1(int a)
+{
+	cout << "foo1";
+	return a;
+}
+
+function : float foo2(float y)
+{
+	cout << "foo2";
+	return y;
+}
+
+function : bool foo3(bool a)
+{
+	cout << "foo3";
+	return a;
+}
+
+function : void main() {
+
+	cout << "main" <<  foo1(x) << foo2(y) << foo3(z) << foo3(a) << "end" <<endl;
+}

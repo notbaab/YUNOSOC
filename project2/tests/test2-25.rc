@@ -1,0 +1,23 @@
+// cout var by ref
+
+function: void foo2 (int & x, float & y, bool & z) {
+	cout << x << " " << y << " " << z << endl;
+}
+
+function: void foo (int & x, float & y, bool & z) {
+	foo2(x,y,z);
+}
+
+function: void main() {
+	int x = 77;
+	float y = 135.24;
+	bool b = true;
+
+	foo(x,y,b);
+	
+	x = 0;
+	y = 0.0;
+	b = false;
+	
+	foo(x,y,b);
+}

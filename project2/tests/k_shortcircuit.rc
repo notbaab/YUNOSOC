@@ -1,0 +1,38 @@
+function : bool foo()
+{
+    cout << "inside foo" << endl;
+    return true;
+}
+
+function : void main()
+{
+    bool a = true;
+    bool b = false;
+
+
+
+    if ( a && foo() )
+    {
+        cout << "if1" << endl;
+        if (foo() && b)
+        {
+            cout << "if inside" << endl;
+        }
+    }
+    else
+    {
+        cout << "else" << endl;
+    }
+    
+    if ( a || foo() )
+    {
+        cout << "haha1" << endl;
+    }
+
+    if ( b || foo() )
+    {
+        cout << "haha2" << endl;
+    }
+
+}
+

@@ -1,0 +1,8 @@
+function : void main()
+{
+	const bool a = true;
+	
+	int b = (int)a;
+	
+	cout << b << endl;
+}

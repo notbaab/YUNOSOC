@@ -1,0 +1,12 @@
+//local floating var * var multiplication
+
+
+function: void main() {
+	
+	float k = 4.0;
+	float l = 6.0;
+	float m = k * l;
+	
+	cout << k << " * " << l << " = " << m << endl;
+
+}

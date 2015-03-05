@@ -1,0 +1,12 @@
+// pass constant by value bool
+
+bool x = true;
+
+function: void foo (bool x) {
+	cout << x;
+}
+
+function: void main() {
+	foo(false);
+	cout << " " << x;
+}

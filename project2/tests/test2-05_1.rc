@@ -1,0 +1,14 @@
+//short circuiting
+
+function: bool trueFunc() {
+	cout << "trueFunc! ";
+	return true;
+}
+
+function: void main() {
+
+	if (trueFunc()) {
+		cout << "good!" << endl;
+	}
+
+}

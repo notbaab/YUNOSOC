@@ -1,0 +1,29 @@
+int counter = 0;
+
+function : int foo()
+{
+	counter++;
+	
+	if (counter < 10)
+	{
+		return foo();
+	}
+	
+	return counter;
+}
+
+function : void main()
+{
+	int final = foo();
+	counter = 0;
+	int doubleFinal = foo() + 10;
+	counter = 0;
+	int tripleFinal = foo() + doubleFinal;
+	counter = 0;
+	
+	cout << counter << endl; // 0;
+	cout << final << endl; // 10
+	cout << doubleFinal << endl; // 20
+	cout << tripleFinal << endl; // 30
+	
+}

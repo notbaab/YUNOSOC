@@ -1,0 +1,6 @@
+int arr[10];
+
+function : void main(){
+	int i = -3;
+	cout<<arr[i]<<endl;
+}

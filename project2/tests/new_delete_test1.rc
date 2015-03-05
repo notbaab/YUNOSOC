@@ -1,0 +1,9 @@
+function : void main(){
+	int * p;
+	new p;
+	int * d = p;
+	cout << *p << endl;
+	cout << *d << endl;
+	delete d;
+	delete p;
+} 

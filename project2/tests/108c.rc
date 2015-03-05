@@ -1,0 +1,20 @@
+int a =5;
+int b;
+
+function: void main()
+{
+    exit(a);
+}
+function: void foo()
+{
+    exit(a+b);
+}
+function: void bar()
+{
+    int c  = a + b;
+    exit(c);
+}
+function: void foobar()
+{
+    exit(4);
+}

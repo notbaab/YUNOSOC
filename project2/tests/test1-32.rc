@@ -1,0 +1,16 @@
+//simple if
+
+function: void main() {
+	
+	int x = 5;
+	
+	if (true) {
+		x = 10;
+	}
+	if (false) {
+		x = 12;
+	}
+	
+	cout << x;
+	
+}

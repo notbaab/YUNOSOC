@@ -1,0 +1,6 @@
+function : void main()
+{
+    int a = 1;
+    float b = 2.2;
+    cout << (a - b) << endl;
+}

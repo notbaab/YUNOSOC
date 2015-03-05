@@ -1,0 +1,30 @@
+int g = 5;
+function : void main() {
+    // Literals
+    cout << "Literals" << endl << "-----------------------" << endl;
+    cout << "should print  2:  "<< +2 << endl;
+    cout << "should print -2: "<< -2 << endl;
+
+    // Locals
+    cout << "Locals" << endl << "-----------------------" << endl;
+    int x = 5;
+    cout << "should print  5:  "<< +x << endl;
+    cout << "should print -5: "<< -x << endl;
+
+    x = +x; 
+    cout << "should print  5:  "<< +x << endl;
+
+    x = -x; 
+    cout << "should print -5: "<< x << endl;
+
+    // Globals
+    cout << "Locals" << endl << "-----------------------" << endl;
+    cout << "should print  5:  "<< +g << endl;
+    cout << "should print -5: "<< -g << endl;
+
+    g = +g; 
+    cout << "should print  5:  "<< +g << endl;
+
+    g = -g; 
+    cout << "should print -5: "<< g << endl;
+}

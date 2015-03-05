@@ -1,0 +1,84 @@
+function : int foo1()
+{
+  cout << "SHOULD PRINT 1" << endl;
+  return 2; //return constant literal int
+}
+
+function : bool foo2()
+{
+  cout << "SHOULD PRINT 2" << endl;
+  return true; //return constant literal bool
+}
+
+function : int foo3()
+{
+  cout << "SHOULD PRINT 3" << endl;
+  int x = 3;
+  return x; //return VarSTO int
+}
+
+function : bool foo4()
+{
+  cout << "SHOULD PRINT 4" << endl;
+  bool x = true;
+  return x; //return VarSTO boolean
+}
+
+function : int foo5()
+{
+  cout << "SHOULD PRINT 5" << endl;
+  const int cx = 4;
+  return cx; //return ConstSTO int
+}
+
+function : bool foo6()
+{
+  cout << "SHOULD PRINT 6" << endl;
+  const bool cx = false;
+  return cx; //return ConstSTO bool
+}
+
+function : int foo7()
+{
+  cout << "SHOULD PRINT 7" << endl;
+  static int sx = 5;
+  return sx; //return static int
+}
+
+function : bool foo8()
+{
+  cout << "SHOULD PRINT 8" << endl;
+  static bool sx2 = true;
+  return sx2; //return static bool
+}
+
+
+
+
+function : void main()
+{
+  int a = foo1(); //2
+  bool b = foo2(); //true
+
+  int c = foo3(); //3
+  bool d = foo4(); //true
+
+  int e = foo5(); //4
+  bool f = foo6(); //false
+
+  int g = foo7(); //5
+  bool h = foo8(); //false
+
+
+  cout << a << endl;
+  cout << b << endl;
+  cout << c << endl;
+  cout << d << endl;
+  cout << e << endl;
+  cout << f << endl;
+  cout << g << endl;
+  cout << h << endl;
+
+  cout << "SHOULD PRINT LAST" << endl;
+}
+

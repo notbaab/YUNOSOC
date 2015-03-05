@@ -1,0 +1,13 @@
+function : void main()
+{
+	float f = 441;
+    int b = *(int*)&f;
+    int *rawr = &b; 
+	int **rawr1 = &rawr;
+	int ***rawr2 = &rawr1;
+	int ****rawr3 = &rawr2;
+	
+    float ****a = (float ****)rawr3;
+
+    cout << ****a << endl;
+}

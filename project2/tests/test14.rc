@@ -1,0 +1,767 @@
+const int a=97; const int b=98; const int c=99; const int d=100; const int e=101; const int f=102; 
+const int g=103; const int h=104; const int i=105; const int j=106; const int k=107; const int l=108; 
+const int m=109; const int n=110; const int o=111; const int p=112; const int q=113; const int r=114; 
+const int s=115; const int t=116; const int u=117; const int v=118; const int w=119; const int x=120; 
+const int y=121; const int z=122; 
+const int cA=65; const int cB=66; const int cC=67; const int cD=68; const int cE=69; const int cF=70; 
+const int cG=71; const int cH=72; const int cI=73; const int cJ=74; const int cK=75; const int cL=76; 
+const int cM=77; const int cN=78; const int cO=79; const int cP=80; const int cQ=81; const int cR=82; 
+const int cS=83; const int cT=84; const int cU=85; const int cV=86; const int cW=87; const int cX=88; 
+const int cY=89; const int cZ=90; 
+const int space=32; const int nl=10; const int period=46; const int tab=9; 
+const int comma=44; const int squote=39; const int dquote=34; const int excl=33; 
+const int ques=63; 
+
+function : void printchar(int ch) {
+	if(ch == a) { cout << "a"; } if(ch == b) { cout << "b"; } if(ch == c) { cout << "c"; } if(ch == d) { cout << "d"; } 
+	if(ch == e) { cout << "e"; } if(ch == f) { cout << "f"; } if(ch == g) { cout << "g"; } if(ch == h) { cout << "h"; } 
+	if(ch == i) { cout << "i"; } if(ch == j) { cout << "j"; } if(ch == k) { cout << "k"; } if(ch == l) { cout << "l"; } 
+	if(ch == m) { cout << "m"; } if(ch == n) { cout << "n"; } if(ch == o) { cout << "o"; } if(ch == p) { cout << "p"; } 
+	if(ch == q) { cout << "q"; } if(ch == r) { cout << "r"; } if(ch == s) { cout << "s"; } if(ch == t) { cout << "t"; } 
+	if(ch == u) { cout << "u"; } if(ch == v) { cout << "v"; } if(ch == w) { cout << "w"; } if(ch == x) { cout << "x"; } 
+	if(ch == y) { cout << "y"; } if(ch == z) { cout << "z"; } 
+
+	if(ch == cA) { cout << "A"; } if(ch == cB) { cout << "B"; } if(ch == cC) { cout << "C"; } if(ch == cD) { cout << "D"; } 
+	if(ch == cE) { cout << "E"; } if(ch == cF) { cout << "F"; } if(ch == cG) { cout << "G"; } if(ch == cH) { cout << "H"; } 
+	if(ch == cI) { cout << "I"; } if(ch == cJ) { cout << "J"; } if(ch == cK) { cout << "K"; } if(ch == cL) { cout << "L"; } 
+	if(ch == cM) { cout << "M"; } if(ch == cN) { cout << "N"; } if(ch == cO) { cout << "O"; } if(ch == cP) { cout << "P"; } 
+	if(ch == cQ) { cout << "Q"; } if(ch == cR) { cout << "R"; } if(ch == cS) { cout << "S"; } if(ch == cT) { cout << "T"; } 
+	if(ch == cU) { cout << "U"; } if(ch == cV) { cout << "V"; } if(ch == cW) { cout << "W"; } if(ch == cX) { cout << "X"; } 
+	if(ch == cY) { cout << "Y"; } if(ch == cZ) { cout << "Z"; } 
+
+	if(ch == space) { cout << " "; } if(ch == nl) { cout << endl; } if(ch == period) { cout << "."; } 
+	if(ch == tab) { cout << "\t"; } if(ch == comma) { cout << ","; } if(ch == squote) { cout << "'"; } 
+	if(ch == dquote) { cout << "'"; } if(ch == excl) { cout << "!"; } if(ch == ques) { cout << "?"; } 
+}
+
+structdef CHAR {
+   int ch;
+   CHAR* nc;
+};
+
+structdef WORD {
+   CHAR* cl;
+   WORD* nw;
+};
+
+structdef LINE {
+   WORD* wl;
+   LINE* nl;
+};
+
+LINE* sl;
+
+function : void writetext(LINE* start) {
+	LINE* lp = nullptr;
+	WORD* wp = nullptr;
+	CHAR* cp = nullptr;
+
+	lp = start;
+
+	while (lp != nullptr) {
+		wp = lp->wl;
+
+		while (wp != nullptr) {
+			cp = wp->cl;
+
+			while (cp != nullptr) {
+				printchar(cp->ch);
+				cp = cp->nc;
+			}
+
+			printchar(space);
+			wp = wp->nw;
+		}
+
+		printchar(nl);
+		lp = lp->nl;
+	}
+}
+
+function : void deletechar(CHAR* &cp) {
+	if(cp->nc != nullptr) { deletechar(cp->nc); }
+	delete cp;	
+}
+
+function : void deleteword(WORD* &wp) {
+	if(wp->nw != nullptr) { deleteword(wp->nw); }
+	if(wp->cl != nullptr) { deletechar(wp->cl); }
+	delete wp;
+}
+
+function : void deleteline(LINE* &lp) {
+	if(lp->nl != nullptr) { deleteline(lp->nl); }
+	if(lp->wl != nullptr) { deleteword(lp->wl); }
+	delete lp;	
+}
+
+function : void deletetext(LINE* &start) {
+	if(start != nullptr) { deleteline(start); }
+}
+
+function : void text() {
+	LINE* lp = nullptr;
+	WORD* wp = nullptr;
+	CHAR* cp = nullptr;
+
+	new lp; sl = lp; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cI; new cp->nc; cp = cp->nc; cp->ch = m; new cp->nc; cp = cp->nc; 
+	cp->ch = m; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cK; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = p; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = v; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = b; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = period; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cH; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = d; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = g; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cH; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = d; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = g; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = z; new cp->nc; cp = cp->nc; 
+	cp->ch = y; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; cp->ch = g; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = k; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = y; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = period; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cD; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = v; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cH; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = m; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = m; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cW; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = m; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cF; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = c; new cp->nc; cp = cp->nc; 
+	cp->ch = h; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cH; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cA; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cW; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = y; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = w; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = j; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cS; new cp->nc; cp = cp->nc; cp->ch = c; new cp->nc; cp = cp->nc; 
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = g; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = period; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cT; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = squote; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cN; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = z; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = squote; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = c; new cp->nc; cp = cp->nc; 
+	cp->ch = h; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = y; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = squote; new cp->nc; cp = cp->nc; cp->ch = b; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = squote; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = period; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cS; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = m; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = f; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = p; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = m; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = y; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = p; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = d; new cp->nc; cp = cp->nc; 
+	cp->ch = period; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cJ; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cS; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cM; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = w; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = f; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = p; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = p; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = c; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = period; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cP; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = y; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = c; new cp->nc; cp = cp->nc; 
+	cp->ch = k; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = w; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = squote; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = k; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = y; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = v; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = y; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = d; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = y; new cp->nc; cp = cp->nc; cp->ch = excl; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cA; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cA; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; cp->ch = g; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = f; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = comma; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cH; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = b; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = f; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = d; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cD; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = m; new cp->nc; cp = cp->nc; 
+	cp->ch = period; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cA; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = d; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cR; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cD; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = c; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = d; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = k; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = n; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = f; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = dquote; new cp->nc; cp = cp->nc; cp->ch = cI; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = d; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = k; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = f; new cp->nc; cp = cp->nc; 
+	cp->ch = o; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cI; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = m; new cp->nc; cp = cp->nc; 
+	cp->ch = period; new cp->nc; cp = cp->nc; cp->ch = dquote; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cY; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = cS; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = c; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = m; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = f; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = p; new cp->nc; cp = cp->nc; cp->ch = a; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = c; new cp->nc; cp = cp->nc; 
+	cp->ch = u; new cp->nc; cp = cp->nc; cp->ch = l; new cp->nc; cp = cp->nc; 
+	cp->ch = a; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = m; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = d; new cp->nc; cp = cp->nc; 
+	
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+	cp->ch = cA; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = o; new cp->nc; cp = cp->nc; 
+	cp->ch = v; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = y; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = t; new cp->nc; cp = cp->nc; 
+	cp->ch = l; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = t; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = i; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	cp->ch = k; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = r; new cp->nc; cp = cp->nc; cp->ch = comma; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = t; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = a; new cp->nc; cp = cp->nc; 
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = b; new cp->nc; cp = cp->nc; cp->ch = u; new cp->nc; cp = cp->nc; 
+	cp->ch = g; new cp->nc; cp = cp->nc; cp->ch = g; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = r; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = w; new cp->nc; cp = cp->nc; cp->ch = h; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = n; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = h; new cp->nc; cp = cp->nc; cp->ch = e; new cp->nc; cp = cp->nc; 
+	cp->ch = squote; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	
+	new wp->nw; wp = wp->nw; new wp->cl; cp = wp->cl;
+	cp->ch = p; new cp->nc; cp = cp->nc; cp->ch = i; new cp->nc; cp = cp->nc; 
+	cp->ch = s; new cp->nc; cp = cp->nc; cp->ch = s; new cp->nc; cp = cp->nc; 
+	cp->ch = e; new cp->nc; cp = cp->nc; cp->ch = d; new cp->nc; cp = cp->nc; 
+	cp->ch = period; new cp->nc; cp = cp->nc; 
+	new lp->nl; lp = lp->nl; new lp->wl; wp = lp->wl; new wp->cl; cp = wp->cl;
+}	
+
+function : void main() {
+	text();
+	writetext(sl);
+	deletetext(sl);
+}

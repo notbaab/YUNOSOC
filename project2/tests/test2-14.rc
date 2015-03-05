@@ -1,0 +1,12 @@
+// basic while statement
+
+function: void main() {
+
+	int i = 4;
+	
+	while (i >= 2) {
+		cout << i-- << " ";
+	}
+	cout << --i << endl;
+		
+}

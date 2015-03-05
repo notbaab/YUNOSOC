@@ -1,0 +1,23 @@
+structdef FOO {
+    int b;
+    float r;
+};
+
+FOO *bell;
+FOO cold;
+
+function : void main() 
+{
+    float p = 99.99;
+	cold.b = 88;
+	cold.r = p;
+	
+	FOO *bong;
+	
+	bong = bell;
+	
+	bell = &cold;
+
+    cout << (*bell).b << endl;
+	cout << (*bell).r << endl;
+}

@@ -1,0 +1,4 @@
+function : void main()
+{
+    cout << 123.456 << endl;
+}

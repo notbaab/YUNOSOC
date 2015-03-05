@@ -1,0 +1,13 @@
+bool x = true;
+bool y = false;
+
+function : bool foo ()
+{
+	cout << "foo" << x << y << endl;
+	return x;
+}
+
+function : void main() {
+
+	cout << "main" << foo() << "end" <<endl;
+}

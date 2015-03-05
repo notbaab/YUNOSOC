@@ -1,0 +1,4 @@
+function : int p(){return 1;}
+function : int main(){
+   return p();
+}

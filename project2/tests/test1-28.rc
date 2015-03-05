@@ -1,0 +1,18 @@
+//float division (local, global, constant)
+
+const int i = 10;
+const float j = 2.0;
+float k = i / j; // 5.00
+
+
+function: void main() {
+	
+	int a = 20;
+	float b = 5.0;
+	float c = a / b; // 4.0
+	int d = a / i; // 2
+	float e = a / 2.0; //10.00
+	
+	cout << k << " " << c << " " << d << " " << e << " " << 30 / b << " " << a << endl;
+	
+}

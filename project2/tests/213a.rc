@@ -1,0 +1,21 @@
+structdef STRUCTY{ int a; bool b; float c;};
+
+const int c = 20;
+function : int main(){
+	STRUCTY s[c];
+   
+	int i = 0; 
+	while (i < c) {
+		s[i].a = i;
+		s[i].b = i % 2 == 0;
+		s[i].c = 1.234 * i;
+		i++;
+	}
+   
+	i = 0; 
+	while (i < c) {
+		cout << s[i].a << s[i].b << s[i].c << endl;
+		i++;
+	}
+	return 0;
+}

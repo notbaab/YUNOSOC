@@ -1,0 +1,12 @@
+function : void main()
+{
+  cout << "SHOULD PRINT" << endl;
+
+  int x = 2;
+  int y = 4;
+
+  exit(x + y); // Tests const literal
+
+  cout << "SHOULD NOT PRINT" << endl;
+
+}

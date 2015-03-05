@@ -1,0 +1,19 @@
+bool a = true;
+bool b = true;
+bool c = true;
+bool d = true;
+bool e = true;
+int f = 5;
+int g = 4;
+int h = 6;
+int i = 7;
+int j = 9;
+float k = 3.33;
+float l = 4.44;
+float m = 5.55;
+float n = 6.66;
+
+function : void main() {
+
+	cout << "main" << c << " " << h << " " << m << "end" <<endl;
+}

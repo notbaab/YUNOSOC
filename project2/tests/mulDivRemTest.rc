@@ -1,0 +1,16 @@
+function : void main()
+{
+  int x = 10;
+  int y = 2;
+
+  cout << x * y << endl; //20
+  cout << x / y << endl; //5
+  cout << x % y << endl; //0
+
+  cout << x * 2 << endl; //20
+  cout << 2 * x << endl; //20
+  cout << x / 2 << endl; //5
+  cout << 2 / x << endl; //0
+  cout << x % 2 << endl; //0
+  cout << 2 % x << endl; //2
+}

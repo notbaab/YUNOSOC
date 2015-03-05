@@ -1,0 +1,37 @@
+const int c = 10;
+structdef S{int a[c]; int b[c];};
+
+S s;
+
+function : int main(){
+   int *p = &s.a[0];
+
+   int i = 0; while (i < 2 * c){
+      p[i] = i*i*i;
+   i++;}
+   
+   i = 0; while (i < c){
+      cout << s.a[i] << " ";
+   i++;}
+   i = 0; while (i < c){
+      cout << s.b[i] << " ";
+   i++;}
+   cout << endl;
+ 
+   p = &s.b[c-1];
+   i = 0; while (i < 2 * c){
+      p[-i] = i*i*i;
+   i++;}
+   
+   i = 0; 
+   while (i < c){
+      cout << s.a[i] << " ";
+      i++;
+   }
+   i = 0; while (i < c){
+      cout << s.b[i] << " ";
+   i++;}
+   cout << endl;
+   
+   return 0;
+}

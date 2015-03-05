@@ -1,0 +1,5 @@
+const int a = 5;
+const int b = 6;
+int c = a + b;
+
+function: void main() {}

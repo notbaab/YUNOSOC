@@ -1,0 +1,26 @@
+function : void main()
+{
+  int x = 0;
+  cout << "X should be printed 5 times" << endl; 
+  cout << "Y should be printed 10 times" << endl; 
+  cout << "Z should be printed 10 times" << endl; 
+
+  while (x < 5)
+  {
+    int y = 4;
+    while(y > 2)
+    {
+      int z = 0;
+      while(z == 0)
+      {
+        cout << "Z" << z << endl;
+	    z++;
+      }
+      cout << "Y" << y << endl;
+      y--;
+    }
+    cout << "X" << x << endl;
+    x++;
+  }
+  cout << "END TEST" << endl;
+}

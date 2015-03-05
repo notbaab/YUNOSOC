@@ -1,0 +1,65 @@
+function: void main() {
+
+// Short circuit doesn't work, I have to do something in the rc file
+// I know what to do, can do it first thing
+    // && literals
+    cout << "Basic Literals" << endl << "----------------" << endl;
+    cout << "true  && true:  should be true   " << true && true << endl;
+    cout << "true  && false: should be false  " << true && false << endl;
+    cout << "false && false: should be false  " << false && false << endl;
+    cout << endl;
+
+    // || literals
+    cout << "true  || true:  should be true   " << true || true << endl;
+    cout << "true  || false: should be true   " << true || false << endl;
+    cout << "false || false: should be false  " << false || false << endl;
+    cout << endl;
+
+    cout << "Basic Locals" << endl << "----------------" << endl;
+    bool a = true;
+    bool b = false;
+
+    // && locals
+    cout << "true  && true:  should be true   " << a && a << endl;  
+    cout << "true  && false: should be false  " << a && b << endl;  
+    cout << "false && false: should be false  " << b && b << endl;  
+    cout << endl;
+
+    // || locals
+    cout << "true  || true:  should be true   " << a || a << endl;  
+    cout << "true  || false: should be true   " << a || b << endl;  
+    cout << "false || false: should be false  " << b || b << endl;  
+    cout << endl;
+
+    
+    cout << "Short Circuits" << endl << "----------------" << endl;
+
+    // short circuits
+    a = true;
+    b = false;
+    cout << "((a = 3 < 2) && (b = 3 > 2)): should be false  " << ((a = 3 < 2) && (b = 3 > 2)) << endl;
+    cout << "                           a: should be false  " << a << endl;
+    cout << "                           b: should be false  " << b << endl;
+    cout << endl;
+
+    a = false;
+    b = false;
+    cout << "((a = 3 > 2) && (b = 3 > 2)): should be true  " << ((a = 3 > 2) && (b = 3 > 2)) << endl;
+    cout << "                           a: should be true  " << a << endl;
+    cout << "                           b: should be true  " << b << endl;
+    cout << endl;
+
+    a = false;
+    b = true;
+    cout << "((a = 3 > 2) || (b = 3 < 2)): should be true  " << ((a = 3 > 2) || (b = 3 < 2)) << endl; 
+    cout << "                           a: should be true  " << a << endl;
+    cout << "                           b: should be true  " << b << endl;
+    cout << endl;
+
+    a = true;
+    b = true;
+    cout << "((a = 3 < 2) || (b = 3 < 2)): should be false  " << ((a = 3 < 2) || (b = 3 < 2)) << endl;
+    cout << "                           a: should be false  " << a << endl;
+    cout << "                           b: should be false  " << b << endl;
+    cout << endl;
+}

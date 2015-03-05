@@ -1,0 +1,8 @@
+x: should be 100	100	true
+x: should be -8		-8	true
+x: should be 0		0	true
+x: should be 3		3	true
+x: should be 0		0	true
+x: should be 1		1	true
+x: should be 111	111	true
+x: should be 1		1	true

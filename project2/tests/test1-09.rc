@@ -1,0 +1,33 @@
+int i = 10;
+int k = -50;
+bool b1 = false;
+bool b2 = true;
+float f1 = 1.00;
+float f2 = 7654321.0;
+float f3 = -100.01;
+
+//this output should be no different from test1-5.rc
+
+function: void main() {
+
+	//the final local constant test:
+	bool b1 = true;
+	bool b2 = false;
+	int i = 2;
+	int k = -5;
+	float f1 = 95.95;
+	float f2 = 1234567.0;
+	float f3 = -0.01;
+	
+	cout << i << " " << k << endl;
+	cout << " " << b1 << " = true, false = " << b2;
+	cout << "\n";
+	cout << f1 << " " << f2 << " " << f3 << endl;
+
+	//printing constants:
+	cout << 2 << " " << -5 << endl;
+	cout << " " << true << " = true, false = " << false;
+	cout << "\n";
+	cout << 95.95 << " " << 1234567.0 << " " << -0.01 << endl;
+
+}

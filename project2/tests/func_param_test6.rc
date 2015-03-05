@@ -1,0 +1,12 @@
+function : int foo(int &a, int b)
+{
+	return (b + b);
+}
+
+function : void main()
+{
+	int k = 4;
+	int c = 4 + foo(k, k);
+
+	cout << c << endl;
+}

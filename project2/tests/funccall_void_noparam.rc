@@ -1,0 +1,42 @@
+int recurse = 5;
+int y = 10;
+
+function: void foo4() {
+    cout << y << ". foo4()" << endl;
+    recurse = recurse - 1;
+    y = y + 1;
+    if(recurse > 0) {
+        foo4();
+    }
+    return;
+}
+
+function: void foo3() {
+    cout << " 6. foo3()" << endl;
+}
+
+function: void foo2() {
+    cout << " 5. foo2() - before foo2()" << endl;
+    foo3();
+    cout << " 7. foo2() - after foo2()" << endl;
+}
+
+function: void foo1() {
+    cout << " 2. foo1()" << endl;
+}
+
+function: void main() {
+    cout << "Testing function calls returning VOID" << endl;
+
+    cout << " 1. foo() - before" << endl;
+    foo1();
+    cout << " 3. foo() - after" << endl;
+
+    cout << " 4. foo1() - before" << endl;
+    foo2();
+    cout << " 8. foo1() - after" << endl;
+
+    cout << " 9. foo4() - recursive start" << endl;
+    foo4();
+    cout << y << ". foo4() - recursive end" << endl;
+}

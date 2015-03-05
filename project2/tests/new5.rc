@@ -1,0 +1,7 @@
+
+function : void main() {
+	static bool x = true;
+	static bool y = false;
+
+	cout << x << endl << y;
+}

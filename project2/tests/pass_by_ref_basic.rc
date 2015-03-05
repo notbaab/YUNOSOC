@@ -1,0 +1,40 @@
+function : void te( int & x, int y, float & f, float d, bool & b, bool c){
+    x = x + 12;
+    y = y - 20;
+    f = f + 12.0;
+    d = d - 20;
+    b = b || true;
+    c = c && false;
+    cout << "Function" << endl;
+    cout << x << endl;
+    cout << y << endl;
+    cout << f << endl;
+    cout << d << endl;
+    cout << b << endl;
+    cout << c << endl;
+}
+function : void main(){
+    int x = 12;
+    int y = 100;
+    float f = 12.00;
+    float d = 100.00;
+    bool b = false;
+    bool c = true;
+    cout << "Every other variable, starting with the top is passbyref" << endl;
+    cout << "before func" << endl;
+    cout << x << endl;
+    cout << y << endl;
+    cout << f << endl;
+    cout << d << endl;
+    cout << b << endl;
+    cout << c << endl;
+    te(x,y,f,d,b,c);
+    cout << "after func" << endl;
+    cout << x << endl;
+    cout << y << endl;
+    cout << f << endl;
+    cout << d << endl;
+    cout << b << endl;
+    cout << c << endl;
+
+}

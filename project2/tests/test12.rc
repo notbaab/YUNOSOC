@@ -1,0 +1,258 @@
+structdef MS {
+  int val;
+  MS* left;
+  MS* right;
+  function : int getVal() { return this.val; }
+  function : void setVal(int v) { this.val = v; }
+};
+
+static MS* node;
+
+typedef bool DIRECTION;
+
+const bool messagesOn = true;
+
+const bool success = true;
+const bool failure = false;
+const bool right   = true;
+const bool left    = false;
+
+function : MS* makeNode( int val ) {
+   MS* temp;
+   new temp;
+   temp->setVal(val);
+   return temp;
+}
+
+function : int getVal( ) {
+   if(messagesOn) {
+     cout << "Enter an integer value: ";
+   }
+   int val;
+   cin >> val;
+   return val;
+}
+
+function : int getOption( ) {
+   if(messagesOn) {
+     cout << "Make a selection: ";
+   }
+   int option;
+   cin >> option;
+   return option;
+}
+
+function : void printMenu( ) {
+   if(messagesOn) {
+     cout << endl;
+     cout << "/***********************************\\" << endl;
+     cout << "|* 1. Insert a node into the BST   *|" << endl;
+     cout << "|* 2. Delete a node from the BST   *|" << endl;
+     cout << "|* 3. Search for a node in the BST *|" << endl;
+     cout << "|* 4. Print the BST inorder        *|" << endl;
+     cout << "|* 5. Quit this crazy program      *|" << endl;
+     cout << "\\***********************************/" << endl;
+   }
+}
+
+function : void recursiveInsert( MS* &root, MS* newNode ) {
+   if ( root == nullptr ) {
+	root = newNode;
+   } else {
+	if ( newNode->getVal() >= root->getVal() ) {
+               	if ( root->right != nullptr ) {
+                       	recursiveInsert( root->right, newNode );
+               	} else {
+                       	root->right = newNode;
+               	}
+       	} else {
+               	if ( root->left != nullptr ) {
+                       	recursiveInsert( root->left, newNode );
+               	} else {
+                       	root->left = newNode;
+               	}
+       	}
+   }
+}
+
+function : bool recursiveSearch( MS* root, int val ) {
+   if ( root != nullptr ) {
+	if ( val == root->getVal() ) {
+		return success;
+	}
+
+	if ( val > root->getVal() ) {
+		if ( root->right != nullptr ) {
+			return recursiveSearch( root->right, val );
+		} else {
+			return failure;
+		}
+	} else {
+		if ( root->left != nullptr ) {
+			return recursiveSearch( root->left, val );
+		} else {
+			return failure;
+		}
+	}
+   }
+
+   return failure;
+}
+
+function : bool recursiveDelete( MS* &pre, MS* &cur, int val, DIRECTION dir ) {
+   MS* temp = nullptr;
+   MS* walker1 = nullptr;
+   MS* walker2 = nullptr;
+
+   if ( cur != nullptr ) {
+      if ( val == cur->getVal() ) {			/* we've found the value we want to delete */
+	temp = cur;
+
+	if ( cur->right == nullptr ) { 			/* there's no need to replace the node we're deleting */
+		cur = cur->left;			/* make the root the root of the left subtree */
+		
+		if ( pre != cur ) {			/* this is not the root of the btree, so above connections need to be repaired */
+			if ( dir == left ) {
+				pre->left = cur;
+			} else {
+				pre->right = cur;
+			}
+		}
+	} else {					/* we need to find a replacement node for the node we're deleting */
+		walker1 = cur->right;
+		
+		if ( walker1->left == nullptr ) { 		/* we've already found the replacement node */
+			cur = cur->right;
+			cur->left = temp->left;
+
+			if ( pre != cur ) {		/* this is not the root of the btree, so above connections need to be repaired */
+				if ( dir == left ) {
+					pre->left = cur;
+				} else {
+					pre->right = cur;
+				}
+			}
+		} else {				/* we haven't already found the replacement node */
+			while ( walker1->left != nullptr ) {
+				walker2 = walker1;
+				walker1 = walker1->left;
+			}
+
+			/* at this point, walker1 has our replacement node, and we need to repair connections */
+			walker2->left = walker1->right;
+			cur = walker1;
+			cur->left = temp->left;
+			cur->right = temp->right;
+
+			if ( pre != cur ) {		/* this is not the root of the btree, so above connections need to be repaired */
+				if ( dir == left ) {
+					pre->left = cur;
+				} else {
+					pre->right = cur;
+				}
+			}
+		}
+	}
+
+	delete temp;
+	return success;
+      }
+
+      if ( val > cur->val ) {
+	if ( cur->right != nullptr ) {
+		return recursiveDelete( cur, cur->right, val, right );
+	} else {
+		return failure;
+	}
+      } else {
+	if ( cur->left != nullptr ) {
+		return recursiveDelete( cur, cur->left, val, left );
+	} else {
+		return failure;
+	}
+      }
+   }
+
+   return failure;
+}
+
+function : void recursiveDestroy( MS* &root ) {
+   if ( root != nullptr ) {
+	if ( root->left != nullptr ) {
+		recursiveDestroy( root->left );
+	}
+
+	if ( root->right != nullptr ) {
+		recursiveDestroy( root->right );
+	}
+
+	delete root;
+  }
+}
+
+function : void inorderPrint( MS* root ) {
+   if ( root != nullptr ) {
+	if ( root->left != nullptr ) {
+		inorderPrint( root->left );
+	}
+
+	cout << root->getVal() << " ";
+
+	if ( root->right != nullptr ) {
+		inorderPrint( root->right );
+	}
+   } else {
+	cout << "Tree is empty";
+   }
+}
+
+function : void driver( ) {
+   int opt = 0;
+   int val = 0;
+   bool result = false;
+   MS* root = nullptr;
+
+   while ( opt != 5 ) {
+	printMenu();
+	opt = getOption();
+
+	if ( opt == 1 ) {	/* insert */
+		val = getVal();
+		recursiveInsert( root, makeNode( val ) );
+	}
+	
+	if ( opt == 2 ) {	/* delete */
+		val = getVal();
+		result = recursiveDelete( root, root, val, left );
+
+		if ( result == success ) {
+			cout << "Value found. Delete successful\n";
+		} else {
+			cout << "Value not found. Delete failed\n";
+		}
+	}
+
+	if ( opt == 3 ) {	/* search */
+		val = getVal();
+		result = recursiveSearch( root, val );
+
+		if ( result == success ) {
+			cout << "Value found.\n";
+		} else {
+			cout << "Value not found.\n";
+		}
+	}
+
+	if ( opt == 4 ) {	/* print */
+		inorderPrint( root );
+		cout << endl;
+	}
+   }
+
+   recursiveDestroy( root );	
+}
+
+function : void main() {
+   driver();
+}
+

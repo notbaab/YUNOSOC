@@ -1,0 +1,10 @@
+function : void main () {
+
+      int c;
+
+      c = 1;
+
+      cout << c << endl;
+
+}
+

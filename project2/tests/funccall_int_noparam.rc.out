@@ -1,0 +1,19 @@
+Testing function calls returning INT
+ 1. foo1() - returning 1 as literal
+ 2. foo1() -  received 1
+ 3. foo2() - returning 2 as local
+ 4. foo2() -  received 2
+ 5. foo3() - returning 3 as const local
+ 6. foo3() -  received 3
+ 7. foo4() - returning 4 as global
+ 8. foo4() -  received 4
+ 9. bar1() - returning 5 as direct
+10. bar2() - returning 5
+11. bar1() -  received 5
+12. foo5() - recursive start
+13. foo5() - returning 1
+14. foo5() - returning 2
+15. foo5() - returning 3
+16. foo5() - returning 4
+17. foo5() - returning 5
+18. foo5() - recursive end - final value: 5

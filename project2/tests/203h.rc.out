@@ -1,0 +1,11 @@
+b1: should be: true     true
+b1: should be: false    false
+b2: should be: true     true
+b3: should be: false    false
+b4: should be: true     true
+b5: should be: true     true
+ x: should be: true     true
+ y: should be: false    false
+ w: should be: true     true
+ z: should be: false    false
+ a: should be: true     true

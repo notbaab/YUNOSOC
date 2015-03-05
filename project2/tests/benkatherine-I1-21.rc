@@ -1,0 +1,8 @@
+int x = 4;
+
+function : void main()
+{
+  int x = 6;
+  int y = ::x;
+
+}

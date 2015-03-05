@@ -1,0 +1,12 @@
+function : void main()
+{
+    int b = 1;
+    int *rawr = &b; 
+	int **rawr1 = &rawr;
+	int ***rawr2 = &rawr1;
+	int ****rawr3 = &rawr2;
+	
+    bool ****a = (bool ****)rawr3;
+
+    cout << ****a && true && true && false << endl;
+}

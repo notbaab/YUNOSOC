@@ -1,0 +1,124 @@
+function : int foo1()
+{
+  return 1 + 2; // constant folding - not ExprSTO
+}
+
+function : int foo2()
+{
+  int x = 1;
+  int y = 3;
+  return x + y;
+}
+
+function : int foo3()
+{
+  int x = 5;
+  int y = 2;
+  int z = 1;
+  return x + y - z;
+}
+
+function : int foo4()
+{
+  int x = 7;
+  int y = 5;
+  int z = x + y; // 12
+  return ++x;
+}
+
+function : int foo5()
+{
+  int x = 4; 
+  int y = 5;
+  int z = 2;
+  return x * y / z;
+}
+
+function : int foo6()
+{
+  int x = 4;
+  int y = 3;
+  return x % y;
+}
+
+function : bool foo7()
+{
+  bool x = true;
+  bool y = false;
+  return x || y;
+}
+
+function : bool foo8()
+{
+  bool x = true;
+  bool y = false;
+  return x && y;
+}
+
+function : float foo9()
+{
+  float x = 1.1;
+  float y = 2.2;
+  return x + y;
+}
+
+function : float foo10()
+{
+  float x = 5.5;
+  float y = 2.5;
+  float z = 0.5;
+  return x + y - z;
+}
+
+function : float foo11()
+{
+  float x = 1.5;
+  float y = 3.1;
+  float z = x + y; 
+  return ++x;
+}
+
+function : float foo12()
+{
+  float x = 2.5; 
+  float y = 3.0;
+  float z = 0.5;
+  return x * y / z;
+}
+
+
+function : void main()
+{
+  int a = foo1();
+  int b = foo2();
+  int c = foo3();
+  int d = foo4();
+  int e = foo5();
+  int f = foo6();
+
+  bool g = foo7();
+  bool h = foo8();
+
+  float i = foo9();
+  float j = foo10();
+  float k = foo11();
+  float l = foo12();
+
+  cout << "print 3: " << a << endl;
+  cout << "print 4: " << b << endl;
+  cout << "print 6: " << c << endl;
+  cout << "print 8: " << d << endl;
+  cout << "print 10: " << e << endl;
+  cout << "print 1: " << f << endl;
+
+  cout << "print true: " << g << endl;
+  cout << "print false: " << h << endl;
+
+  cout << "print 3.3: " << i << endl;
+  cout << "print 7.5: " << j << endl;
+  cout << "print 2.5: " << k << endl;
+  cout << "print 15.0: " << l << endl;
+
+
+
+}

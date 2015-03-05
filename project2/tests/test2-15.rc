@@ -1,0 +1,56 @@
+// advanced while statement mixed with if/elses
+
+function: void main() {
+
+	int i = -1;
+	int j;
+	
+	if (true) {
+		cout << "You have ";
+	}
+	else {
+		cout << "INCORRECT!";
+	}
+	if (false) {
+		cout << "INCORRECT!";
+	}
+	else {
+		cout << "to the count of 10: " << endl;
+	}
+	
+	while (i < 14) {
+		
+		if (i <= 11) {
+			if (false) {
+			
+			}
+			else {
+			
+			}
+			
+			while (i <= 10) {
+				if (i > 8) {
+					++i;
+					cout << " bark!";
+				}
+				else {
+					j = i + 2;
+					cout << j << " ";
+					i++;
+				}
+			}
+			
+			if (true) {
+				cout << endl << "Uh ooh! ";
+				++i;
+			}			
+			
+		}
+		else {
+			cout << endl << "RUN!";
+			i = 100;
+		}
+	}
+	cout << "<death>" << endl;
+		
+}

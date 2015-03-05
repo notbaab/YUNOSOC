@@ -1,0 +1,13 @@
+function : void main()
+{
+    bool a = true;
+    bool b = !a;
+    bool c = b;
+    
+    cout << a << endl;
+    cout << b << endl;
+    cout << c << endl;
+    cout << !b << endl;
+    cout << !c << endl;
+    cout << !a << endl;
+}

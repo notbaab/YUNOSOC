@@ -1,0 +1,19 @@
+/*Testing UnarySign for int*/
+int x = -5;
+int y = -6;
+
+function: void main()
+{
+   int a = x*y;
+   int b = x-y;
+   int c = x+y; 
+   int d = x/y;
+   cout<<(-a)<<endl; // should print out -30
+   cout<<-b<<endl; // should print out -1
+   cout<<-c<<endl; // should print out 11
+   cout<<-d<<endl; // should print out -0
+   cout<<-4<< endl; // -4
+   cout<<-(a+b)<<endl; // -31
+   cout<<-(x+y)<<endl; // 11
+   cout<<-x<<endl; //5
+}

@@ -1,0 +1,5 @@
+
+function : void main() {
+
+	cout << endl << true << " " << false <<endl;
+}

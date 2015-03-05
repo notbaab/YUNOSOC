@@ -1,0 +1,37 @@
+int i3;
+
+function: void main() {
+    
+    int i1;
+    int i2;
+    int i4;
+    int i5;
+
+    i1 = 1;
+    cout << "i1: should be: 1     " << i1 << endl;
+
+    i2 = i1;
+    i1 = 2;
+    i5 = i4 = i2;
+
+    cout << "i1: should be: 2     " << i1 << endl;
+    cout << "i2: should be: 1     " << i2 << endl;
+    cout << "i3: should be: 0     " << i3 << endl;
+    cout << "i4: should be: 1     " << i4 << endl;
+    cout << "i5: should be: 1     " << i5 << endl;
+
+    const int x = 0;
+    const int y = 1;
+    const int a = y;
+    const int b = 2;
+    const int c = 4;
+
+    int w = c;
+
+    cout << " x: should be: 0     " << x << endl;
+    cout << " y: should be: 1     " << y << endl;
+    cout << " a: should be: 1     " << a << endl;
+    cout << " b: should be: 2     " << b << endl;
+    cout << " c: should be: 4     " << c << endl;
+    cout << " w: should be: 4     " << w << endl;
+}

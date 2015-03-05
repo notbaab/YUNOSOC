@@ -1,0 +1,16 @@
+Literals
+-----------------------
+should print  2:  2
+should print -2: -2
+Locals
+-----------------------
+should print  5:  5
+should print -5: -5
+should print  5:  5
+should print -5: -5
+Locals
+-----------------------
+should print  5:  5
+should print -5: -5
+should print  5:  5
+should print -5: -5

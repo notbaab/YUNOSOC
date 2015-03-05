@@ -1,0 +1,36 @@
+function : int fibonacci (int x) {
+  int i;
+  int y;
+  int z;
+  int t;
+  if (x <= 0) {
+    return 0;
+  } else {
+    y = 0; z = 1;
+    i=0;
+    while(i < x) {
+      t = z;
+      z = y + z;
+      y = t;
+      i++;
+    }
+    return y;
+  }
+  return 0;
+}
+
+function : int main () {
+  cout << fibonacci(0) << endl;
+  cout << fibonacci(1) << endl;
+  cout << fibonacci(2) << endl;
+  cout << fibonacci(3) << endl;
+  cout << fibonacci(4) << endl;
+  cout << fibonacci(5) << endl;
+  cout << fibonacci(6) << endl;
+  cout << fibonacci(7) << endl;
+  cout << fibonacci(8) << endl;
+  cout << fibonacci(9) << endl;
+  cout << fibonacci(10) << endl;
+
+  return 0;
+}

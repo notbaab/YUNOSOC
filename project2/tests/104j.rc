@@ -1,0 +1,14 @@
+int x = 5;
+int y = 10;
+int z = 5000;
+
+function : void main()
+{
+    int sinatra = y % x;
+    int fitzgerald = (z * y - z) % x;
+    int bono = (((x * y * z) + (x * y * z)) % 10) + 5;
+
+    cout << sinatra << endl; // 0
+    cout << fitzgerald << endl; // 0
+    cout << bono << endl; // 5
+}

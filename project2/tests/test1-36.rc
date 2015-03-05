@@ -1,0 +1,37 @@
+// function calls to bool, int, float, void functions:
+
+bool glb1 = false;
+int  glb2 = 9821;
+float glb3 = 66.99;
+
+function : int foo() {
+	return 123;
+}
+
+function : bool foo2() {
+	return false;
+}
+
+function : bool foo3() {
+	return true;
+}
+
+function : float foo4() {
+	return 99.44;
+}
+
+function : void foo5() {
+	glb1 = true;
+	glb2 = glb2 - 1;
+}
+
+function: void main() {
+	int a = foo();
+	bool b = foo2();
+	bool c = foo3();
+	float d = foo4();
+	foo5();
+	
+	cout << a << " " << b << " " << c << " " << d << endl;
+	cout << glb1 << " " << glb2 << " " << glb3 << endl;
+}

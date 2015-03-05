@@ -1,0 +1,21 @@
+function : void main()
+{
+  bool a = true;
+  bool b = false;
+  bool c = true;
+
+  cout << "ONLY ONE STATEMENT SHOULD PRINT" << endl;
+
+  if( a && b )
+  {
+    cout << "THIS SHOULD NOT PRINT" << endl;
+  }
+
+  if( a && c )
+  {
+    cout << "THIS WILL PRINT" << endl;
+  }
+
+
+
+}

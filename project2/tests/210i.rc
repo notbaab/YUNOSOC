@@ -1,0 +1,14 @@
+function : void main()
+{
+   bool b[3];
+
+   b[0] = true;
+   b[1] = false;
+
+   cout << b[0] << endl; //true
+   cout << b[1] << endl;  //false
+
+   cout << b[2] = b[0] << endl; //true
+
+
+}

@@ -1,0 +1,8 @@
+function: void main() {
+    const int x = 0;
+    cout << "exit(0) as const" << endl;
+    exit(x);
+
+    cout << "SHOULD NOT PRINT" << endl;
+}
+

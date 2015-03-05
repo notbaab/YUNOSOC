@@ -1,0 +1,58 @@
+int fooRec;
+int barRec = 5;
+int foobazRec;
+
+function : void foobaz()
+{
+	foobazRec++;
+	if (foobazRec > 52)
+	{
+		cout << "breaking out of foobaz recursive call" << endl;
+		return;
+	}
+	
+	cout << "recursive foobaz call " << foobazRec << endl;
+	foobaz();
+}
+
+function : void bar()
+{
+	barRec++;
+
+	if (barRec >= 8)
+	{
+		cout << "breaking out of bar recursive call" << endl;
+		foobaz();
+		return;
+	}
+	
+	cout << "recursive bar call " << barRec << endl;
+	bar();
+}
+
+function : void foo()
+{
+	fooRec++;
+
+	if (fooRec > 10)
+	{
+		cout << "breaking out of foo recursive call" << endl;
+		bar();
+		return;
+	}
+	
+	cout << "recursive foo call " << fooRec << endl;
+	foo();
+}
+
+function : void main()
+{
+	fooRec = 1;
+	foobazRec = 50;
+	
+	foo();
+	
+	cout << "fooRec, in the end, is: " << fooRec << endl; // 11
+	cout << "barRec, in the end, is: " << barRec << endl; // 8 
+	cout << "foobazRec, in the end, is: " << foobazRec << endl; // 53
+}

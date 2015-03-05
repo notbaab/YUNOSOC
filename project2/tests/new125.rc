@@ -1,0 +1,13 @@
+function : void foo()
+{
+	cout << "YES!" << endl;
+	exit(1);
+	cout << "NO!1" << endl;
+}
+
+function : void main()
+{
+	cout << "YES!" << endl;
+	foo();
+	cout << "NO!2" << endl;
+}

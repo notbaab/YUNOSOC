@@ -1,0 +1,24 @@
+
+function: void foo(int x) {
+    cout << "received: " << x << endl;
+}
+
+function: void foo6(int a, int b, int c, int d, int e, int f) {
+    cout << "received: " << endl;
+    cout << "\ta: " << a << endl;
+    cout << "\tb: " << b << endl;
+    cout << "\tc: " << c << endl;
+    cout << "\td: " << d << endl;
+    cout << "\te: " << e << endl;
+    cout << "\tf: " << f << endl;
+}
+
+
+function: void main() {
+
+    int x = 1;
+    foo(x);
+
+    foo6(1,2,3,4,5,6);
+
+}

@@ -1,0 +1,28 @@
+function : int fibonacci (int x) {
+  if (x <= 0) {
+    return 0;
+  } else {
+    if (x <= 2) {
+      return 1;
+    } else {
+      return fibonacci(x-1) + fibonacci(x-2);
+    }
+  }
+  return 0;
+}
+
+function : int main () {
+  cout << fibonacci(0) << endl;
+  cout << fibonacci(1) << endl;
+  cout << fibonacci(2) << endl;
+  cout << fibonacci(3) << endl;
+  cout << fibonacci(4) << endl;
+  cout << fibonacci(5) << endl;
+  cout << fibonacci(6) << endl;
+  cout << fibonacci(7) << endl;
+  cout << fibonacci(8) << endl;
+  cout << fibonacci(9) << endl;
+  cout << fibonacci(10) << endl;
+
+  return 0;
+}

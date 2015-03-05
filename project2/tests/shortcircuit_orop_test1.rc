@@ -1,0 +1,55 @@
+function : void main()
+{
+	bool x = true;
+	bool y = false;
+	
+	
+	if (x || y)
+	{
+		cout << "1" << endl;
+		cout << "x's value: " << x << endl; // x's value: true
+		cout << "y's value: " << y << endl; // y's value: false
+	}	
+	
+	if (x || (y = true))
+	{
+		cout << "2" << endl;
+		cout << "y's value: " << y << endl; // y's value: false
+	
+	}
+	
+	if( (y = true) || (x = false) )
+	{
+		cout << "3" << endl;
+		cout << "x's value: " << x << endl; // x's value: true
+		cout << "y's value: " << y << endl; // y's value: true
+	
+	}
+	
+	if ( (x = false) || false || (y = false))
+	{
+	
+		cout << "this should not be printed 1" << endl;
+	
+	} 
+	
+	cout << "x's value: " << x << endl; // x's value: false
+	cout << "y's value: " << y << endl; // y's value: false
+	
+	x = y || y;
+	
+	cout << "x's value: " << x << endl; // x's value: false
+	
+	x = true || ( y = true );
+	
+	cout << "x's value: " << x << endl; // x's value: true
+	cout << "y's value: " << y << endl; // y's value: false
+	
+	if ( false || (y = x))
+	{
+		cout << "4" << endl;
+		cout << "y's value: " << y << endl; // y's value: true
+	
+	}
+
+}

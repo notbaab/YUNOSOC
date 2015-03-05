@@ -1,0 +1,9 @@
+//testing local var
+
+float x = 3.33;
+
+function : void main() {
+	float x  = 4.44;
+
+	cout << "main" << x << "end" <<endl;
+}

@@ -1,0 +1,7 @@
+function : void main()
+{
+    const float r1 = 420.25;
+    cout << r1 + 662.50 << "\n";
+    cout << sizeof(r1) << endl;
+
+}

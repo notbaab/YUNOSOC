@@ -1,0 +1,8 @@
+function : void main() {
+	int x = 1;
+	float y = 2.22;
+	bool z = false;
+	bool a = true;
+
+	cout << "main" << x << y << z << a << "end" << endl;
+}

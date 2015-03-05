@@ -1,0 +1,5 @@
+function : void main(){
+   float e = 2.718;
+   cout << ++e << " " << e++ << " " << e << " " << ++e + e++ << endl;
+   cout << --e << " " << e-- << " " << e << " " << --e + e-- << endl;
+}

@@ -1,0 +1,24 @@
+function: void main() {
+
+    cout << "INT" << endl << "----------------------------------------------------" << endl;
+
+    int x = 2;
+    cout << "Pre Increment" << "-------------" << endl;
+    cout << "should print 3: " << ++x << endl;
+    cout << "should print 3: " << x << endl << endl;
+
+    x = 2;
+    cout << "Post Increment" << "-------------" << endl;
+    cout << "should print 2: " << x++ << endl;
+    cout << "should print 3: " << x << endl << endl;
+
+    x = 2;
+    cout << "Pre Decrement" << "-------------" << endl;
+    cout << "should print 1: " << --x << endl;
+    cout << "should print 1: " << x << endl << endl;
+
+    x = 2;
+    cout << "Post Decrement" << "-------------" << endl;
+    cout << "should print 2: " << x-- << endl;
+    cout << "should print 1: " << x << endl << endl;
+}

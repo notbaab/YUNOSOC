@@ -1,0 +1,31 @@
+structdef BAR {
+	int *a;
+	float b;
+	bool **c;
+};
+
+int wow[10000];
+
+structdef FOO {
+	bool dude[4000];
+	float will;
+};
+
+FOO gangster;
+BAR bee;
+
+function : void main() 
+{
+	gangster.dude[2431] = false;
+	bool *dudette = &gangster.dude[2431];
+	
+	BAR *bird = &bee;
+	
+	wow[3122] = 3332;
+
+	bird->a = &wow[3133 - 11];
+	bird->c = &dudette;
+	
+	cout << *(bird->a) << endl;
+	cout << **(bird->c) || true << endl;
+}

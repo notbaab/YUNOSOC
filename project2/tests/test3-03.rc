@@ -1,0 +1,26 @@
+// local int, bool, float var address of, pointers, derefs
+
+function: void main() {
+	
+	int i = 17;
+	int * iptr = &i;
+	int j = *&i;
+	int k = *iptr;
+	
+	cout << j << " " << k << endl;
+	
+	float f = 27.29;
+	float * fptr = &f;
+	float jf = *&f;
+	float kf = *fptr;
+	
+	cout << jf << " " << kf << endl;
+	
+	bool b = false;
+	bool * bptr = &b;
+	bool jb = *&b;
+	bool kb = *bptr;
+	
+	cout << jb << " " << kb << endl;
+		
+}

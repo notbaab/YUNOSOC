@@ -1,0 +1,41 @@
+int x[10];
+float y[10];
+bool z[10];
+
+function : void main()
+{
+  int ix[10];
+  float iy[10];
+  bool iz[10];
+  
+
+  int a = 1;
+  int b = 2;
+
+  x[0] = a + b;
+  cout << "3: " << x[0] <<endl;
+
+  ix[0] = a + b;
+  cout << "3: " << x[0] << endl;
+
+
+  bool b1 = true;
+  bool b2 = false;
+  z[0] = b1 && b2;
+  cout << "false: " << z[0] << endl;
+
+  iz[0] = b1 || b2;
+  cout << "true: " << iz[0] << endl;
+  
+  float f1 = 1.1;
+  y[0] = f1 + f1;
+  cout << "2.2: " << y[0] << endl;
+
+  iy[0] = f1 + f1;
+  cout << "2.2: " << iy[0] << endl;
+
+  iy[0] = a + b;
+  cout << "3.0: " << iy[0] << endl;
+
+}
+

@@ -1,0 +1,2 @@
+before calling foo, i is 5 and j is1
+after calling foo, i is modified, and is now 777 and j is 778

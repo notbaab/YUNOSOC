@@ -1,0 +1,21 @@
+//simple function recursion 
+
+int i = 5;
+
+function: void foo() {
+	int j = i;
+
+	if ( i >= 0) {
+		cout << i-- << " ";
+		foo();
+	}
+
+	cout << j << " ";
+}
+
+function: void main() {
+	
+	foo();
+	cout << i << endl;
+
+}
